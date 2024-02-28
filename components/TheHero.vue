@@ -1,8 +1,5 @@
 <template>
-  <div class="text-red-800">
-    <TheNav />
-    <TheHero />
-  </div>
+  <div></div>
 </template>
 
 <script setup></script>

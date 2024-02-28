@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavigationMenuRoot> </NavigationMenuRoot>
+    <NavigationMenuRoot></NavigationMenuRoot>
   </div>
 </template>
 
