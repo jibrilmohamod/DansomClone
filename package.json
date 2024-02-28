@@ -4,19 +4,18 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^3.10.3",
-    "primevue": "^3.49.1",
+    "radix-vue": "^1.4.9",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4",
-    "nuxt-primevue": "^0.3.1"
+    "@nuxtjs/tailwindcss": "^6.11.4"
   }
 }
