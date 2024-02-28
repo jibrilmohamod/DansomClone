@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="bg-primary h-[90vh] curved-div"></div>
+    <div class="bg-primary h-screen curved-div"></div>
   </div>
 </template>
 
