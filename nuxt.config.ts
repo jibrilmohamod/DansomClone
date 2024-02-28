@@ -3,8 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     "@nuxtjs/tailwindcss",
-    "radix-vue/nuxt",
     "@hypernym/nuxt-anime",
+    "nuxt-icon",
+    "@nuxt/image",
   ],
   css: ["~/assets/css/tailwind.css"],
 });
