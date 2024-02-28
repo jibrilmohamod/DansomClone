@@ -1,5 +1,7 @@
 <template>
-  <div class="text-red-800">Hey Dansom</div>
+  <div class="text-red-800">
+    <TheNav />
+  </div>
 </template>
 
 <script setup></script>

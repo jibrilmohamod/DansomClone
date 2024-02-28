@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <NavigationMenuRoot> </NavigationMenuRoot>
+  </div>
 </template>
 
 <script setup></script>
