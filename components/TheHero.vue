@@ -1,6 +1,8 @@
 <template>
   <div class="">
-    <div class="bg-primary h-screen curved-div"></div>
+    <div class="bg-primary h-screen curved-div">
+      Hey
+    </div>
   </div>
 </template>
 
