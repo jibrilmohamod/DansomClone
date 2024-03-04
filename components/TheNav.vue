@@ -22,19 +22,19 @@
             <NavigationMenuItem>
               <NavigationMenuLink href="/">
                 <Icon name="ri:menu-4-line"
-                      class="text-5xl text-quaternary" />
+                      class="text-4xl text-quinary" />
 
               </NavigationMenuLink>
             </NavigationMenuItem>
           </li>
 
-          <li class="basis-11/12">
+          <li class="">
             <!-- logo -->
             <NavigationMenuItem>
               <NavigationMenuLink href="/">
                 <img src="/dansom-logo.png"
                      alt="logo"
-                     class="w-[550px]" />
+                     class="h-12" />
               </NavigationMenuLink>
             </NavigationMenuItem>
 
