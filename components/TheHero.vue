@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div class="bg-purple-700 h-screen curved-div">
-      Hey
+    <div class="bg-purple-700 h-[90vh] curved-div">
+      <TheNav />
     </div>
   </div>
 </template>
