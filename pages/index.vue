@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <TheHero />
+    <OurExpertise />
   </div>
 </template>
 

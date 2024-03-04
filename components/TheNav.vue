@@ -34,7 +34,7 @@
               <NavigationMenuLink href="/">
                 <img src="/dansom-logo.png"
                      alt="logo"
-                     class="w-[500px]" />
+                     class="w-[550px]" />
               </NavigationMenuLink>
             </NavigationMenuItem>
 
