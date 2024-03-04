@@ -21,8 +21,8 @@
           <li class="basis-0 ">
             <NavigationMenuItem>
               <NavigationMenuLink href="/">
-                <Icon name="ri:menu-4-line"
-                      class="text-4xl text-quinary" />
+                <Icon name="bytesize:menu"
+                      class="text-[40px] text-quinary" />
 
               </NavigationMenuLink>
             </NavigationMenuItem>
