@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="bg-primary h-screen curved-div">
+    <div class="bg-purple-700 h-screen curved-div">
       Hey
     </div>
   </div>
