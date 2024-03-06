@@ -39,6 +39,12 @@ module.exports = {
     quaternary: "#46658C",
     quinary: "#0D0D0D",
    },
+   fontFamily: {
+    Playfair: ["Playfair Display", "serif"],
+    Montserrat: ["Montserrat", "sans-serif"],
+    Roboto: ["Roboto", "sans-serif"],
+    OpenSans: ["Open Sans", "sans-serif"],
+   },
   },
  },
  plugins: [animate],

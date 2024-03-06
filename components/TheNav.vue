@@ -22,7 +22,7 @@
             <NavigationMenuItem>
               <NavigationMenuLink href="/">
                 <Icon name="bytesize:menu"
-                      class="text-[40px] text-quinary" />
+                      class="text-[40px] text-white" />
 
               </NavigationMenuLink>
             </NavigationMenuItem>
