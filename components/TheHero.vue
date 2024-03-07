@@ -6,24 +6,37 @@
       <TheNav />
 
       <!-- call to action  -->
-      <div class="h-[76vh] outline outline-red-500 px-6 flex items-center">
+      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6 pt-5">
 
         <!-- Big Header Text -->
-        <div class="flex flex-col items-center justify-center h-[50vh]">
-          <h1 class="text-6xl font-[Playfair Display] text-center ">
-            One Word: <span class=" text-white block">
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-7xl font-Playfair text-center font-bold pb-6 text-white">
+            One word: <span class=" text-white block">
               Patner
             </span>
           </h1>
-          <p class="text-2xl text-white">Join the community and share your stories with the world</p>
+          <p class="text-xl text-white text-center font-OpenSans">
+            Powerful transformations across the horn of Africa
+          </p>
         </div>
 
+        <!-- cta button  -->
+        <Button class="w-1/2 mx-auto font-Montserrat text-lg h-12 bg-secondary">
+
+          <Icon name="ri:lightbulb-flash-fill"
+                class="text-white text-xl" />
+
+          <span class="text-white pl-3 font-semibold">Get Started</span>
+        </Button>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup
+        lang="ts">
+        import { Button } from '@/components/ui/button'
+</script>
 
 <style scoped>
 .curved-div {

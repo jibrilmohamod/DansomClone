@@ -18,7 +18,7 @@
       <NavigationMenuList>
         <!-- menu item -->
         <ul class="flex w-[90vw] items-center justify-between">
-          <li class="outline">
+          <li class="">
             <NavigationMenuItem>
               <NavigationMenuLink href="/">
                 <Icon name="quill:hamburger"
