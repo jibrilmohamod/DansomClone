@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="w-full px-4 py-5 bg-white">
+  <div class="w-full px-4 py-5 bg-transparent">
     <NavigationMenu class="w-96">
       <NavigationMenuList>
         <!-- menu item -->

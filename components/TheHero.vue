@@ -1,7 +1,7 @@
 <template>
   <div class="pb-10 ">
     <div
-         class="bg-[url(https://preview.redd.it/8rrqh5rpwj131.jpg?width=640&crop=smart&auto=webp&s=50b2f52ecb71901da7b38f685f304c43bb996d43)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-50 bg-cover">
+         class="bg-[url(https://img.freepik.com/free-photo/front-view-woman-sitting-near-fruits_23-2149522151.jpg?t=st=1709803835~exp=1709807435~hmac=f8f43e36770a2e12d22ae3566150bf17671f544d41e60f03c8952bbf5ed0b5a8&w=740)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-50 bg-cover">
 
       <TheNav />
 
@@ -26,7 +26,9 @@
           <Icon name="ri:lightbulb-flash-fill"
                 class="text-white text-xl" />
 
-          <span class="text-white pl-3 font-semibold">Get Started</span>
+          <span class="text-white pl-3 font-semibold">
+            What We Do
+          </span>
         </Button>
       </div>
     </div>
