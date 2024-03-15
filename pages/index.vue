@@ -28,7 +28,7 @@ let services = [
     subtitle: "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia."
   },
   {
-    icon: "fluent-mdl2:analytics-report",
+    icon: "material-symbols-light:chart-data-outline-rounded",
     title: "Formative Research and Policy Advisory Services",
     subtitle: "Formative Research and Policy Advisory Services to inform programming and policy development."
   },
@@ -39,7 +39,7 @@ let services = [
   },
   {
     icon: "pepicons-pencil:people",
-    title: "Organizational Capacity Building & Human Resource Management",
+    title: "Organizational Capacity Building & HR",
     subtitle: "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia."
   },
   {
