@@ -2,6 +2,7 @@
   <div class="">
     <TheHero />
     <OurExpertise />
+    <TheCard />
   </div>
 </template>
 

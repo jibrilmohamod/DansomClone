@@ -27,9 +27,15 @@ export default defineNuxtConfig({
    Roboto: true,
    Montserrat: true,
    "Open Sans": true,
+   Merriweather: true,
+   Lora: true,
+   Pridi: true,
+   "Zilla Slab": true,
+   "Cormorant Garamond": true,
+   "DM Serif Display": true,
   },
-  prefetch:true,
-  preconnect:true,
-  display:"swap"
+  prefetch: true,
+  preconnect: true,
+  display: "swap",
  },
 })

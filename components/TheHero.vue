@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-10 ">
+  <div class="">
     <div
          class="bg-[url(https://ajani.bold-themes.com/orbis/wp-content/uploads/sites/4/2021/06/bgn-v2-hero.jpg)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-20 bg-cover bg-center">
 
@@ -10,12 +10,12 @@
 
         <!-- Big Header Text -->
         <div class="flex flex-col items-center justify-center px-2">
-          <h1 class="text-[4.6rem] font-Playfair text-center pb-6 text-white leading-[70px] tr">
+          <h1 class="text-[4.6rem] font-DM text-center pb-6 text-white leading-[70px] tr">
             One word: <span class=" text-white block">
               Patner
             </span>
           </h1>
-          <p class="text-lg text-white text-center font-Montserrat">
+          <p class="text-xl text-white text-center font-roboto">
             Dansom Consultancy offers tailored services for development in the horn of Africa. From monitoring and
             evaluation to policy guidance.
           </p>
