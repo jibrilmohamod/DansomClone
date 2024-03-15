@@ -13,18 +13,18 @@
 </script>
 
 <template>
-  <div class="w-full px-4 py-5 bg-transparent">
+  <div class="w-full px-5 py-5 bg-transparent">
     <NavigationMenu class="w-96">
       <NavigationMenuList>
         <!-- menu item -->
         <ul class="flex w-[90vw] items-center justify-between">
           <li class="">
             <NavigationMenuItem>
-              <NavigationMenuLink href="/">
-                <Icon name="quill:hamburger"
-                      class="text-[40px] text-quaternary" />
 
-              </NavigationMenuLink>
+              <Icon name="quill:hamburger"
+                    class="text-[40px] text-white" />
+
+
             </NavigationMenuItem>
           </li>
 

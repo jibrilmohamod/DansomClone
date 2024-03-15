@@ -1,33 +1,34 @@
 <template>
   <div class="pb-10 ">
     <div
-         class="bg-[url(https://img.freepik.com/free-photo/front-view-woman-sitting-near-fruits_23-2149522151.jpg?t=st=1709803835~exp=1709807435~hmac=f8f43e36770a2e12d22ae3566150bf17671f544d41e60f03c8952bbf5ed0b5a8&w=740)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-50 bg-cover">
+         class="bg-[url(https://ajani.bold-themes.com/orbis/wp-content/uploads/sites/4/2021/06/bgn-v2-hero.jpg)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-20 bg-cover bg-center">
 
       <TheNav />
 
       <!-- call to action  -->
-      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6 pt-5">
+      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6">
 
         <!-- Big Header Text -->
-        <div class="flex flex-col items-center justify-center">
-          <h1 class="text-7xl font-Playfair text-center font-bold pb-6 text-white">
+        <div class="flex flex-col items-center justify-center px-2">
+          <h1 class="text-[4.6rem] font-Playfair text-center pb-6 text-white leading-[70px] tr">
             One word: <span class=" text-white block">
               Patner
             </span>
           </h1>
-          <p class="text-xl text-white text-center font-OpenSans">
-            Powerful transformations across the horn of Africa
+          <p class="text-lg text-white text-center font-Montserrat">
+            Dansom Consultancy offers tailored services for development in the horn of Africa. From monitoring and
+            evaluation to policy guidance.
           </p>
         </div>
 
         <!-- cta button  -->
-        <Button class="w-1/2 mx-auto font-Montserrat text-lg h-12 bg-secondary">
+        <Button class=" mx-auto font-Montserrat  py-6 bg-primary flex gap-1 px-7">
 
           <Icon name="ri:lightbulb-flash-fill"
                 class="text-white text-xl" />
 
-          <span class="text-white pl-3 font-semibold">
-            What We Do
+          <span class="text-white text-lg font-Montserrat ">
+            What we do
           </span>
         </Button>
       </div>
