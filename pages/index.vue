@@ -39,12 +39,12 @@
                   subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs." />
       </template>
       <template #Image>
-        <TheCarousel />
+        <LogoCarousel />
         <!-- learn more button  -->
         <div class="flex pt-8 pb-0">
           <Button navigateTo="/"
                   class="bg-primary text-white font-Montserrat px-6 h-12 text-lg">
-            Learn More
+            View Our Projects
           </Button>
         </div>
       </template>
