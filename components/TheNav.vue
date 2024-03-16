@@ -1,50 +1,34 @@
 <script setup
         lang="ts">
-        import {
-          NavigationMenu,
-          NavigationMenuContent,
-          NavigationMenuIndicator,
-          NavigationMenuItem,
-          NavigationMenuLink,
-          NavigationMenuList,
-          NavigationMenuTrigger,
-          NavigationMenuViewport,
-        } from '@/components/ui/navigation-menu'
 </script>
 
 <template>
   <div class="w-full px-5 py-5 bg-transparent">
-    <NavigationMenu class="w-96">
-      <NavigationMenuList>
-        <!-- menu item -->
-        <ul class="flex w-[90vw] items-center justify-between">
-          <li class="">
-            <NavigationMenuItem>
+    <nav class="w-96">
 
-              <Icon name="quill:hamburger"
-                    class="text-[40px] text-white" />
+      <!-- menu item -->
+      <ul class="flex w-[90vw] items-center justify-between">
+        <li class="">
 
 
-            </NavigationMenuItem>
-          </li>
+          <Icon name="quill:hamburger"
+                class="text-[40px] text-white" />
 
-          <li class="">
-            <!-- logo -->
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/">
-                <img src="/dansom-logo.png"
-                     alt="logo"
-                     class="h-10" />
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+        </li>
 
-          </li>
-        </ul>
+        <li class="">
+          <!-- logo -->
+
+          <img src="/dansom-logo.png"
+               alt="logo"
+               class="h-10" />
 
 
-      </NavigationMenuList>
+        </li>
+      </ul>
 
-    </NavigationMenu>
+
+    </nav>
   </div>
 
 
