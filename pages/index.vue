@@ -44,7 +44,7 @@
         <div class="flex pt-8 pb-0">
           <Button navigateTo="/"
                   class="bg-primary text-white font-Montserrat px-6 h-12 text-lg">
-            View Our Projects
+            Our Projects
           </Button>
         </div>
       </template>
