@@ -49,6 +49,19 @@
         </div>
       </template>
     </TheCard>
+
+    <!-- Contact Us Card  -->
+    <TheCard>
+      <template #One>
+        <TheTitle title="We can help you navigate what's next."
+                  subtitle="
+        With more than 10 years of experience in the horn of Africa, we have the expertise and the network to help you navigate the complex socio-political and economic landscape of the region. CONTACT US today to learn more about our services and how we can help you achieve your goals." />
+
+      </template>
+      <template #Image>
+        <!-- <ContactCard /> -->
+      </template>
+    </TheCard>
   </div>
 </template>
 
