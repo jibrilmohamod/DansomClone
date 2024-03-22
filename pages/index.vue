@@ -66,7 +66,7 @@
         <ImageCard class="pt-5" />
       </template>
     </TheCard>
-  </div> data-aos="fade-in"
+  </div>
 </template>
 
 <script setup

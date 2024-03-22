@@ -1,6 +1,6 @@
 <template>
 
-    <body class="overflow-y-hidden">
+    <div class="overflow-y-hidden">
         <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12">
             <div class="flex flex-col items-center justify-center">
                 <div>
@@ -25,19 +25,19 @@
                 </div>
                 <div class="flex items-center gap-x-8 mt-6">
                     <button aria-label="facebook"
-                            class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                            class="focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
                         <Icon name="ri:facebook-fill"
                               class="text-sky-500 hover:text-gray-500"
                               size="24" />
                     </button>
                     <button aria-label="instagram"
-                            class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                            class="focus:ring-2 focus:ring-offset-2  focus:ring-gray-800 focus:outline-none rounded-full">
                         <Icon name="ri:instagram-fill"
                               class="text-red-400 hover:text-gray-500"
                               size="24" />
                     </button>
                     <button aria-label="pinterest"
-                            class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                            class="focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
                         <Icon name="ri:pinterest-fill"
                               class="text-rose-700 hover:text-gray-500"
                               size="24" />
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
 </template>
 
 <script>

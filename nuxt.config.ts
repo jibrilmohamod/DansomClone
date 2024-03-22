@@ -38,6 +38,4 @@ export default defineNuxtConfig({
   preconnect: true,
   display: "swap",
  },
-
- plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
 })
