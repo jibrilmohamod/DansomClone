@@ -29,8 +29,7 @@
                      :key="service.title"
                      :icon="service.icon"
                      :title="service.title"
-                     :subtitle="service.subtitle"
-                     data-aos="fade-up" />
+                     :subtitle="service.subtitle" />
       </template>
     </TheCard>
     <!-- Patners and Portfolio card -->
@@ -67,7 +66,7 @@
         <ImageCard class="pt-5" />
       </template>
     </TheCard>
-  </div>
+  </div> data-aos="fade-in"
 </template>
 
 <script setup
