@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   "shadcn-nuxt",
   "@nuxtjs/google-fonts",
  ],
- css: ["~/assets/css/tailwind.css"],
+ css: ["~/assets/css/tailwind.css", "animate.css/animate.min.css"],
  shadcn: {
   /**
    * Prefix for all the imported componen
@@ -38,4 +38,6 @@ export default defineNuxtConfig({
   preconnect: true,
   display: "swap",
  },
+
+ plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
 })

@@ -29,7 +29,8 @@
                      :key="service.title"
                      :icon="service.icon"
                      :title="service.title"
-                     :subtitle="service.subtitle" />
+                     :subtitle="service.subtitle"
+                     data-aos="fade-up" />
       </template>
     </TheCard>
     <!-- Patners and Portfolio card -->
@@ -59,7 +60,11 @@
 
       </template>
       <template #Image>
-        <!-- <ContactCard /> -->
+        <Button navigateTo="/"
+                class="bg-primary text-white font-Montserrat px-6 h-12 text-lg">
+          Get in Touch
+        </Button>
+        <ImageCard class="pt-5" />
       </template>
     </TheCard>
   </div>
@@ -107,6 +112,13 @@
           },
 
         ]
+
+        // init aos 
+        import AOS from 'aos'
+        import 'aos/dist/aos.css'
+        onMounted(() => {
+          AOS.init()
+        })
 </script>
 
 <style lang="scss"

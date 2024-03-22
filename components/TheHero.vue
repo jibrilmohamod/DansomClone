@@ -15,7 +15,7 @@
               Patner
             </span>
           </h1>
-          <p class="text-lg text-white text-center font-roboto">
+          <p class="text-xl text-white text-center font-Zilla">
             Dansom Consultancy offers tailored services for development in the horn of Africa. From monitoring and
             evaluation to policy guidance.
           </p>
