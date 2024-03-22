@@ -112,13 +112,6 @@
           },
 
         ]
-
-        // init aos 
-        import AOS from 'aos'
-        import 'aos/dist/aos.css'
-        onMounted(() => {
-          AOS.init()
-        })
 </script>
 
 <style lang="scss"

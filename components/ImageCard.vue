@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtImg :src="image"
-                 class="rounded-xl h-64 w-full shadow-quaternary shadow-xl" />
+                 class="rounded-xl h-60 w-full shadow-quaternary shadow-xl" />
     </div>
 </template>
 

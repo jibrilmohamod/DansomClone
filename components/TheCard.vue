@@ -1,5 +1,6 @@
 <template>
-    <div class="px-6 pt-6">
+    <div class="px-6 pt-6"
+         data-aos="fade-in">
 
 
         <slot name="One"></slot>
