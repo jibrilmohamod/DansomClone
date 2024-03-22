@@ -10,12 +10,12 @@
 
         <!-- Big Header Text -->
         <div class="flex flex-col items-center justify-center px-2">
-          <h1 class="text-[4.6rem] font-DM text-center pb-6 text-white leading-[70px] tr">
+          <h1 class="text-[4.2rem] font-DM text-center pb-6 text-white leading-[70px] tr">
             One word: <span class=" text-white block">
               Patner
             </span>
           </h1>
-          <p class="text-xl text-white text-center font-roboto">
+          <p class="text-lg text-white text-center font-roboto">
             Dansom Consultancy offers tailored services for development in the horn of Africa. From monitoring and
             evaluation to policy guidance.
           </p>

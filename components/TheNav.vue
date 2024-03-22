@@ -12,7 +12,7 @@
 
 
           <Icon name="quill:hamburger"
-                class="text-[40px] text-white" />
+                class="text-4xl text-white" />
 
         </li>
 
@@ -21,7 +21,7 @@
 
           <img src="/dansom-logo.png"
                alt="logo"
-               class="h-10" />
+               class="h-8" />
 
 
         </li>

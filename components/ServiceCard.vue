@@ -1,17 +1,17 @@
 <template>
-    <div class="flex gap-3 items-center py-4">
+    <div class="flex gap-3 py-4">
         <!-- Icon -->
         <div class="h-fit bg-primary w-fit rounded-full p-2">
             <Icon :name="icon"
-                  class=" text-black text-7xl" />
+                  class=" text-black text-6xl" />
         </div>
 
         <!-- Title & Subtitle -->
         <div class="w-full">
-            <h5 class="font-Merriweather text-xl">
+            <h5 class="font-Merriweather text-lg">
                 {{ title }}
             </h5>
-            <p class="font-Montserrat text-sm">
+            <p class="font-Zilla text">
                 {{ subtitle }}
             </p>
         </div>
