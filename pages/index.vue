@@ -25,11 +25,14 @@
         <TheTitle title="Our Expertise and Solutions"
                   subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services" />
         <!-- services vfor loop -->
-        <ServiceCard v-for="service in services"
-                     :key="service.title"
-                     :icon="service.icon"
-                     :title="service.title"
-                     :subtitle="service.subtitle" />
+        <div>
+          <ServiceCard v-for="service in services"
+                       :key="service.title"
+                       :icon="service.icon"
+                       :title="service.title"
+                       :subtitle="service.subtitle" />
+        </div>
+
       </template>
     </TheCard>
     <!-- Patners and Portfolio card -->

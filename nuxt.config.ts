@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   "nuxt-icon",
   "@nuxt/image",
   "shadcn-nuxt",
-  "@nuxtjs/google-fonts",
+  "@nuxtjs/google-fo nts",
  ],
  css: ["~/assets/css/tailwind.css", "animate.css/animate.min.css"],
  shadcn: {
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   prefix: "UI",
   /**
    * Directory that the component lives in.
-   * @default "./components/ui"
+   * @default "./com ponents/ui"
    */
   componentDir: "./components/ui",
  },
@@ -37,5 +37,12 @@ export default defineNuxtConfig({
   prefetch: true,
   preconnect: true,
   display: "swap",
+ },
+
+ //  nuxt image
+ image: {
+  cloudinary: {
+   baseURL: "https://res.cloudinary.com/dckmlqzgd/image/upload/",
+  },
  },
 })

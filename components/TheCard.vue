@@ -1,11 +1,15 @@
 <template>
-    <div class="px-6 pt-6">
+    <div class="px-6 pt-6 md:container">
+        <div class="flex">
+            <div class="basis-1/2">
+                <slot name="One"></slot>
+            </div>
 
 
-        <slot name="One"></slot>
+            <!-- image slot  -->
+            <slot name="Image"></slot>
+        </div>
 
-        <!-- image slot  -->
-        <slot name="Image"></slot>
 
     </div>
 </template>
