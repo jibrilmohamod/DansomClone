@@ -1,12 +1,12 @@
 <template>
   <div class="">
-    <div
-         class="bg-[url(https://ajani.bold-themes.com/orbis/wp-content/uploads/sites/4/2021/06/bgn-v2-hero.jpg)] h-[90vh] curved-div bg-blend-overlay bg-black bg-opacity-20 bg-cover bg-center">
+    <TheCarousel />
+    <div class="curved-div b bg-cover bg-center absolute inset-0">
 
       <TheNav />
 
       <!-- call to action  -->
-      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6">
+      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6 ">
 
         <!-- Big Header Text -->
         <div class="flex flex-col items-center justify-center px-2">

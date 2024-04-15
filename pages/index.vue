@@ -3,14 +3,14 @@
     <TheHero />
     <OurExpertise />
     <!-- About Us Card  -->
-    <TheCard>
-      <template #One>
-        <TheTitle title="Who We Are"
-                  subtitle="We are a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa." />
+    <UiComp header="Who We are"
+            small-text="Dansom"
+            paragraph="We are a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa.">
+
+      <template #image>
+        <ImageCard class="pt-10" />
       </template>
-      <template #Image>
-        <ImageCard />
-        <!-- learn more button  -->
+      <template #button>
         <div class="flex pt-8 pb-0">
           <Button navigateTo="/"
                   class="bg-primary text-white font-Montserrat px-6 h-12 text-lg">
@@ -18,8 +18,29 @@
           </Button>
         </div>
       </template>
-    </TheCard>
+
+    </UiComp>
     <!-- services card -->
+
+    <UiComp header="Our Expertise and Solutions"
+            paragraph="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services">
+      <div>
+        <ServiceCard v-for="service in services"
+                     :key="service.title"
+                     :icon="service.icon"
+                     :title="service.title"
+                     :subtitle="service.subtitle" />
+      </div>
+    </UiComp>
+
+
+
+
+
+
+
+
+
     <TheCard>
       <template #One>
         <TheTitle title="Our Expertise and Solutions"
