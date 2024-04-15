@@ -19,8 +19,11 @@
         </div>
       </template>
       <template #image2>
-        <Image2Card />
-        <Image3Card />
+        <div class="w-full px-2 flex gap-2  items-center">
+          <Image2Card />
+          <Image3Card />
+        </div>
+
       </template>
 
     </UiComp>
@@ -34,6 +37,14 @@
                      :icon="service.icon"
                      :title="service.title"
                      :subtitle="service.subtitle" />
+      </template>
+      <template #image2>
+        <div class="w-full px-2 flex gap-2  items-center">
+
+          <Image3Card />
+          <Image2Card />
+        </div>
+
       </template>
     </UiComp>
 

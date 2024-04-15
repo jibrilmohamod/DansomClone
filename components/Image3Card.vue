@@ -2,7 +2,7 @@
     <div class="h-64 md:h-96 2xl:h-[40vh] md:w-10/12 duration-1000 ease-in-out">
         <NuxtImg loading="lazy"
                  :src="image"
-                 class="w-1/2 h-[40vh] m-auto object-cover shadow-xl shadow-black" />
+                 class="basis-1/2 h-[40vh] m-auto object-cover shadow-xl shadow-black" />
     </div>
 </template>
 

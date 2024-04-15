@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-8 pl-6 pr-3 md:px-2 pb-4 md:container md:m-auto md:pt-16 md:flex md:gap-x-6 2xl:px-0">
+    <div class="pt-8 pl-6 pr-3 md:px-2 pb-4 md:container md:m-auto md:flex md:gap-x-6 2xl:px-0">
         <div class="md:basis-1/2 md:flex md:flex-col h-full">
             <!-- small text with line to its right -->
 
