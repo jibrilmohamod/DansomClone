@@ -6,8 +6,7 @@
 
             <!-- section header -->
             <div class="py-4">
-                <h4
-                    class=" leading-tight md:text-5xl md:font-[600] md:leading-[60px] md:tracking-wider 2xl:text-6xl font-DM text-5xl">
+                <h4 class=" leading-tight 2xl:text-6xl font-DM text-5xl">
                     {{ header }}
                 </h4>
             </div>

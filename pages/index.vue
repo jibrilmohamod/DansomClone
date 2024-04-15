@@ -18,19 +18,23 @@
           </Button>
         </div>
       </template>
+      <template #image2>
+        <Image2Card />
+        <Image3Card />
+      </template>
 
     </UiComp>
     <!-- services card -->
 
     <UiComp header="Our Expertise and Solutions"
             paragraph="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services">
-      <div>
+      <template #image>
         <ServiceCard v-for="service in services"
                      :key="service.title"
                      :icon="service.icon"
                      :title="service.title"
                      :subtitle="service.subtitle" />
-      </div>
+      </template>
     </UiComp>
 
 
