@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   "nuxt-icon",
   "@nuxt/image",
   "shadcn-nuxt",
-  "@nuxtjs/google-fo nts",
+  "@nuxtjs/google-fonts",
  ],
  css: ["~/assets/css/tailwind.css", "animate.css/animate.min.css"],
  shadcn: {
