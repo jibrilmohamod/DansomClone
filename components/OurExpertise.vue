@@ -23,7 +23,7 @@
     data-aos="fade-up"
     data-aos-duration="1000"
     class="basis-1/3"
-    v-for="(service, index) in services.slice(0, 3)"
+    v-for="(service, index) in services.slice(0, 6)"
     :key="service.title"
     :icon="service.icon"
     :title="service.title"

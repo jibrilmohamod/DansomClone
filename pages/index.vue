@@ -25,6 +25,24 @@
   <!-- Services Card  -->
   <OurExpertise />
 
+  <!-- Patners and Portfolio card -->
+  <TheCard>
+   <template #One>
+    <div class="h-full flex flex-col items-center justify-center">
+     <TheTitle
+      title="Our Partners and Portfolio"
+      subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs."
+      link="/"
+      LinkText="Our Projects"
+     >
+     </TheTitle>
+    </div>
+   </template>
+   <template #Image>
+    <LogoCarousel />
+   </template>
+  </TheCard>
+
   <!-- <TheCard>
     
    <template #Image>
