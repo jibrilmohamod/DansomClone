@@ -1,7 +1,7 @@
 <template>
  <div class="bg-white">
   <TheCarousel class="" />
-  <div class="curved-div b bg-cover bg-center absolute inset-0">
+  <div class="curved-div b bg-cover bg-center absolute inset-0 z-50">
    <TheNav />
    <div class="h-[85vh] w-full flex items-center justify-center">
     <div class="w-1/2 h-full hidden md:block"></div>
