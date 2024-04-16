@@ -16,17 +16,17 @@
                              :modifiers="{ effect: 'colorize:40', color: 'black' }"
                              alt="First slide" />
                 </div>
-            </div>
+            </div>x
         </div>
     </div>
 </template>
 
 <script setup>
 const images = ref([
-    "v1700048068/front-view-honey-jar-with-wooden-spoon-green-grapes-wooden-background_rjjbnq.jpg",
-    "v1700048034/5046_gi5uy1.jpg",
-    "v1700049220/close-up-view-cup-tea-with-lemon-honey-gray_ixymlr.jpg",
-    "v1700048068/front-view-honey-jar-with-wooden-spoon-green-grapes-wooden-background_rjjbnq.jpg",
+    "v1713240642/front-view-kids-posing-together-with-ball_23-2149479910_xylyvc.jpg",
+    "v1713240714/smiling-young-african-girl-wearing-traditional-clothing-classroom-with-students_996993-23087_ygimi3.jpg",
+    "v1713240777/countryside-women-out-field-posing_23-2148761775_wo8svm.jpg",
+    "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
 ])
 
 let active = ref(0)

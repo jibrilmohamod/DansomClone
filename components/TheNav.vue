@@ -19,7 +19,7 @@
                 class="text-gray-500" />
           <!-- text  -->
           <a class="text-sm text-gray-400"
-             href=""> Pangani , Nairobi , Kenya </a>
+             href=""> Nairobi , Kenya </a>
         </div>
         <!-- phone  -->
         <div class="py-2 border-r border-gray-500 rounded-sm px-5 grow flex justify-center items-center w-fit gap-3">
@@ -40,7 +40,7 @@
           <!-- text  -->
           <a class="text-sm text-gray-400"
              href="mailto:info@focalfoods.co.ke">
-            info@focalfoods.co.ke
+            info@dansom.co.ke
           </a>
         </div>
         <!-- socials -->
@@ -79,16 +79,16 @@
             </NuxtLink>
             <NuxtLink to="/about"
                       class="text-lg border-button font-Lexend">
-              About
+              About Us
             </NuxtLink>
             <NuxtLink to="/api/login"
                       external
                       class="text-lg border-button font-Lexend">
-              Account
+              Our Portfolio
             </NuxtLink>
             <NuxtLink to="/contactus"
                       class="border-button text-lg font-Lexend">
-              Contact
+              Contact Us
             </NuxtLink>
           </div>
           <!-- button -->

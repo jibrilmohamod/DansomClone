@@ -1,12 +1,12 @@
 <template>
   <div class="">
-    <TheCarousel />
-    <div class="curved-div b bg-cover bg-center absolute inset-0">
+    <TheCarousel class="" />
+    <div class="curved-div b bg-cover bg-center absolute inset-0 bg-black bg-opacity-50">
 
       <TheNav />
 
       <!-- call to action  -->
-      <div class="h-[76vh] px-6 flex items-center justify-center flex-col gap-6 ">
+      <div class="h-full px-6 flex items-center justify-center flex-col gap-6 ">
 
         <!-- Big Header Text -->
         <div class="flex flex-col items-center justify-center px-2">

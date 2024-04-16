@@ -20,8 +20,10 @@
       </template>
       <template #image2>
         <div class="w-full px-2 flex gap-2  items-center">
-          <Image2Card />
-          <Image3Card />
+          <Image2Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241586/young-boy-holding-bunch-vegetables-field_662214-181069_urmsm3.jpg" />
+          <Image3Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241556/medium-shot-boy-working-with-plants_23-2149142895_bl3vbr.jpg" />
         </div>
 
       </template>
@@ -41,43 +43,19 @@
       <template #image2>
         <div class="w-full px-2 flex gap-2  items-center">
 
-          <Image3Card />
-          <Image2Card />
+          <Image2Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241348/front-view-woman-sitting-near-fruits_23-2149522151_uy1b2y.jpg" />
+          <Image3Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240887/countryside-worker-pushing-wheelbarrow-with-peanuts_23-2148761782_qigkes.jpg" />
         </div>
 
       </template>
     </UiComp>
-
-
-
-
-
-
-
-
-
-    <TheCard>
-      <template #One>
-        <TheTitle title="Our Expertise and Solutions"
-                  subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services" />
-        <!-- services vfor loop -->
-        <div>
-          <ServiceCard v-for="service in services"
-                       :key="service.title"
-                       :icon="service.icon"
-                       :title="service.title"
-                       :subtitle="service.subtitle" />
-        </div>
-
-      </template>
-    </TheCard>
     <!-- Patners and Portfolio card -->
-    <TheCard>
-      <template #One>
-        <TheTitle title="Our Partners and Portfolio"
-                  subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs." />
-      </template>
-      <template #Image>
+
+    <UiComp header="Our Partners and Portfolio"
+            paragraph="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs.">
+      <template #image>
         <LogoCarousel />
         <!-- learn more button  -->
         <div class="flex pt-8 pb-0">
@@ -87,24 +65,46 @@
           </Button>
         </div>
       </template>
-    </TheCard>
 
-    <!-- Contact Us Card  -->
-    <TheCard>
-      <template #One>
-        <TheTitle title="We can help you navigate what's next."
-                  subtitle="
-        With more than 10 years of experience in the horn of Africa, we have the expertise and the network to help you navigate the complex socio-political and economic landscape of the region. CONTACT US today to learn more about our services and how we can help you achieve your goals." />
+      <template #image2>
+        <div class="w-full px-2 flex gap-2  items-center">
+
+          <Image3Card
+                      image="https://img.freepik.com/free-photo/view-woman-working-agricultural-sector-celebrate-labour-day-women_23-2151252044.jpg?t=st=1713241743~exp=1713245343~hmac=07c24fed27d76d5827409399df2f0a1c0475920088583e76dc98245115b8f436&w=740" />
+          <Image2Card />
+        </div>
 
       </template>
-      <template #Image>
+
+    </UiComp>
+
+
+
+    <!-- Contact Us Card  -->
+
+    <UiComp header="We can help you navigate what's next"
+            paragraph="With more than 10 years of experience in the horn of Africa, we have the expertise and the network to help you navigate the complex socio-political and economic landscape of the region. CONTACT US today to learn more about our services and how we can help you achieve your goals.">
+      <template #image>
         <Button navigateTo="/"
                 class="bg-primary text-white font-Montserrat px-6 h-12 text-lg">
           Get in Touch
         </Button>
-        <ImageCard class="pt-5" />
+        <ImageCard image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240777/countryside-women-out-field-posing_23-2148761775_wo8svm.jpg"
+                   class="pt-5" />
       </template>
-    </TheCard>
+      <template #image2>
+        <div class="w-full px-2 flex gap-2  items-center">
+
+          <Image3Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240843/countryside-women-browsing-phone-together_23-2148761794_udpxoc.jpg" />
+          <Image2Card
+                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240956/medium-shot-people-selling-bananas_23-2150830598_epjgud.jpg" />
+        </div>
+      </template>
+    </UiComp>
+
+
+
   </div>
 </template>
 
