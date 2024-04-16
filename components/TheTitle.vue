@@ -1,23 +1,34 @@
 <template>
-    <div class="">
-        <h3 class="font-DM text-5xl">
-            {{ title }}
-        </h3>
+ <div class="flex flex-col gap-3 md:gap-6">
+  <h3 class="font-DM text-5xl md:text-6xl">
+   {{ title }}
+  </h3>
 
-        <p class="py-5 font-Zilla text-lg">
-            {{ subtitle }}
-        </p>
-    </div>
+  <p class="py-5 font-Lora text-lg md:text-xl md:pr-3">
+   {{ subtitle }}
+  </p>
+
+  <NuxtLink class="place-self-start" :to="link">
+   <Button
+    class="bg-primary px-6 text-lg my-4 hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear md:text-2xl md:pr-9 rounded-md md:py-4 flex text-white gap-1"
+   >
+    <Icon name="icon-park-outline:torch" class="text-3xl md:text-4xl" />
+    <p class="font-Montserrat">
+     {{ LinkText }}
+    </p>
+   </Button>
+  </NuxtLink>
+ </div>
 </template>
 
 <script setup>
-defineProps({
-    title: String,
-    subtitle: String,
-    image: String
-})
-
+ defineProps({
+  title: String,
+  subtitle: String,
+  image: String,
+  link: String,
+  LinkText: String,
+ })
 </script>
 
-<style lang="scss"
-       scoped></style>
+<style lang="scss" scoped></style>

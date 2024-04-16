@@ -1,6 +1,6 @@
 <template>
  <div
-  class="px-6 pt-6 md:container"
+  class="px-6 pt-6 md:container m-auto md:pt-10"
   data-aos="fade-up"
   data-aos-anchor-placement="top-bottom"
   data-aos-duration="1000"
@@ -11,7 +11,7 @@
    </div>
 
    <!-- image slot  -->
-   <div>
+   <div class="md:basis-1/2 flex items-center justify-center">
     <slot name="Image"></slot>
    </div>
   </div>
