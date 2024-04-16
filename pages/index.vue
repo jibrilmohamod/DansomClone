@@ -26,7 +26,10 @@
   <OurExpertise />
 
   <!-- Patners and Portfolio card -->
-  <TheCard>
+  <TheCard
+   style="border-radius: 32% 25% 25% 0% / 0% 46% 0% 47%"
+   class="bg-secondary bg-opacity-50"
+  >
    <template #One>
     <div class="h-full flex flex-col items-center justify-center">
      <TheTitle
