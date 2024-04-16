@@ -5,13 +5,11 @@
   data-aos-duration="1000"
  >
   <div class="py-4 flex flex-col gap-2">
-   <h4
-    class="hidden md:block leading-tight 2xl:text-6xl font-DM text-5xl w-1/2"
-   >
+   <h4 class="leading-tight 2xl:text-6xl font-DM text-5xl">
     Our Expertise and Services
    </h4>
    <p
-    class="font-Zilla text-[18px] leading-relaxed tracking-wide text-black 2xl:w-3/4 2xl:pb-7 w-2/3"
+    class="font-Zilla text-[18px] leading-relaxed tracking-wide text-black 2xl:w-3/4 2xl:pb-7"
    >
     With access to various locations within Somalia, DANSOM provides high
     quality tailor made services to the clients’ needs, goals and objectives. We
@@ -25,12 +23,23 @@
     data-aos="fade-up"
     data-aos-duration="1000"
     class="basis-1/2"
-    v-for="service in services"
+    v-for="(service, index) in services.slice(0, 3)"
     :key="service.title"
     :icon="service.icon"
     :title="service.title"
     :subtitle="service.subtitle"
    />
+  </div>
+  <!-- button to services page -->
+  <div class="flex py-4">
+   <NuxtLink to="/services">
+    <Button
+     class="bg-primary text-white hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear md:text-2xl md:pr-9 rounded-md md:py-4 flex gap-1 px-4 items-center py-2"
+    >
+     <Icon name="icon-park-outline:torch" class="text-3xl md:text-4xl" />
+     <p class="font-Montserrat">Our Services</p>
+    </Button>
+   </NuxtLink>
   </div>
  </div>
 </template>

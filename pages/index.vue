@@ -22,6 +22,24 @@
    </template>
   </TheCard>
 
+  <!-- Services Card  -->
+  <OurExpertise />
+
+  <!-- <TheCard>
+    
+   <template #Image>
+    <div class="h-full flex flex-col items-center justify-center">
+     <TheTitle
+      title="Our Expertise and Services"
+      subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services"
+      link="/"
+      LinkText="Our Services"
+     >
+     </TheTitle>
+    </div>
+   </template>
+  </TheCard> -->
+
   <!-- About Us Card  -->
   <!-- <UiComp
       header="Who We are"
