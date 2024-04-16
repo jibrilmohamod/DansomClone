@@ -23,13 +23,13 @@
   </TheCard>
 
   <!-- Services Card  -->
-  <OurExpertise />
+  <OurExpertise
+   style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
+   class="bg-primary bg-opacity-50 border-primary"
+  />
 
   <!-- Patners and Portfolio card -->
-  <TheCard
-   style="border-radius: 32% 25% 25% 0% / 0% 46% 0% 47%"
-   class="bg-secondary bg-opacity-50"
-  >
+  <TheCard>
    <template #One>
     <div class="h-full flex flex-col items-center justify-center">
      <TheTitle
