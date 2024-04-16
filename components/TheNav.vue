@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <div class="hidden md:block absolute h-fit inset-0 z-50 container mx-auto text-white">
+    <div class="hidden md:block  h-fit inset-0 z-50 container mx-auto text-white">
       <!-- location , email and phone -->
       <div class="font-jost border-b border-gray-500 flex justify-between rounded-sm text-base">
         <!-- location  -->
@@ -155,7 +155,7 @@
   width: 0;
   height: 2px;
   /* Height of the bottom border */
-  background-color: #f6e088;
+  background-color: #3077d3;
   /* Color of the animated border */
   transition: width 0.3s ease;
   z-index: -1;

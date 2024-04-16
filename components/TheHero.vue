@@ -1,49 +1,23 @@
 <template>
-  <div class="">
-    <TheCarousel class="" />
-    <div class="curved-div b bg-cover bg-center absolute inset-0 bg-black bg-opacity-50">
-
-      <TheNav />
-
-      <!-- call to action  -->
-      <div class="h-full px-6 flex items-center justify-center flex-col gap-6 ">
-
-        <!-- Big Header Text -->
-        <div class="flex flex-col items-center justify-center px-2">
-          <h1 class="text-[4.2rem] font-DM text-center pb-6 text-white leading-[70px] md:text-8xl">
-            One word: <span class=" text-white block">
-              Patner
-            </span>
-          </h1>
-          <p class="text-xl text-white text-center font-Zilla md:w-1/2 md:text-2xl">
-            Dansom Consultancy offers tailored services for development in the horn of Africa. From monitoring and
-            evaluation to policy guidance.
-          </p>
-        </div>
-
-        <!-- cta button  -->
-        <Button class=" mx-auto font-Montserrat  py-6 bg-primary flex gap-1 px-7">
-
-          <Icon name="ri:lightbulb-flash-fill"
-                class="text-white text-xl" />
-
-          <span class="text-white text-lg font-Montserrat ">
-            What we do
-          </span>
-        </Button>
-      </div>
-    </div>
+ <div class="bg-white">
+  <TheCarousel class="" />
+  <div class="curved-div b bg-cover bg-center absolute inset-0">
+   <TheNav />
+   <div class="h-[85vh] w-full outline md:flex items-center hidden">
+    <div class="w-1/2 h-full"></div>
+    <div class="w-[40%] h-5/6 bg-primary rounded-full bg-opacity-60"></div>
+   </div>
   </div>
+ </div>
 </template>
 
-<script setup
-        lang="ts">
-        import { Button } from '@/components/ui/button'
+<script setup lang="ts">
+ import { Button } from "@/components/ui/button"
 </script>
 
 <style scoped>
-.curved-div {
+ .curved-div {
   border-bottom-left-radius: 50% 30px;
   border-bottom-right-radius: 50% 30px;
-}
+ }
 </style>

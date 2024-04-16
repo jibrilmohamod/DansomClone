@@ -1,5 +1,4 @@
 <template>
-
     <div class="overflow-y-hidden">
         <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12">
             <div class="flex flex-col items-center justify-center">
@@ -8,7 +7,6 @@
                     <NuxtImg src="/dansom-logo.png"
                              alt="logo"
                              class="w-52" />
-
                 </div>
                 <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
                     <a href="javascript:void(0)"
@@ -31,7 +29,7 @@
                               size="24" />
                     </button>
                     <button aria-label="instagram"
-                            class="focus:ring-2 focus:ring-offset-2  focus:ring-gray-800 focus:outline-none rounded-full">
+                            class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 focus:outline-none rounded-full">
                         <Icon name="ri:instagram-fill"
                               class="text-red-400 hover:text-gray-500"
                               size="24" />
@@ -44,8 +42,9 @@
                     </button>
                 </div>
                 <div class="flex items-center mt-6">
-                    <p class="text-base leading-4 text-black">2024 <span
-                              class="font-semibold text-quaternary">Dansom</span></p>
+                    <p class="text-base leading-4 text-black">
+                        2024 <span class="font-semibold text-quaternary">Dansom</span>
+                    </p>
                     <div class="border-l border-quaternary pl-2 ml-2">
                         <p class="text-base leading-4 text-black">Inc. All righys reserved</p>
                     </div>
@@ -59,9 +58,9 @@
 export default {
     name: "component",
     data() {
-        return {};
+        return {}
     },
-};
+}
 </script>
 
 <style></style>
