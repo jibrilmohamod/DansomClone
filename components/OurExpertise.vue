@@ -9,7 +9,7 @@
     Our Expertise and Services
    </h4>
    <p
-    class="font-Zilla text-[18px] leading-relaxed tracking-wide text-black md:w-3/4 2xl:pb-7"
+    class="text-black md:w-3/4 2xl:pb-7 py-5 font-Lora text-lg md:text-xl md:pr-3"
    >
     With access to various locations within Somalia, DANSOM provides high
     quality tailor made services to the clients’ needs, goals and objectives. We

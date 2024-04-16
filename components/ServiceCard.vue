@@ -1,16 +1,18 @@
 <template>
  <div class="flex gap-3 py-4">
   <!-- Icon -->
-  <div class="h-fit bg-primary w-fit rounded-full p-2">
+  <div
+   class="h-fit bg-primary w-fit rounded-full p-2 hover:bg-secondary hover:duration-200 transition-all hover:ease-linear"
+  >
    <Icon :name="icon" class="text-black text-6xl" />
   </div>
 
   <!-- Title & Subtitle -->
   <div class="w-full">
-   <h5 class="font-Merriweather text-lg">
+   <h5 class="font-Pridi text-lg">
     {{ title }}
    </h5>
-   <p class="font-Zilla text">
+   <p class="font-Zilla md:w-3/4">
     {{ subtitle }}
    </p>
   </div>
