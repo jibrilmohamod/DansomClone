@@ -10,7 +10,7 @@
 
         <!-- Big Header Text -->
         <div class="flex flex-col items-center justify-center px-2">
-          <h1 class="text-[4.2rem] font-DM text-center pb-6 text-white leading-[70px] md:text-9xl">
+          <h1 class="text-[4.2rem] font-DM text-center pb-6 text-white leading-[70px] md:text-8xl">
             One word: <span class=" text-white block">
               Patner
             </span>

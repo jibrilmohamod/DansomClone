@@ -19,14 +19,27 @@
         </div>
       </template>
       <template #image2>
-        <div class="w-full px-2 flex gap-2  items-center">
-          <Image2Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241586/young-boy-holding-bunch-vegetables-field_662214-181069_urmsm3.jpg" />
-          <Image3Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241556/medium-shot-boy-working-with-plants_23-2149142895_bl3vbr.jpg" />
-        </div>
-
-      </template>
+                <div class="w-full px-2 flex gap-2"
+                     data-aos="fade-up"
+                     data-aos-duration="1000">
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:10', color: 'black' }"
+                             sizes="sm:100px md:50vw lg:600px"
+                             provider="cloudinary"
+                             src="v1713240887/countryside-worker-pushing-wheelbarrow-with-peanuts_23-2148761782_qigkes.jpg"
+                             class="w-1/2 h-[60vh] object-cover md:object-cover shadow-2xl shadow-black" />
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:20', color: 'black' }"
+                             sizes="sm:100vw md:50vw lg:800px"
+                             provider="cloudinary"
+                             src="v1713240956/medium-shot-people-selling-bananas_23-2150830598_epjgud.jpg"
+                             class="w-1/2 h-[40vh] m-auto object-cover shadow-xl shadow-black" />
+                </div>
+            </template>
 
     </UiComp>
     <!-- services card -->
@@ -41,15 +54,27 @@
                      :subtitle="service.subtitle" />
       </template>
       <template #image2>
-        <div class="w-full px-2 flex gap-2  items-center">
-
-          <Image2Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713241348/front-view-woman-sitting-near-fruits_23-2149522151_uy1b2y.jpg" />
-          <Image3Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240887/countryside-worker-pushing-wheelbarrow-with-peanuts_23-2148761782_qigkes.jpg" />
-        </div>
-
-      </template>
+                <div class="w-full px-2 flex gap-2"
+                     data-aos="fade-up"
+                     data-aos-duration="1000">
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:10', color: 'black' }"
+                             sizes="sm:100px md:50vw lg:600px"
+                             provider="cloudinary"
+                             src="v1713240887/countryside-worker-pushing-wheelbarrow-with-peanuts_23-2148761782_qigkes.jpg"
+                             class="w-1/2 h-[60vh] object-cover md:object-cover shadow-2xl shadow-black" />
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:20', color: 'black' }"
+                             sizes="sm:100vw md:50vw lg:800px"
+                             provider="cloudinary"
+                             src="v1713240956/medium-shot-people-selling-bananas_23-2150830598_epjgud.jpg"
+                             class="w-1/2 h-[40vh] m-auto object-cover shadow-xl shadow-black" />
+                </div>
+            </template>
     </UiComp>
     <!-- Patners and Portfolio card -->
 
@@ -93,14 +118,27 @@
                    class="pt-5" />
       </template>
       <template #image2>
-        <div class="w-full px-2 flex gap-2  items-center">
-
-          <Image3Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240843/countryside-women-browsing-phone-together_23-2148761794_udpxoc.jpg" />
-          <Image2Card
-                      image="https://res.cloudinary.com/dckmlqzgd/image/upload/v1713240956/medium-shot-people-selling-bananas_23-2150830598_epjgud.jpg" />
-        </div>
-      </template>
+                <div class="w-full px-2 flex gap-2"
+                     data-aos="fade-up"
+                     data-aos-duration="1000">
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:10', color: 'black' }"
+                             sizes="sm:100px md:50vw lg:600px"
+                             provider="cloudinary"
+                             src="v1713240887/countryside-worker-pushing-wheelbarrow-with-peanuts_23-2148761782_qigkes.jpg"
+                             class="w-1/2 h-[60vh] object-cover md:object-cover shadow-2xl shadow-black" />
+                    <NuxtImg loading="lazy"
+                             format="webp"
+                             alt="image"
+                             :modifiers="{ effect: 'colorize:20', color: 'black' }"
+                             sizes="sm:100vw md:50vw lg:800px"
+                             provider="cloudinary"
+                             src="v1713240956/medium-shot-people-selling-bananas_23-2150830598_epjgud.jpg"
+                             class="w-1/2 h-[40vh] m-auto object-cover shadow-xl shadow-black" />
+                </div>
+            </template>
     </UiComp>
 
 

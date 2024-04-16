@@ -1,15 +1,17 @@
 <template>
-    <div class="pt-8 pl-6 pr-3 md:px-2 pb-4 md:container md:m-auto md:flex md:gap-x-6 2xl:px-0">
+     <div class="py-4 flex justify-center">
+                <h4 class=" leading-tight 2xl:text-6xl font-DM text-5xl text-center w-1/2">
+                    {{ header }}
+                </h4>
+            </div>
+    <div class="pt-8 pl-6 pr-3 pb-4 md:container md:m-auto md:flex md:gap-x-6 2xl:px-0 md:px-6">
+       
         <div class="md:basis-1/2 md:flex md:flex-col h-full">
             <!-- small text with line to its right -->
 
 
             <!-- section header -->
-            <div class="py-4">
-                <h4 class=" leading-tight 2xl:text-6xl font-DM text-5xl">
-                    {{ header }}
-                </h4>
-            </div>
+           
 
             <!-- section body -->
             <div class="">
