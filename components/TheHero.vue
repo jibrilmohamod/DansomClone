@@ -20,7 +20,7 @@
       Powerful transformations across the Horn of Africa
      </h1>
      <p
-      class="text-center text-3xl font-Zilla"
+      class="text-center text-lg md:text-3xl font-Zilla"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1400"
@@ -29,7 +29,7 @@
       range of services to our clients
      </p>
      <button
-      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl flex justify-center gap-x-2 md:text-2xl md:py-5 md:px-6 md:rounded-3xl md:gap-x-4"
+      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl flex justify-center gap-x-2 md:text-2xl md:py-5 md:px-6 md:rounded-3xl md:gap-x-4 hover:bg-primary hover:text-white hover:ease-in-out transition-all hover:shadow-lg hover:duration-300"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1400"

@@ -51,6 +51,15 @@ module.exports = {
     Zilla: ["Zilla Slab", "serif"],
     Pridi: ["Pridi", "serif"],
    },
+   backgroundImage: {
+    "radial-gradient": "radial-gradient(#474bff 2px, transparent 2px)",
+   },
+   backgroundColor: {
+    "custom-blue": "#47d3ff",
+   },
+   backgroundSize: {
+    "12": "12px 12px",
+   },
   },
  },
  plugins: [animate],
