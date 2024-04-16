@@ -8,6 +8,10 @@
    {{ subtitle }}
   </p>
 
+  <p class="font-Lora text-lg md:text-xl md:pr-3">
+   {{ subtitle2 }}
+  </p>
+
   <NuxtLink class="place-self-start" :to="link">
    <Button
     class="bg-primary text-lg my-4 hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear md:text-xl md:pr-9 rounded-md md:py-4 flex text-white gap-1 px-4 items-center py-2"
@@ -28,6 +32,7 @@
   image: String,
   link: String,
   LinkText: String,
+  subtitle2: String,
  })
 </script>
 
