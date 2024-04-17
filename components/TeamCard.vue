@@ -1,8 +1,8 @@
 <template>
   <div
-    class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+    class="xl:w-1/3 md:w-2/5 relative py-4 sm:mb-24 xl:max-w-sm lg:w-2/5 w-full"
   >
-    <div class="h-300 rounded overflow-hidden shadow-md bg-white">
+    <div class="h-300 rounded overflow-hidden bg-white">
       <!-- <div class="absolute -mt-20 w-full flex justify-center">
         <div class="h-32 w-32">
           <img
@@ -13,35 +13,44 @@
         </div>
       </div> -->
       <div class="px-6 mt-16">
-        <div class="font-bold text-3xl text-center pb-1 font-Zilla">
+        <div class="font-bold text-3xl pb-1 font-Zilla">
           {{ name }}
         </div>
-        <p class="text-gray-800 text-sm text-center">{{ role }}</p>
-        <p class="text-center text-gray-600 text-base pt-3 font-normal">
+        <p class="text-quinary font-Lora">{{ role }}</p>
+        <p class="text-gray-600 text-base pt-3 font-normal">
           {{ about }}
         </p>
         <Accordion type="multiple" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>Read More</AccordionTrigger>
             <AccordionContent>
-              <div v-html="aboutBig"></div>
+              <div
+                class="font-Zilla flex flex-col items-center gap-5"
+                style="
+                  p {
+                    margin-bottom: 1rem;
+                    color: #4a5568;
+                  }
+                "
+                v-html="aboutBig"
+              ></div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
         <div class="w-full flex justify-center pt-5 pb-5">
           <a href="javascript:void(0)" class="mx-5">
             <div>
-              <Icon name="facebook" />
+              <Icon name="logos:facebook" class="text-4xl" />
             </div>
           </a>
           <a href="javascript:void(0)" class="mx-5">
             <div>
-              <Icon name="twitter" />
+              <Icon name="logos:twitter" class="text-4xl" />
             </div>
           </a>
           <a href="javascript:void(0)" class="mx-5">
             <div>
-              <Icon name="linkedin" />
+              <Icon name="skill-icons:linkedin" class="text-4xl" />
             </div>
           </a>
         </div>
