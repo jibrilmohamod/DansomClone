@@ -97,7 +97,7 @@
         Repository
        </NuxtLink>
        <a
-        href="mailto:staff@company.com"
+        href="http://webmail.dansomconsultancy.org/"
         class="text-lg border-button font-Lora"
        >
         Staff Email
