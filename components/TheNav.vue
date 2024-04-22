@@ -90,7 +90,7 @@
        <NuxtLink to="contact" class="border-button text-lg font-Lora">
         Contact Us
        </NuxtLink>
-       <NuxtLink to="/careers" class="text-lg border-button font-Lora">
+       <NuxtLink to="career" class="text-lg border-button font-Lora">
         Careers
        </NuxtLink>
        <NuxtLink to="/repository" class="text-lg border-button font-Lora">
