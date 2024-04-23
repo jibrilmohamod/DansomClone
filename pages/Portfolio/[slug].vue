@@ -1,5 +1,5 @@
 <template>
- <TheHeader :title="slug">
+ <TheHeader :projTitle="slug">
   <template #image>
    <NuxtImg
     provider="cloudinary"
@@ -14,8 +14,71 @@
   </template>
  </TheHeader>
  <div class="container m-auto">
-  {{ $route.params.slug }}
-  {{ project }}
+  <div class="w-full flex">
+   <div class="w-1/2 py-10 h-96 grid place-content-center">
+    <!-- Image -->
+    <div>
+     <Image2Card :image="project.icon" />
+    </div>
+   </div>
+   <div class="w-1/2 px-6 py-5 font-Roboto">
+    <div class="flex flex-col gap-3 md:gap-6">
+     <!-- classification -->
+     <div>
+      <h3 class="text-4xl font-DM pb-4">Classification</h3>
+      <p class="text-lg">
+       {{ project.classification }}
+      </p>
+     </div>
+    </div>
+    <div class="flex flex-col gap-3 md:gap-6 py-4">
+     <!-- description -->
+     <div>
+      <h3 class="text-4xl font-DM pb-4">Description</h3>
+      <p class="text-lg">
+       {{ project.description }}
+      </p>
+     </div>
+     <!-- location and timeframes with icons -->
+     <div class="w-full flex justify-between">
+      <!-- location -->
+      <div class="flex items-center text-xl">
+       <Icon name="mdi:location" class="text-primary text-2xl" />
+       <p class="">{{ project.Location }}</p>
+      </div>
+      <!-- timeframes -->
+      <div class="flex items-center text-xl">
+       <Icon name="mdi:calendar" class="text-primary text-2xl" />
+       <p class="">{{ project.timeframes }}</p>
+      </div>
+     </div>
+     <div v-if="project?.classification2">
+      <h3 class="text-4xl font-DM pb-4">Classification</h3>
+      <p class="text-lg">
+       {{ project.classification2 }}
+      </p>
+     </div>
+     <div v-if="project?.description2">
+      <h3 class="text-4xl font-DM pb-4">Description</h3>
+      <p class="text-lg">
+       {{ project?.description2 }}
+      </p>
+     </div>
+     <div class="w-full flex justify-between" v-if="project?.description2">
+      <!-- location -->
+      <div class="flex items-center text-xl">
+       <Icon name="mdi:location" class="text-primary text-2xl" />
+       <p class="">{{ project.Location }}</p>
+      </div>
+      <!-- timeframes -->
+      <div class="flex items-center text-xl">
+       <Icon name="mdi:calendar" class="text-primary text-2xl" />
+       <p class="">{{ project?.timeframes2 }}</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
  </div>
 </template>
 
@@ -74,7 +137,7 @@
     "The objective of the assignment is to carry out a combination of field work and diagnostic analysis of public sector pay and grading trends and living standard assessment in Somalia and propose solutions that will provide adequate incentive for improved performance of civil Servants and also enable efficient and effective management of public government’s wage bill as aligned to nation-al strategies and development aspirations to promote sustainable growth.",
    Location: "Somalia",
    timeframes: "September 2019 - March 2020",
-   icon: "SomaliaWorldBank.jpg",
+   icon: "Untitled design.png",
    Ngo: "World Bank",
   },
   {
@@ -84,7 +147,7 @@
     "provide technical assistance to support a diagnostic assessment of the organizational set up of MDAs focusing on their mandates, functions, and organizational structures, staffing requirements and administrative policies, processes and systems",
    Location: "Somalia",
    timeframes: "December 2020 - September 2021",
-   icon: "Civil.png",
+   icon: "Untitled design (1).png",
   },
   {
    title: "United Nations Office for Project Services (UNOPS)",
@@ -96,13 +159,13 @@
    icon: "unops.jpg",
   },
   {
-   title: "World Food Programme (WFP)/FAO",
+   title: "World Food Programme",
    classification: "Third Party Monitoring & Evaluation",
    description:
     "Research and evaluation services for supporting resilient small holder farming systems in Somalia.We are expected to provide an independent perspective and expand into areas sometimes inaccessible to WFP/FAO staff due to security reasons.",
    Location: "Somalia",
    timeframes: "November 2022 - May 2024",
-   icon: "wfpfao.jpg",
+   icon: "wfpfao.png",
   },
   {
    title:
@@ -146,7 +209,7 @@
    classification2: "Operational & Logistics Management",
    description2:
     "Dansom has partnered with IFC, World Bank Group to facilitate and support Public Private Dialogue in Somalia’s economic recovery sector. The recent support being to the Telecommunication sector and providing strategic advice in moving the National Communication Act towards submission and approval by the National Federal Parliament. Dansom also gives advice to IFC-World Bank on Somalia context, political economic analysis and Business development.",
-   icon: "International_Finance_Corporation_logo.svg",
+   icon: "International_Finance_Corporation_logo.svg.png",
   },
   {
    title: "Horumarinta Elmiga II-Save the Children",
@@ -190,7 +253,7 @@
   },
   {
    title:
-    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project (IAAP)",
+    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project",
    classification: "Formative Research & Policy Analysis",
    description:
     "Consortium of ALTAI and Dansom implemented an Accountability Perception Survey in Somalia. DFID / Mott McDonalds – Implementation and Analysis in Action for Accountability Programme (IAAAP) in Somalia.",

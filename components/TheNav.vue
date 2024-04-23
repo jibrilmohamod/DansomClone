@@ -84,7 +84,7 @@
        <NuxtLink to="/about" class="text-lg border-button font-Lora">
         About Us
        </NuxtLink>
-       <NuxtLink to="portfolio" class="text-lg border-button font-Lora">
+       <NuxtLink to="/portfolio" class="text-lg border-button font-Lora">
         Our Portfolio
        </NuxtLink>
        <NuxtLink to="contact" class="border-button text-lg font-Lora">
