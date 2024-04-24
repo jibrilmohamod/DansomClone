@@ -26,6 +26,7 @@
 </template>
 
 <script setup>
+ import { Button } from "@/components/ui/button"
  defineProps({
   title: String,
   subtitle: String,
