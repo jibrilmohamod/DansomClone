@@ -1,79 +1,86 @@
 <template>
- <TheHeader :projTitle="slug">
-  <template #image>
-   <NuxtImg
-    provider="cloudinary"
-    loading="lazy"
-    format="webp"
-    alt="image"
-    sizes="sm:100vw md:50vw lg:1500px"
-    :modifiers="{ effect: 'colorize:60', color: 'black' }"
-    src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-    class="w-full h-full object-cover object-center"
-   />
-  </template>
- </TheHeader>
- <div class="container m-auto">
-  <div class="w-full flex">
-   <div class="w-1/2 py-10 h-96 grid place-content-center">
-    <!-- Image -->
-    <div>
-     <Image2Card :image="project.icon" />
-    </div>
-   </div>
-   <div class="w-1/2 px-6 py-5 font-Roboto">
-    <div class="flex flex-col gap-3 md:gap-6">
-     <!-- classification -->
+ <div>
+  <TheHeader :projTitle="slug">
+   <template #image>
+    <NuxtImg
+     provider="cloudinary"
+     loading="lazy"
+     format="webp"
+     alt="image"
+     sizes="sm:100vw md:50vw lg:1500px"
+     :modifiers="{ effect: 'colorize:60', color: 'black' }"
+     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
+     class="w-full h-full object-cover object-center"
+    />
+   </template>
+  </TheHeader>
+  <div class="container m-auto">
+   <div class="w-full flex flex-col md:flex-row">
+    <div class="md:w-1/2 py-10 h-96 grid place-content-center">
+     <!-- Image -->
      <div>
-      <h3 class="text-4xl font-DM pb-4">Classification</h3>
-      <p class="text-lg">
-       {{ project.classification }}
-      </p>
+      <Image2Card :image="project.icon" />
      </div>
     </div>
-    <div class="flex flex-col gap-3 md:gap-6 py-4">
-     <!-- description -->
-     <div>
-      <h3 class="text-4xl font-DM pb-4">Description</h3>
-      <p class="text-lg">
-       {{ project.description }}
-      </p>
-     </div>
-     <!-- location and timeframes with icons -->
-     <div class="w-full flex justify-between">
-      <!-- location -->
-      <div class="flex items-center text-xl">
-       <Icon name="mdi:location" class="text-primary text-2xl" />
-       <p class="">{{ project.Location }}</p>
-      </div>
-      <!-- timeframes -->
-      <div class="flex items-center text-xl">
-       <Icon name="mdi:calendar" class="text-primary text-2xl" />
-       <p class="">{{ project.timeframes }}</p>
+    <div class="md:w-1/2 px-6 py-5 font-Roboto">
+     <div class="flex flex-col gap-3 md:gap-6">
+      <!-- classification -->
+      <div>
+       <h3 class="text-4xl font-DM pb-4">Classification</h3>
+       <p class="text-lg">
+        {{ project.classification }}
+       </p>
       </div>
      </div>
-     <div v-if="project?.classification2">
-      <h3 class="text-4xl font-DM pb-4">Classification</h3>
-      <p class="text-lg">
-       {{ project.classification2 }}
-      </p>
-     </div>
-     <div v-if="project?.description2">
-      <h3 class="text-4xl font-DM pb-4">Description</h3>
-      <p class="text-lg">
-       {{ project?.description2 }}
-      </p>
-     </div>
-     <div class="w-full flex justify-between" v-if="project?.description2">
-      <!-- location -->
-      <div class="flex items-center text-xl">
-       <Icon name="mdi:location" class="text-primary text-2xl" />
-       <p class="">{{ project.Location }}</p>
+     <div class="flex flex-col gap-3 md:gap-6 py-4">
+      <!-- description -->
+      <div>
+       <h3 class="text-4xl font-DM pb-4">Description</h3>
+       <p class="text-lg">
+        {{ project.description }}
+       </p>
       </div>
-      <!-- timeframes -->
-      <div class="flex items-center text-xl">
-       <Icon name="mdi:calendar" class="text-primary text-2xl" />
-       <p class="">{{ project?.timeframes2 }}</p>
+      <!-- location and timeframes with icons -->
+      <div
+       class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+      >
+       <!-- location -->
+       <div class="flex items-center text-xl">
+        <Icon name="mdi:location" class="text-primary text-2xl" />
+        <p class="">{{ project.Location }}</p>
+       </div>
+       <!-- timeframes -->
+       <div class="flex items-center text-xl">
+        <Icon name="mdi:calendar" class="text-primary text-2xl" />
+        <p class="">{{ project.timeframes }}</p>
+       </div>
+      </div>
+      <div v-if="project?.classification2">
+       <h3 class="text-4xl font-DM pb-4">Classification</h3>
+       <p class="text-lg">
+        {{ project.classification2 }}
+       </p>
+      </div>
+      <div v-if="project?.description2">
+       <h3 class="text-4xl font-DM pb-4">Description</h3>
+       <p class="text-lg">
+        {{ project?.description2 }}
+       </p>
+      </div>
+      <div
+       class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+       v-if="project?.description2"
+      >
+       <!-- location -->
+       <div class="flex items-center text-xl">
+        <Icon name="mdi:location" class="text-primary text-2xl" />
+        <p class="">{{ project.Location }}</p>
+       </div>
+       <!-- timeframes -->
+       <div class="flex items-center text-xl">
+        <Icon name="mdi:calendar" class="text-primary text-2xl" />
+        <p class="">{{ project?.timeframes2 }}</p>
+       </div>
       </div>
      </div>
     </div>
