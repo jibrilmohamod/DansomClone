@@ -114,6 +114,8 @@
     />
    </template>
   </OurTeam>
+
+  <!-- org chart -->
  </div>
 </template>
 
