@@ -40,24 +40,26 @@
   </TheCard>
 
   <!-- Our Vision and Values  -->
-
-  <TheCard
+  <div
    style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
    class="bg-primary bg-opacity-50 border-primary"
   >
-   <template #One>
-    <ImageCard
-     image="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
-    />
-   </template>
+   <TheCard>
+    <template #One>
+     <ImageCard
+      image="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
+     />
+    </template>
 
-   <template #Image>
-    <TheTitle
-     title="Our Vision"
-     subtitle="Our vision is To support the development of the horn of Africa by increasing understanding and knowledge through innovative approaches in socio-political engagement and strategic field-based research."
-    />
-   </template>
-  </TheCard>
+    <template #Image>
+     <TheTitle
+      title="Our Vision"
+      subtitle="Our vision is To support the development of the horn of Africa by increasing understanding and knowledge through innovative approaches in socio-political engagement and strategic field-based research."
+      subtitle2="We aim to be the leading research and consultancy firm in the horn of Africa, providing high-quality services to our clients and partners, and contributing to the development of the region. Our vision is to be a trusted partner for our clients, providing them with the best possible solutions to their needs and challenges."
+     />
+    </template>
+   </TheCard>
+  </div>
 
   <!-- Our Values -->
   <OurExpertise
@@ -81,23 +83,25 @@
   </OurExpertise>
 
   <!-- inclusivity and diversity statement -->
-  <TheCard
+  <div
    style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
    class="bg-primary bg-opacity-50 border-primary"
   >
-   <template #One>
-    <TheTitle
-     title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
-     subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
-    />
-   </template>
+   <TheCard>
+    <template #One>
+     <TheTitle
+      title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
+      subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
+     />
+    </template>
 
-   <template #Image>
-    <ImageCard
-     image="v1713943547/During_Community_Mobilization_Bula_Jiray-1_gosybn.jpg"
-    />
-   </template>
-  </TheCard>
+    <template #Image>
+     <ImageCard
+      image="v1713943547/During_Community_Mobilization_Bula_Jiray-1_gosybn.jpg"
+     />
+    </template>
+   </TheCard>
+  </div>
 
   <OurTeam data-aos="fade-up" data-aos-duration="1000" class="basis-1/3">
    <template #vfor>

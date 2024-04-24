@@ -12,7 +12,7 @@
      data-aos-duration="1000"
     >
      <h1
-      class="text-white text-3xl text-center font font-Pridi md:text-5xl"
+      class="text-white text-3xl text-center font font-Pridi md:text-5xl 2xl:text-7xl"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1200"
@@ -20,7 +20,7 @@
       Powerful transformations across the Horn of Africa
      </h1>
      <p
-      class="text-center text-lg md:text-3xl font-Zilla"
+      class="text-center text-lg md:text-3xl font-Zilla 2xl:text-4xl"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1400"
@@ -29,7 +29,7 @@
       range of services to our clients
      </p>
      <button
-      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl md:text-xl md:py-4 md:px-5 md:rounded-3xl md:gap-x-4 hover:bg-primary hover:text-white hover:duration-200 hover:ease-linear"
+      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl md:text-xl md:py-4 md:px-5 md:rounded-3xl md:gap-x-4 hover:bg-primary hover:text-white hover:duration-200 hover:ease-linear 2xl:text-3xl 2xl:py-5 2xl:px-8 2xl:rounded-4xl 2xl:gap-x-6"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1400"

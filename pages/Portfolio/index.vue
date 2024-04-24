@@ -22,53 +22,57 @@
   />
 
   <!-- projects -->
-  <div class="bg-tertiary container m-auto pb-5">
-   <OurExpertise title="Our Projects" />
-   <div class="">
-    <!-- search and filter bar -->
-    <div class="flex justify-between items-center gap-5 py-5 z-50 px-5">
-     <input
-      type="text"
-      v-model="searchTerm"
-      placeholder="Search Projects"
-      class="border-2 border-slate-300 rounded-md px-3 py-2 w-1/2"
-     />
-     <div class="flex items-center gap-5">
-      <p class="text-white">Filter by:</p>
-      <select
-       v-model="classification"
-       class="border-2 border-slate-300 rounded-md px-3 py-2"
-      >
-       <option value="All">All</option>
-       <option value="Third Party Monitoring & Evaluation">
-        Third Party Monitoring & Evaluation
-       </option>
+  <div class="bg-tertiary">
+   <div class="container m-auto pb-5">
+    <OurExpertise title="Our Projects" />
+    <div class="">
+     <!-- search and filter bar -->
+     <div class="flex justify-between items-center gap-5 py-5 z-50 px-5">
+      <input
+       type="text"
+       v-model="searchTerm"
+       placeholder="Search Projects"
+       class="border-2 border-slate-300 rounded-md px-3 py-2 w-1/2"
+      />
+      <div class="flex items-center gap-5">
+       <p class="text-white">Filter by:</p>
+       <select
+        v-model="classification"
+        class="border-2 border-slate-300 rounded-md px-3 py-2"
+       >
+        <option value="All">All</option>
+        <option value="Third Party Monitoring & Evaluation">
+         Third Party Monitoring & Evaluation
+        </option>
 
-       <option value="Political Economy Analysis & Security Advisory">
-        Political Economy Analysis & Security Advisory
-       </option>
-       <option value="Formative Research & Policy Analysis">
-        Formative Research & Policy Analysis
-       </option>
-      </select>
+        <option value="Political Economy Analysis & Security Advisory">
+         Political Economy Analysis & Security Advisory
+        </option>
+        <option value="Formative Research & Policy Analysis">
+         Formative Research & Policy Analysis
+        </option>
+       </select>
+      </div>
      </div>
     </div>
-   </div>
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-5">
-    <ProjectCard
-     v-for="project in filteredProjects"
-     :key="project.title"
-     :title="project.title"
-     :icon="project.icon"
-     :slug="`/portfolio/${project.title}`"
-    />
-    <Button
-     v-if="displayedProjects.length < projects.length"
-     @click="loadMore()"
-     class="bg-primary my-3 w-1/2 text-lg py-5 hover:bg-quaternary hover:duration-200 transition-all hover:ease-linear font-Zilla"
+    <div
+     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-5 2xl:gap-10"
     >
-     Load More
-    </Button>
+     <ProjectCard
+      v-for="project in filteredProjects"
+      :key="project.title"
+      :title="project.title"
+      :icon="project.icon"
+      :slug="`/portfolio/${project.title}`"
+     />
+     <Button
+      v-if="displayedProjects.length < projects.length"
+      @click="loadMore()"
+      class="bg-primary my-3 w-1/2 text-lg py-5 hover:bg-quaternary hover:duration-200 transition-all hover:ease-linear font-Zilla 2xl:text-2xl 2xl:py-6"
+     >
+      Load More
+     </Button>
+    </div>
    </div>
   </div>
  </div>

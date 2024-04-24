@@ -5,7 +5,7 @@
   <!-- about us card -->
   <TheCard>
    <template #One>
-    <div class="h-full flex flex-col items-center justify-center">
+    <div class="h-full flex flex-col items-center">
      <TheTitle
       title="Who We are"
       subtitle="DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa."
@@ -23,27 +23,31 @@
   </TheCard>
 
   <!-- Services Card  -->
-  <OurExpertise
+  <div
    style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
-   class="bg-primary bg-opacity-50 border-primary"
-   title="Our Expertise and Services"
-   subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services"
+   class="bg-primary bg-opacity-50"
   >
-   <template #vfor>
-    <div class="md:flex flex-wrap justify-center">
-     <ServiceCard
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      class="basis-1/3"
-      v-for="(service, index) in services.slice(0, 6)"
-      :key="service.title"
-      :icon="service.icon"
-      :title="service.title"
-      :subtitle="service.subtitle"
-     />
-    </div>
-   </template>
-  </OurExpertise>
+   <OurExpertise
+    class="border-primary"
+    title="Our Expertise and Services"
+    subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services"
+   >
+    <template #vfor>
+     <div class="md:flex flex-wrap justify-center">
+      <ServiceCard
+       data-aos="fade-up"
+       data-aos-duration="1000"
+       class="basis-1/3"
+       v-for="(service, index) in services.slice(0, 6)"
+       :key="service.title"
+       :icon="service.icon"
+       :title="service.title"
+       :subtitle="service.subtitle"
+      />
+     </div>
+    </template>
+   </OurExpertise>
+  </div>
 
   <!-- Patners and Portfolio card -->
   <TheCard>
