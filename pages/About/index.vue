@@ -9,7 +9,7 @@
      alt="image"
      sizes="sm:100vw md:50vw lg:1500px"
      :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg"
+     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
      class="w-full h-full object-cover object-center"
     />
    </template>
@@ -33,30 +33,22 @@
    </template>
 
    <template #Image>
-    <ImageCard />
+    <ImageCard
+     image="v1713943561/Interview_with_Midnimo_Micro-Finance-Baidoa_zfty83.jpg"
+    />
    </template>
   </TheCard>
 
   <!-- Our Vision and Values  -->
-  <!-- <div
-   class="px-6 pt-6 md:container m-auto md:pt-10 bg-secondary bg-opacity-35"
-   data-aos="fade-up"
-   data-aos-anchor-placement="top-bottom"
-   data-aos-duration="1000"
-  >
-   <TheTitle
-    title="Our Vision"
-    subtitle="Our vision is To support the development of the horn of Africa by increasing understanding and knowledge through innovative approaches in socio-political engagement and strategic field-based research."
-   />
 
-   <ImageCard />
-  </div> -->
   <TheCard
    style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
    class="bg-primary bg-opacity-50 border-primary"
   >
    <template #One>
-    <ImageCard />
+    <ImageCard
+     image="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
+    />
    </template>
 
    <template #Image>
@@ -94,7 +86,9 @@
    class="bg-primary bg-opacity-50 border-primary"
   >
    <template #One>
-    <ImageCard />
+    <ImageCard
+     image="v1713943547/During_Community_Mobilization_Bula_Jiray-1_gosybn.jpg"
+    />
    </template>
 
    <template #Image>

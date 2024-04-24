@@ -17,7 +17,7 @@
    </template>
    <template #Image>
     <div class="w-full">
-     <ImageCard />
+     <ImageCard image="v1713946564/expertise-1000x757_1_ha2eyx.jpg" />
     </div>
    </template>
   </TheCard>

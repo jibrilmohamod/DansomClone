@@ -9,6 +9,9 @@
  >
   <NuxtImg
    :src="image"
+   provider="cloudinary"
+   format="webp"
+   loading="lazy"
    class="rounded-full h-80 w-80 md:w-full md:h-full shadow-quaternary shadow-xl object-cover"
   />
  </div>
@@ -18,8 +21,7 @@
  defineProps({
   image: {
    type: String,
-   default:
-    "https://dansomconsultancy.org/wp-content/uploads/2018/10/expertise-1000x757.jpg",
+   default: "v1713943323/ODK_with_Beneficiary-1_d6zteg.jpg",
   },
  })
 </script>
