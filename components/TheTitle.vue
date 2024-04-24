@@ -14,7 +14,7 @@
 
   <NuxtLink class="place-self-start" :to="link" v-if="icon">
    <button
-    class="bg-primary text-white flex items-center px-4 py-2 rounded-md gap-2 text-xl"
+    class="bg-primary text-white flex items-center px-4 py-2 rounded-md gap-2 text-xl hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear md:text-2xl"
    >
     <p class="font-Montserrat">
      {{ LinkText }}
