@@ -10,7 +10,7 @@
      class="carousel-item inset-0 relative w-full transform transition-all duration-1000 ease-in-out"
     >
      <NuxtImg
-      class="block w-full h-screen object-cover"
+      class="block w-full h-screen object-cover object-"
       :src="img"
       provider="cloudinary"
       format="webp"

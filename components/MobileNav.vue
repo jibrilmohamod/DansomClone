@@ -35,7 +35,7 @@
    </NuxtLink>
 
    <NuxtLink
-    to="/portfolio"
+    to="/Portfolio"
     class="text-2xl focus:text-orange-500"
     aria-label="Nav link"
    >
@@ -43,12 +43,33 @@
    </NuxtLink>
 
    <NuxtLink
-    to="/contact"
+    to="/Contact"
     class="text-2xl focus:text-orange-500"
     aria-label="Nav link"
    >
     Contact Us
    </NuxtLink>
+
+   <NuxtLink
+    to="/Careers"
+    class="text-2xl focus:text-orange-500"
+    aria-label="Nav link"
+   >
+    Careers
+   </NuxtLink>
+
+   <NuxtLink class="text-2xl focus:text-orange-500" aria-label="Nav link">
+    Repository
+   </NuxtLink>
+
+   <a
+    href="http://webmail.dansomconsultancy.org/"
+    class="text-2xl focus:text-orange-500"
+    aria-label="Nav link"
+    target="_blank"
+   >
+    Staff Email
+   </a>
   </nav>
 
   <!-- social media icons and copyright -->
