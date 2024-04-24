@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
-import path from "path"
-
 export default defineNuxtConfig({
  devtools: { enabled: true },
  modules: [
@@ -53,5 +50,10 @@ export default defineNuxtConfig({
  site: {
   url: "https://www.dansom.vercel.app",
   title: "Dansom Research & Consultancy",
+ },
+
+ //transitions
+ app: {
+  pageTransition: { name: "page", mode: "out-in" },
  },
 })

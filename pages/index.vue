@@ -57,8 +57,9 @@
      <TheTitle
       title="Our Partners and Portfolio"
       subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs."
-      link="/"
+      link="/Portfolio"
       LinkText="Our Projects"
+      icon="ic:sharp-double-arrow"
      >
      </TheTitle>
     </div>
