@@ -63,7 +63,7 @@
       :key="project.title"
       :title="project.title"
       :icon="project.icon"
-      :slug="`/portfolio/${project.title}`"
+      :slug="`/Portfolio/${project.title}`"
      />
      <Button
       v-if="displayedProjects.length < projects.length"

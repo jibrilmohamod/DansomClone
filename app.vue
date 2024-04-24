@@ -1,6 +1,4 @@
 <template>
- <SpeedInsights />
-
  <div class="w-full overflow-hidden">
   <NuxtPage />
   <TheFooter />

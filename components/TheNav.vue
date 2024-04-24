@@ -83,19 +83,19 @@
        <NuxtLink to="/" class="text-lg border-button font-Lora">
         Home
        </NuxtLink>
-       <NuxtLink to="/about" class="text-lg border-button font-Lora">
+       <NuxtLink to="/About" class="text-lg border-button font-Lora">
         About Us
        </NuxtLink>
-       <NuxtLink to="/portfolio" class="text-lg border-button font-Lora">
+       <NuxtLink to="/Portfolio" class="text-lg border-button font-Lora">
         Our Portfolio
        </NuxtLink>
-       <NuxtLink to="/contact" class="border-button text-lg font-Lora">
+       <NuxtLink to="/Contact" class="border-button text-lg font-Lora">
         Contact Us
        </NuxtLink>
-       <NuxtLink to="/careers" class="text-lg border-button font-Lora">
+       <NuxtLink to="/Careers" class="text-lg border-button font-Lora">
         Careers
        </NuxtLink>
-       <NuxtLink to="/repository" class="text-lg border-button font-Lora">
+       <NuxtLink to="" class="text-lg border-button font-Lora">
         Repository
        </NuxtLink>
        <a
