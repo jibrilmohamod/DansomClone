@@ -102,7 +102,7 @@
     "The current objective is to improve the performance of the Swiss HoA programme. This overall work to improve the programme is called the “Framework for Risk Gover- nance and Adaptive Programming” (FRAP). It will be implemented over a twelve year timeframe. FRAP will initially focus on Soma- lia (including Somaliland).",
    Location: "Somalia",
    timeframes: "June 2021 - December 2024",
-   icon: "/download (1).png",
+   icon: "2560px-Logo_der_Schweizerischen_Eidgenossenschaft.svg.png",
 
    Ngo: "SDC",
   },
