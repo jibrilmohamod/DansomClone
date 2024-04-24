@@ -281,8 +281,39 @@
   })
  })
 
- let date = new Date()
- let year = date.getFullYear()
+ useHead({
+  title: "Our Portfolio | Dansom Consultancy & Research",
+  meta: [
+   {
+    name: "description",
+    content:
+     "Dansom Consultancy isn't just about expertise – it's about impact. We leverage our unique access and understanding of the Horn of Africa to deliver transformative results for our clients.  We've undertaken a wide range of projects focused on strengthening security and socio-political development across the region. These projects include providing monitoring and evaluation services for organizations like the United Nations Support Office in Somalia (UNSOS) and the European Union Delegation to Somalia, ensuring transparency and accountability in critical development efforts",
+   },
+   //    og tags
+   {
+    property: "og:title",
+    content: "Our Portfolio | Dansom Consultancy & Research",
+   },
+   {
+    property: "og:description",
+    content:
+     "Dansom Consultancy isn't just about expertise – it's about impact. We leverage our unique access and understanding of the Horn of Africa to deliver transformative results for our clients.  We've undertaken a wide range of projects focused on strengthening security and socio-political development across the region. These projects include providing monitoring and evaluation services for organizations like the United Nations Support Office in Somalia (UNSOS) and the European Union Delegation to Somalia, ensuring transparency and accountability in critical development efforts",
+   },
+   {
+    property: "og:image",
+    content:
+     "https://res.cloudinary.com/dansom/image/upload/v1713880776/Banner-3-1600x699_ewoaq4.jpg",
+   },
+   {
+    property: "og:url",
+    content: "https://dansomconsultancy.org/portfolio",
+   },
+   {
+    property: "og:type",
+    content: "website",
+   },
+  ],
+ })
 </script>
 
 <style></style>

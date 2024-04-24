@@ -9,25 +9,25 @@
     <div
      class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8"
     >
-     <a
-      href="javascript:void(0)"
+     <NuxtLink
+      to="/About"
       class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-black"
-      >About</a
+      >About</NuxtLink
      >
-     <a
-      href="javascript:void(0)"
+     <NuxtLink
+      to="/Contact"
       class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-black"
-      >Contact us</a
+      >Contact us</NuxtLink
      >
-     <a
-      href="javascript:void(0)"
+     <NuxtLink
+      to="/Careers"
       class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-black"
-      >Terms of Service</a
+      >Careers</NuxtLink
      >
-     <a
-      href="javascript:void(0)"
+     <NuxtLink
+      to="/Portfolio"
       class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-black"
-      >Privacy Policy</a
+      >Our Projects</NuxtLink
      >
     </div>
     <div class="flex items-center gap-x-8 mt-6">
@@ -64,7 +64,7 @@
     </div>
     <div class="flex items-center mt-6">
      <p class="text-base leading-4 text-black">
-      2024 <span class="font-semibold text-quaternary">Dansom</span>
+      {{ year }} <span class="font-semibold text-quaternary">Dansom</span>
      </p>
      <div class="border-l border-quaternary pl-2 ml-2">
       <p class="text-base leading-4 text-black">Inc. All rights reserved</p>
@@ -75,13 +75,9 @@
  </div>
 </template>
 
-<script>
- export default {
-  name: "component",
-  data() {
-   return {}
-  },
- }
+<script setup>
+ // get the current year
+ const year = new Date().getFullYear()
 </script>
 
 <style></style>

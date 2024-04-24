@@ -86,15 +86,15 @@
    class="bg-primary bg-opacity-50 border-primary"
   >
    <template #One>
-    <ImageCard
-     image="v1713943547/During_Community_Mobilization_Bula_Jiray-1_gosybn.jpg"
+    <TheTitle
+     title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
+     subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
     />
    </template>
 
    <template #Image>
-    <TheTitle
-     title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
-     subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
+    <ImageCard
+     image="v1713943547/During_Community_Mobilization_Bula_Jiray-1_gosybn.jpg"
     />
    </template>
   </TheCard>
