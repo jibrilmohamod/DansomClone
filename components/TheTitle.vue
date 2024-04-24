@@ -1,14 +1,14 @@
 <template>
  <div class="flex flex-col gap-3 md:gap-6">
-  <h3 class="font-DM text-5xl md:text-6xl">
+  <h3 class="font-DM text-5xl md:text-6xl 2xl:text-7xl">
    {{ title }}
   </h3>
 
-  <p class="pt-5 font-Lora text-lg md:text-xl md:pr-3">
+  <p class="pt-5 font-Lora text-lg md:text-xl md:pr-3 2xl:text-2xl">
    {{ subtitle }}
   </p>
 
-  <p class="font-Lora text-lg md:text-xl md:pr-3">
+  <p class="font-Lora text-lg md:text-xl md:pr-3 2xl:text-2xl">
    {{ subtitle2 }}
   </p>
 

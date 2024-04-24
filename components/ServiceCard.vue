@@ -4,15 +4,15 @@
   <div
    class="h-fit bg-primary w-fit rounded-full p-2 hover:bg-secondary hover:duration-200 transition-all hover:ease-linear"
   >
-   <Icon :name="icon" class="text-black text-6xl" />
+   <Icon :name="icon" class="text-black text-6xl hover:" />
   </div>
 
   <!-- Title & Subtitle -->
   <div class="w-full">
-   <h5 class="font-Pridi text-lg">
+   <h5 class="font-Pridi text-lg 2xl:text-2xl">
     {{ title }}
    </h5>
-   <p class="font-Zilla md:w-3/4">
+   <p class="font-Zilla md:w-3/4 2xl:text-lg">
     {{ subtitle }}
    </p>
   </div>

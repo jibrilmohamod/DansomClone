@@ -1,6 +1,6 @@
 <template>
  <div
-  class="px-6 pt-6 md:container m-auto md:pt-10"
+  class="px-6 py-6 md:container m-auto md:pt-10"
   data-aos="fade-up"
   data-aos-anchor-placement="top-bottom"
   data-aos-duration="1000"

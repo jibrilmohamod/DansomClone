@@ -5,7 +5,7 @@
    backgroundSize: '12px 12px',
    backgroundColor: '',
   }"
-  class="md:h-[70vh] md:w-11/12 2xl:h-[40vh] md:w- duration-1000 ease-in-out rounded-full flex items-center justify-center gap-2 p-4 md:gap-6 bg-opacity-60 flex-col md:p-6 m-auto"
+  class="md:h-[70vh] md:w-11/12 2xl:h-[50vh] duration-1000 ease-in-out rounded-full flex items-center justify-center gap-2 p-4 md:gap-6 bg-opacity-60 flex-col md:p-6 m-auto"
  >
   <NuxtImg
    :src="image"
