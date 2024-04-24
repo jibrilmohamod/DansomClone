@@ -26,9 +26,11 @@
 
 <script setup>
  const images = ref([
-  "v1713880776/Banner-1-1-1600x699_qxucbz.jpg",
+  //   "v1713880776/Banner-1-1-1600x699_qxucbz.jpg",
   "v1713880776/Banner-2-1600x699_vmkzbn.jpg",
   "v1713880776/Banner-3-1600x699_ewoaq4.jpg",
+  "v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg",
+  "v1713943545/20220907_110930_xh7a6k.jpg",
  ])
 
  let active = ref(0)
