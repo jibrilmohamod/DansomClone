@@ -1,5 +1,5 @@
 <template>
- <div class="flex flex-col gap-3 md:gap-6">
+ <div class="flex flex-col gap-3 md:gap-6 pb-5">
   <h3 class="font-DM text-5xl md:text-6xl 2xl:text-7xl">
    {{ title }}
   </h3>
@@ -13,14 +13,14 @@
   </p>
 
   <NuxtLink class="place-self-start" :to="link" v-if="icon">
-   <Button
-    class="bg-primary text-lg my-4 hover:bg-quaternary hover:duration-200 transition-all hover:ease-linear md:text-xl md:pr-9 rounded-md md:py-4 flex text-white gap-1 px-4 items-center py-2"
+   <button
+    class="bg-primary text-white flex items-center px-4 py-2 rounded-md gap-2 text-xl"
    >
-    <Icon :name="icon" class="text-3xl md:text-4xl" />
     <p class="font-Montserrat">
      {{ LinkText }}
     </p>
-   </Button>
+    <Icon :name="icon" class="text-3xl md:text-4xl" />
+   </button>
   </NuxtLink>
  </div>
 </template>

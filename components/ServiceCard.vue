@@ -9,10 +9,10 @@
 
   <!-- Title & Subtitle -->
   <div class="w-full">
-   <h5 class="font-Pridi text-lg 2xl:text-2xl">
+   <h5 class="font-Pridi text-lg md:text-xl 2xl:text-2xl">
     {{ title }}
    </h5>
-   <p class="font-Zilla md:w-3/4 2xl:text-lg">
+   <p class="font-Zilla md:w-3/4 2xl:text-xl">
     {{ subtitle }}
    </p>
   </div>

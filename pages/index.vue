@@ -9,8 +9,9 @@
      <TheTitle
       title="Who We are"
       subtitle="DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa."
-      link="/"
+      link="/About"
       LinkText="About Us"
+      icon="ic:sharp-double-arrow"
      >
      </TheTitle>
     </div>
