@@ -26,10 +26,9 @@
 
 <script setup>
  const images = ref([
-  "v1713240642/front-view-kids-posing-together-with-ball_23-2149479910_xylyvc.jpg",
-  "v1713240714/smiling-young-african-girl-wearing-traditional-clothing-classroom-with-students_996993-23087_ygimi3.jpg",
-  "v1713240777/countryside-women-out-field-posing_23-2148761775_wo8svm.jpg",
-  "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
+  "v1713880776/Banner-1-1-1600x699_qxucbz.jpg",
+  "v1713880776/Banner-2-1600x699_vmkzbn.jpg",
+  "v1713880776/Banner-3-1600x699_ewoaq4.jpg",
  ])
 
  let active = ref(0)
