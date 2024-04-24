@@ -1,5 +1,5 @@
 <template>
- <div class="overflow-y-hidden bg-secondary bg-opacity-30">
+ <div class="overflow-y-hidden bg-primary bg-opacity-30">
   <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
    <div class="flex flex-col items-center justify-center">
     <div>
@@ -67,7 +67,7 @@
       2024 <span class="font-semibold text-quaternary">Dansom</span>
      </p>
      <div class="border-l border-quaternary pl-2 ml-2">
-      <p class="text-base leading-4 text-black">Inc. All righys reserved</p>
+      <p class="text-base leading-4 text-black">Inc. All rights reserved</p>
      </div>
     </div>
    </div>

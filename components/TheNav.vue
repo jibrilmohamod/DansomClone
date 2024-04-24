@@ -12,42 +12,42 @@
    <div class="hidden md:block h-fit inset-0 z-50 container mx-auto text-white">
     <!-- location , email and phone -->
     <div
-     class="font-jost border-b border-gray-500 flex justify-between rounded-sm text-base"
+     class="font-jost border-b border-quaternary flex justify-between rounded-sm text-base"
     >
      <!-- location  -->
      <div
-      class="py-2 border-x border-gray-500 rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
+      class="py-2 border-x border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
      >
       <!-- icon  -->
-      <Icon name="mdi:location" class="text-gray-500" />
+      <Icon name="mdi:location" class="text-primary" />
       <!-- text  -->
-      <a class="text-sm text-gray-500" href=""> Nairobi , Kenya </a>
+      <a class="text-sm text-primary" href=""> Nairobi , Kenya </a>
      </div>
      <!-- phone  -->
      <div
-      class="py-2 border-r border-gray-500 rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
+      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
      >
       <!-- icon  -->
-      <Icon name="mdi:phone" class="text-gray-500" />
+      <Icon name="mdi:phone" class="text-primary" />
       <!-- text  -->
-      <a class="text-sm text-gray-500" href="tel:0712995522">
+      <a class="text-sm text-primary" href="tel:0712995522">
        +254 712 99 55 22
       </a>
      </div>
      <!-- email  -->
      <div
-      class="py-2 border-r border-gray-500 rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
+      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
      >
       <!-- icon  -->
-      <Icon name="mdi:email" class="text-gray-500" />
+      <Icon name="mdi:email" class="text-primary" />
       <!-- text  -->
-      <a class="text-sm text-gray-500" href="mailto:info@focalfoods.co.ke">
+      <a class="text-sm text-primary" href="mailto:info@focalfoods.co.ke">
        info@dansom.co.ke
       </a>
      </div>
      <!-- socials -->
      <div
-      class="py-2 border-r border-gray-500 rounded-sm px-5 grow flex justify-center items-center w-fit"
+      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit"
      >
       <!-- icon  -->
       <Icon name="mdi:facebook" class="text-white grow hover:text-blue-700" />

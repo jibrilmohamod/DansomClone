@@ -74,20 +74,20 @@
       type="text"
       id="name"
       placeholder="Name"
-      class="w-full border-b border-gray-300 focus:outline-none focus:border-primary text-lg md:text-xl py-4"
+      class="w-full border-b border-gray-300 focus:outline-none focus:border-primary text-lg md:text-xl placeholder:text-quaternary py-4"
      />
      <input
       type="email"
       id="email"
       placeholder="Email"
-      class="w-full border-b border-gray-300 focus:outline-none focus:border-primary text-lg md:text-xl"
+      class="w-full border-b border-gray-300 focus:outline-none focus:border-primary text-lg md:text-xl placeholder:text-quaternary"
      />
     </div>
     <div class="mb-4 py-5">
      <textarea
       id="message"
       placeholder="Message"
-      class="w-full px-3 py-4 border border-gray-300 rounded-md focus:outline-none focus:border-primary text-lg md:text-xl md:h-52"
+      class="w-full px-3 py-4 border border-gray-300 rounded-md focus:outline-none focus:border-primary text-lg md:text-xl md:h-52 placeholder:text-quaternary"
      ></textarea>
     </div>
     <button

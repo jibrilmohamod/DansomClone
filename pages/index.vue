@@ -1,69 +1,69 @@
 <template>
-  <div class="">
-    <TheHero />
+ <div class="">
+  <TheHero />
 
-    <!-- about us card -->
-    <TheCard>
-      <template #One>
-        <div class="h-full flex flex-col items-center justify-center">
-          <TheTitle
-            title="Who We are"
-            subtitle="DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa."
-            link="/"
-            LinkText="About Us"
-          >
-          </TheTitle>
-        </div>
-      </template>
-      <template #Image>
-        <div class="w-full">
-          <ImageCard />
-        </div>
-      </template>
-    </TheCard>
+  <!-- about us card -->
+  <TheCard>
+   <template #One>
+    <div class="h-full flex flex-col items-center justify-center">
+     <TheTitle
+      title="Who We are"
+      subtitle="DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa."
+      link="/"
+      LinkText="About Us"
+     >
+     </TheTitle>
+    </div>
+   </template>
+   <template #Image>
+    <div class="w-full">
+     <ImageCard />
+    </div>
+   </template>
+  </TheCard>
 
-    <!-- Services Card  -->
-    <OurExpertise
-      style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
-      class="bg-primary bg-opacity-50 border-primary"
-      title="Our Expertise and Services"
-      subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services"
-    >
-      <template #vfor>
-        <div class="md:flex flex-wrap justify-center">
-          <ServiceCard
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            class="basis-1/3"
-            v-for="(service, index) in services.slice(0, 6)"
-            :key="service.title"
-            :icon="service.icon"
-            :title="service.title"
-            :subtitle="service.subtitle"
-          />
-        </div>
-      </template>
-    </OurExpertise>
+  <!-- Services Card  -->
+  <OurExpertise
+   style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
+   class="bg-primary bg-opacity-50 border-primary"
+   title="Our Expertise and Services"
+   subtitle="With access to various locations within Somalia, DANSOM provides high quality tailor made services to the clients’ needs, goals and objectives. We provide an array of services including but not limited to third party monitoring and evaluation, political economy analysis ,security advisory and formative research and policy advisory services"
+  >
+   <template #vfor>
+    <div class="md:flex flex-wrap justify-center">
+     <ServiceCard
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="basis-1/3"
+      v-for="(service, index) in services.slice(0, 6)"
+      :key="service.title"
+      :icon="service.icon"
+      :title="service.title"
+      :subtitle="service.subtitle"
+     />
+    </div>
+   </template>
+  </OurExpertise>
 
-    <!-- Patners and Portfolio card -->
-    <TheCard>
-      <template #One>
-        <div class="h-full flex flex-col items-center justify-center">
-          <TheTitle
-            title="Our Partners and Portfolio"
-            subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs."
-            link="/"
-            LinkText="Our Projects"
-          >
-          </TheTitle>
-        </div>
-      </template>
-      <template #Image>
-        <LogoCarousel />
-      </template>
-    </TheCard>
+  <!-- Patners and Portfolio card -->
+  <TheCard>
+   <template #One>
+    <div class="h-full flex flex-col items-center justify-center">
+     <TheTitle
+      title="Our Partners and Portfolio"
+      subtitle="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs."
+      link="/"
+      LinkText="Our Projects"
+     >
+     </TheTitle>
+    </div>
+   </template>
+   <template #Image>
+    <LogoCarousel />
+   </template>
+  </TheCard>
 
-    <!-- <TheCard>
+  <!-- <TheCard>
     
    <template #Image>
     <div class="h-full flex flex-col items-center justify-center">
@@ -78,8 +78,8 @@
    </template>
   </TheCard> -->
 
-    <!-- About Us Card  -->
-    <!-- <UiComp
+  <!-- About Us Card  -->
+  <!-- <UiComp
       header="Who We are"
       small-text="Dansom"
       paragraph="We are a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa. Dansom has since developed a network of thematic and regional experts based in Somalia and Kenya, with a unique level of access to hard-to-reach areas and a strong focus on security and socio-political and economic development in Eastern Africa."
@@ -126,12 +126,12 @@
         </div>
       </template>
 </UiComp> -->
-    <!-- services card -->
-    <!-- <OurExpertise /> -->
+  <!-- services card -->
+  <!-- <OurExpertise /> -->
 
-    <!-- Patners and Portfolio card -->
+  <!-- Patners and Portfolio card -->
 
-    <!-- <UiComp header="Our Partners and Portfolio"
+  <!-- <UiComp header="Our Partners and Portfolio"
             paragraph="We have worked with a number of partners and clients in the horn of Africa. Our portfolio includes work with the United Nations, the European Union, the World Bank, the Swiss Agency for Development, the Government of Somalia, and a number of international and local NGOs.">
       <template #image>
         <LogoCarousel />
@@ -167,9 +167,9 @@
       </template>
     </UiComp> -->
 
-    <!-- Contact Us Card  -->
+  <!-- Contact Us Card  -->
 
-    <!-- <UiComp header="We can help you navigate what's next"
+  <!-- <UiComp header="We can help you navigate what's next"
             paragraph="With more than 10 years of experience in the horn of Africa, we have the expertise and the network to help you navigate the complex socio-political and economic landscape of the region. CONTACT US today to learn more about our services and how we can help you achieve your goals.">
       <template #image>
         <Button navigateTo="/"
@@ -202,56 +202,182 @@
         </div>
       </template>
     </UiComp> -->
-  </div>
+ </div>
 </template>
 
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
+ import { Button } from "@/components/ui/button"
 
-let services = [
+ let services = [
   {
-    icon: "arcticons:adobe-analytics",
-    title: "Political Economy Analysis",
-    subtitle:
-      "Political Economy Analysis (PEA) in Somalia to inform programming and policy development.",
+   icon: "arcticons:adobe-analytics",
+   title: "Political Economy Analysis",
+   subtitle:
+    "Political Economy Analysis (PEA) in Somalia to inform programming and policy development.",
   },
   {
-    icon: "carbon:data-analytics",
-    title: "Third Party Monitoring and Evaluation",
-    subtitle:
-      "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia.",
+   icon: "carbon:data-analytics",
+   title: "Third Party Monitoring and Evaluation",
+   subtitle:
+    "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia.",
   },
   {
-    icon: "carbon:data-analytics",
-    title: "Formative Research and Policy Advisory Services",
-    subtitle:
-      "Formative Research and Policy Advisory Services to inform programming and policy development.",
+   icon: "carbon:data-analytics",
+   title: "Formative Research and Policy Advisory Services",
+   subtitle:
+    "Formative Research and Policy Advisory Services to inform programming and policy development.",
   },
   {
-    icon: "ph:leaf-thin",
-    title: "Environmental Impact Assessment (EIA) & Monitoring",
-    subtitle:
-      "Environmental Impact Assessment (EIA) & Monitoring of humanitarian and development projects in Somalia.",
+   icon: "ph:leaf-thin",
+   title: "Environmental Impact Assessment (EIA) & Monitoring",
+   subtitle:
+    "Environmental Impact Assessment (EIA) & Monitoring of humanitarian and development projects in Somalia.",
   },
   {
-    icon: "pepicons-pencil:people",
-    title: "Organizational Capacity Building & HR",
-    subtitle:
-      "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
+   icon: "pepicons-pencil:people",
+   title: "Organizational Capacity Building & HR",
+   subtitle:
+    "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
   },
   {
-    icon: "ph:gear-six-thin",
-    title: "Operational and Logistics Management",
-    subtitle:
-      "Operational and Logistics Management for local and international organizations in Somalia.",
+   icon: "ph:gear-six-thin",
+   title: "Operational and Logistics Management",
+   subtitle:
+    "Operational and Logistics Management for local and international organizations in Somalia.",
   },
   {
-    icon: "la:people-carry",
-    title: "Community Engagement Strategies",
-    subtitle:
-      "Community Engagement Strategies for local and international organizations in Somalia.",
+   icon: "la:people-carry",
+   title: "Community Engagement Strategies",
+   subtitle:
+    "Community Engagement Strategies for local and international organizations in Somalia.",
   },
-];
+ ]
+
+ // SEO and Meta tags
+ useHead({
+  title: "Dansom Consultancy & Research",
+  meta: [
+   {
+    hid: "description",
+    name: "description",
+    content:
+     "DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa.",
+   },
+   {
+    hid: "keywords",
+    name: "keywords",
+    content:
+     "DANSOM, research, consultancy, firm, humanitarian, development, partners, transformations, horn of Africa, thematic, regional, experts, Somalia, Kenya, access, hard-to-reach areas, security, socio-political, economic development, Eastern Africa",
+   },
+   //og tags
+   {
+    hid: "og:title",
+    property: "og:title",
+    content: "Dansom Consultancy & Research",
+   },
+   {
+    hid: "og:description",
+    property: "og:description",
+    content:
+     "DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa.",
+   },
+   {
+    hid: "og:image",
+    property: "og:image",
+    content: "",
+   },
+   {
+    hid: "og:url",
+    property: "og:url",
+    content: "https://dansomconsultancy.org",
+   },
+   {
+    hid: "og:type",
+    property: "og:type",
+    content: "website",
+   },
+   {
+    hid: "og:site_name",
+    property: "og:site_name",
+    content: "Dansom Consultancy & Research",
+   },
+   {
+    hid: "og:locale",
+    property: "og:locale",
+    content: "en_US",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_GB",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_CA",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_AU",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_NZ",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_IE",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_ZA",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_IN",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_SG",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_MY",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_PH",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_PK",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_HK",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_IL",
+   },
+   {
+    hid: "og:locale:alternate",
+    property: "og:locale:alternate",
+    content: "en_ID",
+   },
+  ],
+ })
 </script>
 
 <style lang="scss" scoped></style>
