@@ -47,7 +47,7 @@ export default defineNuxtConfig({
  },
 
  site: {
-  url: "https://www.dansomconsultancy.org",
+  url: "https://www.dansom.vercel.app",
   title: "Dansom Research & Consultancy",
  },
 })

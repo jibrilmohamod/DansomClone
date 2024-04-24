@@ -28,11 +28,9 @@
       class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
      >
       <!-- icon  -->
-      <Icon name="mdi:phone" class="text-primary" />
+      <Icon name="mdi:location" class="text-primary" />
       <!-- text  -->
-      <a class="text-sm text-primary" href="tel:0712995522">
-       +254 712 99 55 22
-      </a>
+      <a class="text-sm text-primary"> Mogadishu , Somalia </a>
      </div>
      <!-- email  -->
      <div
@@ -41,8 +39,12 @@
       <!-- icon  -->
       <Icon name="mdi:email" class="text-primary" />
       <!-- text  -->
-      <a class="text-sm text-primary" href="mailto:info@focalfoods.co.ke">
-       info@dansom.co.ke
+      <a
+       class="text-sm text-primary"
+       href="mailto:info@dansomconsultancy.org
+"
+      >
+       info@dansomconsultancy.org
       </a>
      </div>
      <!-- socials -->

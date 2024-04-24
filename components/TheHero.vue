@@ -29,16 +29,18 @@
       range of services to our clients
      </p>
      <button
-      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl flex justify-center gap-x-2 md:text-2xl md:py-5 md:px-6 md:rounded-3xl md:gap-x-4 hover:bg-primary hover:text-white hover:ease-in-out transition-all hover:shadow-lg hover:duration-300"
+      class="bg-white text-black font-Merriweather py-2 px-4 rounded-2xl md:text-xl md:py-4 md:px-5 md:rounded-3xl md:gap-x-4 hover:bg-primary hover:text-white hover:duration-200 hover:ease-linear"
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1400"
      >
-      <Icon
-       name="lets-icons:sun-light"
-       class="text-black text-xl md:text-3xl"
-      />
-      <p>Learn More</p>
+      <NuxtLink to="/about" class="flex justify-center gap-x-2">
+       <Icon
+        name="lets-icons:sun-light"
+        class="text-black text-xl md:text-3xl"
+       />
+       <p>Learn More</p>
+      </NuxtLink>
      </button>
     </div>
    </div>
