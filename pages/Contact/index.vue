@@ -96,8 +96,8 @@
     >
      <!-- submit icon  -->
      <div class="flex text-white gap-2 justify-center items-center">
-      <Icon name="mdi:send" class="" />
       <p class="font-Montserrat">Submit</p>
+      <Icon name="ic:sharp-double-arrow" class="" />
      </div>
     </button>
    </form>

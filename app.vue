@@ -1,30 +1,38 @@
 <template>
+ <SpeedInsights />
+
  <div class="w-full overflow-hidden">
   <NuxtPage />
   <TheFooter />
 
   <!-- Add this icon at the bottom right corner -->
-  <div class="fixed bottom-4 right-4 cursor-pointer" @click="scrollToTop">
-   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    class="h-6 w-6 text-white bg-primary rounded-full p-1"
-   >
-    <path
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     stroke-width="2"
-     d="M5 10l7-7m0 0l7 7m-7-7v18"
-    ></path>
-   </svg>
+  <div
+   class="fixed bottom-4 right-4 cursor-pointer outline-none bg-primary rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out motion-safe:animate-pulse"
+   @click="scrollToTop"
+   v-show="scrolled"
+  >
+   <Icon name="ic:round-arrow-upward" class="text-4xl text-white" />
   </div>
  </div>
 </template>
 
 <script lang="ts" setup>
+ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+
  // Define the scrollToTop function directly
+ const scrolled = ref(false)
+ const checkScroll = () => {
+  scrolled.value = window.scrollY > window.innerHeight
+ }
+
+ onMounted(() => {
+  window.addEventListener("scroll", checkScroll)
+ })
+
+ onUnmounted(() => {
+  window.removeEventListener("scroll", checkScroll)
+ })
+
  const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" })
  }
