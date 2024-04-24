@@ -271,6 +271,16 @@
  let project = computed(() => {
   return projects.value.find((project) => project.title === route.params.slug)
  })
+
+ useHead({
+  title: slug.value,
+  meta: [
+   {
+    name: "description",
+    content: "Dansom Consultancy | " + slug.value,
+   },
+  ],
+ })
 </script>
 
 <style></style>

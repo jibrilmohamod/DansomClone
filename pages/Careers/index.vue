@@ -40,6 +40,17 @@ Dansom is an Equal Opportunity Employer. We are committed to equal treatment of 
  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+ useHead({
+  title: "Careers | Dansom Consultancy",
+  meta: [
+   {
+    name: "description",
+    content:
+     "Dansom is an Equal Opportunity Employer. We are committed to equal treatment of all employees without regard to race, national origin, religion, gender, age, sexual orientation, veteran status, physical or mental disability or other basis protected by law. While the Company is committed to following this principle in every facet of employment, all employees share in the responsibility to promote and foster a favorable work environment",
+   },
+  ],
+ })
+</script>
 
 <style></style>

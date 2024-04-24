@@ -258,124 +258,16 @@
   title: "Dansom Consultancy & Research",
   meta: [
    {
-    hid: "description",
     name: "description",
     content:
      "DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa.",
    },
    {
-    hid: "keywords",
     name: "keywords",
     content:
      "DANSOM, research, consultancy, firm, humanitarian, development, partners, transformations, horn of Africa, thematic, regional, experts, Somalia, Kenya, access, hard-to-reach areas, security, socio-political, economic development, Eastern Africa",
    },
    //og tags
-   {
-    hid: "og:title",
-    property: "og:title",
-    content: "Dansom Consultancy & Research",
-   },
-   {
-    hid: "og:description",
-    property: "og:description",
-    content:
-     "DANSOM is a research and consultancy firm that was established in 2009 to work with humanitarian and development partners and ensure powerful transformations in the development of the horn of Africa.",
-   },
-   {
-    hid: "og:image",
-    property: "og:image",
-    content: "",
-   },
-   {
-    hid: "og:url",
-    property: "og:url",
-    content: "https://dansomconsultancy.org",
-   },
-   {
-    hid: "og:type",
-    property: "og:type",
-    content: "website",
-   },
-   {
-    hid: "og:site_name",
-    property: "og:site_name",
-    content: "Dansom Consultancy & Research",
-   },
-   {
-    hid: "og:locale",
-    property: "og:locale",
-    content: "en_US",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_GB",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_CA",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_AU",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_NZ",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_IE",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_ZA",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_IN",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_SG",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_MY",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_PH",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_PK",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_HK",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_IL",
-   },
-   {
-    hid: "og:locale:alternate",
-    property: "og:locale:alternate",
-    content: "en_ID",
-   },
   ],
  })
 </script>

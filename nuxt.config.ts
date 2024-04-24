@@ -3,11 +3,11 @@ export default defineNuxtConfig({
  devtools: { enabled: true },
  modules: [
   "@nuxtjs/tailwindcss",
-  "@hypernym/nuxt-anime",
   "nuxt-icon",
   "@nuxt/image",
   "shadcn-nuxt",
   "@nuxtjs/google-fonts",
+  "@nuxtjs/seo",
  ],
  css: ["~/assets/css/tailwind.css", "animate.css/animate.min.css"],
  shadcn: {
@@ -44,5 +44,10 @@ export default defineNuxtConfig({
   cloudinary: {
    baseURL: "https://res.cloudinary.com/dckmlqzgd/image/upload/",
   },
+ },
+
+ site: {
+  url: "https://www.dansomconsultancy.org",
+  title: "Dansom Research & Consultancy",
  },
 })

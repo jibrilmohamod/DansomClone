@@ -105,6 +105,17 @@
  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+ useHead({
+  title: "Contact Us | Dansom Consultancy",
+  meta: [
+   {
+    name: "description",
+    content:
+     "Contact Dansom today to discuss your needs and discover how our services can benefit you. Our team is ready to assist you and provide the guidance and solutions you require. Don't hesitate to reach out and start your journey towards success with Dansom.",
+   },
+  ],
+ })
+</script>
 
 <style></style>
