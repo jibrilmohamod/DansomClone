@@ -5,12 +5,10 @@
   data-aos-duration="1000"
  >
   <div class="py-4 flex flex-col gap-2">
-   <h4 class="font-DM text-5xl md:text-6xl 2xl:text-7xl">
+   <h4 class="font-DM text-3xl md:text-4xl 2xl:text-7xl">
     {{ title }}
    </h4>
-   <p
-    class="text-black md:w-3/4 2xl:pb-7 py-5 font-Lora text-lg md:text-xl md:pr-3 pt-5 2xl:text-2xl"
-   >
+   <p class="text-black md:w-3/4 2xl:pb-7 py-5 font-Lora md:pr-3 2xl:text-2xl">
     {{ subtitle }}
    </p>
   </div>

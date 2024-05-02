@@ -23,7 +23,7 @@ Dansom is an Equal Opportunity Employer. We are committed to equal treatment of 
   >
    <template #vfor>
     <p
-     class="text-black md:w-3/4 2xl:pb-7 py-5 font-Lora text-lg md:text-xl md:pr-3 pt-5 2xl:text-2xl -mt-5"
+     class="text-black md:w-3/4 2xl:pb-7 py-5 font-Lora md:pr-3 pt-5 2xl:text-2xl -mt-5"
     >
      We are always looking for talented individuals to join our team. If you are
      interested in a career at Dansom, please send your resume to

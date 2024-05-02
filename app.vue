@@ -15,8 +15,6 @@
 </template>
 
 <script lang="ts" setup>
- import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-
  // Define the scrollToTop function directly
  const scrolled = ref(false)
  const checkScroll = () => {

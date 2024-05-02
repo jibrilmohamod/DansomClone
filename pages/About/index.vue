@@ -85,14 +85,16 @@
   <!-- inclusivity and diversity statement -->
   <div
    style="border-radius: 32% 25% 25% 0% / 0% 46% 42% 47%"
-   class="bg-primary bg-opacity-50 border-primary"
+   class="bg-primary bg-opacity-50 border-primary flex items-center"
   >
-   <TheCard>
+   <TheCard class="">
     <template #One>
-     <TheTitle
-      title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
-      subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
-     />
+     <div class="flex items-center justify-center h-full">
+      <TheTitle
+       title="COMMUNITY AND MINORITY INCLUSION STATEMENT"
+       subtitle="At DANSOM we are committed to fostering an inclusive and diverse environment that embraces individuals regardless of gender and from all backgrounds, including ethnic and religious minorities. Ourx Minority Inclusion Policy reflects our dedication to promoting equality, understanding, and respect among all members within the environment we work in."
+      />
+     </div>
     </template>
 
     <template #Image>
@@ -163,7 +165,7 @@
    image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
    alt: "Mahamed M. Dirir",
    about:
-    "Mahamad Mahab Dirir is a programming, management, social economic, development policy, conflict management, leadership, security and M&E Expert with over 20 years of experience in development cooperation and extensive experience working with donors and stakeholders throughout Somalia.",
+    "Mahamad Mahab Dirir is a programming, management, social economic, development policy, conflict management, leadership, security  M&E Expert with over 20 years of experience in development cooperation & extensive experience working with donors & stakeholders throughout Somalia.",
    aboutBig:
     "<p>Mahamad Mahab Dirir is a programming, management, social economic, development policy, conflict management, leadership, security and Monitoring and Evaluation Expert with over 20 years of experience in development cooperation and extensive experience working with donors and stakeholders throughout Somalia. As Founder and Executive Director of Dansom Research and Consultancy, he has worked since 2014 supervising numerous projects focused on M&E, including Third Party M&E, research, and project reviews. Mr. Dirir’s specific sector experience additionally includes governance, gender, agriculture, security and economics.</p><p>In his role as Deputy Country Director at Solidarites International, he worked closely with stakeholders, including the Federal Government of Somalia and MOPIC, supporting authorities and administration officials with capacity building and improving access to service delivery in the humanitarian sector.</p><p>He has also previously served as an Evaluation Consultant on an EC-funded project in Puntland, assessing achievement of project targets, recommending corrective measures, and developing guidance for EC support programming.</p><p>As a native Somali, he has a keen understanding of the Somalia context, culture and the development needs of the country. In addition to his top-notch interpersonal skills, his established relationships with local actors help him to access difficult field locations and obtain needed information.</p><p>In addition to his rich experience, Mr. Dirir holds a Master of Science degree in Agriculture Science/Land Use in Developing Countries and is fluent in Somali and English</p>",
   },
