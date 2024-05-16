@@ -36,9 +36,7 @@
        <p class="hover:text-primary hover:duration-200 hover:ease-linear">
         Address: Dirir Building on Balcad Road
        </p>
-       <p class="hover:text-primary hover:duration-200 hover:ease-linear">
-        Phone: +252 123456789
-       </p>
+
        <p class="hover:text-primary hover:duration-200 hover:ease-linear">
         Email:
         <a href="mailto:info@dansomconsultancy.org"
@@ -52,9 +50,7 @@
       <p class="hover:text-primary hover:duration-200 hover:ease-linear">
        Address: Nas Apartments, No. 4, Milimani Road
       </p>
-      <p class="hover:text-primary hover:duration-200 hover:ease-linear">
-       Phone: +254 987654321
-      </p>
+
       <p class="hover:text-primary hover:duration-200 hover:ease-linear">
        Email:
        <a href="mailto:info@dansomconsultancy.org"
@@ -67,7 +63,7 @@
   </TheCard>
   <div class="container mx-auto py-10">
    <div class="flex flex-col gap-2"></div>
-   <h2 class="font-DM text-5xl md:text-6xl py-10">Send Us a Message</h2>
+   <h2 class="font-DM text-5xl md:text-3xl py-10">Send Us a Message</h2>
    <form>
     <div class="mb-8 flex gap-4">
      <input

@@ -37,7 +37,7 @@
       </AccordionContent>
      </AccordionItem>
     </Accordion>
-    <div class="w-full flex justify-center pt-5 pb-5">
+    <!-- <div class="w-full flex justify-center pt-5 pb-5">
      <a href="javascript:void(0)" class="mx-5">
       <div>
        <Icon name="logos:facebook" class="text-xl" />
@@ -53,7 +53,7 @@
        <Icon name="skill-icons:linkedin" class="text-xl" />
       </div>
      </a>
-    </div>
+    </div> -->
    </div>
   </div>
  </div>
