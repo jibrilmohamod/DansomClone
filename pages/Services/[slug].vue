@@ -19,7 +19,7 @@
    <div class="flex py-5">
     <!-- icon  -->
     <div class="h-fit flex bg-primary w-1/3 justify-center rounded-md p-2">
-     <Icon :name="service.icon" class="text-black h-96 w-96" />
+     <Icon :name="service.icon" class="text-black h-60 w-60" />
     </div>
     <!-- text  -->
     <div class="w-2/3 flex flex-col md:py-5 md:px-10 mx-auto gap-3">
@@ -122,6 +122,6 @@
 <style>
  .about p {
   text-align: justify;
-  padding-bottom: 100 px;
+  padding: 0px 10px 10px 0px;
  }
 </style>
