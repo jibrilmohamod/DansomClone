@@ -67,7 +67,9 @@
     <!-- navigation and logo -->
     <div class="flex items-center py-5">
      <!-- logo -->
-     <h1 class="w-fit">
+     <h1
+      class="w-fit p-3 rounded-md shadow-md hover:bg-white bg-slate-200 transition-all delay-150 ease-linear"
+     >
       <NuxtLink to="/">
        <img
         src="/dansom-logo.png"
