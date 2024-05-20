@@ -26,8 +26,8 @@
           <div class="flex flex-col gap-3 md:gap-6">
             <!-- classification -->
             <div>
-              <h3 class="text-4xl font-DM pb-4">Classification</h3>
-              <p class="text-lg">
+              <h3 class="text-2xl font-DM pb-4">Classification</h3>
+              <p class="text-base">
                 {{ project.classification }}
               </p>
             </div>
@@ -35,8 +35,8 @@
           <div class="flex flex-col gap-3 md:gap-6 py-4">
             <!-- description -->
             <div>
-              <h3 class="text-4xl font-DM pb-4">Description</h3>
-              <p class="text-lg">
+              <h3 class="text-2xl font-DM pb-4">Description</h3>
+              <p class="text-base">
                 {{ project.description }}
               </p>
             </div>
@@ -45,25 +45,25 @@
               class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
             >
               <!-- location -->
-              <div class="flex items-center text-xl">
+              <div class="flex items-center">
                 <Icon name="mdi:location" class="text-primary text-2xl" />
                 <p class="">{{ project.Location }}</p>
               </div>
               <!-- timeframes -->
-              <div class="flex items-center text-xl">
+              <div class="flex items-center">
                 <Icon name="mdi:calendar" class="text-primary text-2xl" />
                 <p class="">{{ project.timeframes }}</p>
               </div>
             </div>
             <div v-if="project?.classification2">
-              <h3 class="text-4xl font-DM pb-4">Classification</h3>
-              <p class="text-lg">
+              <h3 class="text-2xl font-DM pb-4">Classification</h3>
+              <p class="text-base">
                 {{ project.classification2 }}
               </p>
             </div>
             <div v-if="project?.description2">
-              <h3 class="text-4xl font-DM pb-4">Description</h3>
-              <p class="text-lg">
+              <h3 class="text-2xl font-DM pb-4">Description</h3>
+              <p class="text-base">
                 {{ project?.description2 }}
               </p>
             </div>
@@ -72,30 +72,131 @@
               v-if="project?.description2"
             >
               <!-- location -->
-              <div class="flex items-center text-xl">
+              <div class="flex items-center">
                 <Icon name="mdi:location" class="text-primary text-2xl" />
                 <p class="">{{ project.Location }}</p>
               </div>
               <!-- timeframes -->
-              <div class="flex items-center text-xl">
+              <div class="flex items-center">
                 <Icon name="mdi:calendar" class="text-primary text-2xl" />
                 <p class="">{{ project?.timeframes2 }}</p>
               </div>
             </div>
-            <div class="outline">
-              <div v-if="project?.classification2">
-                <h3 class="text-4xl font-DM pb-4">Classification</h3>
-                <p class="text-lg">
-                  {{ project.classification2 }}
+            <div class="">
+              <div v-if="project?.classification3">
+                <h3 class="text-2xl font-DM pb-4">Classification</h3>
+                <p class="text-base">
+                  {{ project.classification3 }}
                 </p>
               </div>
-              <div v-if="project?.description2">
-                <h3 class="text-4xl font-DM pb-4">Description</h3>
-                <p class="text-lg">
+              <div v-if="project?.description3">
+                <h3 class="text-2xl font-DM pb-4">Description</h3>
+                <p class="text-base">
                   {{ project?.description2 }}
                 </p>
               </div>
-              
+              <div
+                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+                v-if="project?.description3"
+              >
+                <!-- location -->
+                <div class="flex items-center">
+                  <Icon name="mdi:location" class="text-primary text-2xl" />
+                  <p class="">{{ project.Location }}</p>
+                </div>
+                <!-- timeframes -->
+                <div class="flex items-center">
+                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                  <p class="">{{ project?.timeframes2 }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div v-if="project?.classification4">
+                <h3 class="text-2xl font-DM pb-4">Classification</h3>
+                <p class="text-base">
+                  {{ project.classification4 }}
+                </p>
+              </div>
+              <div v-if="project?.description4">
+                <h3 class="text-2xl font-DM pb-4">Description</h3>
+                <p class="text-base">
+                  {{ project?.description4 }}
+                </p>
+              </div>
+              <div
+                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+                v-if="project?.description4"
+              >
+                <!-- location -->
+                <div class="flex items-center">
+                  <Icon name="mdi:location" class="text-primary text-2xl" />
+                  <p class="">{{ project.Location }}</p>
+                </div>
+                <!-- timeframes -->
+                <div class="flex items-center">
+                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                  <p class="">{{ project?.timeframes4 }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div v-if="project?.classification5">
+                <h3 class="text-2xl font-DM pb-4">Classification</h3>
+                <p class="text-base">
+                  {{ project.classification5 }}
+                </p>
+              </div>
+              <div v-if="project?.description5">
+                <h3 class="text-2xl font-DM pb-4">Description</h3>
+                <p class="text-base">
+                  {{ project?.description5 }}
+                </p>
+              </div>
+              <div
+                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+                v-if="project?.description5"
+              >
+                <!-- location -->
+                <div class="flex items-center">
+                  <Icon name="mdi:location" class="text-primary text-2xl" />
+                  <p class="">{{ project.Location }}</p>
+                </div>
+                <!-- timeframes -->
+                <div class="flex items-center">
+                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                  <p class="">{{ project?.timeframes5 }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div v-if="project?.classification6">
+                <h3 class="text-2xl font-DM pb-4">Classification</h3>
+                <p class="text-base">
+                  {{ project.classification6 }}
+                </p>
+              </div>
+              <div v-if="project?.description6">
+                <h3 class="text-2xl font-DM pb-4">Description</h3>
+                <p class="text-base">
+                  {{ project?.description6 }}
+                </p>
+              </div>
+              <div
+                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+                v-if="project?.description6"
+              >
+                <!-- location -->
+                <div class="flex items-center">
+                  <Icon name="mdi:location" class="text-primary text-2xl" />
+                  <p class="">{{ project.Location }}</p>
+                </div>
+                <!-- timeframes -->
+                <div class="flex items-center">
+                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                  <p class="">{{ project?.timeframes6 }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -130,17 +231,33 @@ let projects = ref([
   },
   {
     title: "EU Delegation to Somalia (EUD-Somalia)",
-    classification: "Third Party Monitoring & Evaluation",
+    classification: "Third Party Monitoring and Evaluation IV ",
     description:
+      "The overall objective is to conduct regular, independent and objective monitoring of all activities or interventions funded under the NDICI funding instrument in various regions in Somalia. The main scope of the Third-Party Monitoring and Evaluation (TPME) is to monitor the execution & implementation of EU funded projects in Somalia by carrying out monitoring missions in all the regions of Somalia.",
+    timeframes: "January 2024 - January 2027",
+    classification2: "Third Party Monitoring & Evaluation III – EUTF",
+    description2:
+      "Independent and objective monitoring activities of EU Priority projects implemented in in Somalia funded under the EUTF funding.Specific monitoring reports on thematic issues, including access to water service delivery, integrated land and water resource management, economic development as part of the livelihood with durable solutions, etc.",
+    timeframes2: "July 2022 - June 2024",
+    classification3: "Third Party Monitoring & Evaluation III – EDF",
+    description3:
+      "Independent and objective monitoring activities of EU Priority projects implemented in in Somalia funded under the EDF funding.Specific monitoring reports on the thematic issues including livelihood through expanded supply of drinking water, resilient agriculture value-chain, etc.",
+    timeframes3: "December 2021 - January 2024",
+    classification4: "Third Party Monitoring & Evaluation II",
+    description4:
+      "Independent and objective monitoring activities of EU Priority projects implemented in in Somalia funded under the EUD-Somalia funding.The European Union Delegation to Somalia (EUD-Somalia) has contracted Dansom Consultancy to provide Third Party Monitoring and Evaluation services in support of the EU’s development cooperation in Somalia.",
+    timeframes4: "December 2018 - June 2021",
+    classification5: "Third Party Monitoring & Evaluation",
+    description5:
       "The European Union Delegation to Somalia (EUD-Somalia) has contracted Dansom Consultancy to provide Third Party Monitoring and Evaluation services in support of the EU’s development cooperation in Somalia.",
     Location: "Somalia",
-    timeframes: "July 2016 - April 2018",
+    timeframes5: "July 2016 - April 2018",
     icon: "EU.jpg",
     Ngo: "EU",
-    classification2: "Political Economy Analysis & Security Advisory",
-    description2:
+    classification6: "Political Economy Analysis & Security Advisory",
+    description6:
       "Consortium of IDC, Hoplite and Dansom carried out Somalia Maritime Security Actors Mapping.",
-    timeframes2: "December 2015 - July 2016  ",
+    timeframes6: "December 2015 - July 2016  ",
   },
   {
     title: "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",

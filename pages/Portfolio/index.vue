@@ -128,6 +128,16 @@
    Ngo: "GIZ",
   },
   {
+    title:"Monitoring and Evaluation of Somalia Country Programme (2019-2023) and Peace and Stabilisation Programme (2018-2022)",
+    classification:"Third Party Monitoring & Evaluation",
+    description:"Establish and facilitae a functioning Monitoring, Evaluation, Accountability and Learning (MEAL) including risk management system for the two programmes and their engagement documents, and communication of findigns to both the Somalia and Danish general public and other identified recipients.",
+    Ngo:"DANIDA",
+    Location:"Somalia , Kenya , Ethiopia",
+    timeframes:"December 2019 - present",
+    icon:"",
+
+  },
+  {
    title: "Somalia Capacity Injection Project Pay and Grading Reform",
    classification: "Formative Research & Policy Analysis",
    description:
