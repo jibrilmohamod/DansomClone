@@ -1,3 +1,5 @@
 {
- "editor.fontFamily": "\"Fira Code\""
+  "editor.fontFamily": "\"Fira Code\"",
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }

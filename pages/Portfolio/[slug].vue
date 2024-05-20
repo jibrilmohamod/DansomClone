@@ -55,21 +55,50 @@
                 <p class="">{{ project.timeframes }}</p>
               </div>
             </div>
-            <div v-if="project?.classification2">
+          </div>
+          <div v-if="project?.classification2">
+            <h3 class="text-2xl font-DM pb-4">Classification</h3>
+            <p class="text-base">
+              {{ project.classification2 }}
+            </p>
+          </div>
+          <div v-if="project?.description2">
+            <h3 class="text-2xl font-DM pb-4">Description</h3>
+            <p class="text-base">
+              {{ project?.description2 }}
+            </p>
+          </div>
+          <div
+            class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+            v-if="project?.description2"
+          >
+            <!-- location -->
+            <div class="flex items-center">
+              <Icon name="mdi:location" class="text-primary text-2xl" />
+              <p class="">{{ project.Location }}</p>
+            </div>
+            <!-- timeframes -->
+            <div class="flex items-center">
+              <Icon name="mdi:calendar" class="text-primary text-2xl" />
+              <p class="">{{ project?.timeframes2 }}</p>
+            </div>
+          </div>
+          <div class="">
+            <div v-if="project?.classification3">
               <h3 class="text-2xl font-DM pb-4">Classification</h3>
               <p class="text-base">
-                {{ project.classification2 }}
+                {{ project.classification3 }}
               </p>
             </div>
-            <div v-if="project?.description2">
+            <div v-if="project?.description3">
               <h3 class="text-2xl font-DM pb-4">Description</h3>
               <p class="text-base">
-                {{ project?.description2 }}
+                {{ project?.description3 }}
               </p>
             </div>
             <div
               class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-              v-if="project?.description2"
+              v-if="project?.description3"
             >
               <!-- location -->
               <div class="flex items-center">
@@ -82,120 +111,91 @@
                 <p class="">{{ project?.timeframes2 }}</p>
               </div>
             </div>
-            <div class="">
-              <div v-if="project?.classification3">
-                <h3 class="text-2xl font-DM pb-4">Classification</h3>
-                <p class="text-base">
-                  {{ project.classification3 }}
-                </p>
+          </div>
+          <div class="">
+            <div v-if="project?.classification4">
+              <h3 class="text-2xl font-DM pb-4">Classification</h3>
+              <p class="text-base">
+                {{ project.classification4 }}
+              </p>
+            </div>
+            <div v-if="project?.description4">
+              <h3 class="text-2xl font-DM pb-4">Description</h3>
+              <p class="text-base">
+                {{ project?.description4 }}
+              </p>
+            </div>
+            <div
+              class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+              v-if="project?.description4"
+            >
+              <!-- location -->
+              <div class="flex items-center">
+                <Icon name="mdi:location" class="text-primary text-2xl" />
+                <p class="">{{ project.Location }}</p>
               </div>
-              <div v-if="project?.description3">
-                <h3 class="text-2xl font-DM pb-4">Description</h3>
-                <p class="text-base">
-                  {{ project?.description2 }}
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-                v-if="project?.description3"
-              >
-                <!-- location -->
-                <div class="flex items-center">
-                  <Icon name="mdi:location" class="text-primary text-2xl" />
-                  <p class="">{{ project.Location }}</p>
-                </div>
-                <!-- timeframes -->
-                <div class="flex items-center">
-                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
-                  <p class="">{{ project?.timeframes2 }}</p>
-                </div>
+              <!-- timeframes -->
+              <div class="flex items-center">
+                <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                <p class="">{{ project?.timeframes4 }}</p>
               </div>
             </div>
-            <div class="">
-              <div v-if="project?.classification4">
-                <h3 class="text-2xl font-DM pb-4">Classification</h3>
-                <p class="text-base">
-                  {{ project.classification4 }}
-                </p>
+          </div>
+          <div class="">
+            <div v-if="project?.classification5">
+              <h3 class="text-2xl font-DM pb-4">Classification</h3>
+              <p class="text-base">
+                {{ project.classification5 }}
+              </p>
+            </div>
+            <div v-if="project?.description5">
+              <h3 class="text-2xl font-DM pb-4">Description</h3>
+              <p class="text-base">
+                {{ project?.description5 }}
+              </p>
+            </div>
+            <div
+              class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+              v-if="project?.description5"
+            >
+              <!-- location -->
+              <div class="flex items-center">
+                <Icon name="mdi:location" class="text-primary text-2xl" />
+                <p class="">{{ project.Location }}</p>
               </div>
-              <div v-if="project?.description4">
-                <h3 class="text-2xl font-DM pb-4">Description</h3>
-                <p class="text-base">
-                  {{ project?.description4 }}
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-                v-if="project?.description4"
-              >
-                <!-- location -->
-                <div class="flex items-center">
-                  <Icon name="mdi:location" class="text-primary text-2xl" />
-                  <p class="">{{ project.Location }}</p>
-                </div>
-                <!-- timeframes -->
-                <div class="flex items-center">
-                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
-                  <p class="">{{ project?.timeframes4 }}</p>
-                </div>
+              <!-- timeframes -->
+              <div class="flex items-center">
+                <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                <p class="">{{ project?.timeframes5 }}</p>
               </div>
             </div>
-            <div class="">
-              <div v-if="project?.classification5">
-                <h3 class="text-2xl font-DM pb-4">Classification</h3>
-                <p class="text-base">
-                  {{ project.classification5 }}
-                </p>
-              </div>
-              <div v-if="project?.description5">
-                <h3 class="text-2xl font-DM pb-4">Description</h3>
-                <p class="text-base">
-                  {{ project?.description5 }}
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-                v-if="project?.description5"
-              >
-                <!-- location -->
-                <div class="flex items-center">
-                  <Icon name="mdi:location" class="text-primary text-2xl" />
-                  <p class="">{{ project.Location }}</p>
-                </div>
-                <!-- timeframes -->
-                <div class="flex items-center">
-                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
-                  <p class="">{{ project?.timeframes5 }}</p>
-                </div>
-              </div>
+          </div>
+          <div class="">
+            <div v-if="project?.classification6">
+              <h3 class="text-2xl font-DM pb-4">Classification</h3>
+              <p class="text-base">
+                {{ project.classification6 }}
+              </p>
             </div>
-            <div class="">
-              <div v-if="project?.classification6">
-                <h3 class="text-2xl font-DM pb-4">Classification</h3>
-                <p class="text-base">
-                  {{ project.classification6 }}
-                </p>
+            <div v-if="project?.description6">
+              <h3 class="text-2xl font-DM pb-4">Description</h3>
+              <p class="text-base">
+                {{ project?.description6 }}
+              </p>
+            </div>
+            <div
+              class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
+              v-if="project?.description6"
+            >
+              <!-- location -->
+              <div class="flex items-center">
+                <Icon name="mdi:location" class="text-primary text-2xl" />
+                <p class="">{{ project.Location }}</p>
               </div>
-              <div v-if="project?.description6">
-                <h3 class="text-2xl font-DM pb-4">Description</h3>
-                <p class="text-base">
-                  {{ project?.description6 }}
-                </p>
-              </div>
-              <div
-                class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-                v-if="project?.description6"
-              >
-                <!-- location -->
-                <div class="flex items-center">
-                  <Icon name="mdi:location" class="text-primary text-2xl" />
-                  <p class="">{{ project.Location }}</p>
-                </div>
-                <!-- timeframes -->
-                <div class="flex items-center">
-                  <Icon name="mdi:calendar" class="text-primary text-2xl" />
-                  <p class="">{{ project?.timeframes6 }}</p>
-                </div>
+              <!-- timeframes -->
+              <div class="flex items-center">
+                <Icon name="mdi:calendar" class="text-primary text-2xl" />
+                <p class="">{{ project?.timeframes6 }}</p>
               </div>
             </div>
           </div>
@@ -260,6 +260,21 @@ let projects = ref([
     timeframes6: "December 2015 - July 2016  ",
   },
   {
+    title:
+      "Monitoring & Evaluation of Somalia Country Programme & Peace and Stabilisation Programme",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "Establish and facilitae a functioning Monitoring, Evaluation, Accountability and Learning (MEAL) including risk management system for Monitoring & Evaluation of Somalia Country Programme (2019-2023)  and its engagement documents, and communication of findigns to both the Somalia and Danish general public and other identified recipients.",
+    Ngo: "DANIDA",
+    Location: "Somalia , Kenya , Ethiopia",
+    timeframes: "September 2021 - September 2022",
+    icon: "Danida.png",
+    classification2: "Third Party Monitoring & Evaluation",
+    description2:
+      "Establish and facilitate a functioning Monitoring, Evaluation, Accountability and Learning (MEAL) including risk management system for the Peace and Stabilisation Programme (2018-2022) and its engagement documents, and communication of findings to both the Somalia and Danish general public and other identified recipients.",
+    timeframes2: "September 2021 - September 2022",
+  },
+  {
     title: "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
     classification: "Political Economy Analysis & Security Advisory",
     description:
@@ -268,6 +283,10 @@ let projects = ref([
     timeframes: "August 2017 - January 2018",
     icon: "giz-400x173.jpg",
     Ngo: "GIZ",
+    classification2: "Political Economy Analysis & Security Advisory",
+    timeframes2: "August 2017 - January 2018",
+    description2:
+      "Consortium of Dansom consultancy & CMC conducted a peace and conflict assessment (PCA) in Kismayo, Somalia for the Somali Re integration Programme (GIZ SRP) and Fish for Nutrition project (GIZ FNP)",
   },
   {
     title: "Somalia Capacity Injection Project Pay and Grading Reform",
