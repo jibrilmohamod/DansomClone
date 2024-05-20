@@ -1,19 +1,6 @@
 <template>
  <div class="h-fit w-full overflow-hidden">
-  <TheHeader title="Who We Are">
-   <template #image>
-    <NuxtImg
-     provider="cloudinary"
-     loading="lazy"
-     format="webp"
-     alt="image"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
-    />
-   </template>
-  </TheHeader>
+  <TheHeader title="Who We Are"> </TheHeader>
 
   <!-- introduction on Dansom -->
 
@@ -299,4 +286,35 @@
  })
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+ .bg {
+  background: radial-gradient(
+     farthest-side at -33.33% 50%,
+     #0000 52%,
+     #474bff 54% 57%,
+     #0000 59%
+    )
+    0 calc(40px / 2),
+   radial-gradient(
+     farthest-side at 50% 133.33%,
+     #0000 52%,
+     #474bff 54% 57%,
+     #0000 59%
+    )
+    calc(40px / 2) 0,
+   radial-gradient(
+    farthest-side at 133.33% 50%,
+    #0000 52%,
+    #474bff 54% 57%,
+    #0000 59%
+   ),
+   radial-gradient(
+    farthest-side at 50% -33.33%,
+    #0000 52%,
+    #474bff 54% 57%,
+    #0000 59%
+   ),
+   #47d3ff;
+  background-size: calc(40px / 4.667) 40px, 40px calc(40px / 4.667);
+ }
+</style>

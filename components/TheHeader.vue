@@ -1,35 +1,18 @@
 <template>
- <div class="h-[50vh] 2xl:h-[40vh]">
+ <div class="">
+  <TheNav class="z-50 w-full" />
+
   <div
-   class="absolute inset-0 z-10 h-[50vh] flex justify-center items-center 2xl:h-[40vh]"
+   class="flex flex-col items-center justify-center bg md:h-32"
+   :style="getStyleBasedOnTitle()"
   >
-   <!-- page title  -->
+   <h1 class="text-6xl font-bold text-center text-gray-800 font-Lora">
+    {{ title }}
+   </h1>
+   <h2 class="text-4xl font-bold text-center text-gray-800">
+    {{ projTitle }}
+   </h2>
   </div>
-  <div class="absolute inset-0 z-20 h-[50vh] flex justify-center items-center">
-   <!-- page title  -->
-   <!-- project title -->
-   <div class="h-full justify-center items-center flex pt-16 md:w-3/4">
-    <h2
-     class="text-white text-2xl uppercase pt-5 md:text-3xl 2xl:pt-0 text-center font-Merriweather"
-    >
-     <p v-if="projTitle">
-      {{ projTitle }}
-     </p>
-
-     <p
-      v-if="title"
-      class="text-white text-2xl uppercase md:text-3xl 2xl:pt-0 text-center font-Merriweather"
-     >
-      {{ title }}
-     </p>
-    </h2>
-   </div>
-  </div>
-  <!-- NavBar -->
-  <TheNav class="absolute z-50 w-full" />
-
-  <!-- image slot  -->
-  <slot name="image"></slot>
  </div>
 </template>
 
@@ -38,6 +21,47 @@
   title: {},
   projTitle: {},
  })
+
+ const getStyleBasedOnTitle = computed(() => {
+  if (title === "Who we are") {
+   return {
+    background:
+     "radial-gradient(farthest-side at -33.33% 50%, #0000 52%, #474bff 54% 57%, #0000 59%) 0 calc(40px / 2), radial-gradient(farthest-side at 50% 133.33%, #0000 52%, #474bff 54% 57%, #0000 59%) calc(40px / 2) 0, radial-gradient(farthest-side at 133.33% 50%, #0000 52%, #474bff 54% 57%, #0000 59%), radial-gradient(farthest-side at 50% -33.33%, #0000 52%, #474bff 54% 57%, #0000 59%), #47d3ff",
+    backgroundSize: "calc(40px / 4.667) 40px, 40px calc(40px / 4.667)",
+   }
+  }
+ })
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+ .bg {
+  background: radial-gradient(
+     farthest-side at -33.33% 50%,
+     #0000 52%,
+     #474bff 54% 57%,
+     #0000 59%
+    )
+    0 calc(40px / 2),
+   radial-gradient(
+     farthest-side at 50% 133.33%,
+     #0000 52%,
+     #474bff 54% 57%,
+     #0000 59%
+    )
+    calc(40px / 2) 0,
+   radial-gradient(
+    farthest-side at 133.33% 50%,
+    #0000 52%,
+    #474bff 54% 57%,
+    #0000 59%
+   ),
+   radial-gradient(
+    farthest-side at 50% -33.33%,
+    #0000 52%,
+    #474bff 54% 57%,
+    #0000 59%
+   ),
+   #47d3ff;
+  background-size: calc(40px / 4.667) 40px, 40px calc(40px / 4.667);
+ }
+</style>

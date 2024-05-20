@@ -9,67 +9,13 @@
 <template>
  <div>
   <div>
-   <div class="hidden md:block h-fit inset-0 z-50 container mx-auto text-white">
+   <div class="hidden md:block h-fit inset-0 z-50 container mx-auto nav">
     <!-- location , email and phone -->
-    <div
-     class="font-jost border-b border-quaternary flex justify-between rounded-sm text-base"
-    >
-     <!-- location  -->
-     <div
-      class="py-2 border-x border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:location" class="text-primary" />
-      <!-- text  -->
-      <a class="text-sm text-primary" href=""> Nairobi , Kenya </a>
-     </div>
-     <!-- phone  -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:location" class="text-primary" />
-      <!-- text  -->
-      <a class="text-sm text-primary"> Mogadishu , Somalia </a>
-     </div>
-     <!-- email  -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:email" class="text-primary" />
-      <!-- text  -->
-      <a
-       class="text-sm text-primary"
-       href="mailto:info@dansomconsultancy.org
-"
-      >
-       info@dansomconsultancy.org
-      </a>
-     </div>
-     <!-- socials -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:facebook" class="text-white grow hover:text-blue-700" />
-      <!-- icon  -->
-      <Icon name="mdi:instagram" class="text-white grow hover:text-pink-700" />
-      <!-- icon  -->
-      <Icon name="mdi:twitter" class="text-white grow hover:text-sky-600" />
-      <!-- tiktok -->
-      <Icon
-       name="akar-icons:tiktok-fill"
-       class="text-white grow hover:text-fuchsia-600"
-      />
-     </div>
-    </div>
+
     <!-- navigation and logo -->
     <div class="flex items-center py-5">
      <!-- logo -->
-     <h1
-      class="w-fit p-3 rounded-md shadow-md hover:bg-white bg-slate-200 transition-all delay-150 ease-linear"
-     >
+     <h1 class="w-fit p-3 rounded-md">
       <NuxtLink to="/">
        <img
         src="/dansom-logo.png"
@@ -82,27 +28,36 @@
      <div class="flex-grow flex justify-end items-center gap-5">
       <!-- nav items -->
       <div class="flex-grow flex justify-end items-center gap-5">
-       <NuxtLink to="/" class="text-lg border-button font-Lora">
+       <NuxtLink to="/" class="text-lg border-button text-black font-Lora">
         Home
        </NuxtLink>
-       <NuxtLink to="/About" class="text-lg border-button font-Lora">
+       <NuxtLink to="/About" class="text-lg border-button text-black font-Lora">
         About Us
        </NuxtLink>
-       <NuxtLink to="/Portfolio" class="text-lg border-button font-Lora">
+       <NuxtLink
+        to="/Portfolio"
+        class="text-lg border-button text-black font-Lora"
+       >
         Our Portfolio
        </NuxtLink>
-       <NuxtLink to="/Contact" class="border-button text-lg font-Lora">
+       <NuxtLink
+        to="/Contact"
+        class="border-button text-lg font-Lora text-black"
+       >
         Contact Us
        </NuxtLink>
-       <NuxtLink to="/Careers" class="text-lg border-button font-Lora">
+       <NuxtLink
+        to="/Careers"
+        class="text-lg border-button text-black font-Lora"
+       >
         Careers
        </NuxtLink>
-       <NuxtLink to="" class="text-lg border-button font-Lora">
+       <NuxtLink to="" class="text-lg border-button text-black font-Lora">
         Repository
        </NuxtLink>
        <a
         href="http://webmail.dansomconsultancy.org/"
-        class="text-lg border-button font-Lora"
+        class="text-lg border-button text-black font-Lora"
         target="_blank"
        >
         Staff Email
@@ -171,7 +126,6 @@
   background-color: #3077d3;
   /* Color of the animated border */
   transition: width 0.3s ease;
-  z-index: -1;
  }
 
  .border-button:hover::before {

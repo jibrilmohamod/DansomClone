@@ -63,7 +63,7 @@
   </TheCard>
   <div class="container mx-auto py-10">
    <div class="flex flex-col gap-2"></div>
-   <h2 class="font-DM text-5xl md:text-3xl py-10">Send Us a Message</h2>
+   <h2 class="font-DM text-5xl md:text-4xl py-10">Send Us a Message</h2>
    <form>
     <div class="mb-8 flex gap-4">
      <input

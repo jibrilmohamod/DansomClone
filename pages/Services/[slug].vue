@@ -117,6 +117,16 @@
  ]
 
  service.value = services.find((service) => service.title === slug.value)
+
+ useHead({
+  title: service.value.fullTitle,
+  meta: [
+   {
+    name: "description",
+    content: service.value.subtitle,
+   },
+  ],
+ })
 </script>
 
 <style>
