@@ -18,8 +18,8 @@
    <div class="w-full flex flex-col md:flex-row">
     <div class="md:w-1/2 py-10 h-96 grid place-content-center">
      <!-- Image -->
-     <div class="md:w-1/2">
-      <Image2Card :image="project.icon" />
+     <div class="md:w-fit">
+      <Image2Card class="md:w-fit" :image="project.icon" />
      </div>
     </div>
     <div class="md:w-1/2 px-6 py-5 font-Roboto">
