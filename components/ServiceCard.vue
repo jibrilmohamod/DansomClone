@@ -1,6 +1,10 @@
 <template>
- <div>
-  <NuxtLink v-if="link" :to="link" class="flex gap-3 py-4 cursor-pointer">
+ <div class="hover:scale-110">
+  <NuxtLink
+   v-if="link"
+   :to="link"
+   class="flex gap-3 py-4 cursor-pointer hover:scale-105 transition-all ease-linear duration-200"
+  >
    <!-- Icon -->
    <div
     class="h-fit bg-primary w-fit rounded-full p-2 hover:bg-secondary hover:duration-200 transition-all hover:ease-linear"

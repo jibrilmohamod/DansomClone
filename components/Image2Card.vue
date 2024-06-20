@@ -1,10 +1,6 @@
 <template>
  <div class="">
-  <NuxtImg
-   loading="lazy"
-   :src="image"
-   class="max-h-full object-cover md:object-cover"
-  />
+  <NuxtImg :src="image" class="max-h-full object-cover md:object-cover" />
  </div>
 </template>
 

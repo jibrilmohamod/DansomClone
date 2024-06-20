@@ -13,7 +13,6 @@
        :src="icon"
        alt="logo"
        class="object-contain h-24 w-full"
-       loading="lazy"
        quality="100"
        v-if="icon"
       />
