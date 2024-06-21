@@ -296,7 +296,7 @@
     "The objective of the assignment is to carry out a combination of field work and diagnostic analysis of public sector pay and grading trends and living standard assessment in Somalia and propose solutions that will provide adequate incentive for improved performance of civil Servants and also enable efficient and effective management of public government’s wage bill as aligned to nation-al strategies and development aspirations to promote sustainable growth.",
    Location: "Somalia",
    timeframes: "September 2019 - March 2020",
-   icon: "Untitled design.pngv1718972436/Untitled_design_cr2tcr.png",
+   icon: "v1718972436/Untitled_design_cr2tcr.png",
    Ngo: "World Bank",
   },
   {
@@ -356,7 +356,7 @@
    classification2: "Operational & Logistics Management",
    description2:
     "World Bank – Somalia High Frequency Survey. Dansom facilitated cooperation between the government of Somalia and The SHFS team (Altai and World Bank).",
-   icon: "v1718972384/FAO_logo_wauqq5.svg",
+   icon: "v1718972384/The_World_Bank_logo_qaqflw.svg",
   },
   {
    title: "Somalia Invest Climate Reform Program, IFC-World Bank",
@@ -368,7 +368,7 @@
    classification2: "Operational & Logistics Management",
    description2:
     "Dansom has partnered with IFC, World Bank Group to facilitate and support Public Private Dialogue in Somalia’s economic recovery sector. The recent support being to the Telecommunication sector and providing strategic advice in moving the National Communication Act towards submission and approval by the National Federal Parliament. Dansom also gives advice to IFC-World Bank on Somalia context, political economic analysis and Business development.",
-   icon: "International_Finance_Corporation_logo.svg.png",
+   icon: "v1718972374/International_Finance_Corporation_logo_zmjmi2.svg",
   },
   {
    title: "Horumarinta Elmiga II-Save the Children",
