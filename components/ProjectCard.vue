@@ -13,7 +13,10 @@
        :src="icon"
        alt="logo"
        class="object-contain h-24 w-full"
-       quality="100"
+       quality="50"
+       preload
+       type="webp"
+       provider="cloudinary"
        v-if="icon"
       />
      </div>

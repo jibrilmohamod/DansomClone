@@ -1,6 +1,12 @@
 <template>
  <div class="">
-  <NuxtImg :src="image" class="max-h-full object-cover md:object-cover" />
+  <NuxtImg
+   preload
+   :src="image"
+   provider="cloudinary"
+   type="webp"
+   class="max-h-full object-cover md:object-cover"
+  />
  </div>
 </template>
 
