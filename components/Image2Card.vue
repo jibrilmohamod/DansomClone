@@ -1,8 +1,10 @@
 <template>
  <div class="">
   <NuxtImg
-   loading="lazy"
+   preload
    :src="image"
+   provider="cloudinary"
+   type="webp"
    class="max-h-full object-cover md:object-cover"
   />
  </div>
