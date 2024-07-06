@@ -1,5 +1,5 @@
 <template>
- <TheNav />
+ <TheNav class="z-50" />
  <div class="bg-white">
   <TheCarousel class="" />
  </div>
