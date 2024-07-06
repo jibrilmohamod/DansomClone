@@ -2,7 +2,7 @@
  <div id="app" class="h-screen">
   <div class="relative slide overflow-hidden">
    <div class="carousel-inner relative overflow-hidden w-full">
-    <div class="curved-div bg-cover bg-center inset-0 z-50 outline absolute">
+    <div class="curved-div bg-cover bg-center inset-0 z-30 outline absolute">
      <div class="h-full w-full flex items-center justify-center">
       <div class="w-1/2 h-full hidden md:block"></div>
       <div
