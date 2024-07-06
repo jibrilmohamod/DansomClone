@@ -1,7 +1,7 @@
 <template>
  <TheNav />
  <div class="bg-white">
-  <TheCarousel class="z-40" />
+  <TheCarousel class="" />
  </div>
 </template>
 
