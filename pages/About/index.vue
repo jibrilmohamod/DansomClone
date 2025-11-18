@@ -90,15 +90,25 @@
      subtitle="Our values guide how we work with partners, communities, and one another."
     >
      <template #vfor>
-      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-       <ServiceCard
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+       <article
         v-for="service in services"
         :key="service.title"
-        class="bg-white/10 text-white"
-        :icon="service.icon"
-        :title="service.title"
-        :subtitle="service.subtitle"
-       />
+        class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-6 shadow-2xl shadow-primary/25 backdrop-blur"
+       >
+        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+        <div class="relative flex items-start justify-between gap-4">
+         <span class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em]">Value</span>
+         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-2xl text-white ring-1 ring-white/25">
+          <Icon :name="service.icon" />
+         </div>
+        </div>
+        <h4 class="relative mt-5 text-xl font-semibold leading-tight">{{ service.title }}</h4>
+        <p class="relative mt-3 text-sm leading-relaxed text-white/80">{{ service.subtitle }}</p>
+        <div class="relative mt-6 h-1.5 overflow-hidden rounded-full bg-white/10">
+         <div class="h-full w-2/3 bg-white transition-all duration-500 group-hover:w-full"></div>
+        </div>
+       </article>
       </div>
      </template>
     </OurExpertise>
@@ -112,6 +122,8 @@
      :key="member.name"
      :name="member.name"
      :role="member.role"
+     :image="member.image"
+     :alt="member.alt"
      :about="member.about"
      :aboutBig="member.aboutBig"
     />
