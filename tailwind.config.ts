@@ -33,13 +33,17 @@ module.exports = {
     "accordion-up": "accordion-up 0.2s ease-out",
    },
    colors: {
-    primary: "#55C1D9",
-    secondary: "#8BA651",
-    tertiary: "#BFD962",
-    quaternary: "#46658C",
-    quinary: "#0D0D0D",
+    primary: "#060a1a",
+    secondary: "#7cf8ff",
+    tertiary: "#0c132b",
+    quaternary: "#9c7bff",
+    quinary: "#0a132b",
+    surface: "#070f22",
+    muted: "#c7d8ff",
    },
    fontFamily: {
+    display: ["Space Grotesk", "Montserrat", "Inter", "sans-serif"],
+    body: ["Inter", "Open Sans", "Roboto", "sans-serif"],
     Playfair: ["Playfair Display", "serif"],
     Montserrat: ["Montserrat", "sans-serif"],
     Roboto: ["Roboto", "sans-serif"],
@@ -52,13 +56,18 @@ module.exports = {
     Pridi: ["Pridi", "serif"],
    },
    backgroundImage: {
-    "radial-gradient": "radial-gradient(#474bff 2px, transparent 2px)",
+    "radial-gradient": "radial-gradient(#7cf8ff 2px, transparent 2px)",
+    "neon-grid":
+     "radial-gradient(circle at 12% 22%, rgba(124,248,255,0.26), transparent 36%), radial-gradient(circle at 88% 10%, rgba(156,123,255,0.22), transparent 26%), radial-gradient(circle at 18% 76%, rgba(103,153,255,0.2), transparent 32%), radial-gradient(circle at 82% 68%, rgba(255,255,255,0.06), transparent 30%)",
    },
    backgroundColor: {
-    "custom-blue": "#47d3ff",
+    "custom-blue": "#7cf8ff",
    },
    backgroundSize: {
     "12": "12px 12px",
+   },
+   boxShadow: {
+    glow: "0 20px 80px rgba(0,0,0,0.35), 0 10px 40px rgba(124,248,255,0.24)",
    },
   },
  },
