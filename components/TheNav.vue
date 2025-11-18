@@ -32,9 +32,13 @@
      </div>
     </div>
 
-    <div class="flex items-center justify-between rounded-[18px] border border-white/10 bg-gradient-to-r from-white/10 via-white/5 to-white/10 px-5 py-3 backdrop-blur-2xl shadow-[0_22px_60px_-28px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
-     <NuxtLink to="/" class="flex items-center gap-3">
-      <img src="/dansom-logo.png" alt="Dansom logo" class="h-11 w-auto" />
+    <div class="flex items-center justify-between rounded-[18px] border border-white/15 bg-gradient-to-r from-[#050b1f]/85 via-[#0d1b3a]/70 to-[#050b1f]/85 px-5 py-3 backdrop-blur-2xl shadow-[0_22px_60px_-28px_rgba(0,0,0,0.85)] ring-1 ring-secondary/25">
+     <NuxtLink
+      to="/"
+      class="relative flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20 shadow-[0_10px_40px_rgba(124,248,255,0.25)] backdrop-blur"
+     >
+      <span class="absolute inset-0 rounded-full bg-gradient-to-r from-secondary/20 via-primary/15 to-quaternary/20 blur-xl"></span>
+      <img src="/dansom-logo.png" alt="Dansom logo" class="relative h-11 w-auto drop-shadow-[0_10px_24px_rgba(124,248,255,0.6)]" />
      </NuxtLink>
 
      <div class="flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.16em]">
@@ -74,8 +78,9 @@
      </li>
 
      <li>
-      <NuxtLink to="/">
-       <img src="/dansom-logo.png" alt="Dansom logo" class="h-9" />
+      <NuxtLink to="/" class="group relative flex items-center rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/20 shadow-glow backdrop-blur">
+       <span class="absolute inset-0 rounded-full bg-gradient-to-r from-secondary/25 via-primary/20 to-quaternary/25 blur-lg"></span>
+       <img src="/dansom-logo.png" alt="Dansom logo" class="relative h-9 drop-shadow-[0_8px_20px_rgba(124,248,255,0.55)]" />
       </NuxtLink>
      </li>
     </ul>

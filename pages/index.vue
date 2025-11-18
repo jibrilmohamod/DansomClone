@@ -118,33 +118,110 @@
    </div>
   </section>
 
-  <section class="py-16 md:py-20">
-   <div class="container px-6 space-y-8 rounded-[28px] border border-white/10 bg-white/5 p-10 shadow-glow backdrop-blur-xl">
-    <div class="flex flex-col gap-4 text-center">
-     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-secondary">Recent work</p>
-     <h2 class="font-display text-3xl font-semibold sm:text-4xl">Trusted by leading regional and global institutions</h2>
-     <p class="font-body text-lg text-white/80">
-      We support international consultancies, donor agencies, and NGOs with bespoke strategies, monitoring frameworks, and research that respond to shifting contexts. Explore our recent collaborations and the outcomes we delivered.
-     </p>
-     <div class="flex flex-wrap gap-3 justify-center">
-      <NuxtLink
-       to="/Portfolio"
-       class="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-surface shadow-glow transition hover:-translate-y-1"
+  <section class="relative py-16 md:py-20">
+   <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(124,248,255,0.18),transparent_32%),radial-gradient(circle_at_90%_15%,rgba(156,123,255,0.14),transparent_30%),linear-gradient(120deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))]"></div>
+   <div class="container relative px-6 space-y-8">
+    <div class="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+     <div class="space-y-6 rounded-[24px] border border-white/10 bg-gradient-to-br from-white/10 via-primary/10 to-surface/70 p-8 shadow-glow backdrop-blur">
+      <div class="space-y-4">
+       <p class="text-sm font-semibold uppercase tracking-[0.3em] text-secondary">Recent work</p>
+       <h2 class="font-display text-3xl font-semibold sm:text-4xl">Trusted by leading regional and global institutions</h2>
+       <p class="font-body text-lg text-white/80">
+        We support international consultancies, donor agencies, and NGOs with bespoke strategies, monitoring frameworks, and research that respond to shifting contexts. Explore our recent collaborations and the outcomes we delivered.
+       </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+       <div
+        v-for="signal in deliveryStats"
+        :key="signal.title"
+        class="relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-4 ring-1 ring-white/10"
+       >
+        <span class="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/10 via-transparent to-quaternary/10 blur-xl"></span>
+        <div class="relative flex items-center gap-3">
+         <span class="flex h-11 w-11 items-center justify-center rounded-full bg-secondary/20 text-secondary shadow-[0_6px_30px_rgba(124,248,255,0.35)]">
+          <Icon :name="signal.icon" class="text-xl" />
+         </span>
+         <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.15em] text-white/70">{{ signal.title }}</p>
+          <p class="text-sm text-white/80">{{ signal.copy }}</p>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+       <NuxtLink
+        to="/Portfolio"
+        class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary via-[#6ce1ff] to-quaternary px-5 py-3 text-sm font-semibold text-primary shadow-[0_20px_40px_-18px_rgba(124,248,255,0.8)] transition hover:-translate-y-1"
+       >
+        View portfolio
+        <Icon name="ic:round-arrow-outward" class="text-lg" />
+       </NuxtLink>
+       <NuxtLink
+        to="/Contact"
+        class="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:border-white/40 hover:bg-white/10"
+       >
+        Start a conversation
+        <Icon name="mdi:message-text-outline" class="text-lg" />
+       </NuxtLink>
+      </div>
+     </div>
+
+     <div class="grid gap-4 md:grid-cols-2">
+      <article
+       v-for="project in portfolioHighlights"
+       :key="project.title"
+       class="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-primary/5 to-surface/60 p-6 shadow-[0_30px_80px_-50px_rgba(0,0,0,0.9)] backdrop-blur"
       >
-       View portfolio
-       <Icon name="ic:round-arrow-outward" class="text-lg" />
-      </NuxtLink>
-      <NuxtLink
-       to="/Contact"
-       class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:border-white/40 hover:bg-white/10"
-      >
-       Start a conversation
-       <Icon name="mdi:message-text-outline" class="text-lg" />
-      </NuxtLink>
+       <span class="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/10 via-transparent to-quaternary/15 opacity-70 blur-2xl"></span>
+       <div class="relative flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+        <span class="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">
+         <Icon name="mdi:map-marker-outline" class="text-base text-secondary" />
+         {{ project.location }}
+        </span>
+        <span class="rounded-full bg-secondary/15 px-3 py-1 text-secondary ring-1 ring-secondary/40">{{ project.partner }}</span>
+       </div>
+       <h3 class="relative mt-4 text-xl font-semibold text-white">{{ project.title }}</h3>
+       <p class="relative mt-2 text-sm leading-relaxed text-white/75">{{ project.summary }}</p>
+
+       <div class="relative mt-4 flex flex-wrap gap-2">
+        <span
+         v-for="tag in project.tags"
+         :key="tag"
+         class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/80"
+        >
+         {{ tag }}
+        </span>
+       </div>
+
+       <div class="relative mt-5 flex items-center justify-between border-t border-white/10 pt-4 text-sm text-white/80">
+        <div class="flex items-center gap-2">
+         <span class="flex h-9 w-9 items-center justify-center rounded-full bg-secondary/20 text-secondary">
+          <Icon :name="project.icon" class="text-lg" />
+         </span>
+         <div>
+          <p class="text-xs uppercase tracking-[0.16em] text-white/60">Outcome</p>
+          <p class="font-semibold">{{ project.metric }}</p>
+         </div>
+        </div>
+        <NuxtLink
+         to="/Portfolio"
+         class="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white transition group-hover:-translate-y-1 group-hover:text-secondary"
+        >
+         Case study
+         <Icon name="mdi:arrow-top-right" class="text-base" />
+        </NuxtLink>
+       </div>
+      </article>
      </div>
     </div>
-    <div class="rounded-[28px] border border-white/10 bg-primary/40 p-6 shadow-inner shadow-black/30">
-     <LogoCarousel />
+
+    <div class="rounded-[20px] border border-white/10 bg-white/5 p-5 shadow-inner shadow-black/30 backdrop-blur">
+     <div class="flex flex-col gap-3 text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-white/60">Partners and collaborators</p>
+      <LogoCarousel />
+     </div>
     </div>
    </div>
   </section>
@@ -180,6 +257,58 @@
 </template>
 
 <script setup lang="ts">
+ const portfolioHighlights = [
+  {
+   title: "Stabilization monitoring for social services",
+   summary: "Network of enumerators verifying education and health outputs in high-risk districts to inform adaptive delivery.",
+   partner: "UN partners",
+   location: "Somalia",
+   metric: "340+ sites verified",
+   tags: ["TPME", "Access", "Localization"],
+   icon: "mdi:radar",
+  },
+  {
+   title: "Cross-border political economy analysis",
+   summary: "Mixed-method PEA unpacking mobility, trade, and governance dynamics along Somali-Kenyan corridors.",
+   partner: "Global consultancy",
+   location: "Somalia & Kenya",
+   metric: "12 counties mapped",
+   tags: ["PEA", "Advisory", "Economies"],
+   icon: "mdi:earth",
+  },
+  {
+   title: "Community engagement playbooks",
+   summary: "Participatory design sprints with displaced communities to co-create inclusion toolkits for INGOs.",
+   partner: "INGO consortium",
+   location: "Kenya",
+   metric: "6 co-created toolkits",
+   tags: ["Engagement", "Design", "Inclusion"],
+   icon: "mdi:hand-heart",
+  },
+  {
+   title: "Security and access advisory",
+   summary: "Risk mapping, vetting, and access strategies enabling safe deployments and data collection in fragile contexts.",
+   partner: "Donor missions",
+   location: "Horn of Africa",
+   metric: "72h mobilization",
+   tags: ["Security", "Access", "Advisory"],
+   icon: "mdi:security",
+  },
+ ]
+
+ const deliveryStats = [
+  {
+   title: "Rapid mobilization",
+   copy: "Field teams active within 72 hours across Somalia and Kenya.",
+   icon: "mdi:flash-outline",
+  },
+  {
+   title: "Regional reach",
+   copy: "340+ sites monitored with local enumerators and advisors.",
+   icon: "mdi:earth",
+  },
+ ]
+
  const services = [
   {
    icon: "arcticons:adobe-analytics",
