@@ -1,7 +1,8 @@
 <template>
  <section class="relative isolate overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-primary/75 to-tertiary/95"></div>
-  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(124,248,255,0.18),transparent_40%),linear-gradient(300deg,rgba(156,123,255,0.16),transparent_38%),radial-gradient(circle_at_12%_20%,rgba(103,153,255,0.14),transparent_32%)]"></div>
+ <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-primary/75 to-tertiary/95"></div>
+  <div class="pointer-events-none absolute inset-0 bg-neon-grid opacity-70 mix-blend-screen"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(124,248,255,0.2),transparent_42%),linear-gradient(300deg,rgba(156,123,255,0.18),transparent_40%),radial-gradient(circle_at_12%_20%,rgba(103,153,255,0.16),transparent_32%)]"></div>
   <div class="absolute inset-0 opacity-55" aria-hidden="true">
    <NuxtImg
     provider="cloudinary"
@@ -31,10 +32,10 @@
        </p>
       </div>
       <div class="flex flex-wrap gap-3">
-       <NuxtLink
-        to="/Portfolio"
-        class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary to-quaternary px-5 py-3 text-base font-semibold text-primary shadow-glow transition hover:-translate-y-1 hover:shadow-lg"
-       >
+      <NuxtLink
+       to="/Portfolio"
+       class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary via-white to-quaternary px-5 py-3 text-base font-semibold text-primary shadow-glow transition hover:-translate-y-1 hover:shadow-lg"
+      >
         View recent work
         <span class="transition-transform group-hover:translate-x-1">
          <Icon name="ic:round-arrow-outward" class="text-xl" />
@@ -68,8 +69,8 @@
     </div>
 
     <div class="relative">
-      <div class="relative overflow-hidden rounded-[30px] border border-white/15 bg-gradient-to-b from-white/10 via-white/5 to-white/10 p-6 backdrop-blur-2xl shadow-2xl shadow-black/30 ring-1 ring-white/15">
-      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(124,248,255,0.18),transparent_35%),radial-gradient(circle_at_75%_20%,rgba(156,123,255,0.16),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(103,153,255,0.16),transparent_35%)]"></div>
+      <div class="relative overflow-hidden rounded-[30px] border border-secondary/30 bg-gradient-to-b from-white/10 via-white/5 to-white/10 p-6 backdrop-blur-2xl shadow-2xl shadow-black/30 ring-1 ring-white/15">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(124,248,255,0.2),transparent_35%),radial-gradient(circle_at_75%_20%,rgba(156,123,255,0.18),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(103,153,255,0.18),transparent_35%)]"></div>
        <div class="relative space-y-6">
         <div class="rounded-2xl border border-white/15 bg-white/10 p-4 shadow-lg shadow-black/20 ring-1 ring-white/10">
          <div class="flex items-center gap-3">

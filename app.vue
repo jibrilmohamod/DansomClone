@@ -1,9 +1,9 @@
 <template>
  <div class="relative min-h-screen overflow-hidden bg-gradient-to-b from-primary via-quinary to-primary text-white">
-  <div class="pointer-events-none absolute inset-0 bg-neon-grid opacity-70 mix-blend-screen"></div>
+  <div class="pointer-events-none absolute inset-0 bg-neon-grid opacity-80 mix-blend-screen"></div>
   <div class="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-secondary/25 via-transparent to-transparent blur-3xl"></div>
   <div class="pointer-events-none absolute inset-y-0 right-0 w-[360px] bg-gradient-to-l from-quaternary/25 via-transparent to-transparent blur-3xl"></div>
-  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(124,248,255,0.08),transparent_38%),radial-gradient(circle_at_70%_18%,rgba(156,123,255,0.08),transparent_36%),radial-gradient(circle_at_50%_80%,rgba(124,248,255,0.06),transparent_40%)]"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(124,248,255,0.11),transparent_38%),radial-gradient(circle_at_70%_18%,rgba(156,123,255,0.1),transparent_36%),radial-gradient(circle_at_50%_80%,rgba(124,248,255,0.08),transparent_40%)]"></div>
 
   <div class="relative flex min-h-screen flex-col backdrop-blur-[2px]">
    <NuxtPage />
