@@ -35,9 +35,6 @@
     <div class="flex items-center justify-between rounded-[18px] border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-xl shadow-glow">
      <NuxtLink to="/" class="flex items-center gap-3">
       <img src="/dansom-logo.png" alt="Dansom logo" class="h-11 w-auto" />
-      <div class="hidden text-left text-[11px] font-semibold leading-tight text-white/70 lg:block">
-       Research &amp; Consultancy for the Horn of Africa
-      </div>
      </NuxtLink>
 
      <div class="flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.12em]">
