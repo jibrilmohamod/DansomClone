@@ -7,129 +7,76 @@
 </script>
 
 <template>
- <div>
-  <div>
-   <div class="hidden md:block h-fit inset-0 z-50 container mx-auto text-white">
-    <!-- location , email and phone -->
-    <div
-     class="font-jost border-b border-quaternary flex justify-between rounded-sm text-base"
-    >
-     <!-- location  -->
-     <div
-      class="py-2 border-x border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:location" class="text-primary" />
-      <!-- text  -->
-      <a class="text-sm text-primary" href=""> Nairobi , Kenya </a>
-     </div>
-     <!-- phone  -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:location" class="text-primary" />
-      <!-- text  -->
-      <a class="text-sm text-primary"> Mogadishu , Somalia </a>
-     </div>
-     <!-- email  -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit gap-3"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:email" class="text-primary" />
-      <!-- text  -->
+ <div class="text-white">
+  <div class="hidden md:block">
+   <div class="container">
+    <div class="flex flex-wrap items-center justify-between py-3 text-xs font-medium text-white/70">
+     <div class="flex flex-wrap items-center gap-4">
+      <div class="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">
+       <Icon name="mdi:map-marker" class="text-base text-secondary" />
+       <span>Mogadishu &amp; Nairobi</span>
+      </div>
       <a
-       class="text-sm text-primary"
-       href="mailto:info@dansomconsultancy.org
-"
+       class="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10 transition hover:bg-white/10"
+       href="mailto:info@dansomconsultancy.org"
       >
+       <Icon name="mdi:email-outline" class="text-base text-secondary" />
        info@dansomconsultancy.org
       </a>
      </div>
-     <!-- socials -->
-     <div
-      class="py-2 border-r border-quaternary rounded-sm px-5 grow flex justify-center items-center w-fit"
-     >
-      <!-- icon  -->
-      <Icon name="mdi:facebook" class="text-white grow hover:text-blue-700" />
-      <!-- icon  -->
-      <Icon name="mdi:instagram" class="text-white grow hover:text-pink-700" />
-      <!-- icon  -->
-      <Icon name="mdi:twitter" class="text-white grow hover:text-sky-600" />
-      <!-- tiktok -->
-      <Icon
-       name="akar-icons:tiktok-fill"
-       class="text-white grow hover:text-fuchsia-600"
-      />
+     <div class="flex items-center gap-3 text-white/70">
+      <Icon name="mdi:facebook" class="transition hover:text-white" />
+      <Icon name="mdi:instagram" class="transition hover:text-white" />
+      <Icon name="mdi:twitter" class="transition hover:text-white" />
+      <Icon name="akar-icons:tiktok-fill" class="transition hover:text-white" />
      </div>
     </div>
-    <!-- navigation and logo -->
-    <div class="flex items-center py-5">
-     <!-- logo -->
-     <h1
-      class="w-fit p-3 rounded-md shadow-md hover:bg-white bg-slate-200 transition-all delay-150 ease-linear"
-     >
-      <NuxtLink to="/">
-       <img
-        src="/dansom-logo.png"
-        alt="logo"
-        class="object-contain h-10 w-fit"
-       />
-      </NuxtLink>
-     </h1>
-     <!-- navigation -->
-     <div class="flex-grow flex justify-end items-center gap-5">
-      <!-- nav items -->
-      <div class="flex-grow flex justify-end items-center gap-5">
-       <NuxtLink to="/" class="text-lg border-button font-Lora">
-        Home
-       </NuxtLink>
-       <NuxtLink to="/About" class="text-lg border-button font-Lora">
-        About Us
-       </NuxtLink>
-       <NuxtLink to="/Portfolio" class="text-lg border-button font-Lora">
-        Our Portfolio
-       </NuxtLink>
-       <NuxtLink to="/Contact" class="border-button text-lg font-Lora">
-        Contact Us
-       </NuxtLink>
-       <NuxtLink to="/Careers" class="text-lg border-button font-Lora">
-        Careers
-       </NuxtLink>
-       <NuxtLink to="" class="text-lg border-button font-Lora">
-        Repository
-       </NuxtLink>
-       <a
-        href="http://webmail.dansomconsultancy.org/"
-        class="text-lg border-button font-Lora"
-        target="_blank"
-       >
-        Staff Email
-       </a>
-      </div>
-      <!-- button -->
-      <div class="flex justify-end items-center gap-5">
-       <a href="mailto:info@focalfoods.co.ke" class="text-lg font-Lora hover:">
-       </a>
-      </div>
+
+    <div class="flex items-center justify-between rounded-[18px] border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-xl shadow-glow">
+     <NuxtLink to="/" class="flex items-center gap-3">
+      <img src="/dansom-logo.png" alt="Dansom logo" class="h-11 w-auto" />
+     </NuxtLink>
+
+     <div class="flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.12em]">
+      <NuxtLink to="/" class="nav-link">Home</NuxtLink>
+      <NuxtLink to="/About" class="nav-link">About</NuxtLink>
+      <NuxtLink to="/Services" class="nav-link">Services</NuxtLink>
+      <NuxtLink to="/Portfolio" class="nav-link">Portfolio</NuxtLink>
+      <NuxtLink to="/Careers" class="nav-link">Careers</NuxtLink>
+      <NuxtLink to="/Contact" class="nav-link">Contact</NuxtLink>
+      <a
+       href="http://webmail.dansomconsultancy.org/"
+       target="_blank"
+       class="nav-link"
+      >
+       Staff Email
+      </a>
      </div>
+
+     <NuxtLink
+      to="/Contact"
+      class="group inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-1"
+     >
+      Book a call
+      <span class="transition-transform group-hover:translate-x-1">
+       <Icon name="mdi:arrow-right" />
+      </span>
+     </NuxtLink>
     </div>
    </div>
   </div>
-  <div class="w-full px-5 py-5 overflow-hidden md:hidden">
-   <nav class="w-96">
-    <!-- menu item -->
-    <ul class="flex w-[90vw] items-center justify-between">
-     <li class="bg-white p-2 rounded-full" @click="toggleMobileNav()">
-      <Icon name="ci:menu-alt-01" class="text-4xl text-blue-500" />
+
+  <div class="w-full px-5 py-5 md:hidden">
+   <nav class="w-full">
+    <ul class="flex w-full items-center justify-between">
+     <li class="rounded-full border border-white/20 bg-white/10 p-3" @click="toggleMobileNav()">
+      <Icon name="ci:menu-alt-01" class="text-3xl text-white" />
      </li>
 
-     <li class="">
-      <!-- logo -->
-      <NuxtLink to="/"
-       ><img src="/dansom-logo.png" alt="logo" class="h-8"
-      /></NuxtLink>
+     <li>
+      <NuxtLink to="/">
+       <img src="/dansom-logo.png" alt="Dansom logo" class="h-9" />
+      </NuxtLink>
      </li>
     </ul>
     <transition
@@ -138,7 +85,6 @@
      leave-to-class="animate__animated animate__fadeOutRight"
     >
      <MobileNav
-      class=""
       v-if="showMobile"
       @toggleMobileNav="toggleMobileNav()"
      />
@@ -149,32 +95,34 @@
 </template>
 
 <style scoped>
- .border-button {
-  padding: 10px 20px;
-  background-color: transparent;
-  border: none;
-  position: relative;
-  overflow: hidden;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
- }
+.nav-link {
+ position: relative;
+ padding: 6px 0;
+ transition: color 0.2s ease, opacity 0.2s ease;
+ color: rgba(255, 255, 255, 0.75);
+}
 
- .border-button::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  /* Height of the bottom border */
-  background-color: #3077d3;
-  /* Color of the animated border */
-  transition: width 0.3s ease;
-  z-index: -1;
- }
+.nav-link::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ height: 2px;
+ width: 100%;
+ transform: scaleX(0);
+ transform-origin: left;
+ background: linear-gradient(90deg, #d7b065, #8c7357);
+ transition: transform 0.25s ease;
+ opacity: 0.9;
+}
 
- .border-button:hover::before {
-  width: 100%;
- }
+.nav-link:hover::after,
+.nav-link.router-link-exact-active::after {
+ transform: scaleX(1);
+}
+
+.nav-link:hover,
+.nav-link.router-link-exact-active {
+ color: #fff;
+}
 </style>
