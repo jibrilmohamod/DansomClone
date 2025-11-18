@@ -1,17 +1,17 @@
 <template>
- <div class="bg-slate-50 text-quinary">
+ <div class="bg-tertiary text-quinary">
   <TheHero />
 
   <section class="container px-6 py-16 md:py-20">
    <div class="grid items-center gap-12 md:grid-cols-12">
     <div class="md:col-span-7 space-y-6">
-     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-quaternary">Who we are</p>
+     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Who we are</p>
      <h2 class="text-3xl font-bold leading-tight sm:text-4xl font-Playfair">Regional expertise backed by on-the-ground access</h2>
      <p class="text-lg leading-relaxed text-slate-700 font-Montserrat">
       Since 2009, DANSOM has partnered with humanitarian and development actors to generate actionable insights across Somalia and Kenya. Our network of thematic experts and field researchers brings clarity to complex contexts so programs can move forward with confidence.
      </p>
      <div class="grid gap-4 sm:grid-cols-2">
-      <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-md shadow-slate-200/70 ring-1 ring-slate-100">
+      <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-md shadow-slate-200/70 ring-1 ring-tertiary">
        <span class="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
         <Icon name="mdi:account-group" class="text-xl" />
        </span>
@@ -20,7 +20,7 @@
         <p class="text-sm text-slate-600">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
        </div>
       </div>
-      <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-md shadow-slate-200/70 ring-1 ring-slate-100">
+      <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-md shadow-slate-200/70 ring-1 ring-tertiary">
        <span class="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-secondary/10 text-secondary">
         <Icon name="mdi:lightbulb-on-outline" class="text-xl" />
        </span>
@@ -32,7 +32,7 @@
      </div>
     </div>
     <div class="md:col-span-5">
-     <div class="relative overflow-hidden rounded-[28px] bg-white shadow-2xl shadow-slate-200">
+     <div class="relative overflow-hidden rounded-[28px] bg-white shadow-2xl shadow-slate-200 ring-1 ring-tertiary">
       <NuxtImg
        provider="cloudinary"
        format="webp"
@@ -55,7 +55,7 @@
   <section class="bg-white py-16 md:py-20">
    <div class="container px-6 space-y-12">
     <div class="flex flex-col gap-4 text-center">
-     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-quaternary">Our expertise</p>
+     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Our expertise</p>
      <h2 class="text-3xl font-bold sm:text-4xl font-Playfair">Services designed for complex environments</h2>
      <p class="text-lg text-slate-700 max-w-3xl mx-auto font-Montserrat">
       We blend rigorous methodologies with contextual sensitivity to deliver monitoring, advisory, and research services that strengthen decision-making for partners across the Horn of Africa.
@@ -66,7 +66,7 @@
      <div
       v-for="service in services"
       :key="service.title"
-      class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-50 to-white p-6 shadow-md shadow-slate-200 ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl"
+      class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-tertiary to-white p-6 shadow-md shadow-slate-200 ring-1 ring-tertiary transition hover:-translate-y-1 hover:shadow-xl"
      >
       <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
        <Icon :name="service.icon" class="text-2xl" />
@@ -87,11 +87,11 @@
 
   <section class="py-16 md:py-20">
    <div class="container px-6">
-    <div class="grid gap-10 rounded-[28px] bg-gradient-to-r from-primary/15 via-white to-secondary/10 p-10 shadow-lg shadow-slate-200">
+    <div class="grid gap-10 rounded-[28px] bg-gradient-to-r from-primary/90 via-primary to-quinary p-10 shadow-2xl shadow-primary/20 text-white">
      <div class="max-w-3xl space-y-4">
       <p class="text-sm font-semibold uppercase tracking-[0.2em] text-quaternary">How we work</p>
       <h2 class="text-3xl font-bold sm:text-4xl font-Playfair">Field-tested methods for reliable results</h2>
-      <p class="text-lg text-slate-700 font-Montserrat">
+      <p class="text-lg text-white/80 font-Montserrat">
        Our teams pair local presence with proven tools to deliver credible evidence. From rapid mobilization to structured analysis, every engagement is designed to translate findings into practical recommendations.
       </p>
      </div>
@@ -100,16 +100,16 @@
       <div
        v-for="step in approach"
        :key="step.title"
-       class="rounded-2xl bg-white p-6 shadow-md shadow-slate-200 ring-1 ring-slate-100"
+       class="rounded-2xl bg-white/10 p-6 shadow-lg shadow-black/10 ring-1 ring-white/10"
       >
        <div class="flex items-center gap-3">
-        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-quaternary/10 text-quaternary">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-quaternary/20 text-quaternary">
          <Icon :name="step.icon" class="text-xl" />
         </span>
-        <p class="text-sm font-semibold uppercase tracking-[0.15em] text-quinary">{{ step.tag }}</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.15em] text-white">{{ step.tag }}</p>
        </div>
-       <h3 class="mt-4 text-xl font-semibold">{{ step.title }}</h3>
-       <p class="mt-2 text-sm text-slate-600 leading-relaxed">{{ step.copy }}</p>
+       <h3 class="mt-4 text-xl font-semibold text-white">{{ step.title }}</h3>
+       <p class="mt-2 text-sm text-white/80 leading-relaxed">{{ step.copy }}</p>
       </div>
      </div>
     </div>
@@ -119,7 +119,7 @@
   <section class="bg-white py-16 md:py-20">
    <div class="container px-6 grid items-center gap-10 lg:grid-cols-2">
     <div class="space-y-6">
-     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-quaternary">Partners &amp; portfolio</p>
+     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Partners &amp; portfolio</p>
      <h2 class="text-3xl font-bold sm:text-4xl font-Playfair">Trusted by leading regional and global institutions</h2>
      <p class="text-lg text-slate-700 font-Montserrat">
       We support international consultancies, donor agencies, and NGOs with bespoke strategies, monitoring frameworks, and research that respond to shifting contexts. Explore our recent collaborations and the outcomes we delivered.
@@ -127,21 +127,21 @@
      <div class="flex flex-wrap gap-3">
       <NuxtLink
        to="/Portfolio"
-       class="inline-flex items-center gap-2 rounded-full bg-quaternary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-300 transition hover:-translate-y-0.5"
+       class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:-translate-y-0.5"
       >
        View portfolio
        <Icon name="ic:round-arrow-outward" class="text-lg" />
       </NuxtLink>
       <NuxtLink
        to="/Contact"
-       class="inline-flex items-center gap-2 rounded-full border border-quaternary px-5 py-3 text-sm font-semibold text-quaternary transition hover:-translate-y-0.5 hover:bg-quaternary hover:text-white"
+       class="inline-flex items-center gap-2 rounded-full border border-primary px-5 py-3 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:bg-primary hover:text-white"
       >
        Start a conversation
        <Icon name="mdi:message-text-outline" class="text-lg" />
       </NuxtLink>
      </div>
     </div>
-    <div class="rounded-[28px] bg-slate-50 p-6 shadow-inner shadow-slate-200 ring-1 ring-slate-100">
+    <div class="rounded-[28px] bg-tertiary p-6 shadow-inner shadow-slate-200 ring-1 ring-tertiary">
      <LogoCarousel />
     </div>
    </div>
@@ -150,7 +150,7 @@
   <section class="py-16 md:py-20">
    <div class="container px-6">
     <div class="flex flex-col items-center gap-4 text-center">
-     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-quaternary">Let&apos;s collaborate</p>
+     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Let&apos;s collaborate</p>
      <h2 class="text-3xl font-bold sm:text-4xl font-Playfair">Ready to build actionable evidence together?</h2>
      <p class="text-lg text-slate-700 max-w-3xl font-Montserrat">
       Tell us about your objectives and we&apos;ll assemble the right team to support you—from rapid assessments to long-term monitoring and evaluation.
@@ -158,14 +158,14 @@
      <div class="flex flex-wrap items-center justify-center gap-3">
       <NuxtLink
        to="/Contact"
-       class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-quinary shadow-lg shadow-primary/30 transition hover:-translate-y-0.5"
+       class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:-translate-y-0.5"
       >
        Contact Dansom
        <Icon name="mdi:phone" class="text-lg" />
       </NuxtLink>
       <NuxtLink
        to="/About"
-       class="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:bg-primary hover:text-quinary"
+       class="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:bg-primary hover:text-white"
       >
        Meet the team
        <Icon name="mdi:account-circle-outline" class="text-lg" />
@@ -198,68 +198,49 @@
    title: "Community Engagement & Inclusion",
    subtitle:
     "Strategies that ensure meaningful participation of community members, women, and minority groups across program cycles.",
-   slug: "Community%20Engagement%20Strategies",
+   slug: "Community%20Engagement%20and%20Inclusion",
   },
   {
-   icon: "ph:leaf-thin",
-   title: "Environmental Impact & Resilience",
+   icon: "ph:chart-line-up",
+   title: "Economic Growth & Market Systems",
    subtitle:
-    "Environmental impact assessments and climate resilience insights tailored to humanitarian and development contexts.",
-   slug: "Environmental%20Impact%20Assessment%20(EIA)%20%26%20Monitoring",
+    "Market analyses and growth strategies that align public, private, and community stakeholders.",
+   slug: "Economic%20Growth%20and%20Market%20Systems",
   },
   {
-   icon: "pepicons-pencil:people",
-   title: "Organizational Capacity & HR",
+   icon: "mdi:security",
+   title: "Security & Access Advisory",
    subtitle:
-    "Capacity building, leadership coaching, and HR systems that strengthen local institutions and delivery partners.",
-   slug: "Organizational%20Capacity%20Building%20%26%20HR",
+    "Risk analysis, access strategies, and secure field operations enabling safe delivery in fragile contexts.",
+   slug: "Security%20and%20Access%20Advisory",
   },
   {
-   icon: "ph:gear-six-thin",
-   title: "Operational & Logistics Advisory",
+   icon: "mdi:chart-bell-curve",
+   title: "Program Design & Learning",
    subtitle:
-    "Operational planning, security advisory, and logistics management to keep field activities safe and efficient.",
-   slug: "Operational%20and%20Logistics%20Management",
+    "Evidence-backed design support, MEL frameworks, and adaptive learning systems for complex programs.",
+   slug: "Program%20Design%20and%20Learning",
   },
  ]
 
  const approach = [
   {
-   title: "Local insight meets rigorous design",
-   copy:
-    "We combine local researchers, subject matter experts, and robust methodologies to tailor each engagement to the context.",
-   icon: "mdi:map-search-outline",
-   tag: "Discover",
+   icon: "mdi:flash-outline",
+   tag: "Mobilize",
+   title: "Local presence, rapid start",
+   copy: "Embedded field teams and vetted networks unlock reliable access to communities and decision-makers.",
   },
   {
-   title: "Secure field deployment",
-   copy:
-    "Dedicated access teams operate in challenging environments to collect reliable qualitative and quantitative data.",
-   icon: "mdi:shield-check-outline",
-   tag: "Access",
+   icon: "mdi:chart-pie",
+   tag: "Analyse",
+   title: "Mixed-method rigor",
+   copy: "Qualitative and quantitative tools paired with triangulation deliver defensible findings you can trust.",
   },
   {
-   title: "Actionable reporting",
-   copy:
-    "Clear, decision-ready deliverables with recommendations aligned to partner objectives and community realities.",
-   icon: "mdi:chart-box-outline",
-   tag: "Deliver",
+   icon: "mdi:rocket-launch-outline",
+   tag: "Act",
+   title: "Decision-ready outputs",
+   copy: "Clear recommendations and stakeholder-ready deliverables accelerate implementation and course corrections.",
   },
  ]
-
- useHead({
-  title: "Dansom Consultancy & Research",
-  meta: [
-   {
-    name: "description",
-    content:
-     "DANSOM is a research and consultancy firm that partners with humanitarian and development organizations across the Horn of Africa to deliver actionable insights.",
-   },
-   {
-    name: "keywords",
-    content:
-     "DANSOM, research, consultancy, third party monitoring, political economy analysis, Somalia, Kenya, Horn of Africa, humanitarian, development",
-   },
-  ],
- })
 </script>

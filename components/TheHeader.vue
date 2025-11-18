@@ -1,36 +1,24 @@
 <template>
- <div class="h-[50vh] 2xl:h-[40vh]">
-  <div
-   class="absolute inset-0 z-10 h-[50vh] flex justify-center items-center 2xl:h-[40vh]"
-  >
-   <!-- page title  -->
-  </div>
-  <div class="absolute inset-0 z-20 h-[50vh] flex justify-center items-center">
-   <!-- page title  -->
-   <!-- project title -->
-   <div class="h-full justify-center items-center flex pt-16 md:w-3/4">
-    <h2
-     class="text-white text-2xl uppercase pt-5 md:text-3xl 2xl:pt-0 text-center font-Merriweather"
-    >
-     <p v-if="projTitle">
-      {{ projTitle }}
-     </p>
-
-     <p
-      v-if="title"
-      class="text-white text-2xl uppercase md:text-3xl 2xl:pt-0 text-center font-Merriweather"
-     >
-      {{ title }}
-     </p>
-    </h2>
+ <section class="relative isolate overflow-hidden bg-gradient-to-br from-primary via-quinary to-primary text-white">
+  <div class="absolute inset-0" aria-hidden="true">
+   <div class="absolute inset-0 bg-gradient-to-r from-primary/85 via-quinary/70 to-secondary/50"></div>
+   <div class="absolute inset-0 opacity-60">
+    <slot name="image"></slot>
    </div>
   </div>
-  <!-- NavBar -->
-  <TheNav class="absolute z-50 w-full" />
 
-  <!-- image slot  -->
-  <slot name="image"></slot>
- </div>
+  <div class="relative">
+   <TheNav class="absolute z-50 w-full" />
+   <div class="container flex h-[45vh] flex-col items-center justify-end pb-12 pt-28 text-center">
+    <p class="text-xs uppercase tracking-[0.3em] text-white/70">Dansom Consultancy</p>
+    <h1 class="mt-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl font-Playfair">
+     <span v-if="projTitle">{{ projTitle }}</span>
+     <span v-else>{{ title }}</span>
+    </h1>
+    <div class="mt-4 h-1 w-16 rounded-full bg-quaternary"></div>
+   </div>
+  </div>
+ </section>
 </template>
 
 <script setup>
@@ -40,4 +28,4 @@
  })
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

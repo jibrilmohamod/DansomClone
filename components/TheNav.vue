@@ -10,15 +10,13 @@
  <div class="text-white">
   <div class="hidden md:block">
    <div class="container">
-    <div class="flex items-center justify-between pb-3 pt-2 text-sm text-white/80">
-     <div class="flex items-center gap-6">
+    <div
+     class="flex flex-wrap items-center justify-between pb-3 pt-2 text-xs font-medium text-white/80"
+    >
+     <div class="flex flex-wrap items-center gap-5">
       <div class="flex items-center gap-2">
        <Icon name="mdi:map-marker" />
-       <span>Nairobi, Kenya</span>
-      </div>
-      <div class="flex items-center gap-2">
-       <Icon name="mdi:map-marker" />
-       <span>Mogadishu, Somalia</span>
+       <span>Mogadishu &amp; Nairobi</span>
       </div>
       <a
        class="flex items-center gap-2 hover:text-white"
@@ -28,7 +26,7 @@
        info@dansomconsultancy.org
       </a>
      </div>
-     <div class="flex items-center gap-3">
+     <div class="flex items-center gap-3 text-white/70">
       <Icon name="mdi:facebook" class="hover:text-white" />
       <Icon name="mdi:instagram" class="hover:text-white" />
       <Icon name="mdi:twitter" class="hover:text-white" />
@@ -36,7 +34,9 @@
      </div>
     </div>
 
-    <div class="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-4 ring-1 ring-white/15 backdrop-blur">
+    <div
+     class="flex items-center justify-between rounded-2xl bg-white/10 px-5 py-4 ring-1 ring-white/15 backdrop-blur-lg shadow-lg shadow-black/10"
+    >
      <NuxtLink to="/" class="flex items-center gap-3">
       <img src="/dansom-logo.png" alt="Dansom logo" class="h-12 w-auto" />
       <div class="hidden text-left text-xs font-semibold leading-tight text-white/80 lg:block">
@@ -44,7 +44,7 @@
       </div>
      </NuxtLink>
 
-     <div class="flex items-center gap-8 text-base font-semibold">
+     <div class="flex items-center gap-7 text-sm font-semibold uppercase tracking-[0.08em]">
       <NuxtLink to="/" class="nav-link">Home</NuxtLink>
       <NuxtLink to="/About" class="nav-link">About</NuxtLink>
       <NuxtLink to="/Services" class="nav-link">Services</NuxtLink>
@@ -115,9 +115,9 @@
  width: 100%;
  transform: scaleX(0);
  transform-origin: left;
- background: #fff;
+ background: #f5a524;
  transition: transform 0.25s ease;
- opacity: 0.8;
+ opacity: 0.9;
 }
 
 .nav-link:hover::after,
@@ -127,6 +127,6 @@
 
 .nav-link:hover,
 .nav-link.router-link-exact-active {
- color: #fdfdfd;
+ color: #fff;
 }
 </style>

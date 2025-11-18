@@ -33,11 +33,11 @@ module.exports = {
     "accordion-up": "accordion-up 0.2s ease-out",
    },
    colors: {
-    primary: "#55C1D9",
-    secondary: "#8BA651",
-    tertiary: "#BFD962",
-    quaternary: "#46658C",
-    quinary: "#0D0D0D",
+    primary: "#0b1c2c",
+    secondary: "#0ea5e9",
+    tertiary: "#e6eef5",
+    quaternary: "#f5a524",
+    quinary: "#0a0f1c",
    },
    fontFamily: {
     Playfair: ["Playfair Display", "serif"],
@@ -52,7 +52,7 @@ module.exports = {
     Pridi: ["Pridi", "serif"],
    },
    backgroundImage: {
-    "radial-gradient": "radial-gradient(#474bff 2px, transparent 2px)",
+    "radial-gradient": "radial-gradient(#47d3ff 2px, transparent 2px)",
    },
    backgroundColor: {
     "custom-blue": "#47d3ff",

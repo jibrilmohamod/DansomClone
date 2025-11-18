@@ -1,9 +1,6 @@
 <template>
- <section class="relative isolate overflow-hidden bg-gradient-to-br from-quaternary via-primary to-primary/40 text-white">
-  <div
-   class="pointer-events-none absolute inset-0 opacity-70"
-   aria-hidden="true"
-  >
+ <section class="relative isolate overflow-hidden bg-gradient-to-br from-primary via-quinary to-primary/90 text-white">
+  <div class="pointer-events-none absolute inset-0 opacity-70" aria-hidden="true">
    <NuxtImg
     provider="cloudinary"
     format="webp"
@@ -11,7 +8,7 @@
     src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
     class="h-full w-full object-cover"
    />
-   <div class="absolute inset-0 bg-gradient-to-r from-quinary via-quaternary/80 to-primary/60"></div>
+   <div class="absolute inset-0 bg-gradient-to-r from-primary via-quinary/85 to-secondary/60"></div>
   </div>
 
   <div class="relative">
@@ -19,8 +16,10 @@
    <div class="container px-6 pb-16 pt-10 md:pt-16">
     <div class="grid items-center gap-12 md:grid-cols-2">
      <div class="space-y-6">
-      <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-teal-50 ring-1 ring-white/20">
-       <span class="h-2 w-2 rounded-full bg-tertiary"></span>
+      <p
+       class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-teal-50 ring-1 ring-white/20"
+      >
+       <span class="h-2 w-2 rounded-full bg-quaternary"></span>
        Transforming research into impact
       </p>
       <h1 class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl font-Playfair">
