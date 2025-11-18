@@ -5,11 +5,22 @@
   data-aos-duration="1000"
  >
   <div class="py-4 flex flex-col gap-3">
-   <p class="text-xs uppercase tracking-[0.3em] text-primary">Capabilities</p>
-   <h4 class="font-DM text-3xl md:text-4xl 2xl:text-5xl text-quinary">
+   <p
+    class="text-xs uppercase tracking-[0.3em]"
+    :class="variantStyles.kicker"
+   >
+    Capabilities
+   </p>
+   <h4
+    class="font-DM text-3xl md:text-4xl 2xl:text-5xl"
+    :class="variantStyles.title"
+   >
     {{ title }}
    </h4>
-   <p class="text-slate-700 md:w-3/4 2xl:pb-4 py-2 font-Lora md:pr-3 2xl:text-xl">
+   <p
+    class="md:w-3/4 2xl:pb-4 py-2 font-Lora md:pr-3 2xl:text-xl"
+    :class="variantStyles.subtitle"
+   >
     {{ subtitle }}
    </p>
   </div>
@@ -18,10 +29,30 @@
 </template>
 
 <script setup>
- defineProps({
+ import { computed } from 'vue'
+
+ const props = defineProps({
   title: String,
   subtitle: String,
+  variant: {
+   type: String,
+   default: 'light',
+  },
  })
+
+ const variantStyles = computed(() =>
+  props.variant === 'dark'
+   ? {
+      kicker: 'text-white/80',
+      title: 'text-white',
+      subtitle: 'text-white/85',
+     }
+   : {
+      kicker: 'text-primary',
+      title: 'text-quinary',
+      subtitle: 'text-slate-700',
+     },
+ )
 </script>
 
 <style lang="scss" scoped></style>

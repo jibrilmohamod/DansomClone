@@ -88,13 +88,14 @@
     <OurExpertise
      title="Our Values"
      subtitle="Our values guide how we work with partners, communities, and one another."
+     variant="dark"
     >
      <template #vfor>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
        <article
         v-for="service in services"
         :key="service.title"
-        class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-6 shadow-2xl shadow-primary/25 backdrop-blur"
+        class="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-6 shadow-2xl shadow-primary/25 backdrop-blur"
        >
         <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
         <div class="relative flex items-start justify-between gap-4">
@@ -104,7 +105,7 @@
          </div>
         </div>
         <h4 class="relative mt-5 text-xl font-semibold leading-tight">{{ service.title }}</h4>
-        <p class="relative mt-3 text-sm leading-relaxed text-white/80">{{ service.subtitle }}</p>
+        <p class="relative mt-3 text-base leading-relaxed text-white/90">{{ service.subtitle }}</p>
         <div class="relative mt-6 h-1.5 overflow-hidden rounded-full bg-white/10">
          <div class="h-full w-2/3 bg-white transition-all duration-500 group-hover:w-full"></div>
         </div>
