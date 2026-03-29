@@ -1,12 +1,12 @@
 <template>
- <div>
+ <div class="bg-tertiary min-h-screen text-quinary">
   <TheHeader :projTitle="slug">
    <template #image>
     <NuxtImg
      provider="cloudinary"
      loading="lazy"
      format="webp"
-     alt="image"
+     alt="Project hero"
      sizes="sm:100vw md:50vw lg:1500px"
      :modifiers="{ effect: 'colorize:60', color: 'black' }"
      src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
@@ -14,72 +14,45 @@
     />
    </template>
   </TheHeader>
-  <div class="container m-auto">
-   <div class="w-full flex flex-col md:flex-row">
-    <div class="md:w-1/2 py-10 h-96 grid place-content-center">
-     <!-- Image -->
-     <div>
-      <Image2Card :image="project.icon" />
+  <div class="container m-auto px-6 py-14">
+   <div class="grid gap-8 rounded-3xl bg-white p-8 shadow-xl shadow-slate-200 ring-1 ring-tertiary md:grid-cols-3">
+    <div class="flex flex-col items-center gap-4 md:col-span-1">
+     <Image2Card :image="project.icon" />
+     <div class="w-full rounded-2xl bg-tertiary p-4 ring-1 ring-tertiary">
+      <div class="flex items-center gap-2 text-primary">
+       <Icon name="mdi:location" class="text-xl" />
+       <p>{{ project.Location }}</p>
+      </div>
+      <div class="mt-2 flex items-center gap-2 text-primary">
+       <Icon name="mdi:calendar" class="text-xl" />
+       <p>{{ project.timeframes }}</p>
+      </div>
      </div>
     </div>
-    <div class="md:w-1/2 px-6 py-5 font-Roboto">
-     <div class="flex flex-col gap-3 md:gap-6">
-      <!-- classification -->
-      <div>
-       <h3 class="text-4xl font-DM pb-4">Classification</h3>
-       <p class="text-lg">
-        {{ project.classification }}
-       </p>
-      </div>
+    <div class="md:col-span-2 space-y-6 font-Roboto">
+     <div class="space-y-3">
+      <h3 class="text-3xl font-DM pb-2">Classification</h3>
+      <p class="text-lg text-slate-700">{{ project.classification }}</p>
      </div>
-     <div class="flex flex-col gap-3 md:gap-6 py-4">
-      <!-- description -->
-      <div>
-       <h3 class="text-4xl font-DM pb-4">Description</h3>
-       <p class="text-lg">
-        {{ project.description }}
-       </p>
-      </div>
-      <!-- location and timeframes with icons -->
-      <div
-       class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-      >
-       <!-- location -->
-       <div class="flex items-center text-xl">
-        <Icon name="mdi:location" class="text-primary text-2xl" />
-        <p class="">{{ project.Location }}</p>
+     <div class="space-y-3">
+      <h3 class="text-3xl font-DM pb-2">Description</h3>
+      <p class="text-lg text-slate-700 leading-relaxed">{{ project.description }}</p>
+     </div>
+     <div v-if="project?.classification2" class="space-y-3">
+      <h3 class="text-3xl font-DM pb-2">Classification</h3>
+      <p class="text-lg text-slate-700">{{ project.classification2 }}</p>
+     </div>
+     <div v-if="project?.description2" class="space-y-3">
+      <h3 class="text-3xl font-DM pb-2">Description</h3>
+      <p class="text-lg text-slate-700 leading-relaxed">{{ project?.description2 }}</p>
+      <div class="flex flex-wrap gap-4 text-primary">
+       <div class="flex items-center gap-2">
+        <Icon name="mdi:location" class="text-xl" />
+        <p>{{ project.Location }}</p>
        </div>
-       <!-- timeframes -->
-       <div class="flex items-center text-xl">
-        <Icon name="mdi:calendar" class="text-primary text-2xl" />
-        <p class="">{{ project.timeframes }}</p>
-       </div>
-      </div>
-      <div v-if="project?.classification2">
-       <h3 class="text-4xl font-DM pb-4">Classification</h3>
-       <p class="text-lg">
-        {{ project.classification2 }}
-       </p>
-      </div>
-      <div v-if="project?.description2">
-       <h3 class="text-4xl font-DM pb-4">Description</h3>
-       <p class="text-lg">
-        {{ project?.description2 }}
-       </p>
-      </div>
-      <div
-       class="w-full flex flex-col md:flex-row justify-between gap-2 md:gap-0"
-       v-if="project?.description2"
-      >
-       <!-- location -->
-       <div class="flex items-center text-xl">
-        <Icon name="mdi:location" class="text-primary text-2xl" />
-        <p class="">{{ project.Location }}</p>
-       </div>
-       <!-- timeframes -->
-       <div class="flex items-center text-xl">
-        <Icon name="mdi:calendar" class="text-primary text-2xl" />
-        <p class="">{{ project?.timeframes2 }}</p>
+       <div class="flex items-center gap-2">
+        <Icon name="mdi:calendar" class="text-xl" />
+        <p>{{ project?.timeframes2 }}</p>
        </div>
       </div>
      </div>
@@ -131,7 +104,7 @@
    title: "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
    classification: "Political Economy Analysis & Security Advisory",
    description:
-    " Consortium of CMC & Dansom consultancy conducted a peace and conflict assessment (PCA) in Kismayo, Somalia for the Somali Re integration Programme (GIZ SRP) and Fish for Nutrition project (GIZ FNP)",
+    " Consortium of CMC & Dansom consultancy conducted a peace and conflict assessment (PCA) in Kismayo, Somalia for the Somali Reintegration Programme (GIZ SRP) and Fish for Nutrition project (GIZ FNP)",
    Location: "Somalia",
    timeframes: "August 2017 - January 2018",
    icon: "giz-400x173.jpg",
@@ -208,86 +181,63 @@
   },
   {
    title: "Somalia Invest Climate Reform Program, IFC-World Bank",
-   classification: "Operational & Logistics Management",
-   description:
-    "DANSOM is providing various services to IFC as part of this project, including the provision of qualified consultants, arranging consultant travel, organizing logistics, managing payments of fees and expenses related to the contract, and obtaining prior approval from the IFC project manager for any relevant subcontracting arrangements.",
-   Location: "Somalia",
-   timeframes: "March 2017 - December 2018",
-   classification2: "Operational & Logistics Management",
-   description2:
-    "Dansom has partnered with IFC, World Bank Group to facilitate and support Public Private Dialogue in Somalia’s economic recovery sector. The recent support being to the Telecommunication sector and providing strategic advice in moving the National Communication Act towards submission and approval by the National Federal Parliament. Dansom also gives advice to IFC-World Bank on Somalia context, political economic analysis and Business development.",
-   icon: "International_Finance_Corporation_logo.svg.png",
-  },
-  {
-   title: "Horumarinta Elmiga II-Save the Children",
-   classification: "Third Party Monitoring & Evaluation",
-   description:
-    "Final Evaluation of Horumarinta Elmiga II(Education for Empowerment through Cohesive and Harmonized System) was funded by the European Union and  implemented by Save the Children  as the lead agency ,Care International and Norwegian Refugees Council (NRC), in partnership with the MOEHS of Somaliland.",
-   Location: "Somaliland",
-   timeframes: "September 2018 - November 2018",
-   icon: "He-1.png",
-  },
-  {
-   title: "CARE International",
    classification: "Political Economy Analysis & Security Advisory",
    description:
-    "Final Evaluation of the ‘Strengthening Civil Society and Public Engagement in Somalia’ (SCOPES) project to assess the project’s performance and achievements against the overall and specific objectives and to identify factors of success or failure, following the OECD DAC Evaluation Criteria.",
+    "Undertaking a political economy analysis of business licensing with a focus on the federal licensing structure and permit system. The assignment aims to understand the relationships and dynamics among various actors involved in the design, implementation, and administration of business licensing, including line Ministries and public institutions, international donors, national-level business associations, and newly formed Business Membership Organizations, with a focus on licensing actors in Jubaland, Puntland and Benadir Administration.",
    Location: "Somalia",
-   icon: "care-social-image-400x210.jpg",
+   timeframes: "December 2015 - May 2016",
+   icon: "ifc.png",
   },
   {
-   title: "Solidarites International",
-   classification: "Third Party Monitoring & Evaluation",
+   title: "ICF International",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "External Evaluation of the Emergency response to disaster affected population of IDPs and host community Implemented by Solidarites International in Lower Juba.",
-   Location: "Lower Juba, Somalia",
-   timeframes: "May 2016 - July 2016",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for ensuring the release of Solidarites International’s staff that were arrested by Armed Group in Gedo, Somalia.",
-   icon: "solidarites.jpg",
-  },
-  {
-   title: "ACTED",
-   classification: "Political Economy Analysis & Security Advisory",
-   description: "Security Advisory on Need Basis for Jubbaland, Somalia.",
-   Location: "Jubbaland, Somalia",
-   timeframes: "January 2016 - December 2017",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for the release of ACTED’s staff that were arrested by Local Authority in Jubaland, Somalia.",
-   icon: "Acted_logo_2023.png",
+    "Incorporated Dansom alongside other firms in its bidding consortium for Multi-stakeholder Value Chain Analysis & Baseline Study",
+   Location: "Somalia",
+   timeframes: "January 2018 - April 2020",
+   icon: "ICF.png",
   },
   {
    title:
-    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project",
-   classification: "Formative Research & Policy Analysis",
+    "The Ministry of Planning, Investment and Economic Development for the Federal Republic of Somalia",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "Consortium of ALTAI and Dansom implemented an Accountability Perception Survey in Somalia. DFID / Mott McDonalds – Implementation and Analysis in Action for Accountability Programme (IAAAP) in Somalia.",
+    "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
    Location: "Somalia",
-   timeframes: " December 2015 -January 2017 ",
-   classification2: "Formative Research & Policy Analysis",
-   description2:
-    "Consortium of INTEGRITY, AXIOM and Dansom implemented an Accountability Research on accountability mechanisms along the supply chains of sesame and sugar in the context of Kismayo, Somalia. DFID / Mott Mc Donalds – Implementation and Analysis in Action of Accountability Programme (IAAAP) in Somalia.",
-   icon: "DFID-400x162.png",
+   timeframes: "February 2018 - August 2019",
+   icon: "ministry-of-planning-400x162.png",
+  },
+  {
+   title: "African Development Bank (AfDB)",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom provided assistance to the AfDB during the 2nd National Steering Committee Meeting and was responsible for all logistics and operations",
+   Location: "Somalia",
+   timeframes: "February 2018 - March 2018",
+   icon: "afdb.jpg",
+  },
+  {
+   title: "Somalia Monitoring Programme (SMP)",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Political Economy Analysis: Puntland & South Central Somalia (In consortium with Itad, Altai Consulting and GTZ for DFID). Somalia monitoring Programme (SMP) is a Third Party Monitoring Programme contracted by DFID with the aim of enhancing the accountability of the British Government’s investments in Somalia (GBP 250m over four years)",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "UKaid_logo.png",
+  },
+  {
+   title: "Improved Food Security and Enhanced Resilience Programme",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "wfpfao.png",
   },
  ])
 
- let route = useRoute()
- let slug = ref(route.params.slug)
- let project = computed(() => {
-  return projects.value.find((project) => project.title === route.params.slug)
- })
-
- useHead({
-  title: slug.value,
-  meta: [
-   {
-    name: "description",
-    content: "Dansom Consultancy | " + slug.value,
-   },
-  ],
- })
+ const route = useRoute()
+ const slug = ref(route.params.slug)
+const project =
+ projects.value.find((item) => item.title === slug.value) || projects.value[0]
 </script>
-
-<style></style>
