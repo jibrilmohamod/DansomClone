@@ -21,11 +21,13 @@ export default defineNuxtConfig({
    */
   componentDir: "./components/ui",
  },
- googleFonts: {
-  families: {
-   "Playfair Display": true,
-   Roboto: true,
-   Montserrat: true,
+  googleFonts: {
+   families: {
+    "Space Grotesk": true,
+    Inter: true,
+    "Playfair Display": true,
+    Roboto: true,
+    Montserrat: true,
    "Open Sans": true,
    Merriweather: true,
    Lora: true,
