@@ -2,7 +2,7 @@
  <div data-aos="fade-left" data-aos-duration="800">
   <NuxtLink :to="slug">
    <div
-    class="bg-white shadow-2xl rounded-lg overflow-hidden h-60 hover:scale-105 hover:duration-200 hover:ease-linear"
+    class="dansom-card overflow-hidden h-60 transition hover:scale-[1.02] hover:duration-200 hover:ease-linear"
    >
     <div class="h-full px-3 pb-2">
      <!-- logo  -->
@@ -19,9 +19,7 @@
       />
      </div>
      <div class="h-1/2 flex items-center justify-center">
-      <h3
-       class="font-Merriweather text-lg text-pretty text-quaternary text-center"
-      >
+      <h3 class="font-Merriweather text-lg text-pretty text-slate-800 text-center">
        {{ title }}
       </h3>
      </div>
