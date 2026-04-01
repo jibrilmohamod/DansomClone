@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+ .dansom-card {
+  @apply rounded-3xl border border-secondary/30 bg-gradient-to-br from-[#ffffff] via-[#eefdff] to-[#f4fbe0] shadow-[0_18px_44px_-28px_rgba(66,94,135,0.4)] transition;
+ }
+
+ .dansom-card-soft {
+  @apply rounded-2xl border border-secondary/25 bg-gradient-to-br from-[#f2fbff] via-[#ffffff] to-[#eef8d2];
+ }
+
+ .dansom-chip {
+  @apply rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+ }
+
+ .dansom-card:hover {
+  @apply border-secondary/50 shadow-[0_20px_45px_-28px_rgba(80,174,211,0.45)];
+ }
+
+ .animate-bob {
+  animation: bob 1.8s ease-in-out infinite;
+ }
+
+ @keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(8px); opacity: 1; }
+ }
+}
