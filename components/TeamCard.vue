@@ -1,96 +1,74 @@
 <template>
- <div
-  class="xl:w-1/3 md:w-2/5 relative py-4 sm:mb-24 xl:max-w-sm lg:w-2/5 w-full"
- >
-  <div class="h-300 rounded overflow-hidden bg-white">
-   <!-- <div class="absolute -mt-20 w-full flex justify-center">
-        <div class="h-32 w-32">
-          <img
-            src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
-            alt=""
-            class="rounded-full object-cover h-full w-full shadow-md"
-          />
-        </div>
-      </div> -->
-   <div class="px-6 mt-16">
-    <div class="font-bold text-xl pb-1 font-Zilla">
-     {{ name }}
+ <article class="dansom-card group relative flex h-full flex-col overflow-hidden p-4 md:p-0">
+  <div class="flex flex-1 flex-col gap-3 p-0 text-slate-900 md:gap-4 md:p-6">
+   <div class="flex items-start justify-between gap-3">
+    <div>
+     <h3 class="text-lg font-semibold md:text-xl">{{ name }}</h3>
+     <p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 md:text-sm md:tracking-[0.2em]">Leadership Team</p>
     </div>
-    <p class="text-quinary text-sm font-Lora">{{ role }}</p>
-    <p class="text-gray-600 text-sm pt-3 font-normal">
-     {{ about }}
-    </p>
-    <Accordion type="multiple" collapsible>
-     <AccordionItem value="item-1">
-      <AccordionTrigger>Read More</AccordionTrigger>
-      <AccordionContent>
-       <div
-        class="font-Zilla flex flex-col items-center gap-5"
-        style="
-         p {
-          margin-bottom: 1rem;
-          color: #4a5568;
-         }
-        "
-        v-html="aboutBig"
-       ></div>
-      </AccordionContent>
-     </AccordionItem>
-    </Accordion>
-    <!-- <div class="w-full flex justify-center pt-5 pb-5">
-     <a href="javascript:void(0)" class="mx-5">
-      <div>
-       <Icon name="logos:facebook" class="text-xl" />
-      </div>
-     </a>
-     <a href="javascript:void(0)" class="mx-5">
-      <div>
-       <Icon name="logos:twitter" class="text-xl" />
-      </div>
-     </a>
-     <a href="javascript:void(0)" class="mx-5">
-      <div>
-       <Icon name="skill-icons:linkedin" class="text-xl" />
-      </div>
-     </a>
-    </div> -->
+    <span class="dansom-chip !text-[10px] !tracking-[0.14em] !text-secondary md:!text-[11px] md:!tracking-[0.2em]">
+     {{ role }}
+    </span>
    </div>
+
+   <div class="rounded-lg border border-slate-200 bg-white p-3 shadow-none md:dansom-card-soft md:p-4" aria-hidden="true">
+    <div class="h-1.5 w-24 rounded-full bg-secondary/60"></div>
+    <div class="mt-3 h-1.5 w-16 rounded-full bg-slate-300"></div>
+    <div class="mt-3 h-1.5 w-20 rounded-full bg-slate-200"></div>
+    </div>
+
+   <p class="text-sm leading-relaxed text-slate-700">{{ about }}</p>
+
+   <Accordion type="multiple" collapsible class="mt-auto">
+    <AccordionItem value="item-1">
+     <AccordionTrigger class="text-secondary hover:text-slate-900">Read full bio</AccordionTrigger>
+     <AccordionContent>
+      <div class="flex flex-col gap-3 text-sm leading-relaxed text-slate-600" v-html="aboutBig"></div>
+     </AccordionContent>
+    </AccordionItem>
+   </Accordion>
   </div>
- </div>
+ </article>
 </template>
 
 <script lang="ts" setup>
- import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
- } from "@/components/ui/accordion"
+import {
+ Accordion,
+ AccordionContent,
+ AccordionItem,
+ AccordionTrigger,
+} from "@/components/ui/accordion"
 
- defineProps({
-  name: {
-   type: String,
-   required: true,
-   default: "Abdifatah Hamud",
-  },
-  role: {
-   type: String,
-   required: true,
-   default: "Chief Executive Officer",
-  },
-  about: {
-   type: String,
-   required: true,
-   default:
-    "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
-  },
-  aboutBig: {
-   type: String,
-   required: true,
-   default:
-    "<p>Abdifatah Hamud is the CEO of the company. He is responsible for the overall success of the business. He is responsible for making top-level managerial decisions, creating a company-wide strategy, and ensuring that the company's goals are met. He is also responsible for making sure that the company is profitable",
-  },
- })
+defineProps({
+ name: {
+  type: String,
+  required: true,
+  default: "Abdifatah Hamud",
+ },
+ role: {
+  type: String,
+  required: true,
+  default: "Chief Executive Officer",
+ },
+ image: {
+  type: String,
+  default: "",
+ },
+ alt: {
+  type: String,
+  default: "",
+ },
+ about: {
+  type: String,
+  required: true,
+  default:
+   "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
+ },
+ aboutBig: {
+  type: String,
+  required: true,
+  default:
+   "<p>Abdifatah Hamud is the CEO of the company. He is responsible for the overall success of the business. He is responsible for making top-level managerial decisions, creating a company-wide strategy, and ensuring that the company's goals are met. He is also responsible for making sure that the company is profitable</p>",
+ },
+})
 </script>
-
-<style></style>
