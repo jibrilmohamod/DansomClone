@@ -1,12 +1,12 @@
 <template>
- <div>
+ <div class="min-h-screen text-slate-900">
   <TheHeader title="Our Portfolio">
    <template #image>
     <NuxtImg
      provider="cloudinary"
      loading="lazy"
      format="webp"
-     alt="image"
+     alt="Portfolio banner"
      sizes="sm:100vw md:50vw lg:1500px"
      :modifiers="{ effect: 'colorize:60', color: 'black' }"
      src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
@@ -15,49 +15,38 @@
    </template>
   </TheHeader>
 
-  <!-- page intro -->
-  <OurExpertise
-   title="Our Portfolio"
-   subtitle="Dansom Consultancy isn't just about expertise – it's about impact. We leverage our unique access and understanding of the Horn of Africa to deliver transformative results for our clients.  We've undertaken a wide range of projects focused on strengthening security and socio-political development across the region. These projects include providing monitoring and evaluation services for organizations like the United Nations Support Office in Somalia (UNSOS) and the European Union Delegation to Somalia, ensuring transparency and accountability in critical development efforts"
-  />
+  <section class="container m-auto space-y-6 px-4 py-10 md:space-y-10 md:px-6 md:py-16">
+   <OurExpertise
+    title="Our Portfolio"
+    subtitle="Explore how Dansom delivers transparency, accountability, and evidence-backed recommendations across the Horn of Africa."
+   />
 
-  <!-- projects -->
-  <div class="bg-tertiary">
-   <div class="container m-auto pb-5">
-    <OurExpertise title="Our Projects" />
-    <div class="">
-     <!-- search and filter bar -->
-     <div class="flex justify-between items-center gap-5 py-5 z-50 px-5">
+   <div class="rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:p-6">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+     <div class="flex w-full flex-col gap-3 md:flex-row md:items-center md:gap-4">
       <input
        type="text"
        v-model="searchTerm"
-       placeholder="Search Projects"
-       class="border-2 border-slate-300 rounded-md px-3 py-2 w-1/2"
+       placeholder="Search projects"
+       class="w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm placeholder:text-slate-500 focus:border-primary focus:outline-none md:w-1/2 md:rounded-xl md:px-4 md:py-3"
       />
-      <div class="flex items-center gap-5">
-       <p class="text-white">Filter by:</p>
+      <div class="flex items-center gap-2 text-sm font-semibold text-primary md:gap-3">
+       <p class="text-xs text-slate-700 md:text-sm">Filter by:</p>
        <select
         v-model="classification"
-        class="border-2 border-slate-300 rounded-md px-3 py-2"
+        class="rounded-lg border border-slate-300 bg-slate-50 px-2.5 py-2 text-xs focus:border-primary focus:outline-none md:rounded-xl md:px-3 md:text-sm"
        >
         <option value="All">All</option>
-        <option value="Third Party Monitoring & Evaluation">
-         Third Party Monitoring & Evaluation
-        </option>
-
-        <option value="Political Economy Analysis & Security Advisory">
-         Political Economy Analysis & Security Advisory
-        </option>
-        <option value="Formative Research & Policy Analysis">
-         Formative Research & Policy Analysis
-        </option>
+        <option value="Third Party Monitoring & Evaluation">Third Party Monitoring & Evaluation</option>
+        <option value="Political Economy Analysis & Security Advisory">Political Economy Analysis & Security Advisory</option>
+        <option value="Formative Research & Policy Analysis">Formative Research & Policy Analysis</option>
+        <option value="Organizational Capacity Building & Human Resource Management">Organizational Capacity Building</option>
        </select>
       </div>
      </div>
     </div>
-    <div
-     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-5 2xl:gap-10"
-    >
+
+    <div class="mt-5 grid gap-3 md:mt-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
      <ProjectCard
       v-for="project in filteredProjects"
       :key="project.title"
@@ -65,16 +54,18 @@
       :icon="project.icon"
       :slug="`/Portfolio/${project.title}`"
      />
+    </div>
+
+    <div class="mt-4 flex justify-center md:mt-6" v-if="displayedProjects.length < projects.length">
      <Button
-      v-if="displayedProjects.length < projects.length"
       @click="loadMore()"
-      class="bg-primary my-3 w-1/2 text-lg py-5 hover:bg-quaternary hover:duration-200 transition-all hover:ease-linear font-Zilla 2xl:text-2xl 2xl:py-6"
+      class="my-2 w-44 bg-primary py-2.5 font-Zilla text-base text-white transition-all hover:bg-quaternary hover:duration-200 hover:ease-linear md:my-3 md:w-48 md:py-3 md:text-lg"
      >
       Load More
      </Button>
     </div>
    </div>
-  </div>
+  </section>
  </div>
 </template>
 
@@ -121,7 +112,7 @@
    title: "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
    classification: "Political Economy Analysis & Security Advisory",
    description:
-    " Consortium of CMC & Dansom consultancy conducted a peace and conflict assessment (PCA) in Kismayo, Somalia for the Somali Re integration Programme (GIZ SRP) and Fish for Nutrition project (GIZ FNP)",
+    " Consortium of CMC & Dansom consultancy conducted a peace and conflict assessment (PCA) in Kismayo, Somalia for the Somali Reintegration Programme (GIZ SRP) and Fish for Nutrition project (GIZ FNP)",
    Location: "Somalia",
    timeframes: "August 2017 - January 2018",
    icon: "giz-400x173.jpg",
@@ -198,126 +189,82 @@
   },
   {
    title: "Somalia Invest Climate Reform Program, IFC-World Bank",
-   classification: "Operational & Logistics Management",
-   description:
-    "DANSOM is providing various services to IFC as part of this project, including the provision of qualified consultants, arranging consultant travel, organizing logistics, managing payments of fees and expenses related to the contract, and obtaining prior approval from the IFC project manager for any relevant subcontracting arrangements.",
-   Location: "Somalia",
-   timeframes: "March 2017 - December 2018",
-   classification2: "Operational & Logistics Management",
-   description2:
-    "Dansom has partnered with IFC, World Bank Group to facilitate and support Public Private Dialogue in Somalia’s economic recovery sector. The recent support being to the Telecommunication sector and providing strategic advice in moving the National Communication Act towards submission and approval by the National Federal Parliament. Dansom also gives advice to IFC-World Bank on Somalia context, political economic analysis and Business development.",
-   icon: "International_Finance_Corporation_logo.svg.png",
-  },
-  {
-   title: "Horumarinta Elmiga II-Save the Children",
-   classification: "Third Party Monitoring & Evaluation",
-   description:
-    "Final Evaluation of Horumarinta Elmiga II(Education for Empowerment through Cohesive and Harmonized System) was funded by the European Union and  implemented by Save the Children  as the lead agency ,Care International and Norwegian Refugees Council (NRC), in partnership with the MOEHS of Somaliland.",
-   Location: "Somaliland",
-   timeframes: "September 2018 - November 2018",
-   icon: "He-1.png",
-  },
-  {
-   title: "CARE International",
    classification: "Political Economy Analysis & Security Advisory",
    description:
-    "Final Evaluation of the ‘Strengthening Civil Society and Public Engagement in Somalia’ (SCOPES) project to assess the project’s performance and achievements against the overall and specific objectives and to identify factors of success or failure, following the OECD DAC Evaluation Criteria.",
+    "Undertaking a political economy analysis of business licensing with a focus on the federal licensing structure and permit system. The assignment aims to understand the relationships and dynamics among various actors involved in the design, implementation, and administration of business licensing, including line Ministries and public institutions, international donors, national-level business associations, and newly formed Business Membership Organizations, with a focus on licensing actors in Jubaland, Puntland and Benadir Administration.",
    Location: "Somalia",
-   icon: "care-social-image-400x210.jpg",
+   timeframes: "December 2015 - May 2016",
+   icon: "ifc.png",
   },
   {
-   title: "Solidarites International",
-   classification: "Third Party Monitoring & Evaluation",
+   title: "ICF International",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "External Evaluation of the Emergency response to disaster affected population of IDPs and host community Implemented by Solidarites International in Lower Juba.",
-   Location: "Lower Juba, Somalia",
-   timeframes: "May 2016 - July 2016",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for ensuring the release of Solidarites International’s staff that were arrested by Armed Group in Gedo, Somalia.",
-   icon: "solidarites.jpg",
-  },
-  {
-   title: "ACTED",
-   classification: "Political Economy Analysis & Security Advisory",
-   description: "Security Advisory on Need Basis for Jubbaland, Somalia.",
-   Location: "Jubbaland, Somalia",
-   timeframes: "January 2016 - December 2017",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for the release of ACTED’s staff that were arrested by Local Authority in Jubaland, Somalia.",
-   icon: "Acted_logo_2023.png",
+    "Incorporated Dansom alongside other firms in its bidding consortium for Multi-stakeholder Value Chain Analysis & Baseline Study",
+   Location: "Somalia",
+   timeframes: "January 2018 - April 2020",
+   icon: "ICF.png",
   },
   {
    title:
-    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project",
-   classification: "Formative Research & Policy Analysis",
+    "The Ministry of Planning, Investment and Economic Development for the Federal Republic of Somalia",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "Consortium of ALTAI and Dansom implemented an Accountability Perception Survey in Somalia. DFID / Mott McDonalds – Implementation and Analysis in Action for Accountability Programme (IAAAP) in Somalia.",
+    "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
    Location: "Somalia",
-   timeframes: " December 2015 -January 2017 ",
-   classification2: "Formative Research & Policy Analysis",
-   description2:
-    "Consortium of INTEGRITY, AXIOM and Dansom implemented an Accountability Research on accountability mechanisms along the supply chains of sesame and sugar in the context of Kismayo, Somalia. DFID / Mott Mc Donalds – Implementation and Analysis in Action of Accountability Programme (IAAAP) in Somalia.",
-   icon: "DFID-400x162.png",
+   timeframes: "February 2018 - August 2019",
+   icon: "ministry-of-planning-400x162.png",
+  },
+  {
+   title: "African Development Bank (AfDB)",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom provided assistance to the AfDB during the 2nd National Steering Committee Meeting and was responsible for all logistics and operations",
+   Location: "Somalia",
+   timeframes: "February 2018 - March 2018",
+   icon: "afdb.jpg",
+  },
+  {
+   title: "Somalia Monitoring Programme (SMP)",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Political Economy Analysis: Puntland & South Central Somalia (In consortium with Itad, Altai Consulting and GTZ for DFID). Somalia monitoring Programme (SMP) is a Third Party Monitoring Programme contracted by DFID with the aim of enhancing the accountability of the British Government’s investments in Somalia (GBP 250m over four years)",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "UKaid_logo.png",
+  },
+  {
+   title: "Improved Food Security and Enhanced Resilience Programme",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "wfpfao.png",
   },
  ])
- let displayedProjects = ref(projects.value.slice(0, 6))
 
- let loadMore = () => {
-  let nextProjects = projects.value.slice(
-   displayedProjects.value.length,
-   displayedProjects.value.length + 6
-  )
-  displayedProjects.value = [...displayedProjects.value, ...nextProjects]
- }
- let searchTerm = ref("")
- let classification = ref("")
+ const searchTerm = ref("")
+ const classification = ref("All")
+ const displayedProjects = ref(projects.value.slice(0, 9))
 
- let filteredProjects = computed(() => {
+ const filteredProjects = computed(() => {
+  const search = searchTerm.value.toLowerCase()
   return displayedProjects.value.filter((project) => {
-   let matchesSearchTerm =
-    !searchTerm.value ||
-    project.title.toLowerCase().includes(searchTerm.value.toLowerCase())
-   let matchesClassification =
-    !classification.value || project.classification === classification.value
-   return matchesSearchTerm && matchesClassification
+   const matchesSearch = project.title.toLowerCase().includes(search)
+   const matchesClassification =
+    classification.value === "All" ||
+    project.classification === classification.value ||
+    project.classification2 === classification.value
+
+   return matchesSearch && matchesClassification
   })
  })
 
- useHead({
-  title: "Our Portfolio | Dansom Consultancy & Research",
-  meta: [
-   {
-    name: "description",
-    content:
-     "Dansom Consultancy isn't just about expertise – it's about impact. We leverage our unique access and understanding of the Horn of Africa to deliver transformative results for our clients.  We've undertaken a wide range of projects focused on strengthening security and socio-political development across the region. These projects include providing monitoring and evaluation services for organizations like the United Nations Support Office in Somalia (UNSOS) and the European Union Delegation to Somalia, ensuring transparency and accountability in critical development efforts",
-   },
-   //    og tags
-   {
-    property: "og:title",
-    content: "Our Portfolio | Dansom Consultancy & Research",
-   },
-   {
-    property: "og:description",
-    content:
-     "Dansom Consultancy isn't just about expertise – it's about impact. We leverage our unique access and understanding of the Horn of Africa to deliver transformative results for our clients.  We've undertaken a wide range of projects focused on strengthening security and socio-political development across the region. These projects include providing monitoring and evaluation services for organizations like the United Nations Support Office in Somalia (UNSOS) and the European Union Delegation to Somalia, ensuring transparency and accountability in critical development efforts",
-   },
-   {
-    property: "og:image",
-    content:
-     "https://res.cloudinary.com/dansom/image/upload/v1713880776/Banner-3-1600x699_ewoaq4.jpg",
-   },
-   {
-    property: "og:url",
-    content: "https://dansomconsultancy.org/portfolio",
-   },
-   {
-    property: "og:type",
-    content: "website",
-   },
-  ],
- })
+ const loadMore = () => {
+  displayedProjects.value = projects.value.slice(
+   0,
+   displayedProjects.value.length + 6
+  )
+ }
 </script>
-
-<style></style>
