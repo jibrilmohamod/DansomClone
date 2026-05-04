@@ -165,43 +165,50 @@
    icon: "arcticons:adobe-analytics",
    title: "Political Economy Analysis",
    subtitle:
-    "Deep-dive assessments that unpack power dynamics, incentives, and risks to inform programming decisions.",
+    "Political economy analysis in Somalia to inform programming and policy development.",
    slug: "Political%20Economy%20Analysis",
   },
   {
    icon: "carbon:data-analytics",
-   title: "Third Party Monitoring & Evaluation",
+   title: "Third Party Monitoring and Evaluation",
    subtitle:
-    "Independent verification, real-time monitoring, and evaluations that keep projects accountable to communities and donors.",
+    "Third party monitoring and evaluation of humanitarian and development projects in Somalia.",
    slug: "Third%20Party%20Monitoring%20and%20Evaluation",
   },
   {
-   icon: "mdi:account-voice",
-   title: "Community Engagement & Inclusion",
+   icon: "carbon:data-analytics",
+   title: "Formative Research and Policy Advisory Services",
    subtitle:
-    "Strategies that ensure meaningful participation of community members, women, and minority groups across program cycles.",
-   slug: "Community%20Engagement%20and%20Inclusion",
+    "Formative Research and Policy Advisory Services to inform programming and policy development.",
+   slug: "Formative%20Research%20and%20Policy%20Advisory%20Services",
   },
   {
-   icon: "ph:chart-line-up",
-   title: "Economic Growth & Market Systems",
+   icon: "ph:leaf-thin",
+   title: "Environmental Impact Assessment (EIA) & Monitoring",
    subtitle:
-    "Market analyses and growth strategies that align public, private, and community stakeholders.",
-   slug: "Economic%20Growth%20and%20Market%20Systems",
+    "Environmental impact assessment and monitoring of humanitarian and development projects in Somalia.",
+   slug: "Environmental%20Impact%20Assessment%20(EIA)%20%26%20Monitoring",
   },
   {
-   icon: "mdi:security",
-   title: "Security & Access Advisory",
+   icon: "pepicons-pencil:people",
+   title: "Organizational Capacity Building & HR",
    subtitle:
-    "Risk analysis, access strategies, and secure field operations enabling safe delivery in fragile contexts.",
-   slug: "Security%20and%20Access%20Advisory",
+    "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
+   slug: "Organizational%20Capacity%20Building%20%26%20HR",
   },
   {
-   icon: "mdi:chart-bell-curve",
-   title: "Program Design & Learning",
+   icon: "ph:gear-six-thin",
+   title: "Operational and Logistics Management",
    subtitle:
-    "Evidence-backed design support, MEL frameworks, and adaptive learning systems for complex programs.",
-   slug: "Program%20Design%20and%20Learning",
+    "Operational and Logistics Management for local and international organizations in Somalia.",
+   slug: "Operational%20and%20Logistics%20Management",
+  },
+  {
+   icon: "la:people-carry",
+   title: "Community Engagement Strategies",
+   subtitle:
+    "Community Engagement Strategies for local and international organizations in Somalia.",
+   slug: "Community%20Engagement%20Strategies",
   },
  ]
 
