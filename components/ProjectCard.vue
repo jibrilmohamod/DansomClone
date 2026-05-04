@@ -2,26 +2,24 @@
  <div data-aos="fade-left" data-aos-duration="800">
   <NuxtLink :to="slug">
    <div
-    class="bg-white shadow-2xl rounded-lg overflow-hidden h-60 hover:scale-105 hover:duration-200 hover:ease-linear"
+    class="dansom-card h-52 overflow-hidden transition hover:scale-[1.02] hover:duration-200 hover:ease-linear md:h-60"
    >
-    <div class="h-full px-3 pb-2">
+    <div class="h-full px-2.5 pb-2 md:px-3">
      <!-- logo  -->
      <div
-      class="flex justify-center items-center h-1/2 border-b border-1 border-slate-300"
+      class="flex h-1/2 items-center justify-center border-b border-1 border-slate-300"
      >
       <NuxtImg
        :src="icon"
        alt="logo"
-       class="object-contain h-24 w-full"
+       class="h-20 w-full object-contain md:h-24"
        loading="lazy"
        quality="100"
        v-if="icon"
       />
      </div>
-     <div class="h-1/2 flex items-center justify-center">
-      <h3
-       class="font-Merriweather text-lg text-pretty text-quaternary text-center"
-      >
+     <div class="flex h-1/2 items-center justify-center">
+      <h3 class="text-pretty text-center font-Merriweather text-base text-slate-800 md:text-lg">
        {{ title }}
       </h3>
      </div>
