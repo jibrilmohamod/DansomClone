@@ -31,8 +31,8 @@
      </div>
     </div>
     <div class="space-y-2.5 md:col-span-2 md:space-y-4">
-     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
+     <h5 class="font-display text-xl font-semibold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
+     <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
      <div
       class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
       v-html="service.about"
@@ -75,6 +75,42 @@
     "Formative Research and Policy Advisory Services to inform programming and policy development.",
    about:
     "<p>Dansom has built one of the most extensive and effective networks of multi-disciplinary researchers working in Somalia and has delivered formative baseline assessments on strategically themed areas to support the international community and the Somali government in designing appropriate programmes in newly recovered areas and emerging sectors of interest. Our research services combine in-depth qualitative assessments and quantitative surveys to ensure with systematic ground-truthing and triangulation of information to ensure only the highest quality of data is taken into account for the analysis and programme design phases.</p><p>Our specialized consultants represent a diversity of fields with expertise in law, economics, financial management, public policy, security advice and many other areas.</p>",
+  },
+  {
+   icon: "ph:leaf-thin",
+   title: "Environmental Impact Assessment (EIA) & Monitoring",
+   fullTitle: "Environmental Impact Assessment (EIA) & Monitoring",
+   subtitle:
+    "Environmental Impact Assessment (EIA) & Monitoring of humanitarian and development projects in Somalia.",
+   about:
+    "<p>Dansom conducts environmental impact assessments and monitoring activities that support responsible humanitarian and development programming in Somalia. Our teams combine field data collection, stakeholder consultations, and contextual analysis to identify risks, propose mitigation measures, and track compliance over time.</p>",
+  },
+  {
+   icon: "pepicons-pencil:people",
+   title: "Organizational Capacity Building & HR",
+   fullTitle: "Organizational Capacity Building & HR",
+   subtitle:
+    "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
+   about:
+    "<p>We support institutions to strengthen systems, people, and performance through targeted capacity building and HR advisory. Services include workforce planning, policy development, training support, and organizational diagnostics tailored to operating environments in Somalia.</p>",
+  },
+  {
+   icon: "ph:gear-six-thin",
+   title: "Operational and Logistics Management",
+   fullTitle: "Operational and Logistics Management",
+   subtitle:
+    "Operational and Logistics Management for local and international organizations in Somalia.",
+   about:
+    "<p>Dansom provides practical operational and logistics support to improve delivery, coordination, and accountability. We help partners design fit-for-context workflows, strengthen supply and field coordination, and ensure operational decisions are grounded in local realities.</p>",
+  },
+  {
+   icon: "la:people-carry",
+   title: "Community Engagement Strategies",
+   fullTitle: "Community Engagement Strategies",
+   subtitle:
+    "Community Engagement Strategies for local and international organizations in Somalia.",
+   about:
+    "<p>Our community engagement services help organizations build trust, improve participation, and strengthen feedback loops with communities. We design context-sensitive approaches that support inclusive consultations and better programme ownership.</p>",
   },
  ]
 

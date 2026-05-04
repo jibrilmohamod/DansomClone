@@ -73,47 +73,54 @@
 
 <script setup lang="ts">
  const services = [
-  {
+ {
    title: "Political Economy Analysis",
    category: "Advisory",
    icon: "arcticons:adobe-analytics",
    description:
-    "Deep-dive assessments that unpack incentives, power dynamics, and risks to guide strategy and programme design.",
+    "Political Economy Analysis (PEA) in Somalia to inform programming and policy development.",
   },
   {
    title: "Third Party Monitoring and Evaluation",
    category: "MEL",
    icon: "carbon:data-analytics",
    description:
-    "Independent verification, real-time monitoring, and evaluations that ensure accountability to donors and communities.",
+    "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia.",
   },
   {
-   title: "Socio-Political and Economic Development",
+   title: "Formative Research and Policy Advisory Services",
    category: "Research",
-   icon: "mdi:account-group",
+   icon: "carbon:data-analytics",
    description:
-    "Research and advisory services addressing governance, economic growth, and community resilience in fragile contexts.",
+    "Formative Research and Policy Advisory Services to inform programming and policy development.",
   },
   {
-   title: "Security and Access Advisory",
+   title: "Environmental Impact Assessment (EIA) & Monitoring",
    category: "Advisory",
-   icon: "mdi:security",
+   icon: "ph:leaf-thin",
    description:
-    "Risk assessments, access strategies, and operational support for secure delivery in hard-to-reach areas.",
+    "Environmental Impact Assessment (EIA) & Monitoring of humanitarian and development projects in Somalia.",
   },
   {
-   title: "Research and Knowledge Management",
+   title: "Organizational Capacity Building & HR",
    category: "Insights",
-   icon: "mdi:file-document-edit",
+   icon: "pepicons-pencil:people",
    description:
-    "Knowledge products, learning agendas, and evidence synthesis that drive adaptive programming.",
+    "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
   },
   {
-   title: "Monitoring and Performance Evaluation",
+   title: "Operational and Logistics Management",
    category: "MEL",
-   icon: "mdi:clipboard-list",
+   icon: "ph:gear-six-thin",
    description:
-    "End-to-end MEL systems, performance tracking, and data quality assurance tailored to partner needs.",
+    "Operational and Logistics Management for local and international organizations in Somalia.",
+  },
+  {
+   title: "Community Engagement Strategies",
+   category: "MEL",
+   icon: "la:people-carry",
+   description:
+    "Community Engagement Strategies for local and international organizations in Somalia.",
   },
  ]
 </script>
