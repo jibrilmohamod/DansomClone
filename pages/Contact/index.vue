@@ -19,11 +19,11 @@
    <div class="grid gap-4 md:grid-cols-3 md:gap-8">
     <div class="rounded-none border-0 bg-transparent p-0 shadow-none md:col-span-2 md:dansom-card md:p-8">
      <p class="text-xs uppercase tracking-[0.2em] text-primary md:text-sm md:tracking-[0.25em]">We can help</p>
-     <h2 class="font-Playfair text-2xl font-bold md:text-3xl">Let&apos;s navigate what&apos;s next together</h2>
-     <p class="mt-2 font-Montserrat text-sm leading-relaxed text-slate-700 md:mt-3 md:text-lg">
+     <h2 class="font-display text-2xl font-semibold md:text-3xl">Let&apos;s navigate what&apos;s next together</h2>
+     <p class="mt-2 font-body text-sm leading-relaxed text-slate-700 md:mt-3 md:text-lg">
       Contact Dansom today to discuss your needs and discover how our services can benefit you. Our team is ready to assist and provide guidance for your next mission.
      </p>
-     <p class="text-sm leading-relaxed text-slate-700 md:text-base">
+     <p class="font-body text-sm leading-relaxed text-slate-700 md:text-base">
       Please reach out at the addresses below or fill out the form and we will get back to you quickly.
      </p>
 
@@ -89,6 +89,12 @@
 </template>
 
 <script lang="ts" setup>
+ useSeoMeta({
+  title: "Contact Us",
+  description:
+   "Contact Dansom Research & Consultancy for research, evaluation, and advisory support across Somalia and the Horn of Africa.",
+ })
+
  useHead({
   title: "Contact Us | Dansom Consultancy",
   meta: [

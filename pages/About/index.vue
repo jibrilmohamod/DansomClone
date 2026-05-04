@@ -162,6 +162,12 @@
 </template>
 
 <script setup lang="ts">
+ useSeoMeta({
+  title: "About",
+  description:
+   "Learn about Dansom Research & Consultancy, our mission, values, and regional expertise delivering field-based insight in Somalia and Kenya.",
+ })
+
  let services = [
   {
    title: "Respect",

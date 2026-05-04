@@ -22,7 +22,6 @@
       <NuxtLink to="/Portfolio" class="hover:text-slate-900">Our Projects</NuxtLink>
       <NuxtLink to="/Careers" class="hover:text-slate-900">Careers</NuxtLink>
       <NuxtLink to="/Contact" class="hover:text-slate-900">Contact</NuxtLink>
-      <a href="http://webmail.dansomconsultancy.org/" target="_blank" class="hover:text-slate-900">Staff Email</a>
      </div>
     </div>
 
@@ -47,10 +46,12 @@
       info@dansomconsultancy.org
      </a>
      <div class="flex items-center gap-3 text-slate-500">
-      <Icon name="ri:facebook-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:instagram-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:pinterest-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:twitter-fill" class="hover:text-slate-900" size="22" />
+      <a href="https://www.linkedin.com/company/dansom-research-and-consultancy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+       <Icon name="ri:linkedin-fill" class="hover:text-slate-900" size="22" />
+      </a>
+      <a href="https://x.com/DANSOM_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+       <Icon name="ri:twitter-x-fill" class="hover:text-slate-900" size="22" />
+      </a>
      </div>
      <div class="rounded-2xl border border-slate-200 bg-white p-3 text-sm text-slate-700">
       <p class="font-semibold text-slate-900">Mogadishu &amp; Nairobi</p>
