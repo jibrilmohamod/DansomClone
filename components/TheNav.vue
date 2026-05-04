@@ -47,13 +47,6 @@
       <NuxtLink to="/Portfolio" class="nav-link">Portfolio</NuxtLink>
       <NuxtLink to="/Careers" class="nav-link">Careers</NuxtLink>
       <NuxtLink to="/Contact" class="nav-link">Contact</NuxtLink>
-      <a
-       href="http://webmail.dansomconsultancy.org/"
-       target="_blank"
-       class="nav-link"
-      >
-       Staff Email
-      </a>
      </div>
 
      <NuxtLink
