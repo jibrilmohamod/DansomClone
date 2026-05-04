@@ -71,6 +71,13 @@
 
 <script lang="ts" setup>
  import Button from "~/components/ui/button/Button.vue"
+
+ useSeoMeta({
+  title: "Portfolio",
+  description:
+   "Review Dansom project portfolio across monitoring and evaluation, political economy analysis, and advisory assignments in Somalia and the region.",
+ })
+
  let projects = ref([
   {
    title:
