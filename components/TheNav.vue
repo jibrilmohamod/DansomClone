@@ -25,10 +25,12 @@
       </a>
      </div>
      <div class="flex items-center gap-3 text-slate-500">
-      <Icon name="mdi:facebook" class="transition hover:text-slate-900" />
-      <Icon name="mdi:instagram" class="transition hover:text-slate-900" />
-      <Icon name="mdi:twitter" class="transition hover:text-slate-900" />
-      <Icon name="akar-icons:tiktok-fill" class="transition hover:text-slate-900" />
+      <a href="https://www.linkedin.com/company/dansom-research-and-consultancy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+       <Icon name="ri:linkedin-fill" class="transition hover:text-slate-900" />
+      </a>
+      <a href="https://x.com/DANSOM_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+       <Icon name="ri:twitter-x-fill" class="transition hover:text-slate-900" />
+      </a>
      </div>
     </div>
 
@@ -47,13 +49,6 @@
       <NuxtLink to="/Portfolio" class="nav-link">Portfolio</NuxtLink>
       <NuxtLink to="/Careers" class="nav-link">Careers</NuxtLink>
       <NuxtLink to="/Contact" class="nav-link">Contact</NuxtLink>
-      <a
-       href="http://webmail.dansomconsultancy.org/"
-       target="_blank"
-       class="nav-link"
-      >
-       Staff Email
-      </a>
      </div>
 
      <NuxtLink

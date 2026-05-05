@@ -162,6 +162,12 @@
 </template>
 
 <script setup lang="ts">
+ useSeoMeta({
+  title: "About",
+  description:
+   "Learn about Dansom Research & Consultancy, our mission, values, and regional expertise delivering field-based insight in Somalia and Kenya.",
+ })
+
  let services = [
   {
    title: "Respect",
@@ -202,7 +208,7 @@
   },
   {
    name: "Abdifatah Abdullahi Ali",
-   role: "M&E Coordinator",
+   role: "Head of Programs",
    image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
    alt: "Abdifatah Abdullahi Ali",
    about:
@@ -222,7 +228,7 @@
   },
   {
    name: "Douglas Nzioka",
-   role: "Administration & Operations Manager",
+   role: "Finance Expert",
    image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
    alt: "Douglas Nzioka",
    about:
