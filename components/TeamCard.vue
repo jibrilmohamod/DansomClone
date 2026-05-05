@@ -1,14 +1,11 @@
 <template>
  <article class="dansom-card group relative flex h-full flex-col overflow-hidden p-4 md:p-0">
   <div class="flex flex-1 flex-col gap-3 p-0 text-slate-900 md:gap-4 md:p-6">
-   <div class="flex items-start justify-between gap-3">
+   <div class="space-y-1">
     <div>
      <h3 class="text-lg font-semibold md:text-xl">{{ name }}</h3>
-     <p class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 md:text-sm md:tracking-[0.2em]">Leadership Team</p>
+     <p class="text-xs font-medium text-slate-500 md:text-sm">{{ role }}</p>
     </div>
-    <span class="dansom-chip !text-[10px] !tracking-[0.14em] !text-secondary md:!text-[11px] md:!tracking-[0.2em]">
-     {{ role }}
-    </span>
    </div>
 
    <div class="rounded-lg border border-slate-200 bg-white p-3 shadow-none md:dansom-card-soft md:p-4" aria-hidden="true">

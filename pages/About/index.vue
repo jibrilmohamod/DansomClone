@@ -228,7 +228,7 @@
   },
   {
    name: "Douglas Nzioka",
-   role: "Administration & Operations Manager",
+   role: "Finance Expert",
    image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
    alt: "Douglas Nzioka",
    about:
