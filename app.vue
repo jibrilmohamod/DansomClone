@@ -21,6 +21,38 @@
 </template>
 
 <script lang="ts" setup>
+ const route = useRoute()
+ const siteUrl = "https://www.dansom.vercel.app"
+ const defaultTitle = "Dansom Research & Consultancy"
+ const defaultDescription =
+  "Dansom Research & Consultancy delivers field-based research, monitoring, evaluation, and advisory services across Somalia and the Horn of Africa."
+ const defaultOgImage = `${siteUrl}/dansom-logo.png`
+
+ useHead({
+  titleTemplate: (titleChunk) =>
+   titleChunk ? `${titleChunk} | ${defaultTitle}` : defaultTitle,
+  link: [
+   {
+    rel: "canonical",
+    href: `${siteUrl}${route.path}`,
+   },
+  ],
+ })
+
+ useSeoMeta({
+  description: defaultDescription,
+  ogType: "website",
+  ogSiteName: defaultTitle,
+  ogTitle: defaultTitle,
+  ogDescription: defaultDescription,
+  ogUrl: () => `${siteUrl}${route.path}`,
+  ogImage: defaultOgImage,
+  twitterCard: "summary_large_image",
+  twitterTitle: defaultTitle,
+  twitterDescription: defaultDescription,
+  twitterImage: defaultOgImage,
+ })
+
  const scrolled = ref(false)
  const checkScroll = () => {
   scrolled.value = window.scrollY > window.innerHeight
