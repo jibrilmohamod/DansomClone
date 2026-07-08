@@ -1,6 +1,6 @@
 <template>
  <div class="min-h-screen text-slate-900">
-  <TheHeader :projTitle="slug">
+  <TheHeader :projTitle="decodedSlug">
    <template #image>
     <NuxtImg
      provider="cloudinary"
@@ -236,8 +236,10 @@
   },
  ])
 
-const route = useRoute()
-const slug = ref(route.params.slug)
+ const route = useRoute()
+ const slug = computed(() => String(route.params.slug))
+ const decodedSlug = computed(() => decodeURIComponent(slug.value))
  const project =
-  projects.value.find((item) => item.title === slug.value) || projects.value[0]
+  projects.value.find((item) => item.title === decodedSlug.value) ||
+  projects.value[0]
 </script>

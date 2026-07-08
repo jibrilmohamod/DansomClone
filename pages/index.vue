@@ -160,61 +160,48 @@
 </template>
 
 <script setup lang="ts">
- useSeoMeta({
-  title: "Home",
-  description:
-   "Dansom Research & Consultancy provides political economy analysis, monitoring and evaluation, and advisory services across Somalia and the Horn of Africa.",
- })
-
  const services = [
   {
    icon: "arcticons:adobe-analytics",
    title: "Political Economy Analysis",
    subtitle:
-    "Political economy analysis in Somalia to inform programming and policy development.",
+    "Deep-dive assessments that unpack power dynamics, incentives, and risks to inform programming decisions.",
    slug: "Political%20Economy%20Analysis",
   },
   {
    icon: "carbon:data-analytics",
-   title: "Third Party Monitoring and Evaluation",
+   title: "Third Party Monitoring & Evaluation",
    subtitle:
-    "Third party monitoring and evaluation of humanitarian and development projects in Somalia.",
+    "Independent verification, real-time monitoring, and evaluations that keep projects accountable to communities and donors.",
    slug: "Third%20Party%20Monitoring%20and%20Evaluation",
   },
   {
-   icon: "carbon:data-analytics",
-   title: "Formative Research and Policy Advisory Services",
+   icon: "mdi:account-voice",
+   title: "Community Engagement & Inclusion",
    subtitle:
-    "Formative Research and Policy Advisory Services to inform programming and policy development.",
-   slug: "Formative%20Research%20and%20Policy%20Advisory%20Services",
+    "Strategies that ensure meaningful participation of community members, women, and minority groups across program cycles.",
+   slug: "Community%20Engagement%20and%20Inclusion",
   },
   {
-   icon: "ph:leaf-thin",
-   title: "Environmental Impact Assessment (EIA) & Monitoring",
+   icon: "ph:chart-line-up",
+   title: "Economic Growth & Market Systems",
    subtitle:
-    "Environmental impact assessment and monitoring of humanitarian and development projects in Somalia.",
-   slug: "Environmental%20Impact%20Assessment%20(EIA)%20%26%20Monitoring",
+    "Market analyses and growth strategies that align public, private, and community stakeholders.",
+   slug: "Economic%20Growth%20and%20Market%20Systems",
   },
   {
-   icon: "pepicons-pencil:people",
-   title: "Organizational Capacity Building & HR",
+   icon: "mdi:security",
+   title: "Security & Access Advisory",
    subtitle:
-    "Organizational Capacity Building & Human Resource Management for local and international organizations in Somalia.",
-   slug: "Organizational%20Capacity%20Building%20%26%20HR",
+    "Risk analysis, access strategies, and secure field operations enabling safe delivery in fragile contexts.",
+   slug: "Security%20and%20Access%20Advisory",
   },
   {
-   icon: "ph:gear-six-thin",
-   title: "Operational and Logistics Management",
+   icon: "mdi:chart-bell-curve",
+   title: "Program Design & Learning",
    subtitle:
-    "Operational and Logistics Management for local and international organizations in Somalia.",
-   slug: "Operational%20and%20Logistics%20Management",
-  },
-  {
-   icon: "la:people-carry",
-   title: "Community Engagement Strategies",
-   subtitle:
-    "Community Engagement Strategies for local and international organizations in Somalia.",
-   slug: "Community%20Engagement%20Strategies",
+    "Evidence-backed design support, MEL frameworks, and adaptive learning systems for complex programs.",
+   slug: "Program%20Design%20and%20Learning",
   },
  ]
 
