@@ -65,6 +65,33 @@
 <script lang="ts" setup>
  let projects = ref([
   {
+   title: "IFC Hargeisa and Mogadishu Training Support",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom is providing various services to the IFC as part of this project, including organising workshops in both Hargeisa and Mogadishu for the project and providing field support during the trainings including meeting minutes.",
+   Location: "Hargeisa and Mogadishu",
+   timeframes: "May 2025 - November 2025",
+   icon: "International_Finance_Corporation_logo.svg.png",
+  },
+  {
+   title: "Independent Evaluation of Teacher Training Centers",
+   classification: "Independent Evaluation",
+   description:
+    "The overall objective of this project was to conduct an independent assessment of the Teacher Training Centers (TTCs) and the teacher training program implemented under the SEHCDP. The assessment reviews governance, funding, human resource policies, coordination mechanisms, and training outcomes for 2,600 selected teachers, including interviews on subject-matter and pedagogical competencies of the Trainers of Teachers engaged by the TTCs.",
+   Location: "Somalia",
+   timeframes: "July 2025 - September 2025",
+   icon: "The_World_Bank_logo.svg",
+  },
+  {
+   title: "Global Education Policy Dashboard Somalia",
+   classification: "Formative Research & Policy Analysis",
+   description:
+    "A consortium led by Dansom, in partnership with Particip, was implementing the Global Education Policy Dashboard (GEPD) project in Somalia, providing formative research and policy advisory services to support the World Bank in assessing education policies, regional capacities, and learning outcomes.",
+   Location: "Somalia",
+   timeframes: "July 2024 - October 2025",
+   icon: "The_World_Bank_logo.svg",
+  },
+  {
    title:
     "The Provision of Monitoring and Evaluation Services in support of UNSOS(Somalia)",
    classification: "Third Party Monitoring & Evaluation",
