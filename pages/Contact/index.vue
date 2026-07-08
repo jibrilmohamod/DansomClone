@@ -89,6 +89,12 @@
 </template>
 
 <script lang="ts" setup>
+ useSeoMeta({
+  title: "Contact Us",
+  description:
+   "Contact Dansom Research & Consultancy for research, evaluation, and advisory support across Somalia and the Horn of Africa.",
+ })
+
  useHead({
   title: "Contact Us | Dansom Consultancy",
   meta: [
