@@ -125,26 +125,6 @@
    Ngo: "UNSOS",
   },
   {
-    title: "Independent Assessment of Teacher Training Centers and Teacher Training Programme",
-    classification: "Independent Evaluation",
-    description:
-      "The assignment conducts an independent assessment of Teacher Training Centers and the teacher training programme implemented under SEHCDP. It reviews governance, funding, human resource policies, coordination mechanisms, and the outcomes of training provided to 2,600 selected teachers.",
-    Location: "Somalia",
-    timeframes: "July 2025 - September 2025",
-    icon: "The_World_Bank_logo.svg",
-    Ngo: "World Bank",
-  },
-  {
-    title: "Global Education Policy Dashboard Project in Somalia",
-    classification: "Formative Research & Policy Advisory",
-    description:
-      "A consortium led by Dansom, in partnership with Particip, implemented the Global Education Policy Dashboard project in Somalia, providing formative research and policy advisory services to support the World Bank in assessing education policies, regional capacities, and learning outcomes.",
-    Location: "Somalia",
-    timeframes: "July 2024 - October 2025",
-    icon: "The_World_Bank_logo.svg",
-    Ngo: "World Bank",
-  },
-  {
     title: "WFP Programme Monitoring, Learning and Evaluation Support",
     classification: "Third Party Monitoring & Evaluation",
     description:
@@ -154,17 +134,7 @@
     icon: "wfpfao.png",
     Ngo: "WFP",
   },
-  {
-    title: "Monitoring and Evaluation Services in Support of UNSOS",
-    classification: "Third Party Monitoring & Evaluation",
-    description:
-      "A consortium comprising Dansom and Particip is facilitating the provision of monitoring and evaluation services in support of UNSOS throughout Somalia.",
-    Location: "Somalia",
-    timeframes: "December 2022 - Current",
-    icon: "Capture1.PNG-removebg-preview.png",
-    Ngo: "UNSOS",
-  },
-  {
+    {
     title: "Framework for Risk Governance and Adaptive Programming",
     classification: "Third Party Monitoring & Evaluation",
     description:
