@@ -125,29 +125,94 @@
    Ngo: "UNSOS",
   },
   {
-   title: "Swiss Agency for Development and Cooperation (SDC)",
-   classification: "Classification",
-   description:
-    "The current objective is to improve the performance of the Swiss HoA programme. This overall work to improve the programme is called the “Framework for Risk Gover- nance and Adaptive Programming” (FRAP). It will be implemented over a twelve year timeframe. FRAP will initially focus on Soma- lia (including Somaliland).",
-   Location: "Somalia",
-   timeframes: "June 2021 - December 2024",
-   icon: "2560px-Logo_der_Schweizerischen_Eidgenossenschaft.svg.png",
-
-   Ngo: "SDC",
+    title: "Independent Assessment of Teacher Training Centers and Teacher Training Programme",
+    classification: "Independent Evaluation",
+    description:
+      "The assignment conducts an independent assessment of Teacher Training Centers and the teacher training programme implemented under SEHCDP. It reviews governance, funding, human resource policies, coordination mechanisms, and the outcomes of training provided to 2,600 selected teachers.",
+    Location: "Somalia",
+    timeframes: "July 2025 - September 2025",
+    icon: "The_World_Bank_logo.svg",
+    Ngo: "World Bank",
   },
   {
-   title: "EU Delegation to Somalia (EUD-Somalia)",
-   classification: "Third Party Monitoring & Evaluation",
-   description:
-    "The European Union Delegation to Somalia (EUD-Somalia) has contracted Dansom Consultancy to provide Third Party Monitoring and Evaluation services in support of the EU’s development cooperation in Somalia.",
-   Location: "Somalia",
-   timeframes: "July 2016 - April 2018",
-   icon: "EU.jpg",
-   Ngo: "EU",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consortium of IDC, Hoplite and Dansom carried out Somalia Maritime Security Actors Mapping.",
-   timeframes2: "December 2015 - July 2016  ",
+    title: "Global Education Policy Dashboard Project in Somalia",
+    classification: "Formative Research & Policy Advisory",
+    description:
+      "A consortium led by Dansom, in partnership with Particip, implemented the Global Education Policy Dashboard project in Somalia, providing formative research and policy advisory services to support the World Bank in assessing education policies, regional capacities, and learning outcomes.",
+    Location: "Somalia",
+    timeframes: "July 2024 - October 2025",
+    icon: "The_World_Bank_logo.svg",
+    Ngo: "World Bank",
+  },
+  {
+    title: "WFP Programme Monitoring, Learning and Evaluation Support",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "A consortium comprising Dansom and Particip implemented a Third-Party Monitoring project to support WFP’s Programme Monitoring, Learning and Evaluation functions, providing coordinated field monitoring, reporting, and assessments for food assistance and cash-based transfer activities.",
+    Location: "Somalia",
+    timeframes: "April 2025 - June 2026",
+    icon: "wfpfao.png",
+    Ngo: "WFP",
+  },
+  {
+    title: "Monitoring and Evaluation Services in Support of UNSOS",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "A consortium comprising Dansom and Particip is facilitating the provision of monitoring and evaluation services in support of UNSOS throughout Somalia.",
+    Location: "Somalia",
+    timeframes: "December 2022 - Current",
+    icon: "Capture1.PNG-removebg-preview.png",
+    Ngo: "UNSOS",
+  },
+  {
+    title: "Framework for Risk Governance and Adaptive Programming",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "The assignment supports improvement of the Swiss Horn of Africa programme through the Framework for Risk Governance and Adaptive Programming, initially focusing on Somalia including Somaliland over a twelve-year timeframe.",
+    Location: "Somalia",
+    timeframes: "June 2021 - June 2024",
+    icon: "2560px-Logo_der_Schweizerischen_Eidgenossenschaft.svg.png",
+    Ngo: "SDC",
+  },
+  {
+    title: "Technical Assistance on Reorganization and Modernization of MDAs",
+    classification: "Formative Research & Policy Advisory",
+    description:
+      "The project provided technical assistance to support a diagnostic assessment of the organisational setup of MDAs, focusing on mandates, functions, organisational structures, staffing requirements, and administrative policies, processes, and systems.",
+    Location: "Somalia",
+    timeframes: "December 2020 - September 2021",
+    icon: "Untitled design (1).png",
+    Ngo: "Government of Somalia",
+  },
+  {
+    title: "Somali Reintegration Programme Third Party Monitoring",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "The project supported third party monitoring of the Somali Reintegration Programme, which aimed to assist returnees, IDPs, and host community members in Kismayo to establish and secure sustainable livelihoods through a community-based approach.",
+    Location: "Kismayo, Somalia",
+    timeframes: "August 2021 - July 2022",
+    icon: "giz-400x173.jpg",
+    Ngo: "GIZ",
+  },
+  {
+    title: "Third Party Monitoring of EU-Funded Projects Across Somalia",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "A consortium comprising Dansom, Particip, and partners facilitated third party monitoring and evaluation of EU-funded projects across Somalia, covering education, resilience, infrastructure, WASH, social policy, health, communication for development, peacebuilding, democratization, public sector development, and livelihoods.",
+    Location: "Somalia",
+    timeframes: "December 2021 - December 2023",
+    icon: "EU.jpg",
+    Ngo: "EU",
+  },
+  {
+    title: "Third Party Monitoring Services for the Joint Police Programme",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "Dansom provided regular and independent analysis and assessments of the Joint Police Programme in Somalia through quantitative and qualitative methodologies, including routine monitoring, baseline survey, annual perception survey, sociopolitical analysis, and efficiency measurement.",
+    Location: "Somalia",
+    timeframes: "December 2018 - December 2023",
+    icon: "unops.jpg",
+    Ngo: "UNOPS",
   },
   {
    title: "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)",
@@ -160,47 +225,97 @@
    Ngo: "GIZ",
   },
   {
-   title: "Somalia Capacity Injection Project Pay and Grading Reform",
-   classification: "Formative Research & Policy Analysis",
-   description:
-    "The objective of the assignment is to carry out a combination of field work and diagnostic analysis of public sector pay and grading trends and living standard assessment in Somalia and propose solutions that will provide adequate incentive for improved performance of civil Servants and also enable efficient and effective management of public government’s wage bill as aligned to nation-al strategies and development aspirations to promote sustainable growth.",
-   Location: "Somalia",
-   timeframes: "September 2019 - March 2020",
-   icon: "Untitled design.png",
-   Ngo: "World Bank",
+    title: "EU-Funded Somalia Projects Monitoring Programme",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "A consortium comprising Dansom, Particip, and Axiom facilitated third party monitoring and evaluation of EU-funded projects across all regions and districts of Somalia, covering multiple programming areas including education, resilience, infrastructure, WASH, social policy, health, peacebuilding, democratization, public sector development, and livelihoods.",
+    Location: "Somalia",
+    timeframes: "November 2022 - May 2023",
+    icon: "EU.jpg",
+    Ngo: "EU",
   },
   {
-   title: "Technical Assistance on Reorganization & Modernization of MDA’s",
-   classification: "Third Party Monitoring & Evaluation",
-   description:
-    "provide technical assistance to support a diagnostic assessment of the organizational set up of MDAs focusing on their mandates, functions, and organizational structures, staffing requirements and administrative policies, processes and systems",
-   Location: "Somalia",
-   timeframes: "December 2020 - September 2021",
-   icon: "Untitled design (1).png",
+    title: "Somalia Capacity Injection Project Pay and Grading Reform",
+    classification: "Formative Research & Policy Advisory",
+    description:
+      "A consortium comprising Dansom and Particip facilitated field work and diagnostic analysis of public sector pay and grading trends and living standards in Somalia, proposing solutions to improve civil service incentives, public resource management, and alignment of the government wage bill with national strategies.",
+    Location: "Somalia",
+    timeframes: "November 2022 - May 2023",
+    icon: "Untitled design.png",
+    Ngo: "World Bank",
   },
   {
-   title: "United Nations Office for Project Services (UNOPS)",
-   classification: "Third Party Monitoring & Evaluation",
-   description:
-    "Provide regular and independent analysis and assessments of the JPP in Somalia through quantitative and qualitative methodologies to undertake routine monitoring, baseline survey, annual perception survey, socio-political analysis, and measure efficiency.",
-   Location: "Somalia",
-   timeframes: "December 2019 - December 2023",
-   icon: "unops.jpg",
+    title: "Somalia Maritime Security Actors Mapping",
+    classification: "Political Economy Analysis & Security Advisory",
+    description:
+      "A consortium of IDC, Hoplite, and Dansom carried out Somalia Maritime Security Actors Mapping to support understanding of maritime security stakeholders and dynamics.",
+    Location: "Somalia",
+    timeframes: "May 2018 - August 2018",
+    icon: "ifc.png",
+    Ngo: "IDC / Hoplite",
   },
   {
-   title: "World Food Programme",
-   classification: "Third Party Monitoring & Evaluation",
+    title: "Final Evaluation of the SCOPES Project",
+    classification: "Formative Research & Policy Advisory",
+    description:
+      "Dansom supported the final evaluation of the Strengthening Civil Society and Public Engagement in Somalia project, assessing performance and achievements against overall and specific objectives and identifying factors of success or failure using OECD DAC Evaluation Criteria.",
+    Location: "Somalia",
+    timeframes: "December 2015 - July 2016",
+    icon: "EU.jpg",
+    Ngo: "SCOPES",
+  },
+  {
+    title: "Third Party Monitoring and Evaluation of EU Somalia Projects",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "A consortium of Particip, Axiom, and Dansom implemented a third party monitoring and evaluation programme covering EU-funded Somalia projects.",
+    Location: "Somalia",
+    timeframes: "July 2016 - April 2018",
+    icon: "EU.jpg",
+    Ngo: "EU",
+  },
+  {
+    title: "Somalia Emergency Drought Response and Recovery Project Technical Review",
+    classification: "Third Party Monitoring & Evaluation",
+    description:
+      "Dansom conducted a third party technical review to assess implementation and impact of the Somalia Emergency Drought Response and Recovery Project across Somaliland, Puntland, Jubaland, South-West State, HirShabelle, and Galmudug.",
+    Location: "Somalia",
+    timeframes: "December 2017 - December 2018",
+    icon: "FAO_logo.svg",
+    Ngo: "FAO",
+  },
+  {
+    title: "World Bank Microeconomic and Fiscal Management Programme Event Support",
+    classification: "Operational & Logistics Management",
+    description:
+      "Dansom partnered with the World Bank Group to facilitate event management for the Microeconomic and Fiscal Management Programme implemented by the World Bank Group.",
+    Location: "Somalia",
+    timeframes: "September 2016 - December 2016",
+    icon: "The_World_Bank_logo.svg",
+    Ngo: "World Bank",
+  },
+  {
+   title: "Somalia Invest Climate Reform Program, IFC-World Bank",
+   classification: "Political Economy Analysis & Security Advisory",
    description:
-    "Research and evaluation services for supporting resilient small holder farming systems in Somalia.We are expected to provide an independent perspective and expand into areas sometimes inaccessible to WFP/FAO staff due to security reasons.",
+    "Undertaking a political economy analysis of business licensing with a focus on the federal licensing structure and permit system. The assignment aims to understand the relationships and dynamics among various actors involved in the design, implementation, and administration of business licensing, including line Ministries and public institutions, international donors, national-level business associations, and newly formed Business Membership Organizations, with a focus on licensing actors in Jubaland, Puntland and Benadir Administration.",
    Location: "Somalia",
-   timeframes: "November 2022 - May 2024",
-   icon: "wfpfao.png",
+   timeframes: "December 2015 - May 2016",
+   icon: "ifc.png",
+  },
+  {
+   title: "ICF International",
+   classification: "Organizational Capacity Building & Human Resource Management",
+   description:
+    "Incorporated Dansom alongside other firms in its bidding consortium for Multi-stakeholder Value Chain Analysis & Baseline Study",
+   Location: "Somalia",
+   timeframes: "January 2018 - April 2020",
+   icon: "ICF.png",
   },
   {
    title:
     "The Ministry of Planning, Investment and Economic Development for the Federal Republic of Somalia",
-   classification:
-    "Organizational Capacity Building & Human Resource Management",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
     "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
    Location: "Somalia",
@@ -238,7 +353,7 @@
    icon: "International_Finance_Corporation_logo.svg.png",
   },
   {
-   title: "Horumarinta Elmiga II-Save the Children",
+   title: "Somalia Monitoring Programme (SMP)",
    classification: "Third Party Monitoring & Evaluation",
    description:
     "Final Evaluation of Horumarinta Elmiga II(Education for Empowerment through Cohesive and Harmonized System) was funded by the European Union and implemented by Save the Children as the lead agency, Care International and Norwegian Refugees Council (NRC), in partnership with the MOEHS of Somaliland.",
@@ -255,34 +370,10 @@
    icon: "CARE_Logo_Orange.png",
   },
   {
-   title: "Solidarites International",
+   title: "Improved Food Security and Enhanced Resilience Programme",
    classification: "Third Party Monitoring & Evaluation",
    description:
-    "External Evaluation of the Emergency response to disaster affected population of IDPs and host community Implemented by Solidarites International in Lower Juba.",
-   Location: "Lower Juba, Somalia",
-   timeframes: "May 2016 - July 2016",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for ensuring the release of Solidarites International’s staff that were arrested by Armed Group in Gedo, Somalia.",
-   icon: "solidarites.jpg",
-  },
-  {
-   title: "ACTED",
-   classification: "Political Economy Analysis & Security Advisory",
-   description: "Security Advisory on Need Basis for Jubbaland, Somalia.",
-   Location: "Jubbaland, Somalia",
-   timeframes: "January 2016 - December 2017",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for the release of ACTED’s staff that were arrested by Local Authority in Jubaland, Somalia.",
-   icon: "Acted_logo_2023.png",
-  },
-  {
-   title:
-    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project",
-   classification: "Formative Research & Policy Analysis",
-   description:
-    "Consortium of ALTAI and Dansom implemented an Accountability Perception Survey in Somalia. DFID / Mott McDonalds – Implementation and Analysis in Action for Accountability Programme (IAAAP) in Somalia.",
+    "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
    Location: "Somalia",
    timeframes: "December 2015 - January 2017",
    classification2: "Formative Research & Policy Analysis",
@@ -353,7 +444,7 @@
 
    return matchesSearch && matchesClassification
   })
- })
+})
 
  const loadMore = () => {
   displayedProjects.value = projects.value.slice(

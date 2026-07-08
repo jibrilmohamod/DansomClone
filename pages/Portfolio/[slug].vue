@@ -216,8 +216,8 @@
    icon: "International_Finance_Corporation_logo.svg.png",
   },
   {
-   title: "Horumarinta Elmiga II-Save the Children",
-   classification: "Third Party Monitoring & Evaluation",
+   title: "ICF International",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
     "Final Evaluation of Horumarinta Elmiga II(Education for Empowerment through Cohesive and Harmonized System) was funded by the European Union and implemented by Save the Children as the lead agency, Care International and Norwegian Refugees Council (NRC), in partnership with the MOEHS of Somaliland.",
    Location: "Somaliland",
@@ -225,42 +225,37 @@
    icon: "He-1.png",
   },
   {
-   title: "CARE International",
-   classification: "Political Economy Analysis & Security Advisory",
+   title:
+    "The Ministry of Planning, Investment and Economic Development for the Federal Republic of Somalia",
+   classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "Final Evaluation of the ‘Strengthening Civil Society and Public Engagement in Somalia’ (SCOPES) project to assess the project’s performance and achievements against the overall and specific objectives and to identify factors of success or failure, following the OECD DAC Evaluation Criteria.",
+    "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
    Location: "Somalia",
    icon: "CARE_Logo_Orange.png",
   },
   {
-   title: "Solidarites International",
+   title: "African Development Bank (AfDB)",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom provided assistance to the AfDB during the 2nd National Steering Committee Meeting and was responsible for all logistics and operations",
+   Location: "Somalia",
+   timeframes: "February 2018 - March 2018",
+   icon: "afdb.jpg",
+  },
+  {
+   title: "Somalia Monitoring Programme (SMP)",
    classification: "Third Party Monitoring & Evaluation",
    description:
-    "External Evaluation of the Emergency response to disaster affected population of IDPs and host community Implemented by Solidarites International in Lower Juba.",
-   Location: "Lower Juba, Somalia",
-   timeframes: "May 2016 - July 2016",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for ensuring the release of Solidarites International’s staff that were arrested by Armed Group in Gedo, Somalia.",
-   icon: "solidarites.jpg",
+    "Political Economy Analysis: Puntland & South Central Somalia (In consortium with Itad, Altai Consulting and GTZ for DFID). Somalia monitoring Programme (SMP) is a Third Party Monitoring Programme contracted by DFID with the aim of enhancing the accountability of the British Government’s investments in Somalia (GBP 250m over four years)",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "UKaid_logo.png",
   },
   {
-   title: "ACTED",
-   classification: "Political Economy Analysis & Security Advisory",
-   description: "Security Advisory on Need Basis for Jubbaland, Somalia.",
-   Location: "Jubbaland, Somalia",
-   timeframes: "January 2016 - December 2017",
-   classification2: "Political Economy Analysis & Security Advisory",
-   description2:
-    "Consultancy Conflict Mediation and Resolution for the release of ACTED’s staff that were arrested by Local Authority in Jubaland, Somalia.",
-   icon: "Acted_logo_2023.png",
-  },
-  {
-   title:
-    "DFID / Mott MacDonalds - Implementation & Analysis in Action for Accountability Project",
-   classification: "Formative Research & Policy Analysis",
+   title: "Improved Food Security and Enhanced Resilience Programme",
+   classification: "Third Party Monitoring & Evaluation",
    description:
-    "Consortium of ALTAI and Dansom implemented an Accountability Perception Survey in Somalia. DFID / Mott McDonalds – Implementation and Analysis in Action for Accountability Programme (IAAAP) in Somalia.",
+    "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
    Location: "Somalia",
    timeframes: "December 2015 - January 2017",
    classification2: "Formative Research & Policy Analysis",

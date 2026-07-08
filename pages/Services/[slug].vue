@@ -29,6 +29,28 @@
       <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
       <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
      </div>
+     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
+      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
+      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
+     </div>
+    </div>
+    <div class="space-y-3 md:col-span-2 md:space-y-5">
+     <p class="inline-flex w-fit items-center rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+      {{ service.title }}
+     </p>
+     <h5 class="font-display text-xl font-semibold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
+     <div
+      class="service-body prose prose-sm max-w-none text-justify prose-headings:text-primary prose-p:my-0 prose-p:mb-5 prose-p:leading-8 prose-ul:my-5 prose-ul:pl-6 prose-li:leading-7 prose-a:text-secondary md:prose-base"
+      v-html="service.about"
+     ></div>
+    </div>
+    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
+     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
+     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
+     <div
+      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
+      v-html="service.about"
+     ></div>
     </div>
     <div class="space-y-2.5 md:col-span-2 md:space-y-4">
      <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
@@ -54,7 +76,7 @@
    title: "Political Economy Analysis",
    fullTitle: "Political Economy Analysis and Security Advisory",
    subtitle:
-    "Political Economy Analysis (PEA) in Somalia to inform programming and policy development.",
+    "Political economy analysis in Somalia to inform programming and policy development.",
    about:
     "<p>Dansom has developed a unique expertise in providing international development agencies such as the World Bank, EU, DFID, FCO and the UN with in-depth political economy analysis, economic growth and security advisory services in the Somali and broader East-African context. The firm has experience in collecting up-to-date, triangulated information on the ground, analysing local networks and power structures, and in designing effective strategies to guarantee access to civil society actors and strategic stakeholders in insecure and non-permissive areas.</p><p>Dansom also provides security risk analysis, management planning and on-going advisory services to international organisations that aim to deliver impact in some of the most volatile environments in the region.</p><p>Dansom has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs. Dansom has an extensive network of private sector actors as well as government stakeholders. Additionally, the firm has, through various other projects expanded its working relationship with numerous civil society organizations and NGO’s across Somalia.</p>",
   },
@@ -63,7 +85,7 @@
    title: "Third Party Monitoring and Evaluation",
    fullTitle: "Third Party Monitoring and Performance Evaluation",
    subtitle:
-    "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia.",
+    "Third party monitoring and evaluation of humanitarian and development projects in Somalia.",
    about:
     "<p>DANSOM core expertise lies also in third-party monitoring and performance evaluation. Across our network of multi-disciplinary experts, we combine extensive experience in providing third-party monitoring, verification and evaluation, process efficiency, performance and impact evaluations, as well as programme reviews. Using both qualitative and quantitative methods and leveraging our region-wide network of field monitors and data collectors, we ensure reliable analytical results are provided on time to our clients and allow them to make rapid decisions to steer their programmes in the right direction despite the complexity of their environment of operation.</p><p>Our team of experts have experience in providing third-party monitoring and evaluation services to a range of international development agencies, including the World Bank, EU, DFID, FCO, UN, and other international and local NGOs. Our team has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs.</p>",
   },
