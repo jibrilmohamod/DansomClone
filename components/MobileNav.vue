@@ -1,124 +1,58 @@
 <template>
- <div
-  class="bg-quinary z-50 h-[100vh] w-full text-white absolute top-0 left-0 pt-5"
- >
-  <!-- logo here and close button -->
-  <div class="flex justify-between px-5 pb-10 pt-5 border-b border-gray-800">
-   <NuxtLink to="/">
-    <img src="/dansom-logo.png" class="object-contain h-10" alt="Focal Foods" />
+ <div class="absolute inset-0 z-50 h-[100vh] overflow-y-auto bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
+  <div class="flex items-center justify-between border-b border-slate-200 px-4 pb-3 pt-3 backdrop-blur-xl">
+   <NuxtLink to="/" @click="$emit('toggleMobileNav')">
+    <img src="/dansom-logo.png" class="h-8 object-contain" alt="Dansom" />
    </NuxtLink>
 
    <button
-    class="p-2 bg-white rounded-full text-black"
+    class="rounded-xl border border-slate-300 bg-white p-1.5 text-slate-700 shadow-sm backdrop-blur"
     @click="$emit('toggleMobileNav')"
    >
-    <IconCSS name="ic:baseline-close" class="text-3xl text-black" />
+    <IconCSS name="ic:baseline-close" class="text-xl" />
    </button>
   </div>
 
-  <!-- nav links -->
-  <nav class="flex flex-col gap-5 py-8 font-jost px-5">
-   <NuxtLink
-    to="/"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
-   >
-    Home
-   </NuxtLink>
-
-   <NuxtLink
-    to="/about"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
-   >
-    About Us
-   </NuxtLink>
-
-   <NuxtLink
-    to="/Portfolio"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
-   >
-    Our Portfolio
-   </NuxtLink>
-
-   <NuxtLink
-    to="/Contact"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
-   >
-    Contact Us
-   </NuxtLink>
-
-   <NuxtLink
-    to="/Careers"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
-   >
-    Careers
-   </NuxtLink>
-
-   <NuxtLink class="text-2xl focus:text-orange-500" aria-label="Nav link">
-    Repository
-   </NuxtLink>
-
+  <nav class="flex flex-col gap-3 px-4 py-5 text-base font-semibold">
+   <NuxtLink to="/" class="mobile-link" @click="$emit('toggleMobileNav')">Home</NuxtLink>
+   <NuxtLink to="/About" class="mobile-link" @click="$emit('toggleMobileNav')">About Us</NuxtLink>
+   <NuxtLink to="/Services" class="mobile-link" @click="$emit('toggleMobileNav')">Services</NuxtLink>
+   <NuxtLink to="/Portfolio" class="mobile-link" @click="$emit('toggleMobileNav')">Our Portfolio</NuxtLink>
+   <NuxtLink to="/Careers" class="mobile-link" @click="$emit('toggleMobileNav')">Careers</NuxtLink>
+   <NuxtLink to="/Contact" class="mobile-link" @click="$emit('toggleMobileNav')">Contact Us</NuxtLink>
    <a
     href="http://webmail.dansomconsultancy.org/"
-    class="text-2xl focus:text-orange-500"
-    aria-label="Nav link"
+    class="mobile-link"
     target="_blank"
+    @click="$emit('toggleMobileNav')"
    >
     Staff Email
    </a>
   </nav>
 
-  <!-- social media icons and copyright -->
-  <div class="px-5">
-   <div class="flex">
-    <!-- instagram -->
-    <IconCSS name="akar-icons:instagram-fill" class="text-xl mr-5" />
-    <!-- facebook -->
-    <IconCSS name="akar-icons:facebook-fill" class="text-xl mr-5" />
-    <!-- twitter -->
-    <IconCSS name="akar-icons:twitter-fill" class="text-xl mr-5" />
-    <!-- tiktok -->
-    <IconCSS name="akar-icons:tiktok-fill" class="text-xl mr-5" />
-    <!-- youtube -->
-    <IconCSS name="akar-icons:youtube-fill" class="text-xl mr-5" />
+  <div class="space-y-4 px-4 pb-6">
+   <div class="flex items-center gap-3 text-sm text-slate-600">
+    <IconCSS name="mdi:location" class="text-xl text-secondary" />
+    <p>Mogadishu &amp; Nairobi</p>
+   </div>
+   <div class="flex items-center gap-3 text-sm text-slate-600">
+    <IconCSS name="mdi:phone" class="text-xl text-secondary" />
+    <p>+254 745 276 911</p>
+   </div>
+   <div class="flex items-center gap-3 text-sm text-slate-600">
+    <IconCSS name="mdi:email" class="text-xl text-secondary" />
+    <a href="mailto:info@dansomconsultancy.org" class="hover:text-slate-900">info@dansomconsultancy.org</a>
    </div>
 
-   <div class="py-4">
-    <p class="font-jost text-sm">&copy; 2024 DANSOM All Rights Reserved.</p>
+   <div class="flex gap-4 text-slate-500">
+    <IconCSS name="akar-icons:instagram-fill" class="text-2xl" />
+    <IconCSS name="akar-icons:facebook-fill" class="text-2xl" />
+    <IconCSS name="akar-icons:twitter-fill" class="text-2xl" />
+    <IconCSS name="akar-icons:tiktok-fill" class="text-2xl" />
+    <IconCSS name="akar-icons:youtube-fill" class="text-2xl" />
    </div>
-  </div>
 
-  <div class="px-5 text-sm border-t border-gray-800">
-   <!-- address with icon -->
-
-   <div class="flex py-2">
-    <div class="pr-3">
-     <IconCSS name="mdi:location" class="text-xl" />
-    </div>
-    <p class="font-jost">1234, Nairobi, Kenya</p>
-   </div>
-   <!-- phone with icon -->
-
-   <div class="flex py-2">
-    <div class="pr-3">
-     <IconCSS name="mdi:phone" class="text-xl" />
-    </div>
-    <p class="font-jost">+254 123 456 789</p>
-   </div>
-   <!-- email with icon -->
-
-   <div class="flex py-2">
-    <div class="pr-3">
-     <IconCSS name="mdi:email" class="text-xl" />
-    </div>
-    <p class="font-jost">
-     <a href="mailto:info@zaman.co.ke"> info@dansom.com </a>
-    </p>
-   </div>
+   <p class="text-xs text-slate-500">&copy; 2024 Dansom Consultancy. All Rights Reserved.</p>
   </div>
  </div>
 </template>
@@ -127,4 +61,14 @@
  defineEmits(["toggleMobileNav"])
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.mobile-link {
+ transition: color 0.2s ease, transform 0.2s ease;
+ color: rgb(51 65 85);
+}
+
+.mobile-link:hover {
+ color: #b68a35;
+ transform: translateX(6px);
+}
+</style>
