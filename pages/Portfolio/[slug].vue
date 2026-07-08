@@ -1,6 +1,6 @@
 <template>
  <div class="min-h-screen text-slate-900">
-  <TheHeader :projTitle="decodedSlug">
+  <TheHeader :projTitle="project.title">
    <template #image>
     <NuxtImg
      provider="cloudinary"
@@ -64,6 +64,33 @@
 
 <script lang="ts" setup>
  let projects = ref([
+  {
+   title: "IFC Hargeisa and Mogadishu Training Support",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom is providing various services to the IFC as part of this project, including organising workshops in both Hargeisa and Mogadishu for the project and providing field support during the trainings including meeting minutes.",
+   Location: "Hargeisa and Mogadishu",
+   timeframes: "May 2025 - November 2025",
+   icon: "International_Finance_Corporation_logo.svg.png",
+  },
+  {
+   title: "Independent Evaluation of Teacher Training Centers",
+   classification: "Independent Evaluation",
+   description:
+    "The overall objective of this project was to conduct an independent assessment of the Teacher Training Centers (TTCs) and the teacher training program implemented under the SEHCDP. The assessment reviews governance, funding, human resource policies, coordination mechanisms, and training outcomes for 2,600 selected teachers, including interviews on subject-matter and pedagogical competencies of the Trainers of Teachers engaged by the TTCs.",
+   Location: "Somalia",
+   timeframes: "July 2025 - September 2025",
+   icon: "The_World_Bank_logo.svg",
+  },
+  {
+   title: "Global Education Policy Dashboard Somalia",
+   classification: "Formative Research & Policy Analysis",
+   description:
+    "A consortium led by Dansom, in partnership with Particip, was implementing the Global Education Policy Dashboard (GEPD) project in Somalia, providing formative research and policy advisory services to support the World Bank in assessing education policies, regional capacities, and learning outcomes.",
+   Location: "Somalia",
+   timeframes: "July 2024 - October 2025",
+   icon: "The_World_Bank_logo.svg",
+  },
   {
    title:
     "The Provision of Monitoring and Evaluation Services in support of UNSOS(Somalia)",
@@ -186,16 +213,16 @@
     "Undertaking a political economy analysis of business licensing with a focus on the federal licensing structure and permit system. The assignment aims to understand the relationships and dynamics among various actors involved in the design, implementation, and administration of business licensing, including line Ministries and public institutions, international donors, national-level business associations, and newly formed Business Membership Organizations, with a focus on licensing actors in Jubaland, Puntland and Benadir Administration.",
    Location: "Somalia",
    timeframes: "December 2015 - May 2016",
-   icon: "ifc.png",
+   icon: "International_Finance_Corporation_logo.svg.png",
   },
   {
    title: "ICF International",
    classification: "Organizational Capacity Building & Human Resource Management",
    description:
-    "Incorporated Dansom alongside other firms in its bidding consortium for Multi-stakeholder Value Chain Analysis & Baseline Study",
-   Location: "Somalia",
-   timeframes: "January 2018 - April 2020",
-   icon: "ICF.png",
+    "Final Evaluation of Horumarinta Elmiga II(Education for Empowerment through Cohesive and Harmonized System) was funded by the European Union and implemented by Save the Children as the lead agency, Care International and Norwegian Refugees Council (NRC), in partnership with the MOEHS of Somaliland.",
+   Location: "Somaliland",
+   timeframes: "September 2018 - November 2018",
+   icon: "He-1.png",
   },
   {
    title:
@@ -204,8 +231,7 @@
    description:
     "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
    Location: "Somalia",
-   timeframes: "February 2018 - August 2019",
-   icon: "ministry-of-planning-400x162.png",
+   icon: "CARE_Logo_Orange.png",
   },
   {
    title: "African Development Bank (AfDB)",
@@ -231,6 +257,55 @@
    description:
     "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
    Location: "Somalia",
+   timeframes: "December 2015 - January 2017",
+   classification2: "Formative Research & Policy Analysis",
+   description2:
+    "Consortium of INTEGRITY, AXIOM and Dansom implemented an Accountability Research on accountability mechanisms along the supply chains of sesame and sugar in the context of Kismayo, Somalia. DFID / Mott Mc Donalds – Implementation and Analysis in Action of Accountability Programme (IAAAP) in Somalia.",
+   icon: "DFID-400x162.png",
+  },
+  {
+   title: "ICF International",
+   classification: "Organizational Capacity Building & Human Resource Management",
+   description:
+    "Incorporated Dansom alongside other firms in its bidding consortium for Multi-stakeholder Value Chain Analysis & Baseline Study",
+   Location: "Somalia",
+   timeframes: "January 2018 - April 2020",
+   icon: "dansom-logo.png",
+  },
+  {
+   title:
+    "The Ministry of Planning, Investment and Economic Development for the Federal Republic of Somalia",
+   classification: "Organizational Capacity Building & Human Resource Management",
+   description:
+    "Consortium of Dansom and PARTICIP are implementing the Somalia National Statistical Capacity Building Project. The project seeks to build the capacity of the National Directorate for Statistics of the Federal Ministry of International Cooperation (FMoPIC) and Statistics Departments of Puntland Ministry of Planning and International Cooperation (PLMoPIC) and Southwest Administration Ministry of Planning and International Cooperation (SWAMoPIC) to enable these institutions to effectively conduct, supervise and coordinate the statistical activities in the areas under their jurisdiction.",
+   Location: "Somalia",
+   timeframes: "February 2018 - August 2019",
+   icon: "ministry-of-planning-400x162.png",
+  },
+  {
+   title: "African Development Bank (AfDB)",
+   classification: "Operational & Logistics Management",
+   description:
+    "Dansom provided assistance to the AfDB during the 2nd National Steering Committee Meeting and was responsible for all logistics and operations",
+   Location: "Somalia",
+   timeframes: "February 2018 - March 2018",
+   icon: "download (1).png",
+  },
+  {
+   title: "Somalia Monitoring Programme (SMP)",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Political Economy Analysis: Puntland & South Central Somalia (In consortium with Itad, Altai Consulting and GTZ for DFID). Somalia monitoring Programme (SMP) is a Third Party Monitoring Programme contracted by DFID with the aim of enhancing the accountability of the British Government’s investments in Somalia (GBP 250m over four years)",
+   Location: "Somalia",
+   timeframes: "2014 - 2015",
+   icon: "DFID-400x162.png",
+  },
+  {
+   title: "Improved Food Security and Enhanced Resilience Programme",
+   classification: "Third Party Monitoring & Evaluation",
+   description:
+    "Third Party Monitoring Programme for WFP Djibouti Somalia Country Office and FAO Technical Support to the Resilience Programme in Jijiga, Ethiopia (in consortium with Altai Consulting for WFP). Field monitoring of select projects in Somalia for WFP and FAO, ensuring timely field visits to project sites and high quality information is collected and analyzed to improve the quality of program implementation.",
+   Location: "Somalia",
    timeframes: "2014 - 2015",
    icon: "wfpfao.png",
   },
@@ -239,7 +314,24 @@
  const route = useRoute()
  const slug = computed(() => String(route.params.slug))
  const decodedSlug = computed(() => decodeURIComponent(slug.value))
- const project =
-  projects.value.find((item) => item.title === decodedSlug.value) ||
-  projects.value[0]
+ const projectIndex = computed(() => Number(decodedSlug.value.split("-")[0]))
+ const projectTitle = computed(() =>
+  decodedSlug.value.replace(/^\d+-/, ""),
+ )
+ const project = computed(
+  () =>
+   projects.value[projectIndex.value] ||
+   projects.value.find((item) => item.title === projectTitle.value) ||
+   projects.value[0],
+ )
+
+ useSeoMeta({
+  title: () => project.value.title,
+  description: () =>
+   `${project.value.classification} project by Dansom Research & Consultancy: ${project.value.description}`,
+  ogTitle: () => `${project.value.title} | Dansom Portfolio`,
+  ogDescription: () => project.value.description,
+  ogImage: () => `/${project.value.icon}`,
+  twitterCard: "summary_large_image",
+ })
 </script>

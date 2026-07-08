@@ -160,6 +160,17 @@
 </template>
 
 <script setup lang="ts">
+ useSeoMeta({
+  title: "Home",
+  description:
+   "Dansom Research & Consultancy delivers monitoring, evaluation, research, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.",
+  ogTitle: "Dansom Research & Consultancy",
+  ogDescription:
+   "Evidence, partnership, and insight for development and humanitarian partners working across Somalia, Kenya, and the Horn of Africa.",
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
+ })
+
  const services = [
   {
    icon: "arcticons:adobe-analytics",

@@ -72,6 +72,17 @@
 </template>
 
 <script setup lang="ts">
+ useSeoMeta({
+  title: "Services",
+  description:
+   "Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.",
+  ogTitle: "Services | Dansom Research & Consultancy",
+  ogDescription:
+   "Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.",
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
+ })
+
  const services = [
   {
    title: "Political Economy Analysis",

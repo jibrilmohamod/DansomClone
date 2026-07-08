@@ -52,6 +52,14 @@
       v-html="service.about"
      ></div>
     </div>
+    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
+     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
+     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
+     <div
+      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
+      v-html="service.about"
+     ></div>
+    </div>
    </div>
   </div>
  </div>
@@ -94,4 +102,13 @@
 
  service.value =
   services.find((item) => item.title === slug.value) || services[0]
+
+ useSeoMeta({
+  title: () => service.value.fullTitle,
+  description: () => service.value.subtitle,
+  ogTitle: () => `${service.value.fullTitle} | Dansom Services`,
+  ogDescription: () => service.value.subtitle,
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
+ })
 </script>

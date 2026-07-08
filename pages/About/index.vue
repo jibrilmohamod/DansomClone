@@ -165,7 +165,12 @@
  useSeoMeta({
   title: "About",
   description:
-   "Learn about Dansom Research & Consultancy, our mission, values, and regional expertise delivering field-based insight in Somalia and Kenya.",
+   "Learn about Dansom Research & Consultancy, our Horn of Africa expertise, values, and multidisciplinary team supporting research, monitoring, evaluation, and advisory work.",
+  ogTitle: "About Dansom Research & Consultancy",
+  ogDescription:
+   "Meet the Dansom team and learn how our regional access, research expertise, and values support partners across Somalia and Kenya.",
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
  })
 
  let services = [

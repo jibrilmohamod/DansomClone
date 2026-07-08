@@ -50,12 +50,34 @@ export default defineNuxtConfig({
 
  // seo
  site: {
-  url: "https://www.dansom.vercel.app",
+  url: "https://dansomconsultancy.org",
+  name: "Dansom Research & Consultancy",
   title: "Dansom Research & Consultancy",
+  description:
+   "Research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.",
  },
 
  //transitions
  app: {
+  head: {
+   htmlAttrs: {
+    lang: "en",
+   },
+   title: "Dansom Research & Consultancy",
+   titleTemplate: "%s | Dansom Research & Consultancy",
+   meta: [
+    { charset: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    {
+     name: "description",
+     content:
+      "Research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.",
+    },
+    { property: "og:site_name", content: "Dansom Research & Consultancy" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+   ],
+  },
   pageTransition: { name: "page", mode: "out-in" },
  },
 })

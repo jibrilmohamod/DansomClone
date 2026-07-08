@@ -101,6 +101,17 @@
 </template>
 
 <script setup lang="ts">
+ useSeoMeta({
+  title: "Careers",
+  description:
+   "Explore careers and consulting opportunities with Dansom Research & Consultancy across research, monitoring, evaluation, operations, and advisory roles.",
+  ogTitle: "Careers at Dansom Research & Consultancy",
+  ogDescription:
+   "Join Dansom's research, monitoring, evaluation, and advisory teams supporting evidence-driven work across the Horn of Africa.",
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
+ })
+
  const roles = [
   {
    title: "Field Research Coordinator",

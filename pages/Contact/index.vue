@@ -90,20 +90,14 @@
 
 <script lang="ts" setup>
  useSeoMeta({
-  title: "Contact Us",
+  title: "Contact",
   description:
-   "Contact Dansom Research & Consultancy for research, evaluation, and advisory support across Somalia and the Horn of Africa.",
- })
-
- useHead({
-  title: "Contact Us | Dansom Consultancy",
-  meta: [
-   {
-    name: "description",
-    content:
-     "Contact Dansom today to discuss your needs and discover how our services can benefit you. Our team is ready to assist you and provide the guidance and solutions you require.",
-   },
-  ],
+   "Contact Dansom Research & Consultancy in Mogadishu or Nairobi to discuss monitoring, evaluation, research, security advisory, and programme support needs.",
+  ogTitle: "Contact Dansom Research & Consultancy",
+  ogDescription:
+   "Reach Dansom's team in Mogadishu and Nairobi for research, MEL, advisory, and programme support across the Horn of Africa.",
+  ogImage: "/dansom-logo.png",
+  twitterCard: "summary_large_image",
  })
 </script>
 
