@@ -31,7 +31,9 @@
      <div class="space-y-2 md:space-y-3">
       <p class="text-xs font-semibold uppercase tracking-[0.22em] text-secondary md:text-sm">Service focus</p>
       <h1 class="font-DM text-2xl font-bold leading-tight text-primary md:text-4xl">{{ service.title }}</h1>
-      <p class="max-w-3xl font-Zilla text-base leading-relaxed text-slate-700 md:text-lg">{{ service.description }}</p>
+      <div class="max-w-3xl space-y-3 font-Zilla text-base leading-relaxed text-slate-700 md:text-lg">
+       <p v-for="paragraph in service.about" :key="paragraph">{{ paragraph }}</p>
+      </div>
      </div>
 
      <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-sm">
@@ -63,6 +65,7 @@
   title: string
   category: string
   description: string
+  about: string[]
   points: string[]
  }
 
@@ -72,7 +75,12 @@
    category: "Advisory",
    icon: "arcticons:adobe-analytics",
    description:
-    "Deep-dive assessments that unpack incentives, power dynamics, and risks to guide strategy and programme design.",
+    "Political Economy Analysis (PEA) in Somalia to inform programming and policy development.",
+   about: [
+    "Dansom has developed a unique expertise in providing international development agencies such as the World Bank, EU, DFID, FCO and the UN with in-depth political economy analysis, economic growth and security advisory services in the Somali and broader East-African context. The firm has experience in collecting up-to-date, triangulated information on the ground, analysing local networks and power structures, and in designing effective strategies to guarantee access to civil society actors and strategic stakeholders in insecure and non-permissive areas.",
+    "Dansom also provides security risk analysis, management planning and on-going advisory services to international organisations that aim to deliver impact in some of the most volatile environments in the region.",
+    "Dansom has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs. Dansom has an extensive network of private sector actors as well as government stakeholders. Additionally, the firm has, through various other projects expanded its working relationship with numerous civil society organizations and NGO’s across Somalia.",
+   ],
    points: [
     "Political economy and stakeholder mapping",
     "Security and access risk analysis",
@@ -85,7 +93,11 @@
    category: "MEL",
    icon: "carbon:data-analytics",
    description:
-    "Independent verification, real-time monitoring, and evaluations that ensure accountability to donors and communities.",
+    "Third Party Monitoring and Evaluation (TPME) of humanitarian and development projects in Somalia.",
+   about: [
+    "DANSOM core expertise lies also in third-party monitoring and performance evaluation. Across our network of multi-disciplinary experts, we combine extensive experience in providing third-party monitoring, verification and evaluation, process efficiency, performance and impact evaluations, as well as programme reviews. Using both qualitative and quantitative methods and leveraging our region-wide network of field monitors and data collectors, we ensure reliable analytical results are provided on time to our clients and allow them to make rapid decisions to steer their programmes in the right direction despite the complexity of their environment of operation.",
+    "Our team of experts have experience in providing third-party monitoring and evaluation services to a range of international development agencies, including the World Bank, EU, DFID, FCO, UN, and other international and local NGOs. Our team has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs.",
+   ],
    points: [
     "Third-party monitoring and verification",
     "Performance and impact evaluations",
@@ -99,6 +111,10 @@
    icon: "mdi:account-group",
    description:
     "Research and advisory services addressing governance, economic growth, and community resilience in fragile contexts.",
+   about: [
+    "Dansom has built one of the most extensive and effective networks of multi-disciplinary researchers working in Somalia and has delivered formative baseline assessments on strategically themed areas to support the international community and the Somali government in designing appropriate programmes in newly recovered areas and emerging sectors of interest. Our research services combine in-depth qualitative assessments and quantitative surveys to ensure with systematic ground-truthing and triangulation of information to ensure only the highest quality of data is taken into account for the analysis and programme design phases.",
+    "Our specialized consultants represent a diversity of fields with expertise in law, economics, financial management, public policy, security advice and many other areas.",
+   ],
    points: [
     "Socio-political context analysis",
     "Economic development research",
@@ -112,6 +128,9 @@
    icon: "mdi:security",
    description:
     "Risk assessments, access strategies, and operational support for secure delivery in hard-to-reach areas.",
+   about: [
+    "Dansom provides security risk analysis, access planning, management support, and on-going advisory services to organisations delivering programmes in volatile and hard-to-reach areas.",
+   ],
    points: [
     "Operational risk assessments",
     "Access strategy and planning",
@@ -125,6 +144,9 @@
    icon: "mdi:file-document-edit",
    description:
     "Knowledge products, learning agendas, and evidence synthesis that drive adaptive programming.",
+   about: [
+    "Dansom supports partners to transform field evidence, programme learning, and research outputs into practical knowledge products that inform planning, adaptation, and decision-making.",
+   ],
    points: [
     "Learning agendas and evidence reviews",
     "Knowledge products and briefs",
@@ -138,6 +160,9 @@
    icon: "mdi:clipboard-list",
    description:
     "End-to-end MEL systems, performance tracking, and data quality assurance tailored to partner needs.",
+   about: [
+    "Dansom designs and supports monitoring and performance evaluation systems that help partners track implementation quality, verify results, and use data for timely programme improvement.",
+   ],
    points: [
     "MEL framework development",
     "Performance tracking systems",
