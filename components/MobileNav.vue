@@ -15,19 +15,11 @@
 
   <nav class="flex flex-col gap-3 px-4 py-5 text-base font-semibold">
    <NuxtLink to="/" class="mobile-link" @click="$emit('toggleMobileNav')">Home</NuxtLink>
-   <NuxtLink to="/About" class="mobile-link" @click="$emit('toggleMobileNav')">About Us</NuxtLink>
+   <NuxtLink to="/About" class="mobile-link" @click="$emit('toggleMobileNav')">About</NuxtLink>
    <NuxtLink to="/Services" class="mobile-link" @click="$emit('toggleMobileNav')">Services</NuxtLink>
-   <NuxtLink to="/Portfolio" class="mobile-link" @click="$emit('toggleMobileNav')">Our Portfolio</NuxtLink>
+   <NuxtLink to="/Portfolio" class="mobile-link" @click="$emit('toggleMobileNav')">Portfolio</NuxtLink>
    <NuxtLink to="/Careers" class="mobile-link" @click="$emit('toggleMobileNav')">Careers</NuxtLink>
-   <NuxtLink to="/Contact" class="mobile-link" @click="$emit('toggleMobileNav')">Contact Us</NuxtLink>
-   <a
-    href="http://webmail.dansomconsultancy.org/"
-    class="mobile-link"
-    target="_blank"
-    @click="$emit('toggleMobileNav')"
-   >
-    Staff Email
-   </a>
+   <NuxtLink to="/Contact" class="mobile-link" @click="$emit('toggleMobileNav')">Contact</NuxtLink>
   </nav>
 
   <div class="space-y-4 px-4 pb-6">
