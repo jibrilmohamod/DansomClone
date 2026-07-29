@@ -133,7 +133,7 @@
     <div class="flex flex-col items-center gap-3 rounded-none border-0 bg-transparent p-0 text-center shadow-none backdrop-blur-none md:dansom-card md:gap-4 md:p-10 md:shadow-glow md:backdrop-blur">
      <h2 class="font-display text-2xl font-semibold md:text-4xl">Ready to build actionable evidence together?</h2>
      <p class="max-w-3xl font-body text-sm text-slate-600 md:text-lg">
-      Tell us about your objectives and we&apos;ll assemble the right team to support you-from rapid assessments to long-term monitoring and evaluation.
+      Tell us about your objectives and we&apos;ll assemble the right team to support you, from rapid assessments to long-term monitoring and evaluation.
      </p>
      <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3">
       <NuxtLink
