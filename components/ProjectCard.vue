@@ -1,41 +1,29 @@
 <template>
- <div data-aos="fade-left" data-aos-duration="800">
-  <NuxtLink :to="slug">
-   <div
-    class="dansom-card h-52 overflow-hidden transition hover:scale-[1.02] hover:duration-200 hover:ease-linear md:h-60"
-   >
-    <div class="h-full px-2.5 pb-2 md:px-3">
-     <!-- logo  -->
-     <div
-      class="flex h-1/2 items-center justify-center border-b border-1 border-slate-300"
-     >
-      <NuxtImg
-       :src="icon"
-       alt="logo"
-       class="h-20 w-full object-contain md:h-24"
-       loading="lazy"
-       quality="100"
-       v-if="icon"
-      />
-     </div>
-     <div class="flex h-1/2 items-center justify-center">
-      <h3 class="text-pretty text-center font-Merriweather text-base text-slate-800 md:text-lg">
-       {{ title }}
-      </h3>
-     </div>
-    </div>
-   </div>
-  </NuxtLink>
- </div>
+ <NuxtLink
+  :to="slug"
+  class="group flex min-h-56 flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_45px_-34px_rgba(30,64,175,0.5)]"
+ >
+  <div class="flex h-24 items-center justify-start">
+   <NuxtImg
+    v-if="icon"
+    :src="icon"
+    :alt="`${title} project partner logo`"
+    class="max-h-16 max-w-[12rem] object-contain object-left"
+    loading="lazy"
+   />
+  </div>
+  <h3 class="mt-auto font-display text-lg font-semibold leading-snug text-slate-900">{{ title }}</h3>
+  <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+   View project
+   <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" />
+  </span>
+ </NuxtLink>
 </template>
 
 <script lang="ts" setup>
  defineProps({
-  title: String,
+  title: { type: String, required: true },
   icon: String,
-  icon2: String,
-  slug: String,
+  slug: { type: String, required: true },
  })
 </script>
-
-<style></style>

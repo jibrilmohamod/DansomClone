@@ -1,41 +1,32 @@
 <template>
- <div class="flex flex-col gap-3 md:gap-6 pb-5">
-  <h3 class="font-DM text-3xl md:text-4xl 2xl:text-7xl">
+ <div>
+  <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl">
    {{ title }}
-  </h3>
-
-  <p class="pt-5 font-Lora md:pr-3 2xl:text-2xl">
+  </h2>
+  <p v-if="subtitle" class="mt-3 max-w-2xl font-body text-base leading-relaxed text-slate-600 md:text-lg">
    {{ subtitle }}
   </p>
-
-  <p class="font-Lora md:pr-3 2xl:text-2xl">
+  <p v-if="subtitle2" class="mt-3 max-w-2xl font-body text-base leading-relaxed text-slate-600 md:text-lg">
    {{ subtitle2 }}
   </p>
-
-  <NuxtLink class="place-self-start" :to="link" v-if="icon">
-   <button
-    class="bg-primary text-white flex items-center px-4 py-2 rounded-md gap-2 text-xl hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear"
-   >
-    <p class="font-Montserrat">
-     {{ LinkText }}
-    </p>
-    <Icon :name="icon" class="text-xl md:text-2xl" />
-   </button>
+  <NuxtLink
+   v-if="icon && link"
+   :to="link"
+   class="mt-5 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
+  >
+   {{ LinkText }}
+   <Icon :name="icon" class="text-lg" />
   </NuxtLink>
  </div>
 </template>
 
 <script setup>
- import { Button } from "@/components/ui/button"
  defineProps({
   title: String,
   subtitle: String,
-  image: String,
   link: String,
   LinkText: String,
   subtitle2: String,
   icon: String,
  })
 </script>
-
-<style lang="scss" scoped></style>

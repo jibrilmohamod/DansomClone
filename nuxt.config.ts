@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
- devtools: { enabled: true },
+ devtools: { enabled: false },
  modules: [
   "@nuxtjs/tailwindcss",
   "nuxt-icon",
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   "@nuxtjs/google-fonts",
   "@nuxtjs/seo",
  ],
- css: ["~/assets/css/tailwind.css", "animate.css/animate.min.css"],
+ css: ["~/assets/css/tailwind.css"],
  shadcn: {
   /**
    * Prefix for all the imported componen
@@ -21,20 +21,10 @@ export default defineNuxtConfig({
    */
   componentDir: "./components/ui",
  },
-  googleFonts: {
-   families: {
-    "Space Grotesk": true,
-    Inter: true,
-    "Playfair Display": true,
-    Roboto: true,
-    Montserrat: true,
-   "Open Sans": true,
-   Merriweather: true,
-   Lora: true,
-   Pridi: true,
-   "Zilla Slab": true,
-   "Cormorant Garamond": true,
-   "DM Serif Display": true,
+ googleFonts: {
+  families: {
+    "Space Grotesk": [500, 600, 700],
+    Inter: [400, 500, 600],
   },
   prefetch: true,
   preconnect: true,

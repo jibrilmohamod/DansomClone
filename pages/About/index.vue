@@ -18,7 +18,6 @@
   <section class="container mx-auto px-4 py-10 md:px-6 md:py-16">
    <div class="grid items-center gap-5 rounded-none border-0 bg-transparent p-0 shadow-none backdrop-blur-none md:dansom-card md:gap-10 md:p-10 md:backdrop-blur-xl md:grid-cols-2">
     <div class="space-y-3 md:space-y-4">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary md:text-sm md:tracking-[0.25em]">About Dansom</p>
      <h2 class="font-display text-2xl font-semibold leading-tight md:text-3xl">Research and consultancy rooted in the Horn of Africa</h2>
      <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
       We partner with humanitarian and development actors to unlock meaningful change across Somalia and Kenya. Our teams combine rigorous research, contextual understanding, and secure access to deliver evidence that informs policies, strengthens programmes, and amplifies community voices.
@@ -60,6 +59,7 @@
       format="webp"
       sizes="sm:100vw md:50vw lg:1200px"
       src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
+      alt="Community engagement fieldwork in Somalia"
       class="w-full rounded-lg object-cover md:rounded-2xl"
      />
      <div class="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_20%_20%,rgba(124,248,255,0.16),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(156,123,255,0.14),transparent_30%)] md:block"></div>
@@ -92,7 +92,7 @@
      variant="light"
     >
      <template #vfor>
-      <div class="grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+      <div class="grid gap-4 md:grid-cols-2 md:gap-6">
        <article
         v-for="service in services"
         :key="service.title"
@@ -107,9 +107,6 @@
         </div>
         <h4 class="relative mt-4 text-lg font-semibold leading-tight text-slate-900 md:mt-5 md:text-xl">{{ service.title }}</h4>
         <p class="relative mt-2 text-sm leading-relaxed text-slate-600 md:mt-3 md:text-base">{{ service.subtitle }}</p>
-        <div class="relative mt-4 h-1.5 overflow-hidden rounded-full bg-slate-200 md:mt-6">
-         <div class="h-full w-2/3 bg-secondary transition-all duration-500 group-hover:w-full"></div>
-        </div>
        </article>
       </div>
      </template>
@@ -124,8 +121,6 @@
      :key="member.name"
      :name="member.name"
      :role="member.role"
-     :image="member.image"
-     :alt="member.alt"
      :about="member.about"
      :aboutBig="member.aboutBig"
     />
@@ -133,26 +128,26 @@
   </OurTeam>
 
   <section class="py-10 md:py-16">
-   <div class="container mx-auto grid gap-3 px-4 md:grid-cols-3 md:gap-8 md:px-6">
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">Where we work</p>
+   <div class="container mx-auto grid gap-5 px-4 md:grid-cols-2 md:gap-6 md:px-6">
+    <div class="rounded-2xl border border-slate-200 bg-white p-5 md:p-6">
+     <p class="text-sm font-semibold text-primary">Where we work</p>
      <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Somalia &amp; Kenya</h4>
      <p class="mt-2 text-sm text-slate-600">Local teams with deep networks and trusted access.</p>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">What we deliver</p>
+    <div class="rounded-2xl border border-slate-200 bg-white p-5 md:p-6">
+     <p class="text-sm font-semibold text-primary">What we deliver</p>
      <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Actionable intelligence</h4>
      <p class="mt-2 text-sm text-slate-600">Structured analysis, secure data, and clear recommendations.</p>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">How to start</p>
+    <div class="rounded-2xl border border-slate-200 bg-white p-5 md:col-span-2 md:p-6">
+     <p class="text-sm font-semibold text-primary">How to start</p>
      <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Partner with us</h4>
      <p class="mt-2 text-sm text-slate-600">Tell us about your objectives and we will assemble the right team.</p>
      <NuxtLink
       to="/Contact"
       class="mt-3 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-surface shadow-none transition hover:-translate-y-1 md:mt-4 md:shadow-glow"
      >
-      Contact Dansom
+      Contact
       <Icon name="mdi:arrow-right" />
      </NuxtLink>
     </div>
@@ -249,7 +244,7 @@
    about:
     "Statistician and data scientist with deep experience in monitoring, verification, and learning across Africa.",
    aboutBig:
-    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID – SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelor’s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
+    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID - SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelor’s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
   },
   {
    name: "Mumina Hassan",
