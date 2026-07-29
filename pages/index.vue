@@ -4,7 +4,7 @@
 
   <section class="border-b border-mist/10 py-12 md:py-16">
    <div class="shell">
-    <p class="mb-8 text-sm font-semibold text-mist/[0.45]">Selected partners</p>
+    <p class="mb-8 text-sm font-semibold text-mist/[0.52]">Selected partners</p>
     <LogoCarousel />
    </div>
   </section>
@@ -39,12 +39,12 @@
        <div class="p-6 md:p-7">
         <p class="eyebrow">Regional access</p>
         <h3 class="mt-3 font-display text-xl font-semibold text-mist">Local teams, trusted access</h3>
-        <p class="mt-2 text-sm leading-relaxed text-mist/[0.58]">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
+        <p class="mt-2 text-sm leading-relaxed text-mist/[0.64]">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
        </div>
        <div class="border-t border-mist/10 p-6 sm:border-l sm:border-t-0 md:p-7">
         <p class="eyebrow">Decision support</p>
         <h3 class="mt-3 font-display text-xl font-semibold text-mist">Analysis that drives action</h3>
-        <p class="mt-2 text-sm leading-relaxed text-mist/[0.58]">Political economy analysis, TPME, and advisory tailored to your objectives.</p>
+        <p class="mt-2 text-sm leading-relaxed text-mist/[0.64]">Political economy analysis, TPME, and advisory tailored to your objectives.</p>
        </div>
       </div>
      </div>
@@ -52,7 +52,7 @@
    </div>
   </section>
 
-  <section class="border-y border-mist/10 bg-panel/[0.55] py-16 md:py-28">
+  <section class="border-y border-mist/10 bg-panel/[0.62] py-16 md:py-28">
    <div class="shell">
     <div class="reveal max-w-3xl">
      <h2 class="display-title text-4xl leading-tight md:text-6xl">Services for complex environments</h2>
@@ -65,7 +65,7 @@
      <NuxtLink
       v-for="(service, index) in services"
       :key="service.title"
-      :to="'/Services/' + service.slug"
+      :to="'/Services/' + encodeURIComponent(service.slug)"
       class="group surface relative flex min-h-64 flex-col overflow-hidden p-6 transition duration-500 hover:-translate-y-1 hover:border-primary/40 md:p-7"
       :class="index === 0 || index === 5 ? 'md:col-span-7' : index === 1 || index === 4 ? 'md:col-span-5' : 'md:col-span-6'"
      >
@@ -75,7 +75,7 @@
       </div>
       <div class="mt-auto pt-12">
        <h3 class="font-display text-2xl font-semibold tracking-tight text-mist">{{ service.title }}</h3>
-       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.55]">{{ service.subtitle }}</p>
+       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.62]">{{ service.description }}</p>
       </div>
      </NuxtLink>
     </div>
@@ -131,6 +131,8 @@
 </template>
 
 <script setup lang="ts">
+ import { services } from "~/data/services"
+
  useSeoMeta({
   title: "Home",
   description:
@@ -141,51 +143,6 @@
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })
-
- const services = [
-  {
-   icon: "arcticons:adobe-analytics",
-   title: "Political Economy Analysis",
-   subtitle:
-    "Deep-dive assessments that unpack power dynamics, incentives, and risks to inform programming decisions.",
-   slug: "Political%20Economy%20Analysis",
-  },
-  {
-   icon: "carbon:data-analytics",
-   title: "Third Party Monitoring & Evaluation",
-   subtitle:
-    "Independent verification, real-time monitoring, and evaluations that keep projects accountable to communities and donors.",
-   slug: "Third%20Party%20Monitoring%20and%20Evaluation",
-  },
-  {
-   icon: "mdi:account-voice",
-   title: "Community Engagement & Inclusion",
-   subtitle:
-    "Strategies that ensure meaningful participation of community members, women, and minority groups across program cycles.",
-   slug: "Community%20Engagement%20and%20Inclusion",
-  },
-  {
-   icon: "ph:chart-line-up",
-   title: "Economic Growth & Market Systems",
-   subtitle:
-    "Market analyses and growth strategies that align public, private, and community stakeholders.",
-   slug: "Economic%20Growth%20and%20Market%20Systems",
-  },
-  {
-   icon: "mdi:security",
-   title: "Security & Access Advisory",
-   subtitle:
-    "Risk analysis, access strategies, and secure field operations enabling safe delivery in fragile contexts.",
-   slug: "Security%20and%20Access%20Advisory",
-  },
-  {
-   icon: "mdi:chart-bell-curve",
-   title: "Program Design & Learning",
-   subtitle:
-    "Evidence-backed design support, MEL frameworks, and adaptive learning systems for complex programs.",
-   slug: "Program%20Design%20and%20Learning",
-  },
- ]
 
  const approach = [
   {

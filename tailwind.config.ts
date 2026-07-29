@@ -50,7 +50,7 @@ module.exports = {
     body: ["Manrope", "sans-serif"],
    },
    boxShadow: {
-    lift: "0 28px 80px -42px rgba(0, 0, 0, 0.75)",
+    lift: "0 28px 80px -42px rgb(var(--shadow) / 0.55)",
    },
   },
  },

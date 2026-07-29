@@ -32,12 +32,12 @@
      >
       <div class="flex items-center justify-between gap-4">
        <Icon :name="service.icon" class="text-3xl text-primary" />
-       <span class="text-sm font-semibold text-mist/[0.35]">{{ service.category }}</span>
+       <span class="text-sm font-semibold text-mist/[0.45]">{{ service.category }}</span>
       </div>
       <div class="mt-auto pt-14">
        <h3 class="font-display text-2xl font-semibold tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
-       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.58]">{{ service.description }}</p>
-       <NuxtLink :to="'/Services/' + encodeURIComponent(service.title)" class="text-link mt-6">
+       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.64]">{{ service.description }}</p>
+       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" class="text-link mt-6">
         Explore service
         <Icon name="mdi:arrow-right" />
        </NuxtLink>
@@ -47,7 +47,7 @@
    </div>
   </section>
 
-  <section class="border-t border-mist/10 bg-panel/[0.55] py-16 md:py-24">
+  <section class="border-t border-mist/10 bg-panel/[0.62] py-16 md:py-24">
    <div class="shell grid gap-10 lg:grid-cols-12">
     <div class="lg:col-span-5">
      <h2 class="display-title text-4xl leading-tight md:text-5xl">Designed around the operating context.</h2>
@@ -55,11 +55,11 @@
     <div class="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
      <div>
       <p class="font-display text-2xl font-semibold text-primary">Secure access</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.58]">Field teams positioned across Somalia and Kenya.</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Field teams positioned across Somalia and Kenya.</p>
      </div>
      <div>
       <p class="font-display text-2xl font-semibold text-primary">Decision-ready</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.58]">Clear deliverables aligned to partner objectives.</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Clear deliverables aligned to partner objectives.</p>
      </div>
     </div>
    </div>
@@ -68,6 +68,8 @@
 </template>
 
 <script setup lang="ts">
+ import { services } from "~/data/services"
+
  useSeoMeta({
   title: "Services",
   description:
@@ -79,48 +81,4 @@
   twitterCard: "summary_large_image",
  })
 
- const services = [
-  {
-   title: "Political Economy Analysis",
-   category: "Advisory",
-   icon: "arcticons:adobe-analytics",
-   description:
-    "Deep-dive assessments that unpack incentives, power dynamics, and risks to guide strategy and programme design.",
-  },
-  {
-   title: "Third Party Monitoring and Evaluation",
-   category: "MEL",
-   icon: "carbon:data-analytics",
-   description:
-    "Independent verification, real-time monitoring, and evaluations that ensure accountability to donors and communities.",
-  },
-  {
-   title: "Socio-Political and Economic Development",
-   category: "Research",
-   icon: "mdi:account-group",
-   description:
-    "Research and advisory services addressing governance, economic growth, and community resilience in fragile contexts.",
-  },
-  {
-   title: "Security and Access Advisory",
-   category: "Advisory",
-   icon: "mdi:security",
-   description:
-    "Risk assessments, access strategies, and operational support for secure delivery in hard-to-reach areas.",
-  },
-  {
-   title: "Research and Knowledge Management",
-   category: "Insights",
-   icon: "mdi:file-document-edit",
-   description:
-    "Knowledge products, learning agendas, and evidence synthesis that drive adaptive programming.",
-  },
-  {
-   title: "Monitoring and Performance Evaluation",
-   category: "MEL",
-   icon: "mdi:clipboard-list",
-   description:
-    "End-to-end MEL systems, performance tracking, and data quality assurance tailored to partner needs.",
-  },
- ]
 </script>

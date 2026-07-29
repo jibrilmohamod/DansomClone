@@ -67,7 +67,8 @@ export default defineNuxtConfig({
     { name: "apple-mobile-web-app-title", content: "Dansom Research & Consultancy" },
     { name: "author", content: "Dansom Research & Consultancy" },
     { name: "robots", content: "index, follow" },
-    { name: "theme-color", content: "#08131F" },
+    { name: "theme-color", content: "#F7F8F6", media: "(prefers-color-scheme: light)" },
+    { name: "theme-color", content: "#08131F", media: "(prefers-color-scheme: dark)" },
     {
      name: "description",
      content:

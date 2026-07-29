@@ -18,7 +18,7 @@
     <slot name="image">
      <div class="h-full w-full bg-panel"></div>
     </slot>
-    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#08131f]/45 via-transparent to-[#08131f]/5"></div>
    </div>
   </div>
  </section>

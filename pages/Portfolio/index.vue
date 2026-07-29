@@ -54,12 +54,15 @@
       :title="project.title"
       :icon="project.icon"
       :slug="getProjectPath(project)"
+      :classification="project.classification"
+      :location="project.Location"
+      :timeframe="project.timeframes"
      />
     </div>
 
     <div v-if="filteredProjectPool.length === 0" class="surface mt-8 p-8 text-center">
      <h3 class="font-display text-2xl font-semibold text-mist">No matching projects</h3>
-     <p class="mt-2 text-mist/[0.55]">Try another search term or service.</p>
+     <p class="mt-2 text-mist/[0.62]">Try another search term or service.</p>
     </div>
 
     <div v-if="filteredProjects.length < filteredProjectPool.length" class="mt-8 flex justify-center">
