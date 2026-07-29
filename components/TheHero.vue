@@ -25,12 +25,12 @@
 
    <div class="lg:col-span-7">
     <div class="media-zoom overflow-hidden rounded-2xl border border-mist/10 bg-panel shadow-lift">
-     <NuxtImg
+     <img
       src="/dansom-field-research-hero.jpg"
-      format="webp"
+      width="1810"
+      height="869"
       loading="eager"
-      preload
-      sizes="sm:100vw md:90vw lg:820px"
+      fetchpriority="high"
       alt="East African researchers speaking with community members during a field study"
       class="aspect-[16/11] w-full object-cover object-center lg:aspect-[16/10]"
      />
