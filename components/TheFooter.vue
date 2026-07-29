@@ -4,7 +4,7 @@
   <div class="container relative mx-auto px-6 py-12">
    <div class="grid gap-10 lg:grid-cols-[1.1fr_1fr_1fr_1fr]">
     <div class="space-y-5">
-     <NuxtImg src="/dansom-logo.png" alt="logo" class="w-44" />
+     <NuxtImg src="/dansom-logo.png" alt="Dansom Research &amp; Consultancy logo" class="w-44" />
      <p class="text-sm text-slate-600">
       Research and consultancy services anchored in deep regional expertise across Somalia and Kenya.
      </p>
@@ -46,12 +46,16 @@
       <Icon name="mdi:email-outline" />
       info@dansomconsultancy.org
      </a>
-     <div class="flex items-center gap-3 text-slate-500">
-      <Icon name="ri:facebook-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:instagram-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:pinterest-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:twitter-fill" class="hover:text-slate-900" size="22" />
-     </div>
+     <a
+      href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Dansom Research & Consultancy on LinkedIn"
+      class="group inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:border-secondary/40 hover:text-primary"
+     >
+      <Icon name="ri:linkedin-fill" class="text-xl text-secondary transition group-hover:text-primary" />
+      <span>LinkedIn</span>
+     </a>
      <div class="rounded-2xl border border-slate-200 bg-white p-3 text-sm text-slate-700">
       <p class="font-semibold text-slate-900">Mogadishu &amp; Nairobi</p>
       <p class="text-slate-500">+254 745 276 911</p>
@@ -61,7 +65,7 @@
 
    <div class="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
     <p>
-     {{ year }} <span class="font-semibold text-secondary">Dansom Consultancy</span> — All rights reserved
+     &copy; {{ year }} <span class="font-semibold text-secondary">Dansom Research &amp; Consultancy</span>. All rights reserved
     </p>
     <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
      <span class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1">
