@@ -6,7 +6,7 @@
    <div class="reveal lg:col-span-5">
     <p class="eyebrow">Research grounded in regional access</p>
     <h1 class="display-title mt-5 max-w-2xl text-5xl leading-[0.98] sm:text-6xl lg:text-[4rem]">
-     Evidence for a resilient Horn of Africa
+     Evidence for action in the Horn.
     </h1>
     <p class="mt-6 max-w-lg text-base leading-relaxed text-mist/[0.68] md:text-lg">
      Local access and rigorous research help development partners make confident decisions across Somalia, Kenya, and the wider region.
