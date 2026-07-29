@@ -24,12 +24,16 @@
        info@dansomconsultancy.org
       </a>
      </div>
-     <div class="flex items-center gap-3 text-slate-500">
-      <Icon name="mdi:facebook" class="transition hover:text-slate-900" />
-      <Icon name="mdi:instagram" class="transition hover:text-slate-900" />
-      <Icon name="mdi:twitter" class="transition hover:text-slate-900" />
-      <Icon name="akar-icons:tiktok-fill" class="transition hover:text-slate-900" />
-     </div>
+     <a
+      href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Dansom Research & Consultancy on LinkedIn"
+      class="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-600 transition hover:border-secondary/40 hover:text-primary"
+     >
+      <Icon name="ri:linkedin-fill" class="text-base text-secondary transition group-hover:text-primary" />
+      <span>LinkedIn</span>
+     </a>
     </div>
 
     <div class="flex items-center justify-between rounded-[18px] border border-slate-300 bg-gradient-to-r from-white via-[#f8fafc] to-[#f7f1e4] px-5 py-3 backdrop-blur-2xl shadow-[0_16px_40px_-28px_rgba(15,23,42,0.35)]">
