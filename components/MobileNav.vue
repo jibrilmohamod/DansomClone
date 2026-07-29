@@ -1,16 +1,16 @@
 <template>
  <div class="fixed inset-0 z-50 min-h-[100dvh] overflow-y-auto bg-ink text-mist lg:hidden">
   <div class="flex h-16 items-center justify-between border-b border-mist/10 px-4">
-   <NuxtLink to="/" aria-label="Dansom Research & Consultancy home" @click="$emit('toggleMobileNav')">
-    <img src="/dansom-logo.png" class="h-9 w-auto brand-logo" alt="Dansom Research & Consultancy" />
+   <NuxtLink to="/" class="rounded-xl bg-paper px-2.5 py-1.5" aria-label="Dansom Research & Consultancy home" @click="$emit('toggleMobileNav')">
+    <img src="/dansom-logo.png" class="h-7 w-auto" alt="Dansom Research & Consultancy" />
    </NuxtLink>
    <button
     type="button"
-    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-mist/[0.15] text-mist"
+    class="inline-flex h-10 items-center justify-center rounded-xl border border-mist/[0.15] px-3 text-sm font-bold text-mist"
     aria-label="Close navigation"
     @click="$emit('toggleMobileNav')"
    >
-    <Icon name="ic:baseline-close" class="text-2xl" />
+    Close
    </button>
   </div>
 

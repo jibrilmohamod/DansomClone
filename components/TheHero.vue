@@ -5,7 +5,7 @@
   <div class="shell grid min-h-[calc(100dvh-4.5rem)] items-center gap-10 py-10 md:py-14 lg:grid-cols-12 lg:gap-8">
    <div class="reveal relative z-10 lg:col-span-7">
     <p class="eyebrow">Research grounded in regional access</p>
-    <h1 class="display-title mt-5 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
+    <h1 class="display-title mt-5 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-6xl">
      Evidence and insight for a resilient Horn of Africa
     </h1>
     <p class="mt-6 max-w-xl text-base leading-relaxed text-mist/[0.68] md:text-lg">

@@ -38,17 +38,17 @@
   </div>
 
   <div class="flex h-16 items-center justify-between px-4 lg:hidden">
-   <NuxtLink to="/" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-9 w-auto brand-logo" />
+   <NuxtLink to="/" class="rounded-xl bg-paper px-2.5 py-1.5" aria-label="Dansom Research & Consultancy home">
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-7 w-auto" />
    </NuxtLink>
    <button
     type="button"
-    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] text-mist"
+    class="inline-flex h-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] px-3 text-sm font-bold text-mist"
     aria-label="Open navigation"
     :aria-expanded="showMobile"
     @click="toggleMobileNav"
    >
-    <Icon name="ci:menu-alt-01" class="text-2xl" />
+    Menu
    </button>
   </div>
 
