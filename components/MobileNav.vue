@@ -1,5 +1,5 @@
 <template>
- <div class="absolute inset-0 z-50 h-[100vh] overflow-y-auto bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
+ <div class="absolute inset-0 z-50 min-h-[100dvh] overflow-y-auto bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
   <div class="flex items-center justify-between border-b border-slate-200 px-4 pb-3 pt-3 backdrop-blur-xl">
    <NuxtLink to="/" @click="$emit('toggleMobileNav')">
     <img src="/dansom-logo.png" class="h-8 object-contain" alt="Dansom" />
@@ -7,6 +7,7 @@
 
    <button
     class="rounded-xl border border-slate-300 bg-white p-1.5 text-slate-700 shadow-sm backdrop-blur"
+    aria-label="Close navigation"
     @click="$emit('toggleMobileNav')"
    >
     <IconCSS name="ic:baseline-close" class="text-xl" />
@@ -44,21 +45,25 @@
     <a href="mailto:info@dansomconsultancy.org" class="hover:text-slate-900">info@dansomconsultancy.org</a>
    </div>
 
-   <div class="flex gap-4 text-slate-500">
-    <IconCSS name="akar-icons:instagram-fill" class="text-2xl" />
-    <IconCSS name="akar-icons:facebook-fill" class="text-2xl" />
-    <IconCSS name="akar-icons:twitter-fill" class="text-2xl" />
-    <IconCSS name="akar-icons:tiktok-fill" class="text-2xl" />
-    <IconCSS name="akar-icons:youtube-fill" class="text-2xl" />
-   </div>
+   <a
+    href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Dansom Research & Consultancy on LinkedIn"
+    class="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:border-secondary/40 hover:text-primary"
+   >
+    <IconCSS name="ri:linkedin-fill" class="text-xl text-secondary" />
+    <span>LinkedIn</span>
+   </a>
 
-   <p class="text-xs text-slate-500">&copy; 2024 Dansom Consultancy. All Rights Reserved.</p>
+   <p class="text-xs text-slate-500">&copy; {{ year }} Dansom Research &amp; Consultancy. All rights reserved.</p>
   </div>
  </div>
 </template>
 
 <script setup>
  defineEmits(["toggleMobileNav"])
+ const year = new Date().getFullYear()
 </script>
 
 <style scoped>
