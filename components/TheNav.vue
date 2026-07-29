@@ -7,7 +7,7 @@
 
 <template>
  <header class="relative z-40 border-b border-mist/10 bg-ink/[0.88] text-mist backdrop-blur-xl">
-  <div class="shell hidden h-[72px] items-center gap-7 lg:flex">
+  <div class="shell hidden h-[72px] items-center gap-5 xl:flex">
    <NuxtLink to="/" class="shrink-0" aria-label="Dansom Research & Consultancy home">
     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-10 w-auto brand-logo" />
    </NuxtLink>
@@ -21,6 +21,8 @@
     <NuxtLink to="/Contact" class="nav-link">Contact</NuxtLink>
     <a href="http://webmail.dansomconsultancy.org/" target="_blank" rel="noopener noreferrer" class="nav-link">Staff Email</a>
    </nav>
+
+   <ThemeToggle compact />
 
    <a
     href="https://so.linkedin.com/company/dansom-research-and-consultancy"
@@ -37,19 +39,22 @@
    </NuxtLink>
   </div>
 
-  <div class="flex h-16 items-center justify-between px-4 lg:hidden">
+  <div class="flex h-16 items-center justify-between px-4 xl:hidden">
    <NuxtLink to="/" class="rounded-xl bg-paper px-2.5 py-1.5" aria-label="Dansom Research & Consultancy home">
     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-7 w-auto" />
    </NuxtLink>
-   <button
-    type="button"
-    class="inline-flex h-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] px-3 text-sm font-bold text-mist"
-    aria-label="Open navigation"
-    :aria-expanded="showMobile"
-    @click="toggleMobileNav"
-   >
-    Menu
-   </button>
+   <div class="flex items-center gap-2">
+    <ThemeToggle compact />
+    <button
+     type="button"
+     class="inline-flex h-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] px-3 text-sm font-bold text-mist"
+     aria-label="Open navigation"
+     :aria-expanded="showMobile"
+     @click="toggleMobileNav"
+    >
+     Menu
+    </button>
+   </div>
   </div>
 
   <MobileNav v-if="showMobile" @toggleMobileNav="toggleMobileNav" />
@@ -60,7 +65,7 @@
 .nav-link {
  position: relative;
  padding: 0.55rem 0;
- color: rgb(243 247 249 / 0.66);
+ color: rgb(var(--mist) / 0.66);
  transition: color 0.25s ease;
 }
 .nav-link::after {
@@ -77,7 +82,7 @@
 }
 .nav-link:hover,
 .nav-link.router-link-exact-active {
- color: #f3f7f9;
+ color: rgb(var(--mist));
 }
 .nav-link:hover::after,
 .nav-link.router-link-exact-active::after {

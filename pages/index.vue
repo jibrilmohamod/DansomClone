@@ -22,26 +22,30 @@
      </NuxtLink>
     </div>
 
-    <div class="relative lg:col-span-7 lg:pl-12">
-     <div class="media-zoom overflow-hidden rounded-2xl border border-mist/10">
-      <NuxtImg
-       provider="cloudinary"
-       format="webp"
-       loading="lazy"
-       sizes="sm:100vw md:70vw lg:760px"
-       src="v1713946564/expertise-1000x757_1_ha2eyx.jpg"
-       alt="Dansom field research and regional expertise"
-       class="aspect-[16/10] w-full object-cover"
-      />
-     </div>
-     <div class="surface-soft -mt-10 ml-6 grid max-w-xl gap-5 p-6 shadow-lift sm:ml-auto sm:grid-cols-2 md:p-7">
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Local teams, trusted access</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
+    <div class="lg:col-span-7 lg:pl-12" data-testid="home-intro-media">
+     <div class="overflow-hidden rounded-2xl border border-mist/10 bg-panel shadow-lift">
+      <div class="media-zoom overflow-hidden">
+       <NuxtImg
+        provider="cloudinary"
+        format="webp"
+        loading="lazy"
+        sizes="sm:100vw md:70vw lg:760px"
+        src="v1713946564/expertise-1000x757_1_ha2eyx.jpg"
+        alt="Dansom field research and regional expertise"
+        class="aspect-[16/10] w-full object-cover"
+       />
       </div>
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Analysis that drives action</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Political economy analysis, TPME, and advisory tailored to your objectives.</p>
+      <div class="grid border-t border-mist/10 sm:grid-cols-2" data-testid="home-intro-evidence">
+       <div class="p-6 md:p-7">
+        <p class="eyebrow">Regional access</p>
+        <h3 class="mt-3 font-display text-xl font-semibold text-mist">Local teams, trusted access</h3>
+        <p class="mt-2 text-sm leading-relaxed text-mist/[0.58]">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
+       </div>
+       <div class="border-t border-mist/10 p-6 sm:border-l sm:border-t-0 md:p-7">
+        <p class="eyebrow">Decision support</p>
+        <h3 class="mt-3 font-display text-xl font-semibold text-mist">Analysis that drives action</h3>
+        <p class="mt-2 text-sm leading-relaxed text-mist/[0.58]">Political economy analysis, TPME, and advisory tailored to your objectives.</p>
+       </div>
       </div>
      </div>
     </div>

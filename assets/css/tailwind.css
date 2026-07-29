@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 @layer base {
- :root {
+ :root,
+ :root[data-theme="light"] {
   color-scheme: light;
-  --ink: 242 246 244;
+  --ink: 248 249 247;
   --panel: 255 255 255;
-  --panel-soft: 229 237 233;
+  --panel-soft: 235 239 236;
   --mist: 9 25 36;
-  --primary: 105 128 35;
+  --primary: 92 114 30;
   --accent-ink: 8 19 31;
  }
 
  @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
    color-scheme: dark;
    --ink: 8 19 31;
    --panel: 13 29 43;
@@ -23,6 +24,16 @@
    --primary: 191 217 98;
    --accent-ink: 8 19 31;
   }
+ }
+
+ :root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: 8 19 31;
+  --panel: 13 29 43;
+  --panel-soft: 18 38 55;
+  --mist: 243 247 249;
+  --primary: 191 217 98;
+  --accent-ink: 8 19 31;
  }
 
  html {
@@ -97,10 +108,15 @@
  }
 
  @media (prefers-color-scheme: dark) {
-  .brand-logo,
-  .logo-invert {
+  :root:not([data-theme]) .brand-logo,
+  :root:not([data-theme]) .logo-invert {
    filter: brightness(0) invert(1);
   }
+ }
+
+ :root[data-theme="dark"] .brand-logo,
+ :root[data-theme="dark"] .logo-invert {
+  filter: brightness(0) invert(1);
  }
 
  .media-zoom img {

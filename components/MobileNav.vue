@@ -1,5 +1,5 @@
 <template>
- <div class="fixed inset-0 z-50 min-h-[100dvh] overflow-y-auto bg-ink text-mist lg:hidden">
+ <div class="fixed inset-0 z-50 min-h-[100dvh] overflow-y-auto bg-ink text-mist xl:hidden">
   <div class="flex h-16 items-center justify-between border-b border-mist/10 px-4">
    <NuxtLink to="/" class="rounded-xl bg-paper px-2.5 py-1.5" aria-label="Dansom Research & Consultancy home" @click="$emit('toggleMobileNav')">
     <img src="/dansom-logo.png" class="h-7 w-auto" alt="Dansom Research & Consultancy" />
@@ -40,6 +40,7 @@
       LinkedIn
      </a>
      <a href="http://webmail.dansomconsultancy.org/" target="_blank" rel="noopener noreferrer" class="button-ghost">Staff Email</a>
+     <ThemeToggle />
     </div>
     <p class="mt-8 text-xs">&copy; {{ year }} Dansom Research &amp; Consultancy.</p>
    </div>
@@ -54,7 +55,7 @@
 
 <style scoped>
 .mobile-link {
- border-bottom: 1px solid rgb(255 255 255 / 0.1);
+ border-bottom: 1px solid rgb(var(--mist) / 0.1);
  padding: 0.72rem 0;
  transition: color 0.25s ease, padding-left 0.25s ease;
 }
