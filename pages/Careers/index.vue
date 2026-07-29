@@ -1,97 +1,73 @@
 <template>
- <div class="min-h-[100dvh] text-slate-900">
+ <div>
   <TheHeader title="Careers">
    <template #image>
     <NuxtImg
      provider="cloudinary"
-     loading="lazy"
+     loading="eager"
      format="webp"
-     alt="Careers banner"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
+     alt="Careers with Dansom"
+     sizes="sm:100vw md:50vw lg:760px"
      src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <section class="container mx-auto space-y-6 px-4 py-10 md:space-y-10 md:px-6 md:py-16">
-   <div class="grid gap-5 rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:grid-cols-3 md:gap-8 md:p-8">
-    <div class="space-y-3 md:col-span-2 md:space-y-4">
-     <h2 class="font-display text-2xl font-bold md:text-3xl">Careers at Dansom</h2>
-     <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
+  <section class="py-16 md:py-28">
+   <div class="shell grid gap-12 lg:grid-cols-12">
+    <div class="reveal lg:col-span-7">
+     <h2 class="display-title text-4xl leading-tight md:text-6xl">Careers at Dansom.</h2>
+     <p class="body-copy mt-6 text-base md:text-lg">
       Dansom is an Equal Opportunity Employer committed to inclusive teams and equitable workplaces. We welcome diverse experiences and perspectives that strengthen our work across the Horn of Africa.
      </p>
-     <p class="text-sm leading-relaxed text-slate-700 md:text-base">
-      We look for team members who thrive in complex environments, collaborate across disciplines, and translate data into action. If that sounds like you, explore our opportunities below or reach out directly.
+     <p class="body-copy mt-4">
+      We look for people who thrive in complex environments, collaborate across disciplines, and translate data into action.
      </p>
     </div>
-    <div class="rounded-lg border border-slate-200/80 bg-white p-4 shadow-none md:dansom-card-soft md:p-5">
-     <h3 class="text-lg font-semibold text-slate-900 md:text-xl">Why work with us</h3>
-     <ul class="mt-3 space-y-2 text-sm text-slate-700">
-      <li class="flex items-start gap-2"><Icon name="mdi:check-circle" class="text-primary mt-0.5" /> Impactful regional projects</li>
-      <li class="flex items-start gap-2"><Icon name="mdi:check-circle" class="text-primary mt-0.5" /> Collaborative, mission-driven teams</li>
-      <li class="flex items-start gap-2"><Icon name="mdi:check-circle" class="text-primary mt-0.5" /> Professional growth and mentorship</li>
-      <li class="flex items-start gap-2"><Icon name="mdi:check-circle" class="text-primary mt-0.5" /> Inclusive culture and flexible work</li>
-     </ul>
+    <div class="surface-soft p-6 lg:col-span-4 lg:col-start-9">
+     <h3 class="font-display text-2xl font-semibold text-mist">Why work with us</h3>
+     <div class="mt-6 grid gap-4 text-sm text-mist/[0.62]">
+      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Impactful regional projects</p>
+      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Collaborative, mission-driven teams</p>
+      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Professional growth and mentorship</p>
+      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Inclusive culture and flexible work</p>
+     </div>
     </div>
    </div>
+  </section>
 
-   <OurExpertise
-    title="Current Opportunities"
-    subtitle="Browse open roles across research, programme delivery, and operations."
-   >
-    <template #vfor>
-     <div class="grid gap-3 md:grid-cols-2 md:gap-6">
-      <div
-       v-for="role in roles"
-       :key="role.title"
-       class="rounded-lg border border-slate-200/80 bg-white p-4 shadow-none md:dansom-card-soft md:p-5 md:shadow-md md:shadow-slate-200"
-      >
-       <div class="flex items-center justify-between">
-        <div>
-         <p class="text-[10px] uppercase tracking-[0.16em] text-primary md:text-xs md:tracking-[0.2em]">{{ role.type }}</p>
-         <h3 class="mt-1 text-lg font-semibold md:text-xl">{{ role.title }}</h3>
-        </div>
-        <span class="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold text-primary md:px-3 md:text-xs">{{ role.location }}</span>
+  <section class="border-y border-mist/10 bg-panel/[0.55] py-16 md:py-24">
+   <div class="shell">
+    <div class="max-w-3xl">
+     <h2 class="display-title text-4xl leading-tight md:text-5xl">Current opportunities</h2>
+     <p class="body-copy mt-4">Open roles across research, programme delivery, and operations.</p>
+    </div>
+
+    <div class="mt-10 grid gap-5 lg:grid-cols-2">
+     <article v-for="role in roles" :key="role.title" class="surface group p-6 transition duration-500 hover:border-primary/[0.35] md:p-7">
+      <div class="flex flex-wrap items-start justify-between gap-3">
+       <div>
+        <p class="text-sm font-semibold text-primary">{{ role.type }}</p>
+        <h3 class="mt-2 font-display text-2xl font-semibold tracking-tight text-mist">{{ role.title }}</h3>
        </div>
-       <p class="mt-2 text-sm leading-relaxed text-slate-700 md:mt-3">{{ role.summary }}</p>
-       <NuxtLink
-        to="/Contact"
-        class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary"
-       >
-        Start a conversation
-        <Icon name="mdi:arrow-right" />
-       </NuxtLink>
+       <span class="rounded-xl border border-mist/10 px-3 py-1.5 text-xs font-semibold text-mist/[0.55]">{{ role.location }}</span>
       </div>
-     </div>
-    </template>
-   </OurExpertise>
+      <p class="mt-5 text-sm leading-relaxed text-mist/[0.58]">{{ role.summary }}</p>
+      <NuxtLink to="/Contact" class="text-link mt-6">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
+     </article>
+    </div>
+   </div>
+  </section>
 
-   <div class="rounded-2xl border border-slate-200 bg-white p-5 md:p-8">
-    <div class="grid items-center gap-4 md:gap-6 lg:grid-cols-2">
-     <div class="space-y-3 md:space-y-4">
-      <h3 class="font-display text-2xl font-bold md:text-3xl">We&apos;re always meeting future collaborators</h3>
-      <p class="leading-relaxed text-slate-600">
-       Share your CV and interests. We regularly build agile teams for research deployments, evaluations, and advisory missions across the region.
-      </p>
+  <section class="py-16 md:py-24">
+   <div class="shell">
+    <div class="surface-soft grid gap-8 p-7 md:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
+     <div>
+      <h2 class="display-title text-4xl leading-tight md:text-5xl">We&apos;re always meeting future collaborators.</h2>
+      <p class="body-copy mt-4">Share your CV and interests for future research, evaluation, and advisory missions.</p>
      </div>
-     <div class="flex flex-wrap gap-2 md:gap-3">
-      <NuxtLink
-       to="/Contact"
-       class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px md:px-5 md:py-3"
-      >
-       Send your CV
-       <Icon name="mdi:email-outline" />
-      </NuxtLink>
-      <NuxtLink
-       to="/About"
-       class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-primary/25 px-4 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 active:translate-y-px md:px-5 md:py-3"
-      >
-       Learn about Dansom
-       <Icon name="mdi:information-outline" />
-      </NuxtLink>
-     </div>
+     <NuxtLink to="/Contact" class="button-primary">Send your CV <Icon name="mdi:email-outline" /></NuxtLink>
     </div>
    </div>
   </section>

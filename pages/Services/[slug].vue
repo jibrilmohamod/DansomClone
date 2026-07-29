@@ -1,60 +1,56 @@
 <template>
- <div class="min-h-[100dvh] text-slate-900">
+ <div>
   <TheHeader :projTitle="service.fullTitle">
    <template #image>
     <NuxtImg
      provider="cloudinary"
-     loading="lazy"
+     loading="eager"
      format="webp"
      alt="Dansom research team working in the Horn of Africa"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
+     sizes="sm:100vw md:50vw lg:760px"
      src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="h-full w-full object-cover object-center"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <main class="container px-4 py-10 md:px-6 md:py-16">
-   <div class="grid gap-8 lg:grid-cols-[0.75fr_1.75fr] lg:gap-12">
-    <aside class="space-y-4">
-     <div class="flex min-h-44 items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-primary">
-      <Icon :name="service.icon" class="h-20 w-20" />
+  <main class="py-16 md:py-24">
+   <div class="shell grid gap-10 lg:grid-cols-12">
+    <aside class="lg:col-span-4">
+     <div class="surface-soft lg:sticky lg:top-28">
+      <div class="flex min-h-52 items-center justify-center border-b border-mist/10 p-8">
+       <Icon :name="service.icon" class="h-24 w-24 text-primary" />
+      </div>
+      <dl class="grid gap-6 p-6 text-sm">
+       <div>
+        <dt class="font-semibold text-mist">Delivery model</dt>
+        <dd class="mt-2 leading-relaxed text-mist/[0.55]">Mixed-method research with local field teams</dd>
+       </div>
+       <div>
+        <dt class="font-semibold text-mist">Coverage</dt>
+        <dd class="mt-2 text-mist/[0.55]">Somalia and Kenya</dd>
+       </div>
+      </dl>
      </div>
-     <dl class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm">
-      <div>
-       <dt class="font-semibold text-slate-900">Delivery model</dt>
-       <dd class="mt-1 text-slate-600">Mixed-method research with local field teams</dd>
-      </div>
-      <div class="mt-4 border-t border-slate-200 pt-4">
-       <dt class="font-semibold text-slate-900">Coverage</dt>
-       <dd class="mt-1 text-slate-600">Somalia and Kenya</dd>
-      </div>
-     </dl>
     </aside>
 
-    <article>
+    <article class="lg:col-span-7 lg:col-start-6">
      <p class="text-sm font-semibold text-primary">{{ service.title }}</p>
-     <h2 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight text-slate-900 md:text-4xl">
-      {{ service.fullTitle }}
-     </h2>
-     <p class="mt-4 text-lg leading-relaxed text-slate-600">{{ service.subtitle }}</p>
-     <div
-      class="service-body prose prose-slate mt-8 max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:leading-8 prose-a:text-primary"
-      v-html="service.about"
-     ></div>
-     <NuxtLink
-      to="/Contact"
-      class="mt-8 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
-     >
-      Contact
-      <Icon name="mdi:arrow-right" />
-     </NuxtLink>
+     <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">{{ service.fullTitle }}</h2>
+     <p class="mt-5 text-lg leading-relaxed text-mist/[0.65]">{{ service.subtitle }}</p>
+     <div class="service-body mt-10 space-y-6 text-base leading-8 text-mist/[0.65]" v-html="service.about"></div>
+     <NuxtLink to="/Contact" class="button-primary mt-10">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
     </article>
    </div>
   </main>
  </div>
 </template>
+
+<style>
+.service-body p + p {
+ margin-top: 1.5rem;
+}
+</style>
 
 <script lang="ts" setup>
  const route = useRoute()
@@ -85,6 +81,70 @@
     "Formative Research and Policy Advisory Services to inform programming and policy development.",
    about:
     "<p>Dansom has built one of the most extensive and effective networks of multi-disciplinary researchers working in Somalia and has delivered formative baseline assessments on strategically themed areas to support the international community and the Somali government in designing appropriate programmes in newly recovered areas and emerging sectors of interest. Our research services combine in-depth qualitative assessments and quantitative surveys to ensure with systematic ground-truthing and triangulation of information to ensure only the highest quality of data is taken into account for the analysis and programme design phases.</p><p>Our specialized consultants represent a diversity of fields with expertise in law, economics, financial management, public policy, security advice and many other areas.</p>",
+  },
+  {
+   icon: "mdi:account-group",
+   title: "Socio-Political and Economic Development",
+   fullTitle: "Socio-Political and Economic Development",
+   subtitle: "Research and advisory support for governance, economic growth, and community resilience.",
+   about:
+    "<p>Dansom delivers socio-political and economic research grounded in local context and direct regional access. The work helps partners understand governance dynamics, economic conditions, community priorities, and the risks that shape programme delivery.</p><p>Our multidisciplinary teams combine qualitative and quantitative methods to turn complex findings into practical recommendations for policy, programme design, and implementation.</p>",
+  },
+  {
+   icon: "mdi:security",
+   title: "Security and Access Advisory",
+   fullTitle: "Security and Access Advisory",
+   subtitle: "Risk analysis and access strategies for programmes operating in complex environments.",
+   about:
+    "<p>Dansom supports organisations with contextual risk assessments, access strategies, and operational advice for work in hard-to-reach and non-permissive areas. Our local networks help partners understand changing conditions and plan responsible field activity.</p><p>Advisory support is tailored to programme objectives, stakeholder needs, and the realities of each operating location.</p>",
+  },
+  {
+   icon: "mdi:file-document-edit",
+   title: "Research and Knowledge Management",
+   fullTitle: "Research and Knowledge Management",
+   subtitle: "Knowledge products, learning agendas, and evidence synthesis for adaptive programmes.",
+   about:
+    "<p>Dansom designs and delivers research that helps partners capture, organise, and apply knowledge. This includes learning agendas, evidence reviews, analytical reports, and products designed for operational and policy audiences.</p><p>We translate technical findings into clear, usable outputs that support reflection, adaptation, and institutional learning.</p>",
+  },
+  {
+   icon: "mdi:clipboard-list",
+   title: "Monitoring and Performance Evaluation",
+   fullTitle: "Monitoring and Performance Evaluation",
+   subtitle: "MEL systems, performance tracking, and data quality assurance tailored to partner needs.",
+   about:
+    "<p>Dansom supports monitoring and performance evaluation across programme cycles. Our teams develop practical frameworks, indicators, collection tools, and quality assurance processes suited to the operating context.</p><p>We combine field verification with structured analysis so partners can track performance, identify risks, and make timely improvements.</p>",
+  },
+  {
+   icon: "mdi:account-voice",
+   title: "Community Engagement & Inclusion",
+   fullTitle: "Community Engagement and Inclusion",
+   subtitle: "Meaningful participation of communities, women, and minority groups across programme cycles.",
+   about:
+    "<p>Dansom designs engagement approaches that bring community knowledge and lived experience into research and programme decisions. We help partners create safe, inclusive processes for participation, feedback, and accountability.</p><p>Our teams adapt methods to local language, culture, access conditions, and the needs of groups that are often underrepresented.</p>",
+  },
+  {
+   icon: "ph:chart-line-up",
+   title: "Economic Growth & Market Systems",
+   fullTitle: "Economic Growth and Market Systems",
+   subtitle: "Market analysis and growth strategies connecting public, private, and community stakeholders.",
+   about:
+    "<p>Dansom provides market and economic analysis that helps partners understand constraints, incentives, and opportunities across local systems. The work combines field evidence with stakeholder insight from businesses, government, and communities.</p><p>Findings inform practical strategies for livelihoods, private-sector engagement, resilience, and inclusive growth.</p>",
+  },
+  {
+   icon: "mdi:security",
+   title: "Security & Access Advisory",
+   fullTitle: "Security and Access Advisory",
+   subtitle: "Risk analysis, access strategies, and secure field operations in fragile contexts.",
+   about:
+    "<p>Dansom supports organisations with contextual risk assessments, access strategies, and operational advice for work in hard-to-reach and non-permissive areas. Our local networks help partners understand changing conditions and plan responsible field activity.</p><p>Advisory support is tailored to programme objectives, stakeholder needs, and the realities of each operating location.</p>",
+  },
+  {
+   icon: "mdi:chart-bell-curve",
+   title: "Program Design & Learning",
+   fullTitle: "Program Design and Learning",
+   subtitle: "Evidence-backed design support, MEL frameworks, and adaptive learning systems.",
+   about:
+    "<p>Dansom helps partners apply evidence throughout programme design and delivery. We support theories of change, results frameworks, learning questions, review processes, and practical mechanisms for adaptation.</p><p>The approach connects field evidence with programme decisions so teams can learn, respond, and improve in complex environments.</p>",
   },
  ]
 

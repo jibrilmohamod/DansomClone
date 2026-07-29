@@ -1,26 +1,24 @@
 <template>
- <section class="relative isolate overflow-hidden bg-slate-900 text-white">
-  <div class="absolute inset-0">
-   <slot name="image">
-    <div class="h-full w-full bg-slate-800"></div>
-   </slot>
-   <div class="absolute inset-0 bg-slate-950/65"></div>
-   <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-950/20"></div>
-  </div>
-
-  <div class="relative">
-   <TheNav />
-   <div class="container flex min-h-[44dvh] items-end px-4 pb-10 pt-20 md:min-h-[52dvh] md:px-6 md:pb-14 md:pt-24">
+ <section class="relative overflow-hidden bg-ink text-mist">
+  <TheNav />
+  <div class="shell grid min-h-[62dvh] items-stretch lg:grid-cols-12">
+   <div class="reveal flex items-end py-12 md:py-16 lg:col-span-7 lg:pr-12">
     <div class="max-w-4xl">
-     <p class="text-sm font-semibold text-secondary">Dansom Research &amp; Consultancy</p>
-     <h1 class="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
+     <p class="eyebrow">Dansom Research &amp; Consultancy</p>
+     <h1 class="display-title mt-5 text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
       <span v-if="projTitle">{{ projTitle }}</span>
       <span v-else>{{ title }}</span>
      </h1>
-     <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg">
+     <p class="mt-6 max-w-xl text-base leading-relaxed text-mist/[0.65] md:text-lg">
       Regional research, monitoring, evaluation, and advisory expertise for the Horn of Africa.
      </p>
     </div>
+   </div>
+   <div class="relative min-h-72 overflow-hidden rounded-t-2xl border-x border-t border-mist/10 lg:col-span-5 lg:min-h-full lg:rounded-t-none lg:border-y-0 lg:border-r">
+    <slot name="image">
+     <div class="h-full w-full bg-panel"></div>
+    </slot>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/10"></div>
    </div>
   </div>
  </section>

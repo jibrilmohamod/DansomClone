@@ -1,54 +1,53 @@
 <template>
- <div class="min-h-[100dvh] text-slate-900">
+ <div>
   <TheHeader title="Our Portfolio">
    <template #image>
     <NuxtImg
      provider="cloudinary"
-     loading="lazy"
+     loading="eager"
      format="webp"
-     alt="Portfolio banner"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+     alt="Dansom project fieldwork"
+     sizes="sm:100vw md:50vw lg:760px"
+     src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <section class="container m-auto space-y-6 px-4 py-10 md:space-y-10 md:px-6 md:py-16">
-   <OurExpertise
-    title="Projects and partnerships"
-    subtitle="Explore monitoring, evaluation, research, logistics, and advisory work delivered across the Horn of Africa."
-   />
+  <section class="py-16 md:py-24">
+   <div class="shell">
+    <div class="max-w-3xl">
+     <h2 class="display-title text-4xl leading-tight md:text-6xl">Projects and partnerships.</h2>
+     <p class="body-copy mt-5 text-base md:text-lg">
+      Monitoring, evaluation, research, logistics, and advisory work delivered across the Horn of Africa.
+     </p>
+    </div>
 
-   <div class="rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:p-6">
-    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-     <div class="grid w-full gap-4 md:grid-cols-[1fr_1fr]">
-      <div class="grid gap-2">
-       <label for="project-search" class="text-sm font-semibold text-slate-800">Search projects</label>
-       <input
-        id="project-search"
-        v-model="searchTerm"
-        type="search"
-        placeholder="Project or partner name"
-        class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 focus:border-primary focus:outline-none"
-       />
-      </div>
-      <div class="grid gap-2">
-       <label for="project-filter" class="text-sm font-semibold text-slate-800">Filter by service</label>
-       <select
-        id="project-filter"
-        v-model="classification"
-        class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 focus:border-primary focus:outline-none"
-       >
-        <option value="All">All services</option>
-        <option v-for="option in classificationOptions" :key="option" :value="option">{{ option }}</option>
-       </select>
-      </div>
+    <div class="surface-soft mt-10 grid gap-5 p-5 md:grid-cols-2 md:p-6">
+     <div class="grid gap-2">
+      <label for="project-search" class="text-sm font-semibold text-mist">Search projects</label>
+      <input
+       id="project-search"
+       v-model="searchTerm"
+       type="search"
+       placeholder="Project or partner name"
+       class="w-full rounded-xl border border-mist/[0.15] bg-ink px-4 py-3 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+      />
+     </div>
+     <div class="grid gap-2">
+      <label for="project-filter" class="text-sm font-semibold text-mist">Filter by service</label>
+      <select
+       id="project-filter"
+       v-model="classification"
+       class="w-full rounded-xl border border-mist/[0.15] bg-ink px-4 py-3 text-base text-mist focus:border-primary"
+      >
+       <option value="All">All services</option>
+       <option v-for="option in classificationOptions" :key="option" :value="option">{{ option }}</option>
+      </select>
      </div>
     </div>
 
-    <div class="mt-6 grid gap-4 md:grid-cols-2 md:gap-6">
+    <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
      <ProjectCard
       v-for="project in filteredProjects"
       :key="project.title"
@@ -58,18 +57,13 @@
      />
     </div>
 
-    <p v-if="filteredProjectPool.length === 0" class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center text-slate-600">
-     No projects match your search. Try another term or service.
-    </p>
+    <div v-if="filteredProjectPool.length === 0" class="surface mt-8 p-8 text-center">
+     <h3 class="font-display text-2xl font-semibold text-mist">No matching projects</h3>
+     <p class="mt-2 text-mist/[0.55]">Try another search term or service.</p>
+    </div>
 
-    <div v-if="filteredProjects.length < filteredProjectPool.length" class="mt-6 flex justify-center">
-     <button
-      type="button"
-      class="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
-      @click="loadMore"
-     >
-      Load more
-     </button>
+    <div v-if="filteredProjects.length < filteredProjectPool.length" class="mt-8 flex justify-center">
+     <button type="button" class="button-primary" @click="loadMore">Load more</button>
     </div>
    </div>
   </section>

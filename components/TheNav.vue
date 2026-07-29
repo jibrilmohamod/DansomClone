@@ -1,19 +1,18 @@
 <script setup lang="ts">
  const showMobile = ref(false)
-
  const toggleMobileNav = () => {
   showMobile.value = !showMobile.value
  }
 </script>
 
 <template>
- <header class="relative z-40 border-b border-slate-200 bg-white/95 text-slate-800 backdrop-blur">
-  <div class="container hidden h-[72px] items-center justify-between gap-6 px-6 lg:flex">
+ <header class="relative z-40 border-b border-mist/10 bg-ink/[0.88] text-mist backdrop-blur-xl">
+  <div class="shell hidden h-[72px] items-center gap-7 lg:flex">
    <NuxtLink to="/" class="shrink-0" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-11 w-auto" />
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-10 w-auto brand-logo" />
    </NuxtLink>
 
-   <nav aria-label="Primary navigation" class="flex items-center gap-5 text-sm font-semibold">
+   <nav aria-label="Primary navigation" class="ml-auto flex items-center gap-6 text-sm font-semibold">
     <NuxtLink to="/" class="nav-link">Home</NuxtLink>
     <NuxtLink to="/About" class="nav-link">About</NuxtLink>
     <NuxtLink to="/Services" class="nav-link">Services</NuxtLink>
@@ -23,33 +22,28 @@
     <a href="http://webmail.dansomconsultancy.org/" target="_blank" rel="noopener noreferrer" class="nav-link">Staff Email</a>
    </nav>
 
-   <div class="flex shrink-0 items-center gap-2">
-    <a
-     href="https://so.linkedin.com/company/dansom-research-and-consultancy"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Dansom Research & Consultancy on LinkedIn"
-     class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-primary transition hover:border-primary/30 hover:bg-primary/5"
-    >
-     <Icon name="ri:linkedin-fill" class="text-lg" />
-    </a>
-    <NuxtLink
-     to="/Contact"
-     class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
-    >
-     Contact
-     <Icon name="mdi:arrow-right" />
-    </NuxtLink>
-   </div>
+   <a
+    href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Dansom Research & Consultancy on LinkedIn"
+    class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-mist/[0.15] text-mist/75 transition hover:border-primary/60 hover:text-primary"
+   >
+    <Icon name="ri:linkedin-fill" class="text-lg" />
+   </a>
+   <NuxtLink to="/Contact" class="button-primary shrink-0">
+    Contact
+    <Icon name="mdi:arrow-top-right" />
+   </NuxtLink>
   </div>
 
   <div class="flex h-16 items-center justify-between px-4 lg:hidden">
    <NuxtLink to="/" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-9 w-auto" />
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-9 w-auto brand-logo" />
    </NuxtLink>
    <button
     type="button"
-    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700"
+    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] text-mist"
     aria-label="Open navigation"
     :aria-expanded="showMobile"
     @click="toggleMobileNav"
@@ -65,28 +59,26 @@
 <style scoped>
 .nav-link {
  position: relative;
- padding: 0.5rem 0;
- color: rgb(71 85 105);
- transition: color 0.2s ease;
+ padding: 0.55rem 0;
+ color: rgb(243 247 249 / 0.66);
+ transition: color 0.25s ease;
 }
-
 .nav-link::after {
  content: "";
  position: absolute;
- inset-inline: 0;
+ right: 0;
  bottom: 0;
+ left: 0;
  height: 2px;
- background: #425e87;
+ background: #bfd962;
  transform: scaleX(0);
  transform-origin: left;
- transition: transform 0.2s ease;
+ transition: transform 0.25s ease;
 }
-
 .nav-link:hover,
 .nav-link.router-link-exact-active {
- color: rgb(15 23 42);
+ color: #f3f7f9;
 }
-
 .nav-link:hover::after,
 .nav-link.router-link-exact-active::after {
  transform: scaleX(1);

@@ -1,66 +1,52 @@
 <template>
- <footer class="border-t border-slate-200 bg-slate-100 text-slate-800">
-  <div class="container px-6 py-12">
-   <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_1fr]">
+ <footer class="border-t border-mist/10 bg-panel text-mist">
+  <div class="shell py-14 md:py-20">
+   <div class="grid gap-12 lg:grid-cols-[1.5fr_0.7fr_1fr]">
     <div>
-     <NuxtImg src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="w-44" />
-     <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-600">
-      Regional research and consultancy expertise supporting accountable decisions across Somalia, Kenya, and the Horn of Africa.
-     </p>
+     <NuxtImg src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="w-48 brand-logo" />
+     <h2 class="mt-8 max-w-xl font-display text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+      Evidence built close to the context.
+     </h2>
+     <NuxtLink to="/Contact" class="button-primary mt-7">
+      Contact
+      <Icon name="mdi:arrow-top-right" />
+     </NuxtLink>
     </div>
 
-    <div>
-     <h2 class="font-semibold text-slate-900">Company</h2>
-     <nav aria-label="Footer navigation" class="mt-4 grid gap-2 text-sm text-slate-600">
-      <NuxtLink to="/About" class="hover:text-primary">About</NuxtLink>
-      <NuxtLink to="/Services" class="hover:text-primary">Services</NuxtLink>
-      <NuxtLink to="/Portfolio" class="hover:text-primary">Portfolio</NuxtLink>
-      <NuxtLink to="/Careers" class="hover:text-primary">Careers</NuxtLink>
-      <NuxtLink to="/Contact" class="hover:text-primary">Contact</NuxtLink>
-     </nav>
-    </div>
+    <nav aria-label="Footer navigation" class="grid content-start gap-3 text-sm text-mist/60">
+     <p class="mb-2 font-semibold text-mist">Explore</p>
+     <NuxtLink to="/About" class="hover:text-primary">About</NuxtLink>
+     <NuxtLink to="/Services" class="hover:text-primary">Services</NuxtLink>
+     <NuxtLink to="/Portfolio" class="hover:text-primary">Portfolio</NuxtLink>
+     <NuxtLink to="/Careers" class="hover:text-primary">Careers</NuxtLink>
+     <NuxtLink to="/Contact" class="hover:text-primary">Contact</NuxtLink>
+    </nav>
 
-    <div>
-     <h2 class="font-semibold text-slate-900">Offices</h2>
-     <div class="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
-      <div>
-       <p class="font-semibold text-slate-800">Mogadishu</p>
-       <p>Dirir Building on Balcad Road</p>
-      </div>
-      <div>
-       <p class="font-semibold text-slate-800">Nairobi</p>
-       <p>Nas Apartments, No. 4, Milimani Road</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <h2 class="font-semibold text-slate-900">Contact</h2>
-     <div class="mt-4 space-y-3 text-sm text-slate-600">
-      <a href="mailto:info@dansomconsultancy.org" class="flex items-center gap-2 hover:text-primary">
-       <Icon name="mdi:email-outline" />
-       info@dansomconsultancy.org
-      </a>
-      <a href="tel:+254745276911" class="flex items-center gap-2 hover:text-primary">
-       <Icon name="mdi:phone-outline" />
-       +254 745 276 911
-      </a>
+    <div class="text-sm leading-relaxed text-mist/60">
+     <p class="font-semibold text-mist">Mogadishu</p>
+     <p class="mt-1">Dirir Building on Balcad Road</p>
+     <p class="mt-6 font-semibold text-mist">Nairobi</p>
+     <p class="mt-1">Nas Apartments, No. 4, Milimani Road</p>
+     <div class="mt-6 grid gap-2">
+      <a href="mailto:info@dansomconsultancy.org" class="hover:text-primary">info@dansomconsultancy.org</a>
+      <a href="tel:+254745276911" class="hover:text-primary">+254 745 276 911</a>
       <a
        href="https://so.linkedin.com/company/dansom-research-and-consultancy"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="Dansom Research & Consultancy on LinkedIn"
-       class="inline-flex items-center gap-2 font-semibold text-primary hover:text-primary/80"
+       class="inline-flex items-center gap-2 font-semibold text-primary"
       >
-       <Icon name="ri:linkedin-fill" class="text-lg" />
+       <Icon name="ri:linkedin-fill" />
        LinkedIn
       </a>
      </div>
     </div>
    </div>
 
-   <div class="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
-    &copy; {{ year }} Dansom Research &amp; Consultancy. All rights reserved.
+   <div class="mt-14 flex flex-col gap-2 border-t border-mist/10 pt-6 text-xs text-mist/40 sm:flex-row sm:items-center sm:justify-between">
+    <p>&copy; {{ year }} Dansom Research &amp; Consultancy. All rights reserved.</p>
+    <p>Research, monitoring, evaluation, and advisory.</p>
    </div>
   </div>
  </footer>

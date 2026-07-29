@@ -1,12 +1,8 @@
 <template>
  <div>
-  <div class="max-w-3xl pb-6 md:pb-8">
-   <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl" :class="variantStyles.title">
-    {{ title }}
-   </h2>
-   <p class="mt-3 max-w-2xl font-body text-base leading-relaxed md:text-lg" :class="variantStyles.subtitle">
-    {{ subtitle }}
-   </p>
+  <div class="max-w-3xl pb-8 md:pb-10">
+   <h2 class="display-title text-4xl leading-tight md:text-5xl" :class="variantStyles.title">{{ title }}</h2>
+   <p class="body-copy mt-4 text-base md:text-lg" :class="variantStyles.subtitle">{{ subtitle }}</p>
   </div>
   <slot name="vfor"></slot>
  </div>
@@ -14,19 +10,13 @@
 
 <script setup>
  import { computed } from "vue"
-
  const props = defineProps({
   title: String,
   subtitle: String,
-  variant: {
-   type: String,
-   default: "light",
-  },
+  variant: { type: String, default: "dark" },
  })
-
- const variantStyles = computed(() =>
-  props.variant === "dark"
-   ? { title: "text-white", subtitle: "text-slate-200" }
-   : { title: "text-slate-900", subtitle: "text-slate-600" },
- )
+ const variantStyles = computed(() => ({
+  title: "text-mist",
+  subtitle: "text-mist/[0.65]",
+ }))
 </script>

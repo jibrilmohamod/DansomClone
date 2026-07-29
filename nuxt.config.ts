@@ -24,7 +24,7 @@ export default defineNuxtConfig({
  googleFonts: {
   families: {
     "Space Grotesk": [500, 600, 700],
-    Inter: [400, 500, 600],
+    Manrope: [400, 500, 600, 700],
   },
   prefetch: true,
   preconnect: true,
@@ -67,7 +67,7 @@ export default defineNuxtConfig({
     { name: "apple-mobile-web-app-title", content: "Dansom Research & Consultancy" },
     { name: "author", content: "Dansom Research & Consultancy" },
     { name: "robots", content: "index, follow" },
-    { name: "theme-color", content: "#ffffff" },
+    { name: "theme-color", content: "#08131F" },
     {
      name: "description",
      content:

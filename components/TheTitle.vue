@@ -1,19 +1,9 @@
 <template>
  <div>
-  <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-   {{ title }}
-  </h2>
-  <p v-if="subtitle" class="mt-3 max-w-2xl font-body text-base leading-relaxed text-slate-600 md:text-lg">
-   {{ subtitle }}
-  </p>
-  <p v-if="subtitle2" class="mt-3 max-w-2xl font-body text-base leading-relaxed text-slate-600 md:text-lg">
-   {{ subtitle2 }}
-  </p>
-  <NuxtLink
-   v-if="icon && link"
-   :to="link"
-   class="mt-5 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
-  >
+  <h2 class="display-title text-4xl leading-tight md:text-5xl">{{ title }}</h2>
+  <p v-if="subtitle" class="body-copy mt-4 text-base md:text-lg">{{ subtitle }}</p>
+  <p v-if="subtitle2" class="body-copy mt-3 text-base md:text-lg">{{ subtitle2 }}</p>
+  <NuxtLink v-if="icon && link" :to="link" class="button-primary mt-6">
    {{ LinkText }}
    <Icon :name="icon" class="text-lg" />
   </NuxtLink>
