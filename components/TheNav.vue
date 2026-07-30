@@ -1,4 +1,8 @@
 <script setup lang="ts">
+ const props = withDefaults(defineProps<{ overlay?: boolean }>(), {
+  overlay: false,
+ })
+
  const showMobile = ref(false)
  const toggleMobileNav = () => {
   showMobile.value = !showMobile.value
@@ -6,7 +10,10 @@
 </script>
 
 <template>
- <header class="relative z-40 border-b border-mist/10 bg-ink/[0.88] text-mist backdrop-blur-xl">
+ <header
+  class="relative z-40 border-b text-mist backdrop-blur-xl"
+  :class="props.overlay ? 'nav-overlay border-white/15 bg-[#08131f]/35' : 'border-mist/10 bg-ink/[0.88]'"
+ >
   <div class="shell hidden h-[72px] items-center gap-5 xl:flex">
    <NuxtLink to="/" class="shrink-0" aria-label="Dansom Research & Consultancy home">
     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-10 w-auto brand-logo" />
@@ -88,4 +95,16 @@
 .nav-link.router-link-exact-active::after {
  transform: scaleX(1);
 }
+
+.nav-overlay {
+ --mist: 243 247 249;
+ --primary: 191 217 98;
+ --ink: 8 19 31;
+ --accent-ink: 8 19 31;
+}
+
+.nav-overlay :deep(.brand-logo) {
+ filter: brightness(0) invert(1);
+}
 </style>
+

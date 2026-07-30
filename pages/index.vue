@@ -1,126 +1,144 @@
 <template>
  <div>
-  <TheHero />
+  <HomeHero />
 
-  <section class="border-b border-mist/10 py-12 md:py-16">
+  <section class="border-b border-line/35 py-10 md:py-14">
    <div class="shell">
-    <p class="mb-8 text-sm font-semibold text-mist/[0.52]">Selected partners</p>
+    <p class="mb-8 text-sm font-semibold text-mist/55">Selected partners</p>
     <LogoCarousel />
    </div>
   </section>
 
-  <section id="home-intro" class="py-16 md:py-28">
-   <div class="shell grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
-    <div class="reveal lg:col-span-5">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Context changes everything.</h2>
-     <p class="body-copy mt-6 text-base md:text-lg">
-      Since 2009, DANSOM has partnered with humanitarian and development actors to generate actionable insights across Somalia and Kenya. Our network of thematic experts and field researchers brings clarity to complex contexts so programs can move forward with confidence.
-     </p>
-     <NuxtLink to="/About" class="text-link mt-7">
-      About Dansom
-      <Icon name="mdi:arrow-right" />
-     </NuxtLink>
+  <section class="overflow-hidden py-20 md:py-32 lg:py-40">
+   <div class="shell">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-end">
+     <div class="lg:col-span-8">
+      <h2 class="display-title max-w-[15ch] text-5xl leading-[0.92] md:text-7xl lg:text-[6.4rem]">
+       Close enough to understand. Rigorous enough to trust.
+      </h2>
+     </div>
+     <div class="lg:col-span-3 lg:col-start-10 lg:pb-2">
+      <p class="body-copy text-base md:text-lg">
+       Since 2009, Dansom has connected regional access with independent research and practical advisory.
+      </p>
+      <NuxtLink to="/About" class="text-link mt-7">About Dansom <Icon name="mdi:arrow-right" /></NuxtLink>
+     </div>
     </div>
 
-    <div class="lg:col-span-7 lg:pl-12" data-testid="home-intro-media">
-     <div class="editorial-media">
-      <div class="media-zoom overflow-hidden">
-       <img
-        loading="lazy"
-        width="1586"
-        height="992"
-        src="/dansom-livelihoods-research.jpg"
-        alt="Researchers and a farmer examining crop and soil conditions"
-        class="aspect-[16/10] w-full object-cover"
-       />
+    <div class="mt-16 grid gap-4 md:mt-24 md:grid-cols-12 md:grid-rows-[14rem_18rem]">
+     <figure class="media-shift overflow-hidden rounded-2xl border border-line/55 md:col-span-7 md:row-span-2">
+      <img
+       src="/dansom-livelihoods-research.jpg"
+       alt="Researchers examining crop conditions with a farmer"
+       width="1586"
+       height="992"
+       loading="lazy"
+       class="h-full min-h-80 w-full object-cover"
+      />
+     </figure>
+     <div class="flex items-end rounded-2xl border border-line/55 bg-primary p-7 text-accent-ink md:col-span-5 md:p-9">
+      <p class="font-display text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-4xl">Regional expertise. Independent judgement.</p>
+     </div>
+     <figure class="media-shift overflow-hidden rounded-2xl border border-line/55 md:col-span-5">
+      <img
+       src="/dansom-research-workshop.jpg"
+       alt="Researchers facilitating a collaborative workshop"
+       width="1586"
+       height="992"
+       loading="lazy"
+       class="h-full min-h-64 w-full object-cover"
+      />
+     </figure>
+    </div>
+   </div>
+  </section>
+
+  <HomeFieldSequence />
+
+  <section id="capabilities" class="py-20 md:py-32 lg:py-40">
+   <div class="shell">
+    <div class="max-w-4xl">
+     <h2 class="display-title text-4xl leading-[0.96] md:text-6xl lg:text-7xl">Expertise that moves with the context.</h2>
+     <p class="body-copy mt-6 text-base md:text-lg">
+      Six connected capabilities support programmes from first question to field delivery and institutional learning.
+     </p>
+    </div>
+   </div>
+
+   <div class="capability-rail mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[max(1rem,calc((100vw-1400px)/2+2rem))] pb-6 md:mt-20 md:gap-6">
+    <NuxtLink
+     v-for="(service, index) in services"
+     :key="service.title"
+     :to="'/Services/' + encodeURIComponent(service.slug)"
+     class="capability-panel group relative flex min-h-[30rem] w-[84vw] max-w-[46rem] shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-line/55 bg-panel p-7 shadow-lift md:w-[62vw] md:p-10 lg:w-[46vw]"
+    >
+     <img
+      v-if="serviceImages[index]"
+      :src="serviceImages[index]"
+      :alt="serviceAlts[index]"
+      width="1586"
+      height="992"
+      loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"
+     />
+     <div v-if="serviceImages[index]" class="absolute inset-0 bg-gradient-to-t from-[#08131f]/90 via-[#08131f]/30 to-[#08131f]/10"></div>
+     <div class="relative flex h-full flex-1 flex-col" :class="serviceImages[index] ? 'text-[#f3f7f9]' : 'text-mist'">
+      <div class="flex items-start justify-between gap-8">
+       <Icon :name="service.icon" class="text-3xl text-primary" />
+       <Icon name="mdi:arrow-top-right" class="text-2xl opacity-45 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
       </div>
-      <div class="grid border-t border-mist/10 sm:grid-cols-2" data-testid="home-intro-evidence">
-       <div class="p-6 md:p-7">
-        <p class="eyebrow">Regional access</p>
-        <h3 class="mt-3 font-display text-xl font-semibold text-mist">Local teams, trusted access</h3>
-        <p class="mt-2 text-sm leading-relaxed text-mist/[0.64]">Dedicated research teams in hard-to-reach areas across Somalia and Kenya.</p>
-       </div>
-       <div class="border-t border-mist/10 p-6 sm:border-l sm:border-t-0 md:p-7">
-        <p class="eyebrow">Decision support</p>
-        <h3 class="mt-3 font-display text-xl font-semibold text-mist">Analysis that drives action</h3>
-        <p class="mt-2 text-sm leading-relaxed text-mist/[0.64]">Political economy analysis, TPME, and advisory tailored to your objectives.</p>
-       </div>
+      <div class="mt-auto pt-24">
+       <h3 class="max-w-[16ch] font-display text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">{{ service.title }}</h3>
+       <p class="mt-5 max-w-xl text-sm leading-relaxed opacity-70 md:text-base">{{ service.description }}</p>
       </div>
+     </div>
+    </NuxtLink>
+   </div>
+  </section>
+
+  <section class="border-y border-line/35 bg-panel-soft/45 py-20 md:py-32">
+   <div class="shell">
+    <div class="grid gap-12 lg:grid-cols-12">
+     <div class="lg:col-span-4">
+      <h2 class="display-title text-4xl leading-tight md:text-6xl">Selected experience</h2>
+      <p class="body-copy mt-5">Long-term partnerships and independent assignments across complex sectors and operating environments.</p>
+      <NuxtLink to="/Portfolio" class="text-link mt-7">View portfolio <Icon name="mdi:arrow-right" /></NuxtLink>
+     </div>
+
+     <div class="lg:col-span-7 lg:col-start-6">
+      <article v-for="project in featuredProjects" :key="project.title" class="project-row grid gap-5 border-b border-line/45 py-8 first:pt-0 md:grid-cols-[7rem_1fr_auto] md:items-center">
+       <div class="flex h-16 items-center rounded-xl bg-white p-3">
+        <img :src="'/' + project.icon" :alt="project.Ngo || project.title" class="max-h-full w-full object-contain" loading="lazy" />
+       </div>
+       <div>
+        <p class="text-sm font-semibold text-primary">{{ project.Location }}</p>
+        <h3 class="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight text-mist">{{ project.title }}</h3>
+       </div>
+       <NuxtLink to="/Portfolio" :aria-label="`Read about ${project.title}`" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line/60 text-mist transition hover:border-primary hover:bg-primary hover:text-accent-ink">
+        <Icon name="mdi:arrow-top-right" />
+       </NuxtLink>
+      </article>
      </div>
     </div>
    </div>
   </section>
 
-  <section class="border-y border-mist/10 bg-panel/[0.62] py-16 md:py-28">
+  <section class="py-6 md:py-8">
    <div class="shell">
-    <div class="reveal max-w-3xl">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Services for complex environments</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Rigorous methods, contextual sensitivity, and evidence that strengthens decision-making across the Horn of Africa.
-     </p>
-    </div>
-
-    <div class="mt-12 grid auto-rows-fr gap-5 md:grid-cols-12">
-     <NuxtLink
-      v-for="(service, index) in services"
-      :key="service.title"
-      :to="'/Services/' + encodeURIComponent(service.slug)"
-      class="group surface relative flex min-h-64 flex-col overflow-hidden p-6 transition duration-500 hover:-translate-y-1 hover:border-primary/40 md:p-7"
-      :class="index === 0 || index === 5 ? 'md:col-span-7' : index === 1 || index === 4 ? 'md:col-span-5' : 'md:col-span-6'"
-     >
-      <div class="flex items-start justify-between gap-5">
-       <Icon :name="service.icon" class="text-3xl text-primary" />
-       <Icon name="ic:round-arrow-outward" class="text-xl text-mist/30 transition group-hover:text-primary" />
-      </div>
-      <div class="mt-auto pt-12">
-       <h3 class="font-display text-2xl font-semibold tracking-tight text-mist">{{ service.title }}</h3>
-       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.62]">{{ service.description }}</p>
-      </div>
-     </NuxtLink>
-    </div>
-   </div>
-  </section>
-
-  <section class="py-16 md:py-28">
-   <div class="shell grid gap-12 lg:grid-cols-12 lg:items-start">
-    <div class="lg:sticky lg:top-28 lg:col-span-5">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Field-tested methods. Reliable results.</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Local presence and proven tools translate findings into practical recommendations.
-     </p>
-    </div>
-    <div class="lg:col-span-6 lg:col-start-7">
-     <article v-for="step in approach" :key="step.title" class="reveal border-b border-mist/10 py-8 first:pt-0">
-      <Icon :name="step.icon" class="text-3xl text-primary" />
-      <p class="mt-5 text-sm font-semibold text-primary">{{ step.tag }}</p>
-      <h3 class="mt-2 font-display text-3xl font-semibold tracking-tight text-mist">{{ step.title }}</h3>
-      <p class="mt-3 text-base leading-relaxed text-mist/60">{{ step.copy }}</p>
-     </article>
-    </div>
-   </div>
-  </section>
-
-  <section class="pb-16 md:pb-28">
-   <div class="shell">
-    <div class="editorial-media relative min-h-[34rem]">
+    <div class="relative min-h-[38rem] overflow-hidden rounded-2xl border border-line/55">
      <img
-      loading="lazy"
+      src="/dansom-field-operations.jpg"
+      alt="Dansom field researchers travelling through a rural area"
       width="1586"
       height="992"
-      src="/dansom-community-dialogue.jpg"
-      alt="Researchers listening to community members during a consultation"
+      loading="lazy"
       class="absolute inset-0 h-full w-full object-cover"
      />
-     <div class="absolute inset-0 bg-ink/80"></div>
-     <div class="relative max-w-3xl p-7 md:p-14 lg:p-20">
-      <h2 class="display-title text-4xl leading-tight md:text-6xl">Build actionable evidence with us.</h2>
-      <p class="mt-5 max-w-2xl text-base leading-relaxed text-mist/[0.68] md:text-lg">
-       Tell us about your objectives and we&apos;ll assemble the right team, from rapid assessments to long-term monitoring and evaluation.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-       <NuxtLink to="/Contact" class="button-primary">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
-       <NuxtLink to="/About" class="button-ghost">Meet the team <Icon name="mdi:account-group-outline" /></NuxtLink>
-      </div>
+     <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,15,24,0.9),rgba(4,15,24,0.38)_62%,rgba(4,15,24,0.12))]"></div>
+     <div class="relative flex min-h-[38rem] max-w-3xl flex-col justify-end p-7 text-[#f3f7f9] md:p-14 lg:p-20">
+      <h2 class="font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] md:text-6xl">Make the next decision with better evidence.</h2>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-[#f3f7f9]/72 md:text-lg">Bring us the context, the uncertainty and the questions that matter.</p>
+      <NuxtLink to="/Contact" class="button-primary mt-8 w-fit">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
      </div>
     </div>
    </div>
@@ -130,6 +148,7 @@
 
 <script setup lang="ts">
  import { services } from "~/data/services"
+ import { projects } from "~/data/projects"
 
  useSeoMeta({
   title: "Home",
@@ -138,28 +157,64 @@
   ogTitle: "Dansom Research & Consultancy",
   ogDescription:
    "Evidence, partnership, and insight for development and humanitarian partners working across Somalia, Kenya, and the Horn of Africa.",
-  ogImage: "/dansom-logo.png",
+  ogImage: "/dansom-field-research-hero.jpg",
   twitterCard: "summary_large_image",
  })
 
- const approach = [
-  {
-   icon: "mdi:flash-outline",
-   tag: "Mobilize",
-   title: "Local presence, rapid start",
-   copy: "Embedded field teams and vetted networks unlock reliable access to communities and decision-makers.",
-  },
-  {
-   icon: "mdi:chart-pie",
-   tag: "Analyse",
-   title: "Mixed-method rigor",
-   copy: "Qualitative and quantitative tools paired with triangulation deliver defensible findings you can trust.",
-  },
-  {
-   icon: "mdi:rocket-launch-outline",
-   tag: "Apply",
-   title: "Insight to action",
-   copy: "Clear recommendations and partner workshops move findings into implementation and learning.",
-  },
- ]
+ const serviceImages: Record<number, string> = {
+  0: "/dansom-community-dialogue.jpg",
+  3: "/dansom-research-workshop.jpg",
+  5: "/dansom-livelihoods-research.jpg",
+ }
+
+ const serviceAlts: Record<number, string> = {
+  0: "Community members contributing to a facilitated research discussion",
+  3: "A group participating in an organisational research workshop",
+  5: "Researchers examining environmental and agricultural conditions",
+ }
+
+ const featuredProjects = projects.slice(0, 4)
 </script>
+
+<style scoped>
+.media-shift img {
+ transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-shift:hover img {
+ transform: scale(1.025);
+}
+
+.capability-rail {
+ scrollbar-width: none;
+}
+
+.capability-rail::-webkit-scrollbar {
+ display: none;
+}
+
+.capability-panel:nth-child(even) {
+ margin-top: 3rem;
+}
+
+.project-row {
+ transition: padding-left 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-row:hover {
+ padding-left: 0.75rem;
+}
+
+@media (max-width: 767px) {
+ .capability-panel:nth-child(even) { margin-top: 0; }
+ .project-row:hover { padding-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+ .media-shift img,
+ .project-row {
+  transition: none;
+ }
+}
+</style>
+
