@@ -46,12 +46,12 @@
  }
 
  :root[data-theme="dark"] :is(.partner-logo-mark, .experience-logo, .project-logo) {
-  filter: brightness(1.45) saturate(0.9) contrast(0.96);
+    filter: brightness(1.42) saturate(0.9) contrast(0.96);
  }
 
  @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) :is(.partner-logo-mark, .experience-logo, .project-logo) {
-   filter: brightness(1.45) saturate(0.9) contrast(0.96);
+      filter: brightness(1.42) saturate(0.9) contrast(0.96);
   }
  }
 
@@ -128,3 +128,4 @@
   transition-duration: 0.01ms !important;
  }
 }
+
