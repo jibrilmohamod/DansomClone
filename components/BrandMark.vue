@@ -53,12 +53,6 @@
 .brand-mark--carousel.brand-mark--crest img { height: 4.65rem; }
 .brand-mark--experience { width: 9.75rem; }
 .brand-mark--project { width: 10.75rem; height: 5.25rem; }
-:global(:root[data-theme="dark"]) .brand-mark img { filter: brightness(1.05) contrast(1.03); }
-:global(:root[data-theme="dark"]) .brand-mark--boost img { filter: brightness(1.28) saturate(1.04) contrast(1.05); }
-@media (prefers-color-scheme: dark) {
- :global(:root:not([data-theme])) .brand-mark img { filter: brightness(1.05) contrast(1.03); }
- :global(:root:not([data-theme])) .brand-mark--boost img { filter: brightness(1.28) saturate(1.04) contrast(1.05); }
-}
 @media (max-width: 767px) {
  .brand-mark--experience { width: 8rem; height: 4.25rem; }
  .brand-mark--project { width: 9rem; height: 4.5rem; }
