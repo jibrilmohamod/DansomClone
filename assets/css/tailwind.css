@@ -2,38 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+ :root,
+ :root[data-theme="light"] {
+  color-scheme: light;
+ --ink: 247 248 246;
+ --panel: 255 255 254;
+  --panel-soft: 232 237 232;
+  --paper: 238 243 239;
+  --line: 164 178 167;
+  --mist: 16 34 47;
+  --primary: 78 101 20;
+  --accent-ink: 248 249 247;
+  --shadow: 30 59 50;
+ }
+
+ @media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+   color-scheme: dark;
+   --ink: 8 19 31;
+   --panel: 13 29 43;
+   --panel-soft: 18 38 55;
+   --paper: 10 24 36;
+   --line: 76 97 113;
+   --mist: 243 247 249;
+   --primary: 191 217 98;
+   --accent-ink: 8 19 31;
+   --shadow: 0 0 0;
+  }
+ }
+
+ :root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: 8 19 31;
+  --panel: 13 29 43;
+  --panel-soft: 18 38 55;
+  --paper: 10 24 36;
+  --line: 76 97 113;
+  --mist: 243 247 249;
+  --primary: 191 217 98;
+  --accent-ink: 8 19 31;
+  --shadow: 0 0 0;
+ }
+
+ html {
+  scroll-behavior: smooth;
+  background: rgb(var(--ink));
+ }
+
+ body {
+  @apply bg-ink font-body text-mist antialiased;
+ }
+
+ ::selection {
+  background: rgba(191, 217, 98, 0.32);
+  color: rgb(var(--mist));
+ }
+
+ :focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-ink;
+ }
+}
+
 @layer components {
- .dansom-card {
-  @apply rounded-3xl border border-secondary/45 bg-gradient-to-br from-[#ffffff] via-[#dff4ff] to-[#eef8c9] shadow-[0_18px_44px_-28px_rgba(66,94,135,0.4)] transition;
+ .shell {
+  @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8;
  }
 
- .dansom-card-soft {
-  @apply rounded-2xl border border-quaternary/35 bg-gradient-to-br from-[#e9f7ff] via-[#ffffff] to-[#e7f4bf];
+ .surface {
+  @apply rounded-2xl border bg-panel;
+  border-color: rgb(var(--line) / 0.72);
+  box-shadow:
+   0 1px 2px rgb(var(--shadow) / 0.1),
+   0 20px 54px -38px rgb(var(--shadow) / 0.52);
  }
 
- .dansom-chip {
-  @apply rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+ .surface-soft {
+  @apply rounded-2xl border bg-panel-soft;
+  border-color: rgb(var(--line) / 0.56);
+  box-shadow: 0 14px 38px -34px rgb(var(--shadow) / 0.42);
  }
 
- .dansom-card:hover {
-  @apply border-primary/60 shadow-[0_20px_45px_-28px_rgba(80,174,211,0.45)];
+ .editorial-media {
+  @apply overflow-hidden rounded-2xl border bg-panel;
+  border-color: rgb(var(--line) / 0.72);
+  box-shadow:
+   0 1px 2px rgb(var(--shadow) / 0.1),
+   0 24px 64px -42px rgb(var(--shadow) / 0.5);
  }
 
- .animate-bob {
-  animation: bob 1.8s ease-in-out infinite;
+ .eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary;
  }
 
- .animate-fade-up {
-  animation: fade-up 0.7s ease both;
+ .display-title {
+  @apply font-display font-semibold tracking-[-0.045em] text-mist;
  }
 
- @keyframes bob {
-  0%, 100% { transform: translateY(0); opacity: 0.8; }
-  50% { transform: translateY(8px); opacity: 1; }
+ .body-copy {
+  @apply max-w-[65ch] leading-relaxed text-mist/[0.68];
  }
 
- @keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+ .button-primary {
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-primary px-5 py-3 text-sm font-bold text-accent-ink transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-px;
+ }
+
+ .button-ghost {
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-mist/20 bg-mist/[0.03] px-5 py-3 text-sm font-bold text-mist transition duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:text-primary active:translate-y-px;
+ }
+
+ .text-link {
+  @apply inline-flex items-center gap-2 font-semibold text-primary transition duration-300 hover:gap-3;
+ }
+
+ .reveal {
+  animation: reveal-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+ }
+
+ .brand-logo {
+  filter: none;
+ }
+
+ .logo-invert {
+  filter: none;
+ }
+
+ @media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .brand-logo,
+  :root:not([data-theme]) .logo-invert {
+   filter: brightness(0) invert(1);
+  }
+ }
+
+ :root[data-theme="dark"] .brand-logo,
+ :root[data-theme="dark"] .logo-invert {
+  filter: brightness(0) invert(1);
+ }
+
+ .media-zoom img {
+  @apply transition duration-700 ease-out;
+ }
+
+ .media-zoom:hover img {
+  transform: scale(1.025);
+ }
+}
+
+@keyframes reveal-in {
+ from {
+  opacity: 0;
+  transform: translateY(24px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+
+@supports (animation-timeline: view()) {
+ .reveal {
+  animation-timeline: view();
+  animation-range: entry 5% cover 28%;
+ }
+}
+
+@media (prefers-reduced-motion: reduce) {
+ html {
+  scroll-behavior: auto;
+ }
+
+ *,
+ *::before,
+ *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
  }
 }
