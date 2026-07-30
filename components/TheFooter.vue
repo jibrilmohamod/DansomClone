@@ -3,8 +3,8 @@
   <div class="atlas-shell">
    <div class="grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-7">
-     <p class="atlas-label">Make the next decision with better evidence</p>
-     <h2 class="atlas-display mt-6 max-w-4xl text-[clamp(3.3rem,7vw,7rem)] leading-[0.88]">Bring us the context. We will find the signal.</h2>
+     <p class="atlas-label">Research and advisory enquiries</p>
+     <h2 class="atlas-display mt-6 max-w-4xl text-[clamp(3.3rem,7vw,7rem)] leading-[0.88]">Discuss your next assignment with our team.</h2>
      <NuxtLink to="/Contact" class="button-primary mt-9">Start a project <Icon name="mdi:arrow-top-right" /></NuxtLink>
     </div>
     <div class="grid gap-10 border-t border-line/50 pt-8 sm:grid-cols-2 lg:col-span-4 lg:col-start-9 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">

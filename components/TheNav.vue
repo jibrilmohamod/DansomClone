@@ -7,7 +7,7 @@
  <header class="atlas-nav relative z-50" :class="overlay ? 'atlas-nav-overlay' : 'atlas-nav-solid'">
   <div class="atlas-shell flex h-[76px] items-center gap-5">
    <NuxtLink to="/" class="logo-plate shrink-0" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-8 w-auto" />
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" width="153" height="32" />
    </NuxtLink>
 
    <nav aria-label="Primary navigation" class="ml-auto hidden items-center gap-8 text-sm font-semibold xl:flex">
@@ -36,7 +36,7 @@
 .atlas-nav-overlay { color: white; border-bottom: 1px solid rgb(255 255 255 / 0.16); }
 .atlas-nav-solid { color: rgb(var(--mist)); border-bottom: 1px solid rgb(var(--line) / 0.45); background: rgb(var(--ink) / 0.88); backdrop-filter: blur(24px); }
 .logo-plate { display: inline-flex; align-items: center; border-radius: 0.7rem; background: #f7f8f6; padding: 0.42rem 0.68rem; box-shadow: 0 14px 36px -26px rgb(0 0 0 / 0.65); }
-.logo-plate img { display: block; width: auto; height: 2rem; }
+.logo-plate img { display: block !important; width: 9.5625rem !important; max-width: 9.5625rem !important; height: 2rem !important; object-fit: contain; }
 .nav-link { position: relative; padding-block: 0.6rem; color: currentColor; opacity: 0.68; transition: opacity 240ms ease; }
 .nav-link::after { content: ""; position: absolute; inset: auto 0 0; height: 2px; background: #c5e060; transform: scaleX(0); transform-origin: left; transition: transform 240ms ease; }
 .nav-link:hover, .nav-link.router-link-active { opacity: 1; }

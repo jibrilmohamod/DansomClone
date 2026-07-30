@@ -13,8 +13,9 @@
       :alt="copy === 1 ? partner.name : ''"
       width="220"
       height="72"
-      loading="lazy"
-      :class="['partner-logo-mark', { 'partner-logo-contrast': partner.darkContrast }]"
+      loading="eager"
+      fetchpriority="low"
+      class="partner-logo-mark"
      />
     </div>
    </div>
@@ -24,12 +25,12 @@
 
 <script setup lang="ts">
  const partners = [
-  { name: "World Bank", src: "/The_World_Bank_logo.svg", darkContrast: true },
+  { name: "World Bank", src: "/The_World_Bank_logo.svg" },
   { name: "World Food Programme", src: "/wfp-logo-standard-blue-en.svg" },
   { name: "Federal Republic of Somalia", src: "/Coat_of_arms_of_Somalia.svg" },
   { name: "Food and Agriculture Organization", src: "/FAO_logo.svg" },
   { name: "GIZ", src: "/GIZ.svg" },
-  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg", darkContrast: true },
+  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg" },
  ]
 </script>
 
@@ -75,13 +76,13 @@
  transform: translateY(-2px);
 }
 
-:global(:root[data-theme="dark"]) .partner-logo-contrast {
- filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+:global(:root[data-theme="dark"]) .partner-logo-mark {
+ filter: brightness(2.35) saturate(0.9) contrast(0.84) drop-shadow(0 0 1px rgb(255 255 255 / 0.42));
 }
 
 @media (prefers-color-scheme: dark) {
- :global(:root:not([data-theme])) .partner-logo-contrast {
-  filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+ :global(:root:not([data-theme])) .partner-logo-mark {
+  filter: brightness(2.35) saturate(0.9) contrast(0.84) drop-shadow(0 0 1px rgb(255 255 255 / 0.42));
  }
 }
 

@@ -2,7 +2,7 @@
  <div class="fixed inset-0 z-[60] overflow-y-auto bg-[#050e17] text-white xl:hidden">
   <div class="atlas-shell flex min-h-[100dvh] flex-col py-5">
    <div class="flex items-center justify-between">
-    <div class="logo-plate"><img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-8 w-auto" /></div>
+    <div class="logo-plate"><img src="/dansom-logo.png" alt="Dansom Research & Consultancy" width="153" height="32" /></div>
     <button type="button" class="inline-flex h-11 items-center gap-2 rounded-xl border border-white/25 px-4 text-sm font-bold" aria-label="Close navigation" @click="$emit('toggleMobileNav')">Close <Icon name="mdi:close" /></button>
    </div>
    <nav aria-label="Mobile navigation" class="my-auto grid py-12">
@@ -26,7 +26,7 @@
 
 <style scoped>
 .logo-plate { display: inline-flex; border-radius: 0.7rem; background: #f7f8f6; padding: 0.45rem 0.7rem; }
-.logo-plate img { display: block; width: auto; height: 2rem; }
+.logo-plate img { display: block !important; width: 9.5625rem !important; max-width: 9.5625rem !important; height: 2rem !important; object-fit: contain; }
 .mobile-link { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgb(255 255 255 / 0.16); padding-block: 1rem; font-family: "Space Grotesk", sans-serif; font-size: clamp(2.2rem, 11vw, 4.6rem); font-weight: 600; line-height: 1; letter-spacing: -0.055em; }
 .mobile-link:last-child { border-bottom: 1px solid rgb(255 255 255 / 0.16); }
 </style>

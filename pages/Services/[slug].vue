@@ -19,7 +19,7 @@
 
     <article class="lg:col-span-8 lg:col-start-5">
      <p class="atlas-label">How we work</p>
-     <h2 class="atlas-display mt-6 text-[clamp(3.5rem,7vw,7rem)] leading-[0.86]">Context first. Evidence throughout.</h2>
+     <h2 class="atlas-display mt-6 text-[clamp(3rem,5.5vw,5.5rem)] leading-[0.88]">Context first. Evidence throughout.</h2>
      <div class="service-narrative mt-16" v-html="service.about"></div>
      <div class="mt-20 grid gap-6 border-y border-line/55 py-9 md:grid-cols-2">
       <NuxtLink to="/Portfolio" class="group"><p class="atlas-label">Related evidence</p><p class="mt-3 font-display text-3xl font-semibold transition group-hover:text-primary">View our project work</p></NuxtLink>
@@ -32,9 +32,9 @@
 </template>
 
 <style>
-.service-narrative>p { max-width: 34ch; font-family:"Space Grotesk",sans-serif; font-size:clamp(2rem,4.1vw,4.5rem); font-weight:500; line-height:1.05; letter-spacing:-.045em; color:rgb(var(--mist)/.82); }
-.service-narrative>p+ p { margin-top:clamp(5rem,12vw,11rem); margin-left:auto; }
-.service-narrative ul { margin-top:4rem; display:grid; gap:1rem; border-top:1px solid rgb(var(--line)/.55); padding-top:2rem; }
+.service-narrative>p { max-width: 56ch; font-size:clamp(1.125rem,1.65vw,1.55rem); font-weight:400; line-height:1.65; letter-spacing:-.015em; color:rgb(var(--mist)/.78); }
+.service-narrative>p+ p { margin-top:clamp(2.5rem,5vw,4.5rem); margin-left:auto; }
+.service-narrative ul { margin-top:3rem; display:grid; gap:1rem; border-top:1px solid rgb(var(--line)/.55); padding-top:2rem; }
 .service-narrative li { border-bottom:1px solid rgb(var(--line)/.45); padding-bottom:1rem; color:rgb(var(--mist)/.65); }
 </style>
 

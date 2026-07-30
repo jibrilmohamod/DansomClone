@@ -20,6 +20,6 @@
 <style scoped>
 .project-record { background:linear-gradient(90deg,transparent,rgb(var(--panel)/0)); transition:background 350ms ease; }
 .project-record:hover { background:linear-gradient(90deg,transparent,rgb(var(--panel)/.8)); }
-:global(:root[data-theme="dark"]) .project-logo { filter:drop-shadow(0 0 .75px rgba(255,255,255,.9)); }
-@media(prefers-color-scheme:dark){:global(:root:not([data-theme])) .project-logo{filter:drop-shadow(0 0 .75px rgba(255,255,255,.9));}}
+:global(:root[data-theme="dark"]) .project-logo { filter:brightness(2.35) saturate(.9) contrast(.84) drop-shadow(0 0 1px rgb(255 255 255/.42)); }
+@media(prefers-color-scheme:dark){:global(:root:not([data-theme])) .project-logo{filter:brightness(2.35) saturate(.9) contrast(.84) drop-shadow(0 0 1px rgb(255 255 255/.42));}}
 </style>
