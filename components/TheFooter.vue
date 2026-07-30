@@ -7,16 +7,19 @@
      <h2 class="atlas-display mt-6 max-w-3xl text-[clamp(2.75rem,5vw,5rem)] leading-[0.94]">Discuss your next assignment with our team.</h2>
      <NuxtLink to="/Contact" class="button-primary mt-9">Start a project <Icon name="mdi:arrow-top-right" /></NuxtLink>
     </div>
-    <div class="grid gap-10 border-t border-line/50 pt-8 sm:grid-cols-2 lg:col-span-4 lg:col-start-9 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+    <div class="grid gap-10 border-t border-line/50 pt-8 sm:grid-cols-[8rem_1fr] lg:col-span-5 lg:col-start-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
      <nav aria-label="Footer navigation" class="grid content-start gap-3 text-sm text-mist/60">
       <p class="mb-2 font-semibold text-mist">Explore</p>
       <NuxtLink to="/About">About</NuxtLink><NuxtLink to="/Services">Services</NuxtLink><NuxtLink to="/Portfolio">Work</NuxtLink><NuxtLink to="/Careers">Careers</NuxtLink><NuxtLink to="/Contact">Contact</NuxtLink>
      </nav>
-     <div class="text-sm leading-relaxed text-mist/60">
-      <p class="font-semibold text-mist">Mogadishu</p><p class="mt-1">Dirir Building on Balcad Road</p>
-      <p class="mt-5 font-semibold text-mist">Nairobi</p><p class="mt-1">Nas Apartments, No. 4, Milimani Road</p>
-      <a href="mailto:info@dansomconsultancy.org" class="mt-5 block text-primary">info@dansomconsultancy.org</a>
-      <a href="tel:+254745276911" class="mt-2 block">+254 745 276 911</a>
+     <div class="text-sm leading-relaxed text-mist/62">
+      <p class="font-semibold text-mist">Mogadishu</p><p class="mt-1">Airport Road, Waberi District,<br />Mogadishu, Somalia</p>
+      <p class="mt-5 font-semibold text-mist">Nairobi</p><p class="mt-1">Milimani Road (next to Middle East Bank),<br />Nas Apartment No. 4, P.O.BOX 6334-00610,<br />Nairobi, Kenya</p>
+      <p class="mt-5 font-semibold text-mist">Hargeisa</p><p class="mt-1">Shacab Mall, Shacab Street,<br />Second Road, Hargeisa</p>
+      <p class="mt-6 font-semibold text-mist">Dansom Research &amp; Consultancy Ltd</p>
+      <a href="mailto:info@dansomconsultancy.org" class="mt-2 block break-all text-primary">info@dansomconsultancy.org</a>
+      <a href="tel:+254722853540" class="mt-2 block">+254-722-853-540 (Kenya)</a>
+      <a href="tel:+252615570144" class="mt-1 block">+252-61-557-0144 (Somalia)</a>
      </div>
     </div>
    </div>

@@ -45,14 +45,24 @@
   --shadow: 0 0 0;
  }
 
- :root[data-theme="dark"] :is(.partner-logo-mark, .experience-logo, .project-logo) {
-    filter: brightness(1.42) saturate(0.9) contrast(0.96);
+ :root[data-theme="dark"] .home-cinema > img {
+  filter: brightness(0.8) saturate(0.86) contrast(1.06);
+ }
+ :root[data-theme="dark"] .home-cinema .home-scrim {
+  background: linear-gradient(110deg, rgb(3 9 15 / 0.95), rgb(3 9 15 / 0.7) 52%, rgb(3 9 15 / 0.42));
+ }
+ :root[data-theme="dark"] .page-cinema img {
+  filter: brightness(0.78) saturate(0.86) contrast(1.07);
+ }
+ :root[data-theme="dark"] .page-cinema .cinema-scrim {
+  background: linear-gradient(180deg, rgb(2 8 14 / 0.42), rgb(2 8 14 / 0.5) 38%, rgb(2 8 14 / 0.94));
  }
 
  @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) :is(.partner-logo-mark, .experience-logo, .project-logo) {
-      filter: brightness(1.42) saturate(0.9) contrast(0.96);
-  }
+  :root:not([data-theme]) .home-cinema > img { filter: brightness(0.8) saturate(0.86) contrast(1.06); }
+  :root:not([data-theme]) .home-cinema .home-scrim { background: linear-gradient(110deg, rgb(3 9 15 / 0.95), rgb(3 9 15 / 0.7) 52%, rgb(3 9 15 / 0.42)); }
+  :root:not([data-theme]) .page-cinema img { filter: brightness(0.78) saturate(0.86) contrast(1.07); }
+  :root:not([data-theme]) .page-cinema .cinema-scrim { background: linear-gradient(180deg, rgb(2 8 14 / 0.42), rgb(2 8 14 / 0.5) 38%, rgb(2 8 14 / 0.94)); }
  }
 
  html { scroll-behavior: smooth; overflow-x: clip; background: rgb(var(--ink)); }
@@ -128,4 +138,3 @@
   transition-duration: 0.01ms !important;
  }
 }
-

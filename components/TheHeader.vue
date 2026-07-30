@@ -1,7 +1,7 @@
 <template>
  <section class="page-cinema relative min-h-[100dvh] overflow-hidden bg-[#050e17] text-white">
   <div class="absolute inset-0"><slot name="image"><div class="h-full bg-[#091722]"></div></slot></div>
-  <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,14,23,0.2),rgba(5,14,23,0.22)_35%,rgba(5,14,23,0.92))]"></div>
+  <div class="cinema-scrim absolute inset-0"></div>
   <div class="cinema-grid absolute inset-0"></div>
   <TheNav overlay />
   <div class="atlas-shell relative z-10 flex min-h-[calc(100dvh-76px)] items-end pb-12 pt-24 md:pb-16">
@@ -25,6 +25,7 @@
 
 <style scoped>
 .page-cinema :deep(img) { width: 100%; height: 100%; object-fit: cover; animation: cinema-in 1.4s cubic-bezier(0.16,1,0.3,1) both; }
+.cinema-scrim { background:linear-gradient(180deg,rgba(5,14,23,.28),rgba(5,14,23,.34) 35%,rgba(5,14,23,.94)); }
 .cinema-grid { background-image: linear-gradient(rgb(255 255 255 / .1) 1px, transparent 1px),linear-gradient(90deg,rgb(255 255 255 / .1) 1px,transparent 1px); background-size: clamp(4rem,8vw,8rem) clamp(4rem,8vw,8rem); mask-image: linear-gradient(to bottom,transparent 12%,black); opacity:.28; }
 .cinema-title { animation: title-in 950ms 120ms cubic-bezier(0.16,1,0.3,1) both; }
 @keyframes cinema-in { from { opacity:0; transform:scale(1.1) } to { opacity:1; transform:scale(1) } }

@@ -76,18 +76,27 @@
     <aside class="h-fit lg:sticky lg:top-28 lg:col-span-3 lg:col-start-10">
      <p class="atlas-label">Regional presence</p>
      <div class="mt-8 border-t border-line/55">
-      <div class="border-b border-line/55 py-7">
+     <div class="border-b border-line/55 py-7">
        <p class="font-display text-3xl font-semibold">Mogadishu</p>
-       <p class="mt-3 text-sm leading-relaxed text-mist/[0.58]">Dirir Building on Balcad Road</p>
+       <p class="mt-3 text-sm leading-relaxed text-mist/[0.62]">Airport Road, Waberi District,<br />Mogadishu, Somalia</p>
       </div>
       <div class="border-b border-line/55 py-7">
        <p class="font-display text-3xl font-semibold">Nairobi</p>
-       <p class="mt-3 text-sm leading-relaxed text-mist/[0.58]">Nas Apartments, No. 4, Milimani Road</p>
+       <p class="mt-3 text-sm leading-relaxed text-mist/[0.62]">Milimani Road (next to Middle East Bank),<br />Nas Apartment No. 4, P.O.BOX 6334-00610,<br />Nairobi, Kenya</p>
+      </div>
+      <div class="border-b border-line/55 py-7">
+       <p class="font-display text-3xl font-semibold">Hargeisa</p>
+       <p class="mt-3 text-sm leading-relaxed text-mist/[0.62]">Shacab Mall, Shacab Street,<br />Second Road, Hargeisa</p>
       </div>
      </div>
      <div class="mt-8 grid gap-4 text-sm">
-      <a href="tel:+254745276911" class="group flex items-center justify-between border-b border-line/45 pb-3 hover:text-primary">
-       +254 745 276 911
+      <p class="font-semibold text-mist">Dansom Research &amp; Consultancy Ltd</p>
+      <a href="tel:+254722853540" class="group flex items-center justify-between border-b border-line/45 pb-3 hover:text-primary">
+       <span>+254-722-853-540 <span class="text-mist/45">(Kenya)</span></span>
+       <Icon name="mdi:arrow-top-right" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+      </a>
+      <a href="tel:+252615570144" class="group flex items-center justify-between border-b border-line/45 pb-3 hover:text-primary">
+       <span>+252-61-557-0144 <span class="text-mist/45">(Somalia)</span></span>
        <Icon name="mdi:arrow-top-right" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
       </a>
       <a href="mailto:info@dansomconsultancy.org" class="group flex items-center justify-between gap-4 border-b border-line/45 pb-3 hover:text-primary">
@@ -128,10 +137,10 @@
  useSeoMeta({
   title: "Contact",
   description:
-   "Contact Dansom Research & Consultancy in Mogadishu or Nairobi to discuss monitoring, evaluation, research, security advisory, and programme support needs.",
+   "Contact Dansom Research & Consultancy in Mogadishu, Nairobi, or Hargeisa to discuss monitoring, evaluation, research, security advisory, and programme support needs.",
   ogTitle: "Contact Dansom Research & Consultancy",
   ogDescription:
-   "Reach Dansom's team in Mogadishu and Nairobi for research, MEL, advisory, and programme support across the Horn of Africa.",
+   "Reach Dansom's teams in Mogadishu, Nairobi, and Hargeisa for research, MEL, advisory, and programme support across the Horn of Africa.",
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })

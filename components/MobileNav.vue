@@ -10,7 +10,7 @@
    </nav>
    <div class="flex items-end justify-between border-t border-white/15 pt-6 text-sm text-white/55">
     <a href="https://so.linkedin.com/company/dansom-research-and-consultancy" target="_blank" rel="noopener noreferrer" class="text-[#c5e060]">LinkedIn</a>
-    <p class="text-right">Mogadishu<br />Nairobi</p>
+    <p class="text-right">Mogadishu<br />Nairobi<br />Hargeisa</p>
    </div>
   </div>
  </div>

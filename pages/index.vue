@@ -2,7 +2,7 @@
  <div>
   <section class="home-cinema relative min-h-[100dvh] overflow-hidden bg-[#050e17] text-white">
    <img src="/dansom-field-research-hero.jpg" alt="Dansom researchers speaking with community members in a rural farming area" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" width="1586" height="992" />
-   <div class="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,14,23,0.94)_0%,rgba(5,14,23,0.64)_50%,rgba(5,14,23,0.24)_100%)]"></div>
+   <div class="home-scrim absolute inset-0"></div>
    <div class="atlas-grid absolute inset-0 opacity-30"></div>
    <TheNav overlay />
 
@@ -62,7 +62,7 @@
     <RevealBlock class="lg:col-span-4"><p class="atlas-label">Selected experience</p><h2 class="atlas-display mt-6 text-5xl leading-[0.9] md:text-7xl">Evidence tested in real programmes.</h2><NuxtLink to="/Portfolio" class="button-ghost mt-8">Full portfolio <Icon name="mdi:arrow-right" /></NuxtLink></RevealBlock>
     <div class="lg:col-span-7 lg:col-start-6">
      <NuxtLink v-for="project in featuredProjects" :key="project.title" to="/Portfolio" class="experience-row group grid gap-6 border-t border-line/55 py-8 first:border-t-0 first:pt-0 md:items-center">
-      <div class="experience-logo-cell"><img :src="`/${project.icon}`" :alt="project.Ngo || project.title" class="experience-logo" loading="eager" /></div>
+      <div class="experience-logo-cell"><BrandMark :src="`/${project.icon}`" :alt="project.Ngo || project.title" context="experience" loading="eager" /></div>
       <div><p class="text-sm font-semibold text-primary">{{ project.Location }}</p><h3 class="mt-2 max-w-[32ch] font-display text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-snug tracking-tight transition group-hover:text-primary">{{ project.title }}</h3></div>
       <Icon name="mdi:arrow-top-right" class="text-2xl text-mist/40 transition group-hover:text-primary" />
      </NuxtLink>
@@ -85,6 +85,7 @@
 
 <style scoped>
 .home-cinema>img { animation: slow-drift 16s ease-in-out alternate infinite; }
+.home-scrim { background:linear-gradient(110deg,rgba(5,14,23,.94) 0%,rgba(5,14,23,.68) 52%,rgba(5,14,23,.32) 100%); }
 .home-title { animation: home-title 1s 100ms cubic-bezier(.16,1,.3,1) both; }
 .atlas-scroll { scrollbar-width: thin; scrollbar-color: rgb(var(--primary)) transparent; }
 .service-panel { background: linear-gradient(145deg,rgb(var(--panel)/.65),transparent 70%); }
@@ -92,10 +93,7 @@
 .capability-control:hover { border-color:rgb(var(--primary)); background:rgb(var(--primary)); color:rgb(var(--accent-ink)); transform:translateY(-2px); }
 .experience-row { grid-template-columns:9.5rem minmax(0,1fr) auto; }
 .experience-logo-cell { display:flex; min-height:4.75rem; align-items:center; }
-.experience-logo { display:block; width:100%; max-width:9rem; max-height:4.5rem; object-fit:contain; object-position:left center; }
-:global(:root[data-theme="dark"]) .experience-logo { filter:brightness(1.55) saturate(.9) contrast(.94); }
-@media(prefers-color-scheme:dark){:global(:root:not([data-theme])) .experience-logo{filter:brightness(1.55) saturate(.9) contrast(.94);}}
-@media(max-width:767px){.experience-row{grid-template-columns:minmax(7.5rem,9rem) minmax(0,1fr)}.experience-row>:last-child{grid-column:2}.experience-logo-cell{min-height:4rem}.experience-logo{max-width:8rem;max-height:4rem}}
+@media(max-width:767px){.experience-row{grid-template-columns:minmax(7.5rem,9rem) minmax(0,1fr)}.experience-row>:last-child{grid-column:2}.experience-logo-cell{min-height:4rem}}
 @keyframes home-title { from { opacity:0; transform:translateY(55px) } to { opacity:1; transform:none } }
 @media (prefers-reduced-motion:reduce) { .home-cinema>img,.home-title { animation:none; } }
 </style>
