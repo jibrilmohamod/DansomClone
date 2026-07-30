@@ -31,13 +31,6 @@ export default defineNuxtConfig({
   display: "swap",
  },
 
- //  nuxt image
- image: {
-  cloudinary: {
-   baseURL: "https://res.cloudinary.com/dckmlqzgd/image/upload/",
-  },
- },
-
  // seo
  site: {
   url: "https://dansomconsultancy.org",

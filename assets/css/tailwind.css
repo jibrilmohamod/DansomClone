@@ -6,9 +6,11 @@
  :root,
  :root[data-theme="light"] {
   color-scheme: light;
-  --ink: 247 248 246;
-  --panel: 255 255 254;
-  --panel-soft: 239 242 239;
+ --ink: 247 248 246;
+ --panel: 255 255 254;
+  --panel-soft: 232 237 232;
+  --paper: 238 243 239;
+  --line: 164 178 167;
   --mist: 16 34 47;
   --primary: 78 101 20;
   --accent-ink: 248 249 247;
@@ -21,6 +23,8 @@
    --ink: 8 19 31;
    --panel: 13 29 43;
    --panel-soft: 18 38 55;
+   --paper: 10 24 36;
+   --line: 76 97 113;
    --mist: 243 247 249;
    --primary: 191 217 98;
    --accent-ink: 8 19 31;
@@ -33,6 +37,8 @@
   --ink: 8 19 31;
   --panel: 13 29 43;
   --panel-soft: 18 38 55;
+  --paper: 10 24 36;
+  --line: 76 97 113;
   --mist: 243 247 249;
   --primary: 191 217 98;
   --accent-ink: 8 19 31;
@@ -64,11 +70,25 @@
  }
 
  .surface {
-  @apply rounded-2xl border border-mist/10 bg-panel;
+  @apply rounded-2xl border bg-panel;
+  border-color: rgb(var(--line) / 0.72);
+  box-shadow:
+   0 1px 2px rgb(var(--shadow) / 0.1),
+   0 20px 54px -38px rgb(var(--shadow) / 0.52);
  }
 
  .surface-soft {
-  @apply rounded-2xl border border-mist/10 bg-panel-soft;
+  @apply rounded-2xl border bg-panel-soft;
+  border-color: rgb(var(--line) / 0.56);
+  box-shadow: 0 14px 38px -34px rgb(var(--shadow) / 0.42);
+ }
+
+ .editorial-media {
+  @apply overflow-hidden rounded-2xl border bg-panel;
+  border-color: rgb(var(--line) / 0.72);
+  box-shadow:
+   0 1px 2px rgb(var(--shadow) / 0.1),
+   0 24px 64px -42px rgb(var(--shadow) / 0.5);
  }
 
  .eyebrow {

@@ -2,13 +2,13 @@
  <div>
   <TheHeader title="Careers">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
+    <img
      loading="eager"
-     format="webp"
-     alt="Dansom researchers collaborating during fieldwork"
-     sizes="sm:100vw md:50vw lg:760px"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
+     fetchpriority="high"
+     width="1588"
+     height="991"
+     alt="Research and operations colleagues preparing for fieldwork"
+     src="/dansom-field-operations.jpg"
      class="h-full w-full object-cover"
     />
    </template>

@@ -23,15 +23,14 @@
     </div>
 
     <div class="lg:col-span-7 lg:pl-12" data-testid="home-intro-media">
-     <div class="overflow-hidden rounded-2xl border border-mist/10 bg-panel shadow-lift">
+     <div class="editorial-media">
       <div class="media-zoom overflow-hidden">
-       <NuxtImg
-        provider="cloudinary"
-        format="webp"
+       <img
         loading="lazy"
-        sizes="sm:100vw md:70vw lg:760px"
-        src="v1713946564/expertise-1000x757_1_ha2eyx.jpg"
-        alt="Dansom field research and regional expertise"
+        width="1586"
+        height="992"
+        src="/dansom-livelihoods-research.jpg"
+        alt="Researchers and a farmer examining crop and soil conditions"
         class="aspect-[16/10] w-full object-cover"
        />
       </div>
@@ -103,14 +102,13 @@
 
   <section class="pb-16 md:pb-28">
    <div class="shell">
-    <div class="relative overflow-hidden rounded-2xl border border-mist/10">
-     <NuxtImg
-      provider="cloudinary"
-      format="webp"
+    <div class="editorial-media relative min-h-[34rem]">
+     <img
       loading="lazy"
-      sizes="sm:100vw lg:1400px"
-      src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
-      alt="Community engagement fieldwork in Somalia"
+      width="1586"
+      height="992"
+      src="/dansom-community-dialogue.jpg"
+      alt="Researchers listening to community members during a consultation"
       class="absolute inset-0 h-full w-full object-cover"
      />
      <div class="absolute inset-0 bg-ink/80"></div>

@@ -2,13 +2,13 @@
  <div>
   <TheHeader title="Our Portfolio">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
+    <img
      loading="eager"
-     format="webp"
-     alt="Dansom project fieldwork"
-     sizes="sm:100vw md:50vw lg:760px"
-     src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
+     fetchpriority="high"
+     width="1588"
+     height="991"
+     alt="Research and operations staff planning a field deployment"
+     src="/dansom-field-operations.jpg"
      class="h-full w-full object-cover"
     />
    </template>

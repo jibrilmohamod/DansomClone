@@ -2,13 +2,13 @@
  <div>
   <TheHeader :projTitle="service.fullTitle">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
+    <img
      loading="eager"
-     format="webp"
-     alt="Dansom research team working in the Horn of Africa"
-     sizes="sm:100vw md:50vw lg:760px"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
+     fetchpriority="high"
+     width="1586"
+     height="992"
+     alt="Analysts reviewing field evidence and programme findings"
+     src="/dansom-programme-analysis.jpg"
      class="h-full w-full object-cover"
     />
    </template>

@@ -2,13 +2,13 @@
  <div>
   <TheHeader title="Our Services">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
+    <img
      loading="eager"
-     format="webp"
-     alt="Dansom field research in the Horn of Africa"
-     sizes="sm:100vw md:50vw lg:760px"
-     src="v1713946564/expertise-1000x757_1_ha2eyx.jpg"
+     fetchpriority="high"
+     width="1586"
+     height="992"
+     alt="Researchers independently monitoring rural water infrastructure"
+     src="/dansom-field-monitoring.jpg"
      class="h-full w-full object-cover"
     />
    </template>

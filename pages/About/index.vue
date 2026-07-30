@@ -2,13 +2,13 @@
  <div>
   <TheHeader title="Who We Are">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
+    <img
      loading="eager"
-     format="webp"
-     alt="Dansom team in the field"
-     sizes="sm:100vw md:50vw lg:760px"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
+     fetchpriority="high"
+     width="1570"
+     height="1002"
+     alt="Research specialists reviewing a fieldwork plan together"
+     src="/dansom-research-workshop.jpg"
      class="h-full w-full object-cover"
     />
    </template>
@@ -37,14 +37,13 @@
 
   <section class="border-y border-mist/10 bg-panel/[0.55] py-16 md:py-24">
    <div class="shell grid items-center gap-10 lg:grid-cols-2">
-    <div class="media-zoom overflow-hidden rounded-2xl border border-mist/10">
-     <NuxtImg
-      provider="cloudinary"
+    <div class="media-zoom editorial-media">
+     <img
       loading="lazy"
-      format="webp"
-      sizes="sm:100vw md:50vw lg:700px"
-      src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
-      alt="Community engagement fieldwork in Somalia"
+      width="1586"
+      height="992"
+      src="/dansom-community-dialogue.jpg"
+      alt="Community members sharing local knowledge with researchers"
       class="aspect-[5/4] w-full object-cover"
      />
     </div>
@@ -159,8 +158,6 @@
   {
    name: "Mahamed M. Dirir",
    role: "Managing Director",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Mahamed M. Dirir",
    about:
     "Over 20 years of experience leading M&E, conflict management, and development cooperation across Somalia.",
    aboutBig:
@@ -169,8 +166,6 @@
   {
    name: "Abdifatah Abdullahi Ali",
    role: "M&E Coordinator",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Abdifatah Abdullahi Ali",
    about:
     "Dynamic M&E professional with expertise across food security, livelihoods, WASH, health, governance, and resilience.",
    aboutBig:
@@ -179,8 +174,6 @@
   {
    name: "Jama Mahamed",
    role: "Business Development & Reporting Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Jama Mahamed",
    about:
     "Business development and reporting specialist with healthcare operations and programme management experience.",
    aboutBig:
@@ -189,8 +182,6 @@
   {
    name: "Douglas Nzioka",
    role: "Administration & Operations Manager",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Douglas Nzioka",
    about:
     "Operations, logistics, finance, and HR leader with extensive donor compliance and M&E experience.",
    aboutBig:
@@ -199,8 +190,6 @@
   {
    name: "Brian O. Mauwa",
    role: "Statistician Data Scientist & ME Specialist",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Brian O. Mauwa",
    about:
     "Statistician and data scientist with deep experience in monitoring, verification, and learning across Africa.",
    aboutBig:
@@ -209,8 +198,6 @@
   {
    name: "Mumina Hassan",
    role: "Gender Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Mumina Hassan",
    about:
     "Gender specialist and M&E expert advancing inclusive, accountable, and community-centered programming.",
    aboutBig:
@@ -219,8 +206,6 @@
   {
    name: "Jibril Mohamud",
    role: "ICT Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Jibril Mohamud",
    about:
     "IT specialist and data analyst supporting digital systems, analytics, and evidence-based decision-making.",
    aboutBig:

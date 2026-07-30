@@ -1,9 +1,9 @@
 <template>
  <NuxtLink
   :to="slug"
-  class="group grid min-h-[22rem] overflow-hidden rounded-2xl border border-mist/10 bg-panel transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
+  class="group surface grid min-h-[22rem] overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
  >
-  <div class="flex h-32 items-center border-b border-mist/10 bg-paper p-6">
+  <div class="flex h-32 items-center border-b border-line/60 bg-paper p-6">
    <NuxtImg
     v-if="icon"
     :src="icon"
