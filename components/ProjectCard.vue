@@ -4,7 +4,7 @@
   class="group surface grid min-h-[22rem] overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
  >
   <div class="flex h-32 items-center border-b border-line/60 bg-paper p-6">
-   <NuxtImg
+   <img
     v-if="icon"
     :src="icon"
     :alt="title + ' project partner logo'"
