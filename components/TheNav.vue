@@ -12,7 +12,7 @@
 <template>
  <header
   class="relative z-40 border-b text-mist backdrop-blur-xl"
-  :class="props.overlay ? 'nav-overlay border-white/15 bg-[#08131f]/35' : 'border-mist/10 bg-ink/[0.88]'"
+  :class="props.overlay ? 'nav-overlay border-line/55 bg-ink/[0.82]' : 'border-mist/10 bg-ink/[0.88]'"
  >
   <div class="shell hidden h-[72px] items-center gap-5 xl:flex">
    <NuxtLink to="/" class="shrink-0" aria-label="Dansom Research & Consultancy home">
@@ -97,14 +97,6 @@
 }
 
 .nav-overlay {
- --mist: 243 247 249;
- --primary: 191 217 98;
- --ink: 8 19 31;
- --accent-ink: 8 19 31;
-}
-
-.nav-overlay :deep(.brand-logo) {
- filter: brightness(0) invert(1);
+ box-shadow: 0 1px 0 rgb(var(--mist) / 0.04);
 }
 </style>
-

@@ -57,15 +57,28 @@
 
   <section id="capabilities" class="py-20 md:py-32 lg:py-40">
    <div class="shell">
-    <div class="max-w-4xl">
+   <div class="max-w-4xl">
      <h2 class="display-title text-4xl leading-[0.96] md:text-6xl lg:text-7xl">Expertise that moves with the context.</h2>
      <p class="body-copy mt-6 text-base md:text-lg">
       Six connected capabilities support programmes from first question to field delivery and institutional learning.
-     </p>
+    </p>
+    <div class="mt-8 flex items-center gap-3">
+     <button type="button" class="rail-control" aria-label="Previous expertise" @click="moveCapabilities(-1)">
+      <Icon name="mdi:arrow-left" />
+     </button>
+     <button type="button" class="rail-control" aria-label="Next expertise" @click="moveCapabilities(1)">
+      <Icon name="mdi:arrow-right" />
+     </button>
     </div>
    </div>
+  </div>
 
-   <div class="capability-rail mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[max(1rem,calc((100vw-1400px)/2+2rem))] pb-6 md:mt-20 md:gap-6">
+   <div
+    ref="capabilityRail"
+    class="capability-rail mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[max(1rem,calc((100vw-1400px)/2+2rem))] pb-6 md:mt-14 md:gap-6"
+    tabindex="0"
+    aria-label="Dansom areas of expertise"
+   >
     <NuxtLink
      v-for="(service, index) in services"
      :key="service.title"
@@ -174,6 +187,20 @@
  }
 
  const featuredProjects = projects.slice(0, 4)
+
+ const capabilityRail = ref<HTMLElement | null>(null)
+
+ const moveCapabilities = (direction: number) => {
+  const rail = capabilityRail.value
+  if (!rail) return
+
+  const panel = rail.querySelector<HTMLElement>(".capability-panel")
+  const gap = Number.parseFloat(window.getComputedStyle(rail).columnGap) || 24
+  const distance = (panel?.offsetWidth || rail.clientWidth * 0.8) + gap
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+  rail.scrollBy({ left: direction * distance, behavior: reduceMotion ? "auto" : "smooth" })
+ }
 </script>
 
 <style scoped>
@@ -186,11 +213,44 @@
 }
 
 .capability-rail {
- scrollbar-width: none;
+ overscroll-behavior-inline: contain;
+ scrollbar-color: rgb(var(--primary)) rgb(var(--line) / 0.22);
+ scrollbar-width: thin;
 }
 
 .capability-rail::-webkit-scrollbar {
- display: none;
+ height: 6px;
+}
+
+.capability-rail::-webkit-scrollbar-track {
+ background: rgb(var(--line) / 0.22);
+}
+
+.capability-rail::-webkit-scrollbar-thumb {
+ border-radius: 999px;
+ background: rgb(var(--primary));
+}
+
+.rail-control {
+ display: inline-flex;
+ height: 3rem;
+ width: 3rem;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid rgb(var(--line) / 0.7);
+ border-radius: 0.75rem;
+ background: rgb(var(--panel));
+ color: rgb(var(--mist));
+ font-size: 1.25rem;
+ box-shadow: 0 12px 32px -24px rgb(var(--shadow) / 0.65);
+ transition: transform 250ms ease, border-color 250ms ease, background 250ms ease, color 250ms ease;
+}
+
+.rail-control:hover {
+ transform: translateY(-2px);
+ border-color: rgb(var(--primary));
+ background: rgb(var(--primary));
+ color: rgb(var(--accent-ink));
 }
 
 .capability-panel:nth-child(even) {
@@ -212,9 +272,9 @@
 
 @media (prefers-reduced-motion: reduce) {
  .media-shift img,
- .project-row {
+ .project-row,
+ .rail-control {
   transition: none;
  }
 }
 </style>
-

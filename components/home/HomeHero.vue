@@ -1,5 +1,5 @@
 <template>
- <section class="home-hero relative min-h-[100dvh] overflow-hidden bg-[#08131f] text-[#f3f7f9]">
+ <section class="home-hero relative min-h-[100dvh] overflow-hidden bg-ink text-mist">
   <TheNav overlay />
 
   <div class="hero-media absolute inset-0 top-16 md:top-[72px]">
@@ -12,15 +12,15 @@
     class="h-full w-full object-cover object-[58%_center]"
    />
   </div>
-  <div class="absolute inset-0 top-16 bg-[linear-gradient(90deg,rgba(4,15,24,0.92)_0%,rgba(4,15,24,0.66)_42%,rgba(4,15,24,0.14)_72%),linear-gradient(0deg,rgba(4,15,24,0.9)_0%,transparent_52%)] md:top-[72px]"></div>
+  <div class="hero-scrim absolute inset-0 top-16 md:top-[72px]"></div>
 
   <div class="shell relative flex min-h-[calc(100dvh-4rem)] items-end pb-10 pt-24 md:min-h-[calc(100dvh-72px)] md:pb-14 lg:pb-16">
    <div class="hero-copy max-w-4xl">
-    <p class="text-sm font-semibold tracking-[-0.01em] text-[#bfd962]">Research grounded in lived context</p>
-    <h1 class="mt-5 max-w-[15ch] font-display text-[clamp(3.25rem,7vw,7rem)] font-semibold leading-[0.88] tracking-[-0.065em] text-[#f3f7f9]">
+    <p class="text-sm font-semibold tracking-[-0.01em] text-primary">Research grounded in lived context</p>
+    <h1 class="mt-5 max-w-[15ch] font-display text-[clamp(3.25rem,7vw,7rem)] font-semibold leading-[0.88] tracking-[-0.065em] text-mist">
      Evidence begins where context lives.
     </h1>
-    <p class="mt-6 max-w-xl text-base leading-relaxed text-[#f3f7f9]/75 md:text-lg">
+    <p class="mt-6 max-w-xl text-base leading-relaxed text-mist/75 md:text-lg">
      Research, monitoring and advisory built from trusted access across Somalia, Kenya and the Horn of Africa.
     </p>
     <div class="mt-8 flex flex-wrap gap-3">
@@ -35,6 +35,12 @@
 <style scoped>
 .hero-media {
  animation: hero-curtain 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-scrim {
+ background:
+  linear-gradient(90deg, rgb(var(--ink) / 0.96) 0%, rgb(var(--ink) / 0.78) 42%, rgb(var(--ink) / 0.14) 74%),
+  linear-gradient(0deg, rgb(var(--ink) / 0.9) 0%, transparent 54%);
 }
 
 .hero-media img {
@@ -54,11 +60,11 @@
  align-items: center;
  justify-content: center;
  gap: 0.5rem;
- border: 1px solid rgb(243 247 249 / 0.36);
+ border: 1px solid rgb(var(--mist) / 0.28);
  border-radius: 0.75rem;
- background: rgb(8 19 31 / 0.34);
+ background: rgb(var(--ink) / 0.62);
  padding: 0.75rem 1.25rem;
- color: #f3f7f9;
+ color: rgb(var(--mist));
  font-size: 0.875rem;
  font-weight: 700;
  backdrop-filter: blur(14px);
@@ -67,8 +73,8 @@
 
 .hero-secondary:hover {
  transform: translateY(-2px);
- border-color: rgb(191 217 98 / 0.72);
- background: rgb(8 19 31 / 0.58);
+ border-color: rgb(var(--primary) / 0.72);
+ background: rgb(var(--ink) / 0.82);
 }
 
 @keyframes hero-curtain {
@@ -94,4 +100,3 @@
  }
 }
 </style>
-
