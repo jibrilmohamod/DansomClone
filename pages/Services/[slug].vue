@@ -1,46 +1,29 @@
 <template>
  <div>
   <TheHeader :projTitle="service.fullTitle" :eyebrow="service.category" :intro="service.subtitle">
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1586"
-     height="992"
-     alt="Analysts reviewing field evidence and programme findings"
-     src="/dansom-programme-analysis.jpg"
-     class="h-full w-full object-cover"
-    />
-   </template>
+   <template #image><img src="/dansom-programme-analysis.jpg" alt="Analysts reviewing field evidence and programme findings" fetchpriority="high" /></template>
   </TheHeader>
 
-  <main class="py-20 md:py-32">
-   <div class="shell grid gap-10 lg:grid-cols-12">
-    <aside class="lg:col-span-4">
-     <div class="border-y border-line/55 lg:sticky lg:top-28">
-      <div class="flex min-h-44 items-center justify-start border-b border-line/55 py-8">
-       <Icon :name="service.icon" class="h-24 w-24 text-primary" />
-      </div>
-      <dl class="grid gap-6 py-7 text-sm">
-       <div>
-        <dt class="font-semibold text-mist">Delivery model</dt>
-        <dd class="mt-2 leading-relaxed text-mist/[0.62]">{{ service.deliveryModel }}</dd>
-       </div>
-       <div>
-        <dt class="font-semibold text-mist">Coverage</dt>
-        <dd class="mt-2 text-mist/[0.62]">Somalia and Kenya</dd>
-       </div>
+  <main class="atlas-grid bg-ink py-24 md:py-36">
+   <div class="atlas-shell grid gap-14 lg:grid-cols-12">
+    <aside class="lg:col-span-3">
+     <div class="sticky top-8 border-t border-line/55 pt-6">
+      <Icon :name="service.icon" class="text-5xl text-primary" />
+      <dl class="mt-10 grid gap-7 text-sm">
+       <div><dt class="font-semibold text-mist">Delivery model</dt><dd class="mt-2 leading-relaxed text-mist/58">{{ service.deliveryModel }}</dd></div>
+       <div><dt class="font-semibold text-mist">Coverage</dt><dd class="mt-2 text-mist/58">Somalia and Kenya</dd></div>
       </dl>
+      <NuxtLink to="/Contact" class="button-primary mt-9">Discuss this service <Icon name="mdi:arrow-right" /></NuxtLink>
      </div>
     </aside>
 
-    <article class="lg:col-span-7 lg:col-start-6">
-     <p class="text-sm font-semibold text-primary">How we deliver</p>
-     <h2 class="display-title mt-4 text-4xl leading-tight md:text-6xl">Context first. Evidence throughout.</h2>
-     <div class="service-body mt-10 space-y-6 text-base leading-8 text-mist/[0.65]" v-html="service.about"></div>
-     <div class="mt-12 flex flex-wrap gap-3 border-t border-line/55 pt-8">
-      <NuxtLink to="/Contact" class="button-primary">Discuss this service <Icon name="mdi:arrow-right" /></NuxtLink>
-      <NuxtLink to="/Portfolio" class="button-ghost">View relevant work</NuxtLink>
+    <article class="lg:col-span-8 lg:col-start-5">
+     <p class="atlas-label">How we work</p>
+     <h2 class="atlas-display mt-6 text-[clamp(2.75rem,4.4vw,4.5rem)] leading-[0.96]">Context first. Evidence throughout.</h2>
+     <div class="service-narrative mt-16" v-html="service.about"></div>
+     <div class="mt-20 grid gap-6 border-y border-line/55 py-9 md:grid-cols-2">
+      <NuxtLink to="/Portfolio" class="group"><p class="atlas-label">Related evidence</p><p class="mt-3 font-display text-3xl font-semibold transition group-hover:text-primary">View our project work</p></NuxtLink>
+      <NuxtLink to="/Services" class="group md:border-l md:border-line/55 md:pl-7"><p class="atlas-label">Other capabilities</p><p class="mt-3 font-display text-3xl font-semibold transition group-hover:text-primary">Explore all services</p></NuxtLink>
      </div>
     </article>
    </div>
@@ -49,36 +32,15 @@
 </template>
 
 <style>
-.service-body p + p {
- margin-top: 1.5rem;
-}
-.service-body ul {
- margin-top: 1.5rem;
- display: grid;
- gap: 0.75rem;
- padding-left: 1.25rem;
- list-style: disc;
-}
+.service-narrative>p { max-width: 56ch; font-size:clamp(1.125rem,1.65vw,1.55rem); font-weight:400; line-height:1.65; letter-spacing:-.015em; color:rgb(var(--mist)/.78); }
+.service-narrative>p+ p { margin-top:clamp(2.5rem,5vw,4.5rem); margin-left:auto; }
+.service-narrative ul { margin-top:3rem; display:grid; gap:1rem; border-top:1px solid rgb(var(--line)/.55); padding-top:2rem; }
+.service-narrative li { border-bottom:1px solid rgb(var(--line)/.45); padding-bottom:1rem; color:rgb(var(--mist)/.65); }
 </style>
 
-<script lang="ts" setup>
+<script setup lang="ts">
  import { services } from "~/data/services"
-
- const route = useRoute()
- const requestedService = decodeURIComponent(String(route.params.slug || ""))
- const service = services.find((item) => item.slug === requestedService)
-
- if (!service) {
-  throw createError({ statusCode: 404, statusMessage: "Service not found" })
- }
-
- useSeoMeta({
-  title: () => service.fullTitle,
-  description: () => service.subtitle,
-  ogTitle: () => `${service.fullTitle} | Dansom Research & Consultancy`,
-  ogDescription: () => service.subtitle,
-  ogImage: "/dansom-logo.png",
-  twitterCard: "summary_large_image",
- })
+ const route=useRoute(); const requestedService=decodeURIComponent(String(route.params.slug||"")); const service=services.find(item=>item.slug===requestedService)
+ if(!service) throw createError({statusCode:404,statusMessage:"Service not found"})
+ useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:"/dansom-programme-analysis.jpg", twitterCard:"summary_large_image" })
 </script>
-

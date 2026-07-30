@@ -1,16 +1,16 @@
 <template>
- <section id="field-intelligence" class="border-y border-line/35 bg-panel-soft/45 py-20 md:py-28 lg:py-36">
-  <div class="shell">
+ <section id="field-intelligence" class="border-y border-line/35 bg-panel-soft/35 py-20 md:py-24">
+  <div class="atlas-shell">
    <div class="max-w-4xl">
-    <h2 class="display-title text-4xl leading-[0.96] md:text-6xl lg:text-7xl">Clarity is built in the field.</h2>
+    <h2 class="display-title text-4xl leading-[0.96] md:text-6xl">How Dansom develops evidence.</h2>
     <p class="body-copy mt-6 text-base md:text-lg">
-     Every assignment moves through a disciplined cycle of local access, independent verification and decision-ready analysis.
+     Each assignment combines local access, independent verification, and analysis designed for practical decisions.
     </p>
    </div>
 
-   <div class="mt-14 grid gap-12 lg:mt-24 lg:grid-cols-12 lg:gap-8">
-    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block lg:h-[calc(100dvh-7rem)]">
-     <div class="relative h-full overflow-hidden rounded-2xl border border-line/55 bg-panel shadow-lift">
+   <div class="mt-14 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-8">
+    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block lg:h-[68dvh]">
+     <div class="relative h-full overflow-hidden border border-line/55 bg-panel">
       <img
        v-for="(chapter, index) in chapters"
        :key="chapter.title"
@@ -42,7 +42,7 @@
       v-for="(chapter, index) in chapters"
       :key="chapter.verb"
       :ref="(element) => setStepRef(element, index)"
-      class="sequence-step flex min-h-0 flex-col justify-center border-b border-line/40 py-10 first:pt-0 last:border-b-0 lg:min-h-[72dvh] lg:py-20"
+      class="sequence-step flex min-h-0 flex-col justify-center border-b border-line/40 py-10 first:pt-0 last:border-b-0 lg:min-h-[44dvh] lg:py-14"
       :class="activeIndex === index ? 'is-active' : ''"
      >
       <img
@@ -51,9 +51,9 @@
        width="1586"
        height="992"
        loading="lazy"
-       class="mb-7 aspect-[4/3] w-full rounded-2xl border border-line/55 object-cover lg:hidden"
+       class="mb-7 aspect-[16/9] w-full border border-line/55 object-cover lg:hidden"
       />
-      <p class="font-display text-xl font-semibold text-primary">{{ chapter.verb }}</p>
+      <p class="font-display text-base font-semibold text-primary">{{ chapter.verb }}</p>
       <h3 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-mist md:text-4xl">{{ chapter.title }}</h3>
       <p class="mt-5 text-base leading-relaxed text-mist/65">{{ chapter.copy }}</p>
      </article>
@@ -68,21 +68,21 @@
   {
    verb: "Listen",
    title: "Access before assumptions",
-   copy: "Local researchers begin with the people, institutions and incentives that shape each operating environment.",
+   copy: "Local researchers begin with the people, institutions, and incentives that shape each operating environment.",
    image: "/dansom-community-dialogue.jpg",
    alt: "Dansom researchers listening to community members during a consultation",
   },
   {
    verb: "Verify",
    title: "Evidence tested from every angle",
-   copy: "Field observations, interviews and quantitative evidence are triangulated to separate signal from noise.",
+   copy: "Field observations, interviews, and quantitative evidence are triangulated to test findings and resolve inconsistencies.",
    image: "/dansom-field-monitoring.jpg",
    alt: "A researcher recording observations during field monitoring",
   },
   {
    verb: "Advise",
    title: "Findings built for decisions",
-   copy: "Clear analysis and practical recommendations help partners adapt programmes, allocate resources and act with confidence.",
+   copy: "Clear analysis and practical recommendations help partners adapt programmes, allocate resources, and act with confidence.",
    image: "/dansom-programme-analysis.jpg",
    alt: "A research team reviewing programme findings and charts",
   },
@@ -148,4 +148,3 @@
  }
 }
 </style>
-

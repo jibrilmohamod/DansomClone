@@ -8,14 +8,7 @@
     :aria-hidden="copy === 2 ? 'true' : undefined"
    >
     <div v-for="partner in partners" :key="`${copy}-${partner.name}`" class="partner-mark">
-     <img
-      :src="partner.src"
-      :alt="copy === 1 ? partner.name : ''"
-      width="220"
-      height="72"
-      loading="lazy"
-      :class="['partner-logo-mark', { 'partner-logo-contrast': partner.darkContrast }]"
-     />
+     <BrandMark :src="partner.src" :alt="copy === 1 ? partner.name : ''" :shape="partner.shape" context="carousel" loading="eager" />
     </div>
    </div>
   </div>
@@ -24,12 +17,12 @@
 
 <script setup lang="ts">
  const partners = [
-  { name: "World Bank", src: "/The_World_Bank_logo.svg", darkContrast: true },
-  { name: "World Food Programme", src: "/wfp-logo-standard-blue-en.svg" },
-  { name: "Federal Republic of Somalia", src: "/Coat_of_arms_of_Somalia.svg" },
-  { name: "Food and Agriculture Organization", src: "/FAO_logo.svg" },
-  { name: "GIZ", src: "/GIZ.svg" },
-  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg", darkContrast: true },
+  { name: "World Bank", src: "/The_World_Bank_logo.svg", shape: "wide" as const },
+  { name: "World Food Programme", src: "/wfp-logo-standard-blue-en.svg", shape: "medium" as const },
+  { name: "Federal Republic of Somalia", src: "/Coat_of_arms_of_Somalia.svg", shape: "crest" as const },
+  { name: "Food and Agriculture Organization", src: "/FAO_logo.svg", shape: "crest" as const },
+  { name: "GIZ", src: "/GIZ.svg", shape: "wide" as const },
+  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg", shape: "wide" as const },
  ]
 </script>
 
@@ -62,28 +55,7 @@
  justify-content: center;
 }
 
-.partner-mark img {
- width: 100%;
- height: 100%;
- object-fit: contain;
- opacity: 0.92;
- transition: opacity 300ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.partner-mark:hover img {
- opacity: 1;
- transform: translateY(-2px);
-}
-
-:global(:root[data-theme="dark"]) .partner-logo-contrast {
- filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
-}
-
-@media (prefers-color-scheme: dark) {
- :global(:root:not([data-theme])) .partner-logo-contrast {
-  filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
- }
-}
+.partner-mark:hover :deep(img) { opacity: 1; transform: translateY(-2px); }
 
 .partner-carousel:hover .partner-track,
 .partner-carousel:focus-within .partner-track {
@@ -102,7 +74,6 @@
 
  .partner-track { animation: none; }
  .partner-set:last-child { display: none; }
- .partner-mark img { transition: none; }
+ .partner-mark :deep(img) { transition: none; }
 }
 </style>
-

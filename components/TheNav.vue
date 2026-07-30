@@ -1,113 +1,47 @@
 <script setup lang="ts">
- const props = withDefaults(defineProps<{ overlay?: boolean }>(), {
-  overlay: false,
- })
-
+ withDefaults(defineProps<{ overlay?: boolean }>(), { overlay: false })
  const showMobile = ref(false)
- const toggleMobileNav = () => {
-  showMobile.value = !showMobile.value
- }
 </script>
 
 <template>
- <header
-  class="relative z-40 border-b text-mist backdrop-blur-xl"
-  :class="props.overlay ? 'nav-overlay border-line/55 bg-ink/[0.82]' : 'border-mist/10 bg-ink/[0.88]'"
- >
-  <div class="shell hidden h-[72px] items-center gap-5 xl:flex">
+ <header class="atlas-nav relative z-50" :class="overlay ? 'atlas-nav-overlay' : 'atlas-nav-solid'">
+  <div class="atlas-shell flex h-[76px] items-center gap-5">
    <NuxtLink to="/" class="logo-plate shrink-0" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-9 w-auto" />
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" width="153" height="32" />
    </NuxtLink>
 
-   <nav aria-label="Primary navigation" class="ml-auto flex items-center gap-6 text-sm font-semibold">
-    <NuxtLink to="/" class="nav-link">Home</NuxtLink>
+   <nav aria-label="Primary navigation" class="ml-auto hidden items-center gap-8 text-sm font-semibold xl:flex">
     <NuxtLink to="/About" class="nav-link">About</NuxtLink>
     <NuxtLink to="/Services" class="nav-link">Services</NuxtLink>
-    <NuxtLink to="/Portfolio" class="nav-link">Portfolio</NuxtLink>
+    <NuxtLink to="/Portfolio" class="nav-link">Work</NuxtLink>
     <NuxtLink to="/Careers" class="nav-link">Careers</NuxtLink>
-    <NuxtLink to="/Contact" class="nav-link">Contact</NuxtLink>
-    <a href="http://webmail.dansomconsultancy.org/" target="_blank" rel="noopener noreferrer" class="nav-link">Staff Email</a>
    </nav>
 
-   <ThemeToggle compact />
-
-   <a
-    href="https://so.linkedin.com/company/dansom-research-and-consultancy"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Dansom Research & Consultancy on LinkedIn"
-    class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-mist/[0.15] text-mist/75 transition hover:border-primary/60 hover:text-primary"
-   >
-    <Icon name="ri:linkedin-fill" class="text-lg" />
-   </a>
-   <NuxtLink to="/Contact" class="button-primary shrink-0">
-    Contact
-    <Icon name="mdi:arrow-top-right" />
-   </NuxtLink>
-  </div>
-
-  <div class="flex h-16 items-center justify-between px-4 xl:hidden">
-   <NuxtLink to="/" class="logo-plate" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-7 w-auto" />
-   </NuxtLink>
-   <div class="flex items-center gap-2">
+   <div class="ml-auto flex items-center gap-2 xl:ml-4">
     <ThemeToggle compact />
-    <button
-     type="button"
-     class="inline-flex h-10 items-center justify-center rounded-xl border border-mist/[0.15] bg-mist/[0.03] px-3 text-sm font-bold text-mist"
-     aria-label="Open navigation"
-     :aria-expanded="showMobile"
-     @click="toggleMobileNav"
-    >
-     Menu
+    <a href="https://so.linkedin.com/company/dansom-research-and-consultancy" target="_blank" rel="noopener noreferrer" aria-label="Dansom Research & Consultancy on LinkedIn" class="nav-control hidden sm:inline-flex">
+     <Icon name="ri:linkedin-fill" />
+    </a>
+    <NuxtLink to="/Contact" class="button-primary hidden sm:inline-flex">Start a project <Icon name="mdi:arrow-top-right" /></NuxtLink>
+    <button type="button" class="nav-menu xl:hidden" aria-label="Open navigation" :aria-expanded="showMobile" @click="showMobile = !showMobile">
+     <span>Menu</span><Icon name="mdi:menu" class="text-xl" />
     </button>
    </div>
   </div>
-
-  <MobileNav v-if="showMobile" @toggleMobileNav="toggleMobileNav" />
+  <MobileNav v-if="showMobile" @toggleMobileNav="showMobile = false" />
  </header>
 </template>
 
 <style scoped>
-.nav-link {
- position: relative;
- padding: 0.55rem 0;
- color: rgb(var(--mist) / 0.66);
- transition: color 0.25s ease;
-}
-.nav-link::after {
- content: "";
- position: absolute;
- right: 0;
- bottom: 0;
- left: 0;
- height: 2px;
- background: #bfd962;
- transform: scaleX(0);
- transform-origin: left;
- transition: transform 0.25s ease;
-}
-.nav-link:hover,
-.nav-link.router-link-exact-active {
- color: rgb(var(--mist));
-}
-.nav-link:hover::after,
-.nav-link.router-link-exact-active::after {
- transform: scaleX(1);
-}
-
-.nav-overlay {
- box-shadow: 0 1px 0 rgb(var(--mist) / 0.04);
-}
-
-.logo-plate {
- display: inline-flex;
- align-items: center;
- border: 1px solid rgb(16 34 47 / 0.1);
- border-radius: 0.75rem;
- background: #f7f8f6;
- padding: 0.45rem 0.7rem;
- box-shadow: 0 12px 30px -24px rgb(8 19 31 / 0.45);
-}
+.atlas-nav-overlay { color: white; border-bottom: 1px solid rgb(255 255 255 / 0.16); }
+.atlas-nav-solid { color: rgb(var(--mist)); border-bottom: 1px solid rgb(var(--line) / 0.45); background: rgb(var(--ink) / 0.88); backdrop-filter: blur(24px); }
+.logo-plate { display: inline-flex; align-items: center; border-radius: 0.7rem; background: #f7f8f6; padding: 0.42rem 0.68rem; box-shadow: 0 14px 36px -26px rgb(0 0 0 / 0.65); }
+.logo-plate img { display: block !important; width: 9.5625rem !important; max-width: 9.5625rem !important; height: 2rem !important; object-fit: contain; }
+.nav-link { position: relative; padding-block: 0.6rem; color: currentColor; opacity: 0.68; transition: opacity 240ms ease; }
+.nav-link::after { content: ""; position: absolute; inset: auto 0 0; height: 2px; background: #c5e060; transform: scaleX(0); transform-origin: left; transition: transform 240ms ease; }
+.nav-link:hover, .nav-link.router-link-active { opacity: 1; }
+.nav-link:hover::after, .nav-link.router-link-active::after { transform: scaleX(1); }
+.nav-control { height: 2.75rem; width: 2.75rem; align-items: center; justify-content: center; border: 1px solid currentColor; border-radius: 0.7rem; opacity: 0.65; transition: opacity 240ms ease, color 240ms ease; }
+.nav-control:hover { opacity: 1; color: #c5e060; }
+.nav-menu { display: inline-flex; height: 2.75rem; align-items: center; gap: 0.5rem; border: 1px solid currentColor; border-radius: 0.7rem; padding-inline: 0.9rem; font-size: 0.8rem; font-weight: 700; opacity: 0.8; }
 </style>
-
