@@ -1,74 +1,40 @@
 <template>
  <div>
-  <TheHeader
-   title="Our Services"
-   eyebrow="Capabilities"
-   intro="Integrated research, monitoring, advisory, institutional support, and field delivery for complex contexts."
-  >
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1586"
-     height="992"
-     alt="Researchers independently monitoring rural water infrastructure"
-     src="/dansom-field-monitoring.jpg"
-     class="h-full w-full object-cover"
-    />
-   </template>
+  <TheHeader title="Capabilities" eyebrow="What we do" intro="Integrated research, monitoring, advisory, institutional support, and field delivery for complex contexts.">
+   <template #image><img src="/dansom-field-monitoring.jpg" alt="Researchers independently monitoring rural water infrastructure" fetchpriority="high" /></template>
   </TheHeader>
 
-  <section class="py-20 md:py-32">
-   <div class="shell grid gap-12 lg:grid-cols-12">
-    <RevealBlock class="lg:col-span-4">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Specialised services for complex operating environments.</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Contextual understanding and rigorous methodology keep programmes responsive, accountable, and grounded in reliable evidence.
-     </p>
-     <div class="media-zoom editorial-media mt-10 hidden lg:block">
-      <img src="/dansom-programme-analysis.jpg" alt="A Dansom team reviewing programme evidence" class="aspect-[4/5] w-full object-cover" loading="lazy" />
-     </div>
-    </RevealBlock>
-
-    <div class="lg:col-span-7 lg:col-start-6">
-     <RevealBlock
-      v-for="(service, index) in services"
-      :key="service.title"
-      as="article"
-      :delay="index * 45"
-      class="service-index border-t border-line/55 py-8 first:border-t-0 first:pt-0 md:py-10"
-     >
-      <div class="grid gap-5 md:grid-cols-[4rem_1fr_auto] md:items-start">
-       <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-line/60 text-primary"><Icon :name="service.icon" class="text-2xl" /></div>
-       <div>
-        <p class="text-sm font-semibold text-primary">{{ service.category }}</p>
-        <h3 class="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
-        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-mist/62">{{ service.description }}</p>
-       </div>
-       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" :aria-label="`Explore ${service.title}`" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line/60 text-mist transition hover:border-primary hover:bg-primary hover:text-accent-ink">
-        <Icon name="mdi:arrow-top-right" />
-       </NuxtLink>
-      </div>
-     </RevealBlock>
-    </div>
+  <section class="atlas-grid bg-ink py-24 md:py-36">
+   <div class="atlas-shell">
+    <RevealBlock class="max-w-6xl"><p class="atlas-label">The operating model</p><h2 class="atlas-display mt-6 text-[clamp(3.5rem,8.5vw,9rem)] leading-[0.84]">The method changes with the question. The rigour does not.</h2></RevealBlock>
    </div>
   </section>
 
-  <section class="border-t border-line/40 bg-panel-soft/35 py-20 md:py-28">
-   <div class="shell grid gap-10 lg:grid-cols-12">
-    <div class="lg:col-span-5">
-     <h2 class="display-title text-4xl leading-tight md:text-5xl">Designed around the operating context.</h2>
+  <section class="bg-[#050e17] text-white">
+   <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative min-h-[125dvh] border-t border-white/15">
+    <div class="sticky top-0 grid min-h-[100dvh] overflow-hidden lg:grid-cols-12">
+     <div class="service-visual relative min-h-[42dvh] lg:col-span-5 lg:min-h-full">
+      <img :src="images[index]" :alt="service.description" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,14,23,.1),rgba(5,14,23,.7))]"></div>
+      <p class="absolute bottom-6 left-6 font-display text-sm text-white/55 md:bottom-10 md:left-10">0{{ index+1 }} / 0{{ services.length }}</p>
+     </div>
+     <div class="atlas-grid flex items-end p-6 pb-12 md:p-10 md:pb-16 lg:col-span-7 lg:p-16">
+      <div class="max-w-4xl">
+       <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-white/20 text-[#c5e060]"><Icon :name="service.icon" class="text-3xl" /></div>
+       <p class="atlas-label mt-10">{{ service.category }}</p>
+       <h2 class="atlas-display mt-5 text-[clamp(3rem,7vw,7.5rem)] leading-[0.84]">{{ service.title }}</h2>
+       <p class="mt-7 max-w-2xl text-base leading-relaxed text-white/64 md:text-lg">{{ service.subtitle }}</p>
+       <NuxtLink :to="`/Services/${encodeURIComponent(service.slug)}`" class="button-primary mt-8">Explore capability <Icon name="mdi:arrow-right" /></NuxtLink>
+      </div>
+     </div>
     </div>
-    <RevealBlock class="grid gap-8 border-y border-line/55 py-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
-     <div>
-      <p class="font-display text-2xl font-semibold text-primary">Secure access</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Field teams positioned across Somalia and Kenya.</p>
-     </div>
-     <div>
-      <p class="font-display text-2xl font-semibold text-primary">Decision-ready</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Clear deliverables aligned to partner objectives.</p>
-     </div>
-    </RevealBlock>
+   </article>
+  </section>
+
+  <section class="bg-panel py-24 md:py-36">
+   <div class="atlas-shell grid gap-12 lg:grid-cols-12">
+    <RevealBlock class="lg:col-span-7"><p class="atlas-label">Across every assignment</p><h2 class="atlas-display mt-6 text-[clamp(3.5rem,7vw,7rem)] leading-[0.86]">Secure access. Independent evidence. Decision-ready analysis.</h2></RevealBlock>
+    <RevealBlock class="self-end border-t border-line/55 pt-6 lg:col-span-3 lg:col-start-10"><p class="text-lg leading-relaxed text-mist/65">Field teams positioned across Somalia and Kenya, supported by multidisciplinary researchers and operational specialists.</p><NuxtLink to="/Contact" class="button-primary mt-7">Discuss an assignment <Icon name="mdi:arrow-right" /></NuxtLink></RevealBlock>
    </div>
   </section>
  </div>
@@ -76,17 +42,6 @@
 
 <script setup lang="ts">
  import { services } from "~/data/services"
-
- useSeoMeta({
-  title: "Services",
-  description:
-   "Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.",
-  ogTitle: "Services | Dansom Research & Consultancy",
-  ogDescription:
-   "Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.",
-  ogImage: "/dansom-logo.png",
-  twitterCard: "summary_large_image",
- })
-
+ const images=["/dansom-community-dialogue.jpg","/dansom-field-monitoring.jpg","/dansom-research-workshop.jpg","/dansom-programme-analysis.jpg","/dansom-field-operations.jpg","/dansom-livelihoods-research.jpg"]
+ useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:"/dansom-field-monitoring.jpg", twitterCard:"summary_large_image" })
 </script>
-

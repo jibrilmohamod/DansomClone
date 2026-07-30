@@ -1,9 +1,9 @@
 <template>
  <div>
   <TheHeader
-   title="Who We Are"
+   title="Inside Dansom"
    eyebrow="Independent since 2009"
-   intro="Local access, multidisciplinary expertise, and independent judgement across the Horn of Africa."
+   intro="A regional research institution built around access, judgement, and the people who know the context."
   >
    <template #image>
     <img
@@ -18,76 +18,60 @@
    </template>
   </TheHeader>
 
-  <section class="py-20 md:py-32">
-   <div class="shell grid gap-12 lg:grid-cols-12">
-    <div class="reveal lg:col-span-7">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Research rooted in the Horn of Africa.</h2>
-     <p class="body-copy mt-6 text-lg">
-      We partner with humanitarian and development actors to unlock meaningful change across Somalia and Kenya. Our teams combine rigorous research, contextual understanding, and secure access to deliver evidence that informs policies, strengthens programmes, and amplifies community voices.
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-14 lg:grid-cols-12">
+    <p class="atlas-label lg:col-span-2">The premise</p>
+    <RevealBlock class="lg:col-span-9 lg:col-start-4">
+     <h2 class="atlas-display text-[clamp(3.5rem,8.8vw,9rem)] leading-[0.84]">
+      Evidence is only useful when it understands where it came from.
+     </h2>
+     <p class="mt-10 max-w-3xl text-lg leading-relaxed text-mist/[0.65] md:ml-auto md:text-2xl">
+      We partner with humanitarian and development actors across Somalia and Kenya. Multidisciplinary teams connect rigorous research, contextual understanding, and secure access to produce evidence that informs policies, strengthens programmes, and amplifies community voices.
      </p>
+    </RevealBlock>
+   </div>
+  </section>
+
+  <section class="relative min-h-[125dvh]">
+   <div class="sticky top-0 min-h-[100dvh] overflow-hidden">
+    <img
+     loading="lazy"
+     width="1586"
+     height="992"
+     src="/dansom-community-dialogue.jpg"
+     alt="Community members sharing local knowledge with researchers"
+     class="atlas-photo absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/45 to-ink/95"></div>
+    <div class="atlas-shell relative flex min-h-[100dvh] flex-col justify-between py-28 text-white md:py-36">
+     <div class="grid gap-6 lg:grid-cols-12">
+      <p class="atlas-label text-primary lg:col-span-2">Our vision</p>
+      <p class="max-w-sm text-base leading-relaxed text-white/[0.68] lg:col-span-3 lg:col-start-10">
+       Increase understanding through innovative socio-political engagement and strategic field-based research.
+      </p>
+     </div>
+     <h2 class="atlas-display max-w-[12ch] text-[clamp(4.2rem,12vw,12rem)] leading-[0.78]">Knowledge that strengthens the region.</h2>
     </div>
-    <RevealBlock class="grid gap-0 border-y border-line/55 sm:grid-cols-2 lg:col-span-5">
-     <div class="py-7 sm:pr-7">
-      <p class="font-display text-5xl font-semibold text-primary">2009</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/60">Founded to connect global partners with local insight.</p>
-     </div>
-     <div class="border-t border-line/55 py-7 sm:border-l sm:border-t-0 sm:pl-7">
-      <p class="font-display text-3xl font-semibold text-mist">Full access</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/60">Teams positioned across hard-to-reach regions.</p>
-     </div>
-    </RevealBlock>
    </div>
   </section>
 
-  <section class="border-y border-line/40 bg-panel-soft/35 py-20 md:py-32">
-   <div class="shell grid items-center gap-12 lg:grid-cols-12">
-    <RevealBlock class="media-zoom editorial-media lg:col-span-7">
-     <img
-      loading="lazy"
-      width="1586"
-      height="992"
-      src="/dansom-community-dialogue.jpg"
-      alt="Community members sharing local knowledge with researchers"
-      class="aspect-[5/4] w-full object-cover"
-     />
-    </RevealBlock>
-    <RevealBlock class="lg:col-span-4 lg:col-start-9">
-     <p class="eyebrow">Our vision</p>
-     <h2 class="display-title mt-5 text-4xl leading-tight md:text-5xl">Knowledge that strengthens the region.</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Our vision is to support the region by increasing understanding and knowledge through innovative socio-political engagement and strategic field-based research. We aim to be the trusted partner for institutions seeking clarity, accountability, and resilient programme design.
-     </p>
-     <div class="mt-8 grid gap-6 sm:grid-cols-2">
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Informed decisions</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Political economy analysis and security advisory guide policy and programming.</p>
-      </div>
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Community-first</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Approaches elevate local voices and prioritize inclusion.</p>
-      </div>
-     </div>
-    </RevealBlock>
-   </div>
-  </section>
-
-  <section class="py-20 md:py-32">
-   <div class="shell">
-    <OurExpertise title="Values that shape the work" subtitle="How we work with partners, communities, and one another.">
-     <template #vfor>
-       <div class="grid gap-x-8 gap-y-0 md:grid-cols-2">
-       <article
-        v-for="(service, index) in services"
-        :key="service.title"
-        class="group border-t border-line/55 py-8"
-       >
-        <div class="flex items-center justify-between"><Icon :name="service.icon" class="text-3xl text-primary" /><span class="font-display text-sm text-mist/35">0{{ index + 1 }}</span></div>
-        <h3 class="mt-12 font-display text-3xl font-semibold tracking-tight text-mist">{{ service.title }}</h3>
-        <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.58]">{{ service.subtitle }}</p>
-       </article>
-      </div>
-     </template>
-    </OurExpertise>
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell">
+    <div class="grid gap-8 lg:grid-cols-12">
+     <p class="atlas-label lg:col-span-2">Operating code</p>
+     <h2 class="atlas-display text-[clamp(3rem,7vw,7rem)] leading-[0.86] lg:col-span-8 lg:col-start-4">Four commitments. Every assignment.</h2>
+    </div>
+    <div class="mt-20">
+     <RevealBlock
+      v-for="(service, index) in services"
+      :key="service.title"
+      class="group grid min-h-[42dvh] items-center border-t border-line/55 py-10 md:grid-cols-12"
+     >
+      <span class="atlas-label md:col-span-2">0{{ index + 1 }}</span>
+      <h3 class="atlas-display mt-8 text-[clamp(3.5rem,8vw,8rem)] leading-none transition-colors group-hover:text-primary md:col-span-5 md:mt-0">{{ service.title }}</h3>
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-mist/[0.62] md:col-span-4 md:col-start-9 md:mt-0">{{ service.subtitle }}</p>
+     </RevealBlock>
+    </div>
    </div>
   </section>
 
@@ -104,15 +88,13 @@
    </template>
   </OurTeam>
 
-  <section class="py-20 md:py-28">
-   <div class="shell">
-    <RevealBlock class="grid gap-8 border-y border-line/55 py-10 lg:grid-cols-[1fr_auto] lg:items-end">
-     <div>
-      <h2 class="display-title text-4xl leading-tight md:text-5xl">Local access. Actionable intelligence.</h2>
-      <p class="body-copy mt-4">Tell us about your objectives and we will assemble the right team.</p>
-     </div>
-     <NuxtLink to="/Contact" class="button-primary">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
-    </RevealBlock>
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-10 lg:grid-cols-12 lg:items-end">
+    <h2 class="atlas-display text-[clamp(3.8rem,9vw,9rem)] leading-[0.82] lg:col-span-9">Local access. Actionable intelligence.</h2>
+    <div class="lg:col-span-3">
+     <p class="mb-7 text-base leading-relaxed text-mist/[0.62]">Tell us about your objectives and we will assemble the right team.</p>
+     <NuxtLink to="/Contact" class="button-primary">Start a project <Icon name="mdi:arrow-right" /></NuxtLink>
+    </div>
    </div>
   </section>
  </div>
@@ -164,7 +146,7 @@
    about:
     "Over 20 years of experience leading M&E, conflict management, and development cooperation across Somalia.",
    aboutBig:
-    "<p>Mahamad Mahab Dirir is a programming, management, social economic, development policy, conflict management, leadership, security and Monitoring and Evaluation Expert with over 20 years of experience in development cooperation and extensive experience working with donors and stakeholders throughout Somalia. As Founder and Executive Director of Dansom Research and Consultancy, he has worked since 2014 supervising numerous projects focused on M&E, including Third Party M&E, research, and project reviews. Mr. Dirirâ€™s specific sector experience additionally includes governance, gender, agriculture, security and economics.</p><p>In his role as Deputy Country Director at Solidarites International, he worked closely with stakeholders, including the Federal Government of Somalia and MOPIC, supporting authorities and administration officials with capacity building and improving access to service delivery in the humanitarian sector.</p><p>He has also previously served as an Evaluation Consultant on an EC-funded project in Puntland, assessing achievement of project targets, recommending corrective measures, and developing guidance for EC support programming.</p><p>As a native Somali, he has a keen understanding of the Somalia context, culture and the development needs of the country. In addition to his top-notch interpersonal skills, his established relationships with local actors help him to access difficult field locations and obtain needed information.</p><p>In addition to his rich experience, Mr. Dirir holds a Master of Science degree in Agriculture Science/Land Use in Developing Countries and is fluent in Somali and English</p>",
+    "<p>Mahamad Mahab Dirir is a programming, management, social economic, development policy, conflict management, leadership, security and Monitoring and Evaluation Expert with over 20 years of experience in development cooperation and extensive experience working with donors and stakeholders throughout Somalia. As Founder and Executive Director of Dansom Research and Consultancy, he has worked since 2014 supervising numerous projects focused on M&E, including Third Party M&E, research, and project reviews. Mr. Dirir’s specific sector experience additionally includes governance, gender, agriculture, security and economics.</p><p>In his role as Deputy Country Director at Solidarites International, he worked closely with stakeholders, including the Federal Government of Somalia and MOPIC, supporting authorities and administration officials with capacity building and improving access to service delivery in the humanitarian sector.</p><p>He has also previously served as an Evaluation Consultant on an EC-funded project in Puntland, assessing achievement of project targets, recommending corrective measures, and developing guidance for EC support programming.</p><p>As a native Somali, he has a keen understanding of the Somalia context, culture and the development needs of the country. In addition to his top-notch interpersonal skills, his established relationships with local actors help him to access difficult field locations and obtain needed information.</p><p>In addition to his rich experience, Mr. Dirir holds a Master of Science degree in Agriculture Science/Land Use in Developing Countries and is fluent in Somali and English</p>",
   },
   {
    name: "Abdifatah Abdullahi Ali",
@@ -180,7 +162,7 @@
    about:
     "Business development and reporting specialist with healthcare operations and programme management experience.",
    aboutBig:
-    "<p>Jama has over 3 years of experience in healthcare operations, programme management, strategic planning, and reporting. He has extensive experience producing accurate and timely performance reports, KPIs, and analytical insights that support strategic decision-making in complex, organisational and multi-stakeholder environments, including senior operational roles in hospital services and consultancy projects.</p><p>As an alumni of the NHS Graduate Management Training Scheme in the UK, he brings broad international perspective to Dansom. His strengths include advanced analytical and problem-solving skills, strong stakeholder communication, and proven success in synthesizing complex data into actionable reports.</p><p>He holds a Bachelorâ€™s degree in Biochemistry, a Postgraduate Diploma in Healthcare Leadership from the University of Birmingham, and a Masterâ€™s degree in Medical Biotechnology and Business Management.</p>",
+    "<p>Jama has over 3 years of experience in healthcare operations, programme management, strategic planning, and reporting. He has extensive experience producing accurate and timely performance reports, KPIs, and analytical insights that support strategic decision-making in complex, organisational and multi-stakeholder environments, including senior operational roles in hospital services and consultancy projects.</p><p>As an alumni of the NHS Graduate Management Training Scheme in the UK, he brings broad international perspective to Dansom. His strengths include advanced analytical and problem-solving skills, strong stakeholder communication, and proven success in synthesizing complex data into actionable reports.</p><p>He holds a Bachelor’s degree in Biochemistry, a Postgraduate Diploma in Healthcare Leadership from the University of Birmingham, and a Master’s degree in Medical Biotechnology and Business Management.</p>",
   },
   {
    name: "Douglas Nzioka",
@@ -196,7 +178,7 @@
    about:
     "Statistician and data scientist with deep experience in monitoring, verification, and learning across Africa.",
    aboutBig:
-    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID - SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelorâ€™s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
+    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID - SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelor’s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
   },
   {
    name: "Mumina Hassan",
@@ -204,7 +186,7 @@
    about:
     "Gender specialist and M&E expert advancing inclusive, accountable, and community-centered programming.",
    aboutBig:
-    "<p>Mumina Hassan is a Gender Specialist and Monitoring and Evaluation expert with strong experience in gender-transformative programming, youth engagement, and inclusive development. She has solid MEAL expertise, including indicator development, data collection, analysis, and reporting, and is proficient in digital tools such as KOBO and Excel.</p><p>She has worked with national, regional, and international organizations in Kenya, coordinating multi-stakeholder programs across SRHR, SGBV, youth advocacy, and community empowerment. Her work prioritizes the meaningful participation of women, girls, young people, and marginalized groups, with a focus on trauma-informed and gender-responsive approaches.</p><p>Mumina holds a Bachelor of Arts in Social Work and Development Studies and is currently pursuing a Masterâ€™s in Development Communication.</p>",
+    "<p>Mumina Hassan is a Gender Specialist and Monitoring and Evaluation expert with strong experience in gender-transformative programming, youth engagement, and inclusive development. She has solid MEAL expertise, including indicator development, data collection, analysis, and reporting, and is proficient in digital tools such as KOBO and Excel.</p><p>She has worked with national, regional, and international organizations in Kenya, coordinating multi-stakeholder programs across SRHR, SGBV, youth advocacy, and community empowerment. Her work prioritizes the meaningful participation of women, girls, young people, and marginalized groups, with a focus on trauma-informed and gender-responsive approaches.</p><p>Mumina holds a Bachelor of Arts in Social Work and Development Studies and is currently pursuing a Master’s in Development Communication.</p>",
   },
   {
    name: "Jibril Mohamud",
@@ -212,8 +194,7 @@
    about:
     "IT specialist and data analyst supporting digital systems, analytics, and evidence-based decision-making.",
    aboutBig:
-    "<p>Jibril Mohamud is an IT Specialist and Data Analyst with strong experience in digital data systems, data analysis, and research support for development projects in Somalia. He specializes in designing and managing digital data collection, data cleaning and validation, statistical analysis, and data visualization using tools including ODK, KoboToolbox, Power BI, Tableau, R, Python, SPSS, and STATA.</p><p>He has supported NGO and donor-funded programs, including the World Bankâ€™s Global Education Policy Dashboard, across education, governance, livelihoods, and humanitarian sectors. His work covers survey design, field data coordination, enumerator training, data quality assurance, and monitoring and evaluation in fragile and hard-to-reach contexts.</p><p>Jibril holds a Bachelorâ€™s degree in Business Information Technology and professional certifications in Cloud Computing, Software Engineering, and Data Analysis.</p>",
+    "<p>Jibril Mohamud is an IT Specialist and Data Analyst with strong experience in digital data systems, data analysis, and research support for development projects in Somalia. He specializes in designing and managing digital data collection, data cleaning and validation, statistical analysis, and data visualization using tools including ODK, KoboToolbox, Power BI, Tableau, R, Python, SPSS, and STATA.</p><p>He has supported NGO and donor-funded programs, including the World Bank’s Global Education Policy Dashboard, across education, governance, livelihoods, and humanitarian sectors. His work covers survey design, field data coordination, enumerator training, data quality assurance, and monitoring and evaluation in fragile and hard-to-reach contexts.</p><p>Jibril holds a Bachelor’s degree in Business Information Technology and professional certifications in Cloud Computing, Software Engineering, and Data Analysis.</p>",
   },
  ]
 </script>
-

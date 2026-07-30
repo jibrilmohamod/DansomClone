@@ -242,4 +242,3 @@ export const projects: DansomProject[] = [
   Ngo: "African Development Bank",
  },
 ]
-

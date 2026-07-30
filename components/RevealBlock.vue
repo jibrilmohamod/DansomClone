@@ -56,4 +56,3 @@
  .reveal-block { opacity: 1; transform: none; transition: none; }
 }
 </style>
-

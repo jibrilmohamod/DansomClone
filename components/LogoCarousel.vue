@@ -105,4 +105,3 @@
  .partner-mark img { transition: none; }
 }
 </style>
-

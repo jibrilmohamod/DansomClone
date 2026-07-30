@@ -1,15 +1,14 @@
 <template>
- <section class="border-y border-line/40 bg-panel-soft/35 py-20 md:py-32">
-  <div class="shell grid gap-12 lg:grid-cols-12">
-   <RevealBlock class="lg:col-span-4">
-    <p class="eyebrow">Regional specialists</p>
-    <h2 class="display-title mt-5 text-4xl leading-[0.98] md:text-6xl">The people behind the evidence.</h2>
-    <p class="body-copy mt-6">Research leadership, field access, operations, data science, and sector expertise in one multidisciplinary team.</p>
+ <section class="border-y border-line/45 bg-panel-soft/35 py-24 md:py-40">
+  <div class="atlas-shell">
+   <RevealBlock class="grid gap-8 lg:grid-cols-12">
+    <p class="atlas-label lg:col-span-2">Regional specialists</p>
+    <h2 class="atlas-display text-[clamp(4rem,10vw,10rem)] leading-[0.8] lg:col-span-9 lg:col-start-4">The people behind the evidence.</h2>
    </RevealBlock>
-   <div class="lg:col-span-7 lg:col-start-6">
+   <p class="mt-12 max-w-xl text-lg leading-relaxed text-mist/[0.62] lg:ml-auto">Research leadership, field access, operations, data science, and sector expertise in one multidisciplinary team.</p>
+   <div class="mt-20 border-b border-line/55">
     <slot name="vfor"></slot>
    </div>
   </div>
  </section>
 </template>
-

@@ -6,159 +6,115 @@
  :root,
  :root[data-theme="light"] {
   color-scheme: light;
- --ink: 247 248 246;
- --panel: 255 255 254;
-  --panel-soft: 232 237 232;
-  --paper: 238 243 239;
-  --line: 164 178 167;
-  --mist: 16 34 47;
-  --primary: 78 101 20;
-  --accent-ink: 248 249 247;
-  --shadow: 30 59 50;
+  --ink: 242 244 239;
+  --panel: 249 250 247;
+  --panel-soft: 225 230 222;
+  --paper: 235 239 232;
+  --line: 142 154 145;
+  --mist: 9 25 34;
+  --primary: 82 105 18;
+  --accent-ink: 248 250 245;
+  --shadow: 18 43 39;
  }
 
  @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
    color-scheme: dark;
-   --ink: 8 19 31;
-   --panel: 13 29 43;
-   --panel-soft: 18 38 55;
-   --paper: 10 24 36;
-   --line: 76 97 113;
-   --mist: 243 247 249;
-   --primary: 191 217 98;
-   --accent-ink: 8 19 31;
+   --ink: 5 14 23;
+   --panel: 9 23 34;
+   --panel-soft: 14 32 44;
+   --paper: 8 20 30;
+   --line: 69 91 104;
+   --mist: 242 247 248;
+   --primary: 197 224 96;
+   --accent-ink: 5 14 23;
    --shadow: 0 0 0;
   }
  }
 
  :root[data-theme="dark"] {
   color-scheme: dark;
-  --ink: 8 19 31;
-  --panel: 13 29 43;
-  --panel-soft: 18 38 55;
-  --paper: 10 24 36;
-  --line: 76 97 113;
-  --mist: 243 247 249;
-  --primary: 191 217 98;
-  --accent-ink: 8 19 31;
+  --ink: 5 14 23;
+  --panel: 9 23 34;
+  --panel-soft: 14 32 44;
+  --paper: 8 20 30;
+  --line: 69 91 104;
+  --mist: 242 247 248;
+  --primary: 197 224 96;
+  --accent-ink: 5 14 23;
   --shadow: 0 0 0;
  }
 
- html {
-  scroll-behavior: smooth;
-  background: rgb(var(--ink));
- }
-
- body {
-  @apply bg-ink font-body text-mist antialiased;
- }
-
- ::selection {
-  background: rgba(191, 217, 98, 0.32);
-  color: rgb(var(--mist));
- }
-
- :focus-visible {
-  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-ink;
- }
+ html { scroll-behavior: smooth; overflow-x: clip; background: rgb(var(--ink)); }
+ body { @apply overflow-x-clip bg-ink font-body text-mist antialiased; }
+ ::selection { background: rgb(var(--primary) / 0.35); color: rgb(var(--mist)); }
+ :focus-visible { @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-ink; }
 }
 
 @layer components {
- .shell {
-  @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8;
- }
+ .shell,
+ .atlas-shell { @apply mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-10; }
 
- .surface {
-  @apply rounded-2xl border bg-panel;
-  border-color: rgb(var(--line) / 0.72);
-  box-shadow:
-   0 1px 2px rgb(var(--shadow) / 0.1),
-   0 20px 54px -38px rgb(var(--shadow) / 0.52);
- }
+ .atlas-display { @apply font-display font-semibold tracking-[-0.065em]; }
+ .display-title { @apply font-display font-semibold tracking-[-0.055em] text-mist; }
+ .atlas-label,
+ .eyebrow { @apply text-[0.68rem] font-bold uppercase tracking-[0.22em] text-primary; }
+ .body-copy { @apply max-w-[65ch] leading-relaxed text-mist/68; }
 
- .surface-soft {
-  @apply rounded-2xl border bg-panel-soft;
-  border-color: rgb(var(--line) / 0.56);
-  box-shadow: 0 14px 38px -34px rgb(var(--shadow) / 0.42);
- }
-
- .editorial-media {
-  @apply overflow-hidden rounded-2xl border bg-panel;
-  border-color: rgb(var(--line) / 0.72);
-  box-shadow:
-   0 1px 2px rgb(var(--shadow) / 0.1),
-   0 24px 64px -42px rgb(var(--shadow) / 0.5);
- }
-
- .eyebrow {
-  @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary;
- }
-
- .display-title {
-  @apply font-display font-semibold tracking-[-0.045em] text-mist;
- }
-
- .body-copy {
-  @apply max-w-[65ch] leading-relaxed text-mist/[0.68];
+ .atlas-rule { border-color: rgb(var(--line) / 0.55); }
+ .atlas-grid {
+  background-image:
+   linear-gradient(rgb(var(--line) / 0.12) 1px, transparent 1px),
+   linear-gradient(90deg, rgb(var(--line) / 0.12) 1px, transparent 1px);
+  background-size: clamp(3.5rem, 7vw, 7rem) clamp(3.5rem, 7vw, 7rem);
  }
 
  .button-primary {
   @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-primary px-5 py-3 text-sm font-bold text-accent-ink transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-px;
  }
-
  .button-ghost {
-  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-mist/20 bg-mist/[0.03] px-5 py-3 text-sm font-bold text-mist transition duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:text-primary active:translate-y-px;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-line/65 bg-mist/[0.025] px-5 py-3 text-sm font-bold text-mist transition duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary active:translate-y-px;
+ }
+ .text-link { @apply inline-flex items-center gap-2 font-semibold text-primary transition duration-300 hover:gap-3; }
+
+ .surface,
+ .surface-soft { @apply border border-line/50 bg-panel; }
+ .editorial-media { @apply overflow-hidden bg-panel; }
+ .media-zoom img { @apply transition duration-700 ease-out; }
+ .media-zoom:hover img { transform: scale(1.025); }
+
+ .atlas-photo {
+  @apply relative overflow-hidden;
+  background: rgb(var(--panel));
+ }
+ .atlas-photo img { @apply h-full w-full object-cover; }
+ .atlas-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 35%, rgb(5 14 23 / 0.5));
  }
 
- .text-link {
-  @apply inline-flex items-center gap-2 font-semibold text-primary transition duration-300 hover:gap-3;
- }
-
- .reveal {
-  animation: reveal-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
- }
-
- .media-zoom img {
-  @apply transition duration-700 ease-out;
- }
-
- .media-zoom:hover img {
-  transform: scale(1.025);
- }
-
+ .reveal { animation: reveal-in 800ms cubic-bezier(0.16, 1, 0.3, 1) both; }
 }
 
 @keyframes reveal-in {
- from {
-  opacity: 0;
-  transform: translateY(24px);
- }
- to {
-  opacity: 1;
-  transform: translateY(0);
- }
+ from { opacity: 0; transform: translateY(28px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 
-@supports (animation-timeline: view()) {
- .reveal {
-  animation-timeline: view();
-  animation-range: entry 5% cover 28%;
- }
+@keyframes slow-drift {
+ from { transform: scale(1.03); }
+ to { transform: scale(1.1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
- html {
-  scroll-behavior: auto;
- }
-
- *,
- *::before,
- *::after {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   scroll-behavior: auto !important;
   transition-duration: 0.01ms !important;
  }
 }
-

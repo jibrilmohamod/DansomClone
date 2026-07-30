@@ -1,9 +1,9 @@
 <template>
  <div>
   <TheHeader
-   title="Careers"
-   eyebrow="Join the team"
-   intro="Careful thinkers and grounded practitioners working across research, monitoring, analysis, and field delivery."
+   title="Build what matters"
+   eyebrow="Careers at Dansom"
+   intro="For careful thinkers and grounded practitioners working across research, monitoring, analysis, and field delivery."
   >
    <template #image>
     <img
@@ -18,47 +18,54 @@
    </template>
   </TheHeader>
 
-  <section class="py-20 md:py-32">
-   <div class="shell grid gap-12 lg:grid-cols-12">
-    <div class="reveal lg:col-span-7">
-     <p class="eyebrow">Careers at Dansom</p>
-     <h2 class="display-title mt-4 text-4xl leading-tight md:text-6xl">Work grounded in context.</h2>
-     <p class="body-copy mt-6 text-base md:text-lg">
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-12 lg:grid-cols-12">
+    <p class="atlas-label lg:col-span-2">The work</p>
+    <RevealBlock class="lg:col-span-9 lg:col-start-4">
+     <h2 class="atlas-display text-[clamp(3.7rem,9vw,9rem)] leading-[0.83]">Context first. Evidence always. People at the centre.</h2>
+     <p class="mt-10 max-w-3xl text-lg leading-relaxed text-mist/[0.65] md:ml-auto md:text-2xl">
       Dansom is an Equal Opportunity Employer committed to inclusive teams and equitable workplaces. We value people who work carefully across disciplines and translate evidence into useful action.
      </p>
-    </div>
-    <RevealBlock class="border-y border-line/55 py-7 lg:col-span-4 lg:col-start-9">
-     <h3 class="font-display text-2xl font-semibold text-mist">How we work</h3>
-     <div class="mt-6 grid gap-4 text-sm text-mist/[0.62]">
-      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Context before assumptions</p>
-      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Rigour in every assignment</p>
-      <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Respect for partners and communities</p>
-     </div>
     </RevealBlock>
    </div>
   </section>
 
-  <section class="border-y border-line/40 bg-panel-soft/35 py-20 md:py-32">
-   <div class="shell">
-    <RevealBlock class="grid gap-8 lg:grid-cols-12 lg:items-end">
-     <div class="lg:col-span-7">
-      <p class="eyebrow">Current opportunities</p>
-      <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">There are no open positions at this time.</h2>
-      <p class="body-copy mt-5">
-       When a verified vacancy becomes available, it will be published here with a role description, location, closing date, and application instructions.
-      </p>
-     </div>
-     <div class="lg:col-span-4 lg:col-start-9">
-      <a
-       href="https://so.linkedin.com/company/dansom-research-and-consultancy"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="button-ghost"
-      >
-       Follow updates on LinkedIn
-       <Icon name="mdi:linkedin" />
-      </a>
-     </div>
+  <section class="border-y border-line/45 bg-panel-soft/35 py-24 md:py-40">
+   <div class="atlas-shell">
+    <p class="atlas-label">How we operate</p>
+    <div class="mt-16 border-b border-line/55">
+     <RevealBlock
+      v-for="(principle, index) in principles"
+      :key="principle"
+      class="group grid min-h-[28dvh] items-center border-t border-line/55 py-10 md:grid-cols-12"
+     >
+      <span class="atlas-label md:col-span-2">0{{ index + 1 }}</span>
+      <h2 class="atlas-display mt-8 text-[clamp(3rem,7vw,7rem)] leading-[0.86] transition-colors group-hover:text-primary md:col-span-9 md:col-start-4 md:mt-0">{{ principle }}</h2>
+     </RevealBlock>
+    </div>
+   </div>
+  </section>
+
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-2">
+     <p class="atlas-label">Open roles</p>
+     <p class="mt-5 font-display text-6xl font-semibold text-primary">00</p>
+    </div>
+    <RevealBlock class="lg:col-span-8 lg:col-start-4">
+     <h2 class="atlas-display text-[clamp(3.5rem,8vw,8rem)] leading-[0.84]">No open positions at this time.</h2>
+     <p class="mt-8 max-w-2xl text-lg leading-relaxed text-mist/[0.62]">
+      When a verified vacancy becomes available, it will be published here with the role description, location, closing date, and application instructions.
+     </p>
+     <a
+      href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button-primary mt-10"
+     >
+      Follow updates
+      <Icon name="mdi:linkedin" />
+     </a>
     </RevealBlock>
    </div>
   </section>
@@ -66,6 +73,12 @@
 </template>
 
 <script setup lang="ts">
+ const principles = [
+  "Context before assumptions",
+  "Rigour in every assignment",
+  "Respect for partners and communities",
+ ]
+
  useSeoMeta({
   title: "Careers",
   description:
@@ -77,4 +90,3 @@
   twitterCard: "summary_large_image",
  })
 </script>
-
