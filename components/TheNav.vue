@@ -15,8 +15,8 @@
   :class="props.overlay ? 'nav-overlay border-line/55 bg-ink/[0.82]' : 'border-mist/10 bg-ink/[0.88]'"
  >
   <div class="shell hidden h-[72px] items-center gap-5 xl:flex">
-   <NuxtLink to="/" class="shrink-0" aria-label="Dansom Research & Consultancy home">
-    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-10 w-auto brand-logo" />
+   <NuxtLink to="/" class="logo-plate shrink-0" aria-label="Dansom Research & Consultancy home">
+    <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-9 w-auto" />
    </NuxtLink>
 
    <nav aria-label="Primary navigation" class="ml-auto flex items-center gap-6 text-sm font-semibold">
@@ -47,7 +47,7 @@
   </div>
 
   <div class="flex h-16 items-center justify-between px-4 xl:hidden">
-   <NuxtLink to="/" class="rounded-xl bg-paper px-2.5 py-1.5" aria-label="Dansom Research & Consultancy home">
+   <NuxtLink to="/" class="logo-plate" aria-label="Dansom Research & Consultancy home">
     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="h-7 w-auto" />
    </NuxtLink>
    <div class="flex items-center gap-2">
@@ -98,5 +98,15 @@
 
 .nav-overlay {
  box-shadow: 0 1px 0 rgb(var(--mist) / 0.04);
+}
+
+.logo-plate {
+ display: inline-flex;
+ align-items: center;
+ border: 1px solid rgb(16 34 47 / 0.1);
+ border-radius: 0.75rem;
+ background: #f7f8f6;
+ padding: 0.45rem 0.7rem;
+ box-shadow: 0 12px 30px -24px rgb(8 19 31 / 0.45);
 }
 </style>

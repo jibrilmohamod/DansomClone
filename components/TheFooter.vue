@@ -3,7 +3,9 @@
   <div class="shell py-14 md:py-20">
    <div class="grid gap-12 lg:grid-cols-[1.5fr_0.7fr_1fr]">
     <div>
-     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="w-48 brand-logo" />
+     <div class="inline-flex rounded-xl border border-[#10222f]/10 bg-[#f7f8f6] px-4 py-3">
+      <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="w-44" />
+     </div>
      <h2 class="mt-8 max-w-xl font-display text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
       Evidence built close to the context.
      </h2>

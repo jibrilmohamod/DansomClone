@@ -119,26 +119,6 @@
   animation: reveal-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
  }
 
- .brand-logo {
-  filter: none;
- }
-
- .logo-invert {
-  filter: none;
- }
-
- @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .brand-logo,
-  :root:not([data-theme]) .logo-invert {
-   filter: brightness(0) invert(1);
-  }
- }
-
- :root[data-theme="dark"] .brand-logo,
- :root[data-theme="dark"] .logo-invert {
-  filter: brightness(0) invert(1);
- }
-
  .media-zoom img {
   @apply transition duration-700 ease-out;
  }
