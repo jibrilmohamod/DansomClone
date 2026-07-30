@@ -22,7 +22,7 @@
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
     <p class="atlas-label lg:col-span-2">The premise</p>
     <RevealBlock class="lg:col-span-9 lg:col-start-4">
-     <h2 class="atlas-display text-[clamp(3.5rem,8.8vw,9rem)] leading-[0.84]">
+     <h2 class="atlas-display max-w-[13ch] text-[clamp(2.75rem,5.8vw,6.25rem)] leading-[0.92]">
       Evidence is only useful when it understands where it came from.
      </h2>
      <p class="mt-10 max-w-3xl text-lg leading-relaxed text-mist/[0.65] md:ml-auto md:text-2xl">
@@ -32,26 +32,25 @@
    </div>
   </section>
 
-  <section class="relative min-h-[125dvh]">
-   <div class="sticky top-0 min-h-[100dvh] overflow-hidden">
-    <img
-     loading="lazy"
-     width="1586"
-     height="992"
-     src="/dansom-community-dialogue.jpg"
-     alt="Community members sharing local knowledge with researchers"
-     class="atlas-photo absolute inset-0 h-full w-full object-cover"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/45 to-ink/95"></div>
-    <div class="atlas-shell relative flex min-h-[100dvh] flex-col justify-between py-28 text-white md:py-36">
-     <div class="grid gap-6 lg:grid-cols-12">
-      <p class="atlas-label text-primary lg:col-span-2">Our vision</p>
-      <p class="max-w-sm text-base leading-relaxed text-white/[0.68] lg:col-span-3 lg:col-start-10">
-       Increase understanding through innovative socio-political engagement and strategic field-based research.
-      </p>
-     </div>
-     <h2 class="atlas-display max-w-[12ch] text-[clamp(4.2rem,12vw,12rem)] leading-[0.78]">Knowledge that strengthens the region.</h2>
-    </div>
+  <section class="border-y border-line/45 bg-panel py-20 md:py-28">
+   <div class="atlas-shell grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+    <RevealBlock class="lg:col-span-5">
+     <p class="atlas-label">Our vision</p>
+     <h2 class="atlas-display mt-6 max-w-[10ch] text-[clamp(3rem,5.2vw,5.5rem)] leading-[0.94]">Knowledge that strengthens the region.</h2>
+     <p class="mt-8 max-w-lg text-lg leading-relaxed text-mist/[0.66]">
+      Increase understanding through innovative socio-political engagement and strategic field-based research.
+     </p>
+    </RevealBlock>
+    <RevealBlock class="vision-media lg:col-span-7">
+     <img
+      loading="lazy"
+      width="1586"
+      height="992"
+      src="/dansom-community-dialogue.jpg"
+      alt="Community members sharing local knowledge with researchers"
+      class="aspect-[4/3] h-full w-full object-cover"
+     />
+    </RevealBlock>
    </div>
   </section>
 
@@ -59,16 +58,16 @@
    <div class="atlas-shell">
     <div class="grid gap-8 lg:grid-cols-12">
      <p class="atlas-label lg:col-span-2">Operating code</p>
-     <h2 class="atlas-display text-[clamp(3rem,7vw,7rem)] leading-[0.86] lg:col-span-8 lg:col-start-4">Four commitments. Every assignment.</h2>
+     <h2 class="atlas-display text-[clamp(2.75rem,5.2vw,5rem)] leading-[0.94] lg:col-span-8 lg:col-start-4">Four commitments. Every assignment.</h2>
     </div>
     <div class="mt-20">
      <RevealBlock
       v-for="(service, index) in services"
       :key="service.title"
-      class="group grid min-h-[42dvh] items-center border-t border-line/55 py-10 md:grid-cols-12"
+      class="group grid items-center border-t border-line/55 py-10 md:grid-cols-12 md:py-14"
      >
       <span class="atlas-label md:col-span-2">0{{ index + 1 }}</span>
-      <h3 class="atlas-display mt-8 text-[clamp(3.5rem,8vw,8rem)] leading-none transition-colors group-hover:text-primary md:col-span-5 md:mt-0">{{ service.title }}</h3>
+      <h3 class="atlas-display mt-8 text-[clamp(2.5rem,4.4vw,4.5rem)] leading-[0.96] transition-colors group-hover:text-primary md:col-span-5 md:mt-0">{{ service.title }}</h3>
       <p class="mt-7 max-w-xl text-lg leading-relaxed text-mist/[0.62] md:col-span-4 md:col-start-9 md:mt-0">{{ service.subtitle }}</p>
      </RevealBlock>
     </div>
@@ -90,7 +89,7 @@
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-10 lg:grid-cols-12 lg:items-end">
-    <h2 class="atlas-display text-[clamp(3.8rem,9vw,9rem)] leading-[0.82] lg:col-span-9">Local access. Actionable intelligence.</h2>
+    <h2 class="atlas-display text-[clamp(3rem,5.8vw,5.75rem)] leading-[0.92] lg:col-span-8">Local access. Actionable intelligence.</h2>
     <div class="lg:col-span-3">
      <p class="mb-7 text-base leading-relaxed text-mist/[0.62]">Tell us about your objectives and we will assemble the right team.</p>
      <NuxtLink to="/Contact" class="button-primary">Start a project <Icon name="mdi:arrow-right" /></NuxtLink>
@@ -198,3 +197,8 @@
   },
  ]
 </script>
+
+<style scoped>
+.vision-media { position:relative; overflow:hidden; background:rgb(var(--panel-soft)); }
+.vision-media::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 62%,rgb(var(--ink)/.24)); }
+</style>

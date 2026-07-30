@@ -19,7 +19,7 @@
 
     <article class="lg:col-span-8 lg:col-start-5">
      <p class="atlas-label">How we work</p>
-     <h2 class="atlas-display mt-6 text-[clamp(3rem,5.5vw,5.5rem)] leading-[0.88]">Context first. Evidence throughout.</h2>
+     <h2 class="atlas-display mt-6 text-[clamp(2.75rem,4.4vw,4.5rem)] leading-[0.96]">Context first. Evidence throughout.</h2>
      <div class="service-narrative mt-16" v-html="service.about"></div>
      <div class="mt-20 grid gap-6 border-y border-line/55 py-9 md:grid-cols-2">
       <NuxtLink to="/Portfolio" class="group"><p class="atlas-label">Related evidence</p><p class="mt-3 font-display text-3xl font-semibold transition group-hover:text-primary">View our project work</p></NuxtLink>

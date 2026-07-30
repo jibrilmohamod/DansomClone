@@ -22,7 +22,7 @@
    <div class="atlas-shell grid gap-12 lg:grid-cols-12">
     <p class="atlas-label lg:col-span-2">The work</p>
     <RevealBlock class="lg:col-span-9 lg:col-start-4">
-     <h2 class="atlas-display text-[clamp(3.7rem,9vw,9rem)] leading-[0.83]">Context first. Evidence always. People at the centre.</h2>
+     <h2 class="atlas-display max-w-[15ch] text-[clamp(3rem,5.8vw,5.75rem)] leading-[0.94]">Context first. Evidence always. People at the centre.</h2>
      <p class="mt-10 max-w-3xl text-lg leading-relaxed text-mist/[0.65] md:ml-auto md:text-2xl">
       Dansom is an Equal Opportunity Employer committed to inclusive teams and equitable workplaces. We value people who work carefully across disciplines and translate evidence into useful action.
      </p>
@@ -40,7 +40,7 @@
       class="group grid min-h-[28dvh] items-center border-t border-line/55 py-10 md:grid-cols-12"
      >
       <span class="atlas-label md:col-span-2">0{{ index + 1 }}</span>
-      <h2 class="atlas-display mt-8 text-[clamp(3rem,7vw,7rem)] leading-[0.86] transition-colors group-hover:text-primary md:col-span-9 md:col-start-4 md:mt-0">{{ principle }}</h2>
+      <h2 class="atlas-display mt-8 text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[0.96] transition-colors group-hover:text-primary md:col-span-9 md:col-start-4 md:mt-0">{{ principle }}</h2>
      </RevealBlock>
     </div>
    </div>
@@ -53,7 +53,7 @@
      <p class="mt-5 font-display text-6xl font-semibold text-primary">00</p>
     </div>
     <RevealBlock class="lg:col-span-8 lg:col-start-4">
-     <h2 class="atlas-display text-[clamp(3.5rem,8vw,8rem)] leading-[0.84]">No open positions at this time.</h2>
+     <h2 class="atlas-display max-w-[14ch] text-[clamp(3rem,5.4vw,5.25rem)] leading-[0.94]">No open positions at this time.</h2>
      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-mist/[0.62]">
       When a verified vacancy becomes available, it will be published here with the role description, location, closing date, and application instructions.
      </p>

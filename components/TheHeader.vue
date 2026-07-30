@@ -8,7 +8,7 @@
    <div class="grid w-full gap-8 lg:grid-cols-12 lg:items-end">
     <div class="lg:col-span-9">
      <p class="atlas-label">{{ eyebrow }}</p>
-     <h1 class="atlas-display cinema-title mt-5 max-w-[12ch] text-[clamp(3.6rem,9vw,9rem)] leading-[0.82]" :class="projTitle ? 'text-[clamp(2.8rem,7vw,7rem)]' : ''">{{ projTitle || title }}</h1>
+     <h1 class="atlas-display cinema-title mt-5 max-w-[13ch] text-[clamp(3.25rem,7vw,6.75rem)] leading-[0.9]" :class="projTitle ? 'text-[clamp(2.75rem,5.4vw,5.25rem)]' : ''">{{ projTitle || title }}</h1>
     </div>
     <p class="max-w-md border-t border-white/25 pt-5 text-sm leading-relaxed text-white/66 md:text-base lg:col-span-3">{{ intro }}</p>
    </div>

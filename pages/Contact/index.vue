@@ -22,7 +22,7 @@
    <div class="atlas-shell grid gap-16 lg:grid-cols-12">
     <div class="lg:col-span-7">
      <p class="atlas-label">Project brief</p>
-     <h2 class="atlas-display mt-6 text-[clamp(3.5rem,8vw,8rem)] leading-[0.84]">Tell us what needs to become clear.</h2>
+     <h2 class="atlas-display mt-6 max-w-[14ch] text-[clamp(3rem,5.8vw,5.75rem)] leading-[0.94]">Tell us what needs to become clear.</h2>
 
      <form class="mt-16 border-t border-line/55" @submit.prevent="sendEmail">
       <div class="grid border-b border-line/55 py-7 md:grid-cols-[10rem_1fr] md:items-center">

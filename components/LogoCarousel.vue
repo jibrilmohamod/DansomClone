@@ -77,12 +77,12 @@
 }
 
 :global(:root[data-theme="dark"]) .partner-logo-mark {
- filter: brightness(2.35) saturate(0.9) contrast(0.84) drop-shadow(0 0 1px rgb(255 255 255 / 0.42));
+ filter: brightness(1.55) saturate(0.9) contrast(0.94);
 }
 
 @media (prefers-color-scheme: dark) {
  :global(:root:not([data-theme])) .partner-logo-mark {
-  filter: brightness(2.35) saturate(0.9) contrast(0.84) drop-shadow(0 0 1px rgb(255 255 255 / 0.42));
+  filter: brightness(1.55) saturate(0.9) contrast(0.94);
  }
 }
 

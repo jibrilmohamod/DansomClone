@@ -15,7 +15,7 @@
      </aside>
      <article class="lg:col-span-8 lg:col-start-5">
       <p class="atlas-label">Assignment overview</p>
-      <p class="atlas-display mt-6 text-[clamp(2.8rem,6vw,6rem)] leading-[0.94] text-mist/88">{{ project.description }}</p>
+      <p class="mt-6 max-w-[62ch] text-[clamp(1.25rem,1.9vw,1.7rem)] leading-relaxed text-mist/78">{{ project.description }}</p>
       <section v-if="project.classification2||project.description2" class="mt-24 border-t border-line/55 pt-10"><p class="atlas-label">Additional scope</p><h2 v-if="project.classification2" class="atlas-display mt-5 text-4xl md:text-6xl">{{ project.classification2 }}</h2><p v-if="project.description2" class="mt-7 max-w-3xl text-lg leading-relaxed text-mist/65">{{ project.description2 }}</p><p v-if="project.timeframes2" class="mt-5 text-sm text-mist/45">{{ project.timeframes2 }}</p></section>
       <div class="mt-20 flex flex-wrap gap-3 border-t border-line/55 pt-9"><NuxtLink to="/Contact" class="button-primary">Discuss a similar assignment <Icon name="mdi:arrow-right" /></NuxtLink><NuxtLink to="/Portfolio" class="button-ghost">More work</NuxtLink></div>
      </article>

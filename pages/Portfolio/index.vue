@@ -6,7 +6,7 @@
 
   <section class="atlas-grid bg-ink py-20 md:py-28">
    <div class="atlas-shell">
-    <RevealBlock class="grid gap-10 lg:grid-cols-12 lg:items-end"><div class="lg:col-span-8"><p class="atlas-label">Project archive</p><h2 class="atlas-display mt-6 text-[clamp(3.5rem,8vw,8rem)] leading-[0.84]">Evidence tested in real programmes.</h2></div><p class="border-t border-line/55 pt-5 text-lg leading-relaxed text-mist/62 lg:col-span-3 lg:col-start-10">Monitoring, evaluation, research, logistics, and advisory work delivered across the Horn of Africa.</p></RevealBlock>
+    <RevealBlock class="grid gap-10 lg:grid-cols-12 lg:items-end"><div class="lg:col-span-8"><p class="atlas-label">Project archive</p><h2 class="atlas-display mt-6 max-w-[14ch] text-[clamp(3rem,5.8vw,5.75rem)] leading-[0.94]">Evidence tested in real programmes.</h2></div><p class="border-t border-line/55 pt-5 text-base leading-relaxed text-mist/62 lg:col-span-3 lg:col-start-10">Monitoring, evaluation, research, logistics, and advisory work delivered across the Horn of Africa.</p></RevealBlock>
 
     <div class="sticky top-0 z-30 -mx-4 mt-16 grid gap-4 border-y border-line/55 bg-ink/90 px-4 py-5 backdrop-blur-xl md:grid-cols-2 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
      <div><label for="project-search" class="atlas-label">Search</label><input id="project-search" v-model="searchTerm" type="search" placeholder="Project or partner" class="mt-2 w-full border-0 border-b border-line/60 bg-transparent px-0 py-3 text-lg text-mist placeholder:text-mist/35 focus:border-primary focus:ring-0" /></div>

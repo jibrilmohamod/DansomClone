@@ -10,7 +10,7 @@
     <div class="grid w-full gap-10 lg:grid-cols-12 lg:items-end">
      <div class="lg:col-span-9">
       <p class="atlas-label">Research grounded in lived context</p>
-      <h1 class="atlas-display home-title mt-6 max-w-[10ch] text-[clamp(4rem,10vw,10rem)] leading-[0.8]">Evidence begins where context lives.</h1>
+      <h1 class="atlas-display home-title mt-6 max-w-[11ch] text-[clamp(3.5rem,7.4vw,7.5rem)] leading-[0.88]">Evidence begins where context lives.</h1>
      </div>
      <div class="lg:col-span-3">
       <p class="border-t border-white/25 pt-5 text-base leading-relaxed text-white/68">Research, monitoring, and advisory built from trusted access across Somalia, Kenya, and the Horn of Africa.</p>
@@ -28,7 +28,7 @@
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
     <RevealBlock class="lg:col-span-8">
      <p class="atlas-label">The premise</p>
-     <h2 class="atlas-display mt-6 text-[clamp(3.25rem,6.5vw,6.5rem)] leading-[0.88]">Research must reflect the operating context.</h2>
+     <h2 class="atlas-display mt-6 max-w-[15ch] text-[clamp(2.75rem,5.1vw,5.25rem)] leading-[0.94]">Research must reflect the operating context.</h2>
     </RevealBlock>
     <RevealBlock class="self-end border-t border-line/55 pt-6 lg:col-span-3 lg:col-start-10">
      <p class="text-lg leading-relaxed text-mist/65">Since 2009, Dansom has connected field access with independent analysis so programmes can respond to what is actually happening.</p>
@@ -42,7 +42,7 @@
   <section class="overflow-hidden bg-ink py-24 md:py-36">
    <div class="atlas-shell">
     <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
-     <RevealBlock class="max-w-5xl lg:col-span-9"><p class="atlas-label">Capabilities</p><h2 class="atlas-display mt-6 text-[clamp(3.5rem,8vw,8rem)] leading-[0.86]">One team from field evidence to practical action.</h2></RevealBlock>
+     <RevealBlock class="max-w-4xl lg:col-span-9"><p class="atlas-label">Capabilities</p><h2 class="atlas-display mt-6 text-[clamp(3rem,5.8vw,5.75rem)] leading-[0.94]">One team from field evidence to practical action.</h2></RevealBlock>
      <div class="flex items-center gap-3 lg:col-span-3 lg:justify-end">
       <button type="button" class="capability-control" aria-label="Previous capabilities" @click="scrollCapabilities(-1)"><Icon name="mdi:arrow-left" /></button>
       <button type="button" class="capability-control" aria-label="Next capabilities" @click="scrollCapabilities(1)"><Icon name="mdi:arrow-right" /></button>
@@ -52,7 +52,7 @@
    <div ref="capabilityTrack" class="atlas-scroll mt-14 flex snap-x snap-mandatory overflow-x-auto border-y border-line/50 pl-[max(1rem,calc((100vw-1600px)/2+2.5rem))]">
     <NuxtLink v-for="(service,index) in services" :key="service.slug" :to="`/Services/${encodeURIComponent(service.slug)}`" class="service-panel group flex min-h-[32rem] w-[84vw] max-w-[48rem] shrink-0 snap-start flex-col border-r border-line/50 p-7 md:p-10">
      <div class="flex items-center justify-between"><Icon :name="service.icon" class="text-3xl text-primary" /><span class="font-display text-sm text-mist/35">0{{ index+1 }}</span></div>
-     <div class="mt-auto"><p class="atlas-label">{{ service.category }}</p><h3 class="atlas-display mt-4 text-[clamp(2.5rem,5vw,5rem)] leading-[0.9] transition group-hover:text-primary">{{ service.title }}</h3><p class="mt-5 max-w-xl text-base leading-relaxed text-mist/62">{{ service.description }}</p><span class="mt-8 inline-flex items-center gap-2 font-bold text-primary">Explore <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" /></span></div>
+     <div class="mt-auto"><p class="atlas-label">{{ service.category }}</p><h3 class="atlas-display mt-4 max-w-[18ch] text-[clamp(2.25rem,3.8vw,3.9rem)] leading-[0.96] transition group-hover:text-primary">{{ service.title }}</h3><p class="mt-5 max-w-xl text-base leading-relaxed text-mist/62">{{ service.description }}</p><span class="mt-8 inline-flex items-center gap-2 font-bold text-primary">Explore <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" /></span></div>
     </NuxtLink>
    </div>
   </section>
@@ -61,9 +61,9 @@
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
     <RevealBlock class="lg:col-span-4"><p class="atlas-label">Selected experience</p><h2 class="atlas-display mt-6 text-5xl leading-[0.9] md:text-7xl">Evidence tested in real programmes.</h2><NuxtLink to="/Portfolio" class="button-ghost mt-8">Full portfolio <Icon name="mdi:arrow-right" /></NuxtLink></RevealBlock>
     <div class="lg:col-span-7 lg:col-start-6">
-     <NuxtLink v-for="project in featuredProjects" :key="project.title" to="/Portfolio" class="group grid gap-5 border-t border-line/55 py-8 first:border-t-0 first:pt-0 md:grid-cols-[8rem_1fr_auto] md:items-center">
-      <img :src="`/${project.icon}`" :alt="project.Ngo || project.title" class="experience-logo max-h-14 max-w-[7rem] object-contain" loading="eager" />
-      <div><p class="text-sm font-semibold text-primary">{{ project.Location }}</p><h3 class="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight transition group-hover:text-primary">{{ project.title }}</h3></div>
+     <NuxtLink v-for="project in featuredProjects" :key="project.title" to="/Portfolio" class="experience-row group grid gap-6 border-t border-line/55 py-8 first:border-t-0 first:pt-0 md:items-center">
+      <div class="experience-logo-cell"><img :src="`/${project.icon}`" :alt="project.Ngo || project.title" class="experience-logo" loading="eager" /></div>
+      <div><p class="text-sm font-semibold text-primary">{{ project.Location }}</p><h3 class="mt-2 max-w-[32ch] font-display text-[clamp(1.2rem,1.65vw,1.55rem)] font-semibold leading-snug tracking-tight transition group-hover:text-primary">{{ project.title }}</h3></div>
       <Icon name="mdi:arrow-top-right" class="text-2xl text-mist/40 transition group-hover:text-primary" />
      </NuxtLink>
     </div>
@@ -90,8 +90,12 @@
 .service-panel { background: linear-gradient(145deg,rgb(var(--panel)/.65),transparent 70%); }
 .capability-control { display:inline-flex; height:3rem; width:3rem; align-items:center; justify-content:center; border:1px solid rgb(var(--line)/.65); border-radius:.75rem; color:rgb(var(--mist)); transition:transform 240ms ease,border-color 240ms ease,background-color 240ms ease,color 240ms ease; }
 .capability-control:hover { border-color:rgb(var(--primary)); background:rgb(var(--primary)); color:rgb(var(--accent-ink)); transform:translateY(-2px); }
-:global(:root[data-theme="dark"]) .experience-logo { filter:brightness(2.35) saturate(.9) contrast(.84) drop-shadow(0 0 1px rgb(255 255 255/.42)); }
-@media(prefers-color-scheme:dark){:global(:root:not([data-theme])) .experience-logo{filter:brightness(2.35) saturate(.9) contrast(.84) drop-shadow(0 0 1px rgb(255 255 255/.42));}}
+.experience-row { grid-template-columns:9.5rem minmax(0,1fr) auto; }
+.experience-logo-cell { display:flex; min-height:4.75rem; align-items:center; }
+.experience-logo { display:block; width:100%; max-width:9rem; max-height:4.5rem; object-fit:contain; object-position:left center; }
+:global(:root[data-theme="dark"]) .experience-logo { filter:brightness(1.55) saturate(.9) contrast(.94); }
+@media(prefers-color-scheme:dark){:global(:root:not([data-theme])) .experience-logo{filter:brightness(1.55) saturate(.9) contrast(.94);}}
+@media(max-width:767px){.experience-row{grid-template-columns:minmax(7.5rem,9rem) minmax(0,1fr)}.experience-row>:last-child{grid-column:2}.experience-logo-cell{min-height:4rem}.experience-logo{max-width:8rem;max-height:4rem}}
 @keyframes home-title { from { opacity:0; transform:translateY(55px) } to { opacity:1; transform:none } }
 @media (prefers-reduced-motion:reduce) { .home-cinema>img,.home-title { animation:none; } }
 </style>
