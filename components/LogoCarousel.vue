@@ -14,7 +14,7 @@
       width="220"
       height="72"
       loading="lazy"
-      class="partner-logo-mark"
+      :class="['partner-logo-mark', { 'partner-logo-contrast': partner.darkContrast }]"
      />
     </div>
    </div>
@@ -24,12 +24,12 @@
 
 <script setup lang="ts">
  const partners = [
-  { name: "World Bank", src: "/The_World_Bank_logo.svg" },
+  { name: "World Bank", src: "/The_World_Bank_logo.svg", darkContrast: true },
   { name: "World Food Programme", src: "/wfp-logo-standard-blue-en.svg" },
   { name: "Federal Republic of Somalia", src: "/Coat_of_arms_of_Somalia.svg" },
   { name: "Food and Agriculture Organization", src: "/FAO_logo.svg" },
   { name: "GIZ", src: "/GIZ.svg" },
-  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg" },
+  { name: "International Finance Corporation", src: "/International_Finance_Corporation_logo.svg", darkContrast: true },
  ]
 </script>
 
@@ -66,12 +66,23 @@
  width: 100%;
  height: 100%;
  object-fit: contain;
+ opacity: 0.92;
  transition: opacity 300ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .partner-mark:hover img {
  opacity: 1;
  transform: translateY(-2px);
+}
+
+:global(:root[data-theme="dark"]) .partner-logo-contrast {
+ filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+}
+
+@media (prefers-color-scheme: dark) {
+ :global(:root:not([data-theme])) .partner-logo-contrast {
+  filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+ }
 }
 
 .partner-carousel:hover .partner-track,
@@ -94,3 +105,4 @@
  .partner-mark img { transition: none; }
 }
 </style>
+

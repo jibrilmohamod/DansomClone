@@ -127,20 +127,6 @@
   transform: scale(1.025);
  }
 
- .partner-logo-mark {
-  opacity: 0.68;
-  filter: brightness(0);
- }
-}
-
-@media (prefers-color-scheme: dark) {
- :root:not([data-theme]) .partner-logo-mark {
-  filter: brightness(0) invert(1);
- }
-}
-
-:root[data-theme="dark"] .partner-logo-mark {
- filter: brightness(0) invert(1);
 }
 
 @keyframes reveal-in {
@@ -175,3 +161,4 @@
   transition-duration: 0.01ms !important;
  }
 }
+

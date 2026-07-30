@@ -68,7 +68,7 @@
 
      <div class="lg:col-span-7 lg:col-start-6">
       <article v-for="project in featuredProjects" :key="project.title" class="project-row grid gap-5 border-b border-line/45 py-8 first:pt-0 md:grid-cols-[7rem_1fr_auto] md:items-center">
-       <div class="flex h-16 items-center rounded-xl bg-white p-3">
+       <div class="flex h-16 items-center px-2 py-3">
         <img :src="'/' + project.icon" :alt="project.Ngo || project.title" class="max-h-full w-full object-contain" loading="lazy" />
        </div>
        <div>
@@ -152,3 +152,4 @@
  }
 }
 </style>
+

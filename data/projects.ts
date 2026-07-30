@@ -19,7 +19,7 @@ export const projects: DansomProject[] = [
    "Dansom is providing workshop organisation and field support for IFC training activities in Hargeisa and Mogadishu, including on-site coordination and meeting documentation.",
   Location: "Hargeisa and Mogadishu",
   timeframes: "May 2025 - November 2025",
-  icon: "International_Finance_Corporation_logo.svg.png",
+  icon: "International_Finance_Corporation_logo.svg",
   Ngo: "International Finance Corporation",
  },
  {
@@ -49,7 +49,7 @@ export const projects: DansomProject[] = [
    "Dansom and Particip provide coordinated field monitoring, reporting, and assessment support for WFP food-assistance and cash-based transfer activities.",
   Location: "Somalia",
   timeframes: "April 2025 - June 2026",
-  icon: "wfpfao.png",
+  icon: "wfp-logo-standard-blue-en.svg",
   Ngo: "World Food Programme",
  },
  {
@@ -103,7 +103,7 @@ export const projects: DansomProject[] = [
    "Third-party monitoring of a community-based reintegration programme supporting returnees, internally displaced people, and host-community members in Kismayo to establish sustainable livelihoods.",
   Location: "Kismayo, Somalia",
   timeframes: "August 2021 - July 2022",
-  icon: "giz-400x173.jpg",
+  icon: "GIZ.svg",
   Ngo: "GIZ",
  },
  {
@@ -123,7 +123,7 @@ export const projects: DansomProject[] = [
    "CMC and Dansom conducted a peace and conflict assessment for the Somali Reintegration Programme and Fish for Nutrition project in Kismayo.",
   Location: "Kismayo, Somalia",
   timeframes: "August 2017 - January 2018",
-  icon: "giz-400x173.jpg",
+  icon: "GIZ.svg",
   Ngo: "GIZ",
  },
  {
@@ -176,7 +176,7 @@ export const projects: DansomProject[] = [
    "Political economy analysis of business licensing, the federal permit system, and the relationships among ministries, public institutions, donors, business associations, and emerging membership organisations in Jubaland, Puntland, and Benadir.",
   Location: "Somalia",
   timeframes: "December 2015 - May 2016",
-  icon: "International_Finance_Corporation_logo.svg.png",
+  icon: "International_Finance_Corporation_logo.svg",
   Ngo: "IFC and World Bank",
  },
  {
@@ -242,3 +242,4 @@ export const projects: DansomProject[] = [
   Ngo: "African Development Bank",
  },
 ]
+
