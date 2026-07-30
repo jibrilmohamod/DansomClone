@@ -1,6 +1,6 @@
 <template>
  <div>
-  <TheHeader :projTitle="project.title">
+  <TheHeader :projTitle="project.title" :eyebrow="project.classification" :intro="`${project.Location}${project.timeframes ? `, ${project.timeframes}` : ''}`">
    <template #image>
     <img
      loading="eager"
@@ -14,7 +14,7 @@
    </template>
   </TheHeader>
 
-  <main class="py-16 md:py-24">
+  <main class="py-20 md:py-32">
    <div class="shell">
     <NuxtLink to="/Portfolio" class="text-link">
      <Icon name="mdi:arrow-left" />
@@ -25,7 +25,7 @@
      <aside class="lg:col-span-4">
       <div class="lg:sticky lg:top-28">
        <Image2Card :image="project.icon" :alt="project.title + ' project partner logo'" />
-       <dl class="surface-soft mt-5 grid gap-6 p-6 text-sm">
+       <dl class="mt-5 grid gap-6 border-y border-line/55 py-7 text-sm">
         <div>
          <dt class="font-semibold text-mist">Location</dt>
          <dd class="mt-2 text-mist/[0.55]">{{ project.Location }}</dd>
@@ -39,18 +39,21 @@
      </aside>
 
      <article class="lg:col-span-7 lg:col-start-6">
-      <p class="text-sm font-semibold text-primary">{{ project.classification }}</p>
+      <p class="text-sm font-semibold text-primary">Assignment overview</p>
       <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">Project overview</h2>
       <p class="mt-6 text-base leading-8 text-mist/[0.65] md:text-lg">{{ project.description }}</p>
 
-      <section v-if="project.classification2 || project.description2" class="mt-10 border-t border-mist/10 pt-10">
+      <section v-if="project.classification2 || project.description2" class="mt-12 border-t border-line/55 pt-10">
        <h3 class="display-title text-3xl">Additional scope</h3>
        <p v-if="project.classification2" class="mt-5 font-semibold text-primary">{{ project.classification2 }}</p>
        <p v-if="project.description2" class="mt-4 text-base leading-8 text-mist/[0.65]">{{ project.description2 }}</p>
        <p v-if="project.timeframes2" class="mt-4 text-sm text-mist/[0.45]">{{ project.timeframes2 }}</p>
       </section>
 
-      <NuxtLink to="/Contact" class="button-primary mt-10">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
+      <div class="mt-12 flex flex-wrap gap-3 border-t border-line/55 pt-8">
+       <NuxtLink to="/Contact" class="button-primary">Discuss a similar assignment <Icon name="mdi:arrow-right" /></NuxtLink>
+       <NuxtLink to="/Portfolio" class="button-ghost">More projects</NuxtLink>
+      </div>
      </article>
     </div>
    </div>
@@ -83,3 +86,4 @@
   twitterCard: "summary_large_image",
  })
 </script>
+

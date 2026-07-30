@@ -1,27 +1,28 @@
 <template>
- <NuxtLink
-  :to="slug"
-  class="group surface grid min-h-[22rem] overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
- >
-  <div class="flex h-32 items-center border-b border-line/60 bg-paper p-6">
-   <img
-    v-if="icon"
-    :src="icon"
-    :alt="title + ' project partner logo'"
-    class="max-h-16 max-w-[12rem] object-contain object-left"
-    loading="lazy"
-   />
-  </div>
-  <div class="flex flex-col p-5">
-   <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{{ classification }}</p>
-   <h3 class="mt-3 font-display text-xl font-semibold leading-snug tracking-tight text-mist">{{ title }}</h3>
-   <p class="mt-3 text-sm text-mist/[0.62]">{{ location }}<span v-if="timeframe">, {{ timeframe }}</span></p>
-   <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-primary">
-    View project
-    <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" />
+ <RevealBlock as="article" class="project-entry border-t border-line/55 first:border-t-0">
+  <NuxtLink
+   :to="slug"
+   class="group grid gap-5 py-7 transition md:grid-cols-[10rem_1fr_auto] md:items-center md:py-9"
+  >
+   <div class="flex h-16 items-center justify-start pr-4">
+    <img
+     v-if="icon"
+     :src="icon"
+     :alt="title + ' project partner logo'"
+     class="project-logo max-h-14 max-w-[9rem] object-contain object-left"
+     loading="lazy"
+    />
+   </div>
+   <div>
+    <p class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{{ classification }}</p>
+    <h3 class="mt-3 max-w-3xl font-display text-xl font-semibold leading-snug tracking-tight text-mist transition group-hover:text-primary md:text-2xl">{{ title }}</h3>
+    <p class="mt-3 text-sm text-mist/55">{{ location }}<span v-if="timeframe">, {{ timeframe }}</span></p>
+   </div>
+   <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line/65 text-mist transition group-hover:border-primary group-hover:bg-primary group-hover:text-accent-ink">
+    <Icon name="mdi:arrow-top-right" />
    </span>
-  </div>
- </NuxtLink>
+  </NuxtLink>
+ </RevealBlock>
 </template>
 
 <script lang="ts" setup>
@@ -34,3 +35,16 @@
   timeframe: String,
  })
 </script>
+
+<style scoped>
+:global(:root[data-theme="dark"]) .project-logo {
+ filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+}
+
+@media (prefers-color-scheme: dark) {
+ :global(:root:not([data-theme])) .project-logo {
+  filter: drop-shadow(0 0 0.75px rgba(255, 255, 255, 0.9));
+ }
+}
+</style>
+

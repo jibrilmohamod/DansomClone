@@ -1,6 +1,10 @@
 <template>
  <div>
-  <TheHeader title="Our Portfolio">
+  <TheHeader
+   title="Our Portfolio"
+   eyebrow="Selected experience"
+   intro="Independent assignments and long-term partnerships across humanitarian, development, and public-sector programmes."
+  >
    <template #image>
     <img
      loading="eager"
@@ -14,7 +18,7 @@
    </template>
   </TheHeader>
 
-  <section class="py-16 md:py-24">
+  <section class="py-20 md:py-32">
    <div class="shell">
     <div class="max-w-3xl">
      <h2 class="display-title text-4xl leading-tight md:text-6xl">Projects and partnerships.</h2>
@@ -23,7 +27,7 @@
      </p>
     </div>
 
-    <div class="surface-soft mt-10 grid gap-5 p-5 md:grid-cols-2 md:p-6">
+    <div class="mt-12 grid gap-5 border-y border-line/55 py-7 md:grid-cols-2">
      <div class="grid gap-2">
       <label for="project-search" class="text-sm font-semibold text-mist">Search projects</label>
       <input
@@ -31,7 +35,7 @@
        v-model="searchTerm"
        type="search"
        placeholder="Project or partner name"
-       class="w-full rounded-xl border border-mist/[0.15] bg-ink px-4 py-3 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+       class="w-full rounded-xl border border-line/70 bg-panel px-4 py-3 text-base text-mist placeholder:text-mist/40 focus:border-primary"
       />
      </div>
      <div class="grid gap-2">
@@ -39,7 +43,7 @@
       <select
        id="project-filter"
        v-model="classification"
-       class="w-full rounded-xl border border-mist/[0.15] bg-ink px-4 py-3 text-base text-mist focus:border-primary"
+       class="w-full rounded-xl border border-line/70 bg-panel px-4 py-3 text-base text-mist focus:border-primary"
       >
        <option value="All">All services</option>
        <option v-for="option in classificationOptions" :key="option" :value="option">{{ option }}</option>
@@ -47,7 +51,7 @@
      </div>
     </div>
 
-    <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-10">
      <ProjectCard
       v-for="project in filteredProjects"
       :key="project.title"
@@ -60,7 +64,7 @@
      />
     </div>
 
-    <div v-if="filteredProjectPool.length === 0" class="surface mt-8 p-8 text-center">
+    <div v-if="filteredProjectPool.length === 0" class="mt-8 border-y border-line/55 py-14 text-center">
      <h3 class="font-display text-2xl font-semibold text-mist">No matching projects</h3>
      <p class="mt-2 text-mist/[0.62]">Try another search term or service.</p>
     </div>
@@ -140,3 +144,4 @@
   return `/Portfolio/${projectIndex}-${encodeURIComponent(project.title)}`
  }
 </script>
+

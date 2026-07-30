@@ -1,23 +1,23 @@
 <template>
- <article class="surface group flex h-full flex-col p-6 transition duration-500 hover:border-primary/[0.35] md:p-7">
-  <div class="flex items-start justify-between gap-5">
+ <RevealBlock as="article" class="team-row border-t border-line/55 py-7 first:border-t-0 first:pt-0">
+  <div class="grid gap-5 md:grid-cols-[12rem_1fr]">
    <div>
     <p class="text-sm font-semibold text-primary">{{ role }}</p>
-    <h3 class="mt-2 font-display text-2xl font-semibold tracking-tight text-mist">{{ name }}</h3>
+    <h3 class="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight text-mist">{{ name }}</h3>
    </div>
-   <Icon name="mdi:account-outline" class="text-3xl text-mist/25 transition group-hover:text-primary" />
+   <div>
+    <p class="text-sm leading-relaxed text-mist/65">{{ about }}</p>
+    <Accordion type="single" collapsible class="mt-3">
+     <AccordionItem value="bio" class="border-0">
+      <AccordionTrigger class="justify-start gap-2 py-3 text-left text-sm font-semibold text-primary hover:no-underline">Read full bio</AccordionTrigger>
+      <AccordionContent>
+       <div class="team-bio space-y-4 pb-2 text-sm leading-7 text-mist/65" v-html="aboutBig"></div>
+      </AccordionContent>
+     </AccordionItem>
+    </Accordion>
+   </div>
   </div>
-  <p class="mt-5 text-sm leading-relaxed text-mist/60">{{ about }}</p>
-
-  <Accordion type="single" collapsible class="mt-auto pt-5">
-   <AccordionItem value="bio" class="border-mist/10">
-    <AccordionTrigger class="text-left text-primary hover:no-underline">Read full bio</AccordionTrigger>
-    <AccordionContent>
-     <div class="team-bio space-y-3 text-sm leading-relaxed text-mist/60" v-html="aboutBig"></div>
-    </AccordionContent>
-   </AccordionItem>
-  </Accordion>
- </article>
+ </RevealBlock>
 </template>
 
 <script lang="ts" setup>
@@ -29,3 +29,4 @@
   aboutBig: { type: String, required: true },
  })
 </script>
+

@@ -1,6 +1,10 @@
 <template>
  <div>
-  <TheHeader title="Careers">
+  <TheHeader
+   title="Careers"
+   eyebrow="Join the team"
+   intro="Careful thinkers and grounded practitioners working across research, monitoring, analysis, and field delivery."
+  >
    <template #image>
     <img
      loading="eager"
@@ -14,7 +18,7 @@
    </template>
   </TheHeader>
 
-  <section class="py-16 md:py-28">
+  <section class="py-20 md:py-32">
    <div class="shell grid gap-12 lg:grid-cols-12">
     <div class="reveal lg:col-span-7">
      <p class="eyebrow">Careers at Dansom</p>
@@ -23,20 +27,20 @@
       Dansom is an Equal Opportunity Employer committed to inclusive teams and equitable workplaces. We value people who work carefully across disciplines and translate evidence into useful action.
      </p>
     </div>
-    <div class="surface-soft p-6 lg:col-span-4 lg:col-start-9">
+    <RevealBlock class="border-y border-line/55 py-7 lg:col-span-4 lg:col-start-9">
      <h3 class="font-display text-2xl font-semibold text-mist">How we work</h3>
      <div class="mt-6 grid gap-4 text-sm text-mist/[0.62]">
       <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Context before assumptions</p>
       <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Rigour in every assignment</p>
       <p class="flex items-start gap-3"><Icon name="mdi:check" class="mt-0.5 shrink-0 text-primary" /> Respect for partners and communities</p>
      </div>
-    </div>
+    </RevealBlock>
    </div>
   </section>
 
-  <section class="border-y border-mist/10 bg-panel/[0.62] py-16 md:py-24">
+  <section class="border-y border-line/40 bg-panel-soft/35 py-20 md:py-32">
    <div class="shell">
-    <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+    <RevealBlock class="grid gap-8 lg:grid-cols-12 lg:items-end">
      <div class="lg:col-span-7">
       <p class="eyebrow">Current opportunities</p>
       <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">There are no open positions at this time.</h2>
@@ -55,7 +59,7 @@
        <Icon name="mdi:linkedin" />
       </a>
      </div>
-    </div>
+    </RevealBlock>
    </div>
   </section>
  </div>
@@ -73,3 +77,4 @@
   twitterCard: "summary_large_image",
  })
 </script>
+

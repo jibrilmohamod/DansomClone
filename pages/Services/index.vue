@@ -1,6 +1,10 @@
 <template>
  <div>
-  <TheHeader title="Our Services">
+  <TheHeader
+   title="Our Services"
+   eyebrow="Capabilities"
+   intro="Integrated research, monitoring, advisory, institutional support, and field delivery for complex contexts."
+  >
    <template #image>
     <img
      loading="eager"
@@ -14,45 +18,48 @@
    </template>
   </TheHeader>
 
-  <section class="py-16 md:py-28">
-   <div class="shell">
-    <div class="reveal max-w-3xl">
+  <section class="py-20 md:py-32">
+   <div class="shell grid gap-12 lg:grid-cols-12">
+    <RevealBlock class="lg:col-span-4">
      <h2 class="display-title text-4xl leading-tight md:text-6xl">Specialised services for complex operating environments.</h2>
      <p class="body-copy mt-5 text-base md:text-lg">
       Contextual understanding and rigorous methodology keep programmes responsive, accountable, and grounded in reliable evidence.
      </p>
-    </div>
+     <div class="media-zoom editorial-media mt-10 hidden lg:block">
+      <img src="/dansom-programme-analysis.jpg" alt="A Dansom team reviewing programme evidence" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+     </div>
+    </RevealBlock>
 
-    <div class="mt-12 grid auto-rows-fr gap-5 md:grid-cols-12">
-     <article
+    <div class="lg:col-span-7 lg:col-start-6">
+     <RevealBlock
       v-for="(service, index) in services"
       :key="service.title"
-      class="surface group flex min-h-72 flex-col p-6 transition duration-500 hover:-translate-y-1 hover:border-primary/40 md:p-8"
-      :class="index % 4 === 0 || index % 4 === 3 ? 'md:col-span-7' : 'md:col-span-5'"
+      as="article"
+      :delay="index * 45"
+      class="service-index border-t border-line/55 py-8 first:border-t-0 first:pt-0 md:py-10"
      >
-      <div class="flex items-center justify-between gap-4">
-       <Icon :name="service.icon" class="text-3xl text-primary" />
-       <span class="text-sm font-semibold text-mist/[0.45]">{{ service.category }}</span>
-      </div>
-      <div class="mt-auto pt-14">
-       <h3 class="font-display text-2xl font-semibold tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
-       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.64]">{{ service.description }}</p>
-       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" class="text-link mt-6">
-        Explore service
-        <Icon name="mdi:arrow-right" />
+      <div class="grid gap-5 md:grid-cols-[4rem_1fr_auto] md:items-start">
+       <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-line/60 text-primary"><Icon :name="service.icon" class="text-2xl" /></div>
+       <div>
+        <p class="text-sm font-semibold text-primary">{{ service.category }}</p>
+        <h3 class="mt-2 font-display text-2xl font-semibold leading-tight tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
+        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-mist/62">{{ service.description }}</p>
+       </div>
+       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" :aria-label="`Explore ${service.title}`" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line/60 text-mist transition hover:border-primary hover:bg-primary hover:text-accent-ink">
+        <Icon name="mdi:arrow-top-right" />
        </NuxtLink>
       </div>
-     </article>
+     </RevealBlock>
     </div>
    </div>
   </section>
 
-  <section class="border-t border-mist/10 bg-panel/[0.62] py-16 md:py-24">
+  <section class="border-t border-line/40 bg-panel-soft/35 py-20 md:py-28">
    <div class="shell grid gap-10 lg:grid-cols-12">
     <div class="lg:col-span-5">
      <h2 class="display-title text-4xl leading-tight md:text-5xl">Designed around the operating context.</h2>
     </div>
-    <div class="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
+    <RevealBlock class="grid gap-8 border-y border-line/55 py-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
      <div>
       <p class="font-display text-2xl font-semibold text-primary">Secure access</p>
       <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Field teams positioned across Somalia and Kenya.</p>
@@ -61,7 +68,7 @@
       <p class="font-display text-2xl font-semibold text-primary">Decision-ready</p>
       <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Clear deliverables aligned to partner objectives.</p>
      </div>
-    </div>
+    </RevealBlock>
    </div>
   </section>
  </div>
@@ -82,3 +89,4 @@
  })
 
 </script>
+

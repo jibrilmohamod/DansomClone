@@ -1,6 +1,10 @@
 <template>
  <div>
-  <TheHeader title="Contact">
+  <TheHeader
+   title="Contact"
+   eyebrow="Start a conversation"
+   intro="Bring us the context, objectives, and uncertainty. We will bring the right regional and technical expertise."
+  >
    <template #image>
     <img
      loading="eager"
@@ -14,7 +18,7 @@
    </template>
   </TheHeader>
 
-  <section class="py-16 md:py-24">
+  <section class="py-20 md:py-32">
    <div class="shell grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-7">
      <h2 class="display-title text-4xl leading-tight md:text-6xl">Tell us what you are working on.</h2>
@@ -22,7 +26,7 @@
       Share your objectives, operating context, and timeline. Our team will respond with the right regional and technical expertise.
      </p>
 
-     <form class="mt-10 grid gap-6" @submit.prevent="sendEmail">
+     <form class="mt-12 grid gap-6 border-t border-line/55 pt-8" @submit.prevent="sendEmail">
       <div class="grid gap-6 md:grid-cols-2">
        <div class="grid gap-2">
         <label for="name" class="text-sm font-semibold text-mist">Name</label>
@@ -34,7 +38,7 @@
          autocomplete="name"
          required
          placeholder="Your name"
-         class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+         class="w-full rounded-xl border border-line/70 bg-panel-soft px-4 py-3.5 text-base text-mist placeholder:text-mist/40 focus:border-primary"
         />
        </div>
        <div class="grid gap-2">
@@ -47,7 +51,7 @@
          autocomplete="email"
          required
          placeholder="you@organisation.org"
-         class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+         class="w-full rounded-xl border border-line/70 bg-panel-soft px-4 py-3.5 text-base text-mist placeholder:text-mist/40 focus:border-primary"
         />
        </div>
       </div>
@@ -61,7 +65,7 @@
         required
         rows="7"
         placeholder="Briefly describe your project or research need"
-        class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+        class="w-full rounded-xl border border-line/70 bg-panel-soft px-4 py-3.5 text-base text-mist placeholder:text-mist/40 focus:border-primary"
        ></textarea>
        <p class="text-sm text-mist/[0.45]">Submitting opens your email application with this message prepared.</p>
       </div>
@@ -73,7 +77,7 @@
      </form>
     </div>
 
-    <aside class="surface-soft h-fit p-7 lg:col-span-4 lg:col-start-9 lg:sticky lg:top-28">
+    <aside class="h-fit border-y border-line/55 py-8 lg:sticky lg:top-28 lg:col-span-4 lg:col-start-9">
      <h2 class="font-display text-3xl font-semibold tracking-tight text-mist">Our offices</h2>
      <div class="mt-7 grid gap-7 text-sm leading-relaxed text-mist/[0.58]">
       <div>
@@ -136,3 +140,4 @@
   twitterCard: "summary_large_image",
  })
 </script>
+
