@@ -19,7 +19,7 @@ export const projects: DansomProject[] = [
    "Dansom is providing workshop organisation and field support for IFC training activities in Hargeisa and Mogadishu, including on-site coordination and meeting documentation.",
   Location: "Hargeisa and Mogadishu",
   timeframes: "May 2025 - November 2025",
-  icon: "International_Finance_Corporation_logo.svg.png",
+  icon: "partners/ifc.svg",
   Ngo: "International Finance Corporation",
  },
  {
@@ -29,7 +29,7 @@ export const projects: DansomProject[] = [
    "An independent assessment of Teacher Training Centers and the teacher-training programme under the SEHCDP, covering governance, funding, human resources, coordination, and training outcomes for 2,600 selected teachers.",
   Location: "Somalia",
   timeframes: "July 2025 - September 2025",
-  icon: "The_World_Bank_logo.svg",
+  icon: "partners/world-bank.svg",
   Ngo: "World Bank",
  },
  {
@@ -39,7 +39,7 @@ export const projects: DansomProject[] = [
    "Dansom and Particip are supporting the World Bank's Global Education Policy Dashboard in Somalia through formative research on education policies, regional capacity, service delivery, and learning outcomes.",
   Location: "Somalia",
   timeframes: "July 2024 - October 2025",
-  icon: "The_World_Bank_logo.svg",
+  icon: "partners/world-bank.svg",
   Ngo: "World Bank",
  },
  {
@@ -49,7 +49,7 @@ export const projects: DansomProject[] = [
    "Dansom and Particip provide coordinated field monitoring, reporting, and assessment support for WFP food-assistance and cash-based transfer activities.",
   Location: "Somalia",
   timeframes: "April 2025 - June 2026",
-  icon: "wfpfao.png",
+  icon: "partners/wfp.svg",
   Ngo: "World Food Programme",
  },
  {
@@ -59,7 +59,7 @@ export const projects: DansomProject[] = [
    "Independent monitoring of EU-funded interventions across Somalia, including regular field missions and thematic reporting on water services, land and water management, livelihoods, resilient agriculture, infrastructure, health, peacebuilding, and public-sector development.",
   Location: "Somalia",
   timeframes: "July 2016 - January 2027",
-  icon: "EU.jpg",
+  icon: "partners/eu.svg",
   Ngo: "European Union Delegation to Somalia",
   classification2: "Political Economy Analysis and Security Advisory",
   description2:
@@ -73,7 +73,7 @@ export const projects: DansomProject[] = [
    "A consortium comprising Dansom and Particip provides monitoring and evaluation services in support of UNSOS throughout Somalia.",
   Location: "Somalia",
   timeframes: "December 2020 - present",
-  icon: "Capture1.PNG-removebg-preview.png",
+  icon: "partners/unsos.svg",
   Ngo: "UNSOS",
  },
  {
@@ -83,7 +83,7 @@ export const projects: DansomProject[] = [
    "Support for the Swiss Horn of Africa programme through a framework for risk governance and adaptive programming, with an initial focus on Somalia and Somaliland.",
   Location: "Somalia and Somaliland",
   timeframes: "June 2021 - June 2024",
-  icon: "2560px-Logo_der_Schweizerischen_Eidgenossenschaft.svg.png",
+  icon: "partners/sdc.svg",
   Ngo: "Swiss Agency for Development and Cooperation",
  },
  {
@@ -93,7 +93,7 @@ export const projects: DansomProject[] = [
    "Technical assistance for a diagnostic review of government ministries, departments, and agencies, covering mandates, functions, organisational structures, staffing, policies, processes, and administrative systems.",
   Location: "Somalia",
   timeframes: "December 2020 - September 2021",
-  icon: "Untitled design (1).png",
+  icon: "partners/somaliland-csc-world-bank.svg",
   Ngo: "Federal Government of Somalia",
  },
  {
@@ -103,7 +103,7 @@ export const projects: DansomProject[] = [
    "Third-party monitoring of a community-based reintegration programme supporting returnees, internally displaced people, and host-community members in Kismayo to establish sustainable livelihoods.",
   Location: "Kismayo, Somalia",
   timeframes: "August 2021 - July 2022",
-  icon: "giz-400x173.jpg",
+  icon: "partners/giz.svg",
   Ngo: "GIZ",
  },
  {
@@ -113,7 +113,7 @@ export const projects: DansomProject[] = [
    "Regular independent analysis of the Joint Police Programme using quantitative and qualitative methods, including routine monitoring, baseline work, annual perception surveys, socio-political analysis, and efficiency measurement.",
   Location: "Somalia",
   timeframes: "December 2018 - December 2023",
-  icon: "unops.jpg",
+  icon: "partners/unops.svg",
   Ngo: "UNOPS",
  },
  {
@@ -123,7 +123,7 @@ export const projects: DansomProject[] = [
    "CMC and Dansom conducted a peace and conflict assessment for the Somali Reintegration Programme and Fish for Nutrition project in Kismayo.",
   Location: "Kismayo, Somalia",
   timeframes: "August 2017 - January 2018",
-  icon: "giz-400x173.jpg",
+  icon: "partners/giz.svg",
   Ngo: "GIZ",
  },
  {
@@ -133,7 +133,7 @@ export const projects: DansomProject[] = [
    "Fieldwork and diagnostic analysis of public-sector pay, grading trends, and living standards, followed by recommendations to strengthen civil-service incentives and improve management of the public wage bill.",
   Location: "Somalia",
   timeframes: "September 2019 - March 2020",
-  icon: "Untitled design.png",
+  icon: "partners/puntland-world-bank.svg",
   Ngo: "World Bank",
  },
  {
@@ -143,7 +143,7 @@ export const projects: DansomProject[] = [
    "IDC, Hoplite, and Dansom mapped maritime-security actors and relationships to strengthen understanding of Somalia's maritime security landscape.",
   Location: "Somalia",
   timeframes: "December 2015 - July 2016",
-  icon: "ifc.png",
+  icon: "partners/idc-hoplite.svg",
   Ngo: "IDC and Hoplite",
  },
  {
@@ -153,7 +153,7 @@ export const projects: DansomProject[] = [
    "A third-party technical review of implementation and impact across Somaliland, Puntland, Jubaland, South West State, HirShabelle, and Galmudug.",
   Location: "Somalia",
   timeframes: "December 2017 - December 2018",
-  icon: "FAO_logo.svg",
+  icon: "partners/fao.svg",
   Ngo: "Food and Agriculture Organization",
  },
  {
@@ -163,7 +163,7 @@ export const projects: DansomProject[] = [
    "Event-management and operational support for a World Bank economic and fiscal management programme, including coordination with programme stakeholders.",
   Location: "Somalia",
   timeframes: "September 2016 - December 2016",
-  icon: "The_World_Bank_logo.svg",
+  icon: "partners/world-bank.svg",
   Ngo: "World Bank",
   classification2: "Operational and Logistics Management",
   description2:
@@ -176,7 +176,7 @@ export const projects: DansomProject[] = [
    "Political economy analysis of business licensing, the federal permit system, and the relationships among ministries, public institutions, donors, business associations, and emerging membership organisations in Jubaland, Puntland, and Benadir.",
   Location: "Somalia",
   timeframes: "December 2015 - May 2016",
-  icon: "International_Finance_Corporation_logo.svg.png",
+  icon: "partners/ifc.svg",
   Ngo: "IFC and World Bank",
  },
  {
@@ -186,7 +186,7 @@ export const projects: DansomProject[] = [
    "Dansom and Particip supported statistical capacity-building for federal, Puntland, and South West State planning and statistics institutions so they could conduct, supervise, and coordinate statistical activity.",
   Location: "Somalia",
   timeframes: "February 2018 - August 2019",
-  icon: "ministry-of-planning-400x162.png",
+  icon: "partners/somalia-planning.svg",
   Ngo: "Federal Government of Somalia",
  },
  {
@@ -196,7 +196,7 @@ export const projects: DansomProject[] = [
    "Political economy analysis and third-party monitoring designed to strengthen accountability for UK-funded programmes in Puntland and South Central Somalia.",
   Location: "Somalia",
   timeframes: "2014 - 2015",
-  icon: "DFID-400x162.png",
+  icon: "partners/uk-aid.svg",
   Ngo: "DFID",
  },
  {
@@ -206,7 +206,7 @@ export const projects: DansomProject[] = [
    "Field monitoring of selected WFP and FAO projects in Somalia, supported by timely site visits and structured evidence to improve programme implementation.",
   Location: "Somalia and Ethiopia",
   timeframes: "December 2015 - January 2017",
-  icon: "wfpfao.png",
+  icon: "partners/wfp-fao.svg",
   Ngo: "WFP and FAO",
   classification2: "Formative Research and Policy Advisory Services",
   description2:
@@ -218,7 +218,7 @@ export const projects: DansomProject[] = [
   description:
    "Final evaluation of the Strengthening Civil Society and Public Engagement in Somalia project using OECD DAC criteria to assess performance, achievement, and the factors influencing success or failure.",
   Location: "Somalia",
-  icon: "CARE_Logo_Orange.png",
+  icon: "partners/care.svg",
   Ngo: "CARE International",
  },
  {
@@ -228,7 +228,7 @@ export const projects: DansomProject[] = [
    "Dansom joined an ICF-led consortium for a multi-stakeholder value-chain analysis and baseline study.",
   Location: "Somalia",
   timeframes: "January 2018 - April 2020",
-  icon: "ICF.png",
+  icon: "partners/icf.svg",
   Ngo: "ICF International",
  },
  {
@@ -238,7 +238,7 @@ export const projects: DansomProject[] = [
    "Logistics and operational support for the African Development Bank's second National Steering Committee meeting.",
   Location: "Somalia",
   timeframes: "February 2018 - March 2018",
-  icon: "download (1).png",
+  icon: "partners/afdb.svg",
   Ngo: "African Development Bank",
  },
 ]

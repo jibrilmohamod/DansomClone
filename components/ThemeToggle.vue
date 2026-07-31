@@ -28,13 +28,40 @@
 <template>
  <button
   type="button"
-  class="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl border border-mist/[0.15] bg-mist/[0.03] px-3 text-sm font-bold text-mist transition hover:border-primary/60 hover:text-primary"
-  :class="{ 'w-10 px-0': props.compact }"
+  class="theme-toggle"
+  :class="{ 'theme-toggle--compact': props.compact }"
   :aria-label="actionLabel"
   :title="actionLabel"
   @click="toggleTheme"
  >
-  <Icon :name="theme === 'dark' ? 'mdi:white-balance-sunny' : 'mdi:weather-night'" class="text-lg" aria-hidden="true" />
-  <span v-if="!props.compact">{{ theme === "dark" ? "Light mode" : "Dark mode" }}</span>
+  <span class="theme-toggle-icon"><Icon :name="theme === 'dark' ? 'mdi:white-balance-sunny' : 'mdi:weather-night'" aria-hidden="true" /></span>
+  <span class="theme-toggle-label">{{ theme === "dark" ? "Light" : "Dark" }}</span>
  </button>
 </template>
+
+<style scoped>
+.theme-toggle {
+ display: inline-flex;
+ height: 2.75rem;
+ flex-shrink: 0;
+ align-items: center;
+ justify-content: center;
+ gap: .55rem;
+ border: 1px solid currentColor;
+ border-radius: .7rem;
+ background: rgb(5 14 23 / .62);
+ padding: 0 .8rem;
+ color: currentColor;
+ font-size: .78rem;
+ font-weight: 700;
+ opacity: .86;
+ backdrop-filter: blur(14px);
+ transition: opacity 220ms ease, border-color 220ms ease, color 220ms ease, background-color 220ms ease;
+}
+.theme-toggle:hover { border-color: #c5e060; color: #c5e060; opacity: 1; }
+.theme-toggle-icon { display:inline-flex; height:1.55rem; width:1.55rem; align-items:center; justify-content:center; border-radius:999px; background:#c5e060; color:#07111b; font-size:1rem; }
+.theme-toggle--compact .theme-toggle-label { display:none; }
+@media (min-width: 768px) {
+ .theme-toggle--compact .theme-toggle-label { display:inline; }
+}
+</style>

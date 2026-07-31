@@ -1,67 +1,40 @@
 <template>
  <div>
-  <TheHeader title="Our Services">
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1586"
-     height="992"
-     alt="Researchers independently monitoring rural water infrastructure"
-     src="/dansom-field-monitoring.jpg"
-     class="h-full w-full object-cover"
-    />
-   </template>
+  <TheHeader title="Services" eyebrow="What we do" intro="Research, monitoring, advisory, institutional support and field delivery for complex contexts.">
+   <template #image><img src="/dansom-field-monitoring.jpg" alt="Researchers independently monitoring rural water infrastructure" fetchpriority="high" /></template>
   </TheHeader>
 
-  <section class="py-16 md:py-28">
-   <div class="shell">
-    <div class="reveal max-w-3xl">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Specialised services for complex operating environments.</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Contextual understanding and rigorous methodology keep programmes responsive, accountable, and grounded in reliable evidence.
-     </p>
-    </div>
-
-    <div class="mt-12 grid auto-rows-fr gap-5 md:grid-cols-12">
-     <article
-      v-for="(service, index) in services"
-      :key="service.title"
-      class="surface group flex min-h-72 flex-col p-6 transition duration-500 hover:-translate-y-1 hover:border-primary/40 md:p-8"
-      :class="index % 4 === 0 || index % 4 === 3 ? 'md:col-span-7' : 'md:col-span-5'"
-     >
-      <div class="flex items-center justify-between gap-4">
-       <Icon :name="service.icon" class="text-3xl text-primary" />
-       <span class="text-sm font-semibold text-mist/[0.45]">{{ service.category }}</span>
-      </div>
-      <div class="mt-auto pt-14">
-       <h3 class="font-display text-2xl font-semibold tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
-       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.64]">{{ service.description }}</p>
-       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" class="text-link mt-6">
-        Explore service
-        <Icon name="mdi:arrow-right" />
-       </NuxtLink>
-      </div>
-     </article>
-    </div>
+  <section class="atlas-grid bg-ink py-24 md:py-36">
+   <div class="atlas-shell">
+    <RevealBlock class="max-w-5xl"><p class="atlas-label">Our services</p><h2 class="atlas-display mt-6 text-[clamp(2.4rem,4.5vw,4.5rem)] leading-[0.98]">Research, monitoring and advisory support for complex programmes.</h2></RevealBlock>
    </div>
   </section>
 
-  <section class="border-t border-mist/10 bg-panel/[0.62] py-16 md:py-24">
-   <div class="shell grid gap-10 lg:grid-cols-12">
-    <div class="lg:col-span-5">
-     <h2 class="display-title text-4xl leading-tight md:text-5xl">Designed around the operating context.</h2>
-    </div>
-    <div class="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
-     <div>
-      <p class="font-display text-2xl font-semibold text-primary">Secure access</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Field teams positioned across Somalia and Kenya.</p>
+  <section class="bg-panel text-mist">
+   <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative min-h-[118dvh] border-t border-line/45">
+    <div class="sticky top-0 grid min-h-[100dvh] overflow-hidden lg:grid-cols-12">
+     <div class="service-visual relative min-h-[42dvh] lg:col-span-5 lg:min-h-full" :class="index % 2 === 1 ? 'lg:order-2' : ''">
+      <img :src="images[index]" :alt="service.description" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,14,23,.1),rgba(5,14,23,.7))]"></div>
+      <p class="absolute bottom-6 left-6 font-display text-sm text-white/55 md:bottom-10 md:left-10">0{{ index+1 }} / 0{{ services.length }}</p>
      </div>
-     <div>
-      <p class="font-display text-2xl font-semibold text-primary">Decision-ready</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Clear deliverables aligned to partner objectives.</p>
+     <div class="service-copy-panel atlas-grid flex items-end bg-panel p-6 pb-12 md:p-10 md:pb-16 lg:col-span-7 lg:p-16" :class="index % 2 === 1 ? 'lg:order-1' : ''">
+      <div class="service-copy max-w-4xl">
+       <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-line/65 text-primary"><Icon :name="service.icon" class="text-3xl" /></div>
+       <p class="atlas-label mt-10">{{ service.category }}</p>
+       <h2 class="atlas-display mt-5 max-w-[19ch] text-[clamp(2.15rem,3.8vw,3.85rem)] leading-[0.98]">{{ service.title }}</h2>
+       <p class="mt-7 max-w-2xl text-base leading-relaxed text-mist/64 md:text-lg">{{ service.subtitle }}</p>
+       <NuxtLink :to="`/Services/${encodeURIComponent(service.slug)}`" class="button-primary mt-8">View service <Icon name="mdi:arrow-right" /></NuxtLink>
+      </div>
      </div>
     </div>
+   </article>
+  </section>
+
+  <section class="bg-panel py-24 md:py-36">
+   <div class="atlas-shell grid gap-12 lg:grid-cols-12">
+    <RevealBlock class="lg:col-span-7"><p class="atlas-label">Regional delivery</p><h2 class="atlas-display mt-6 text-[clamp(2.3rem,4vw,4rem)] leading-[0.98]">Regional expertise across every assignment.</h2></RevealBlock>
+    <RevealBlock class="self-end border-t border-line/55 pt-6 lg:col-span-3 lg:col-start-10"><p class="text-lg leading-relaxed text-mist/65">Field teams positioned across Somalia and Kenya, supported by multidisciplinary researchers and operational specialists.</p><NuxtLink to="/Contact" class="button-primary mt-7">Discuss an assignment <Icon name="mdi:arrow-right" /></NuxtLink></RevealBlock>
    </div>
   </section>
  </div>
@@ -69,16 +42,21 @@
 
 <script setup lang="ts">
  import { services } from "~/data/services"
-
- useSeoMeta({
-  title: "Services",
-  description:
-   "Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.",
-  ogTitle: "Services | Dansom Research & Consultancy",
-  ogDescription:
-   "Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.",
-  ogImage: "/dansom-logo.png",
-  twitterCard: "summary_large_image",
- })
-
+ const images=["/dansom-community-dialogue.jpg","/dansom-field-monitoring.jpg","/dansom-research-workshop.jpg","/dansom-programme-analysis.jpg","/dansom-field-operations.jpg","/dansom-livelihoods-research.jpg"]
+ useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:"/dansom-field-monitoring.jpg", twitterCard:"summary_large_image" })
 </script>
+
+<style scoped>
+.service-visual { overflow:hidden; }
+.service-visual img { transform:scale(1.04); }
+.service-copy-panel { position:relative; }
+.service-copy-panel::before { content:""; position:absolute; inset:0 auto 0 0; width:3px; background:rgb(var(--primary)); transform:scaleY(.16); transform-origin:bottom; opacity:.7; }
+@media (prefers-reduced-motion:no-preference) {
+ .service-visual img { animation:service-image linear both; animation-timeline:view(block); animation-range:entry 0% cover 85%; }
+ .service-copy { animation:service-copy linear both; animation-timeline:view(block); animation-range:entry 4% cover 38%; }
+ .service-copy-panel::before { animation:service-rule linear both; animation-timeline:view(block); animation-range:entry 5% cover 55%; }
+}
+@keyframes service-image { from { transform:scale(1.11); } to { transform:scale(1.02); } }
+@keyframes service-copy { from { opacity:.2; transform:translateY(3rem); } to { opacity:1; transform:none; } }
+@keyframes service-rule { from { transform:scaleY(.16); } to { transform:scaleY(1); } }
+</style>

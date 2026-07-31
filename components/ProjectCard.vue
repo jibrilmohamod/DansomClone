@@ -1,36 +1,26 @@
 <template>
- <NuxtLink
-  :to="slug"
-  class="group surface grid min-h-[22rem] overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
- >
-  <div class="flex h-32 items-center border-b border-line/60 bg-paper p-6">
-   <img
-    v-if="icon"
-    :src="icon"
-    :alt="title + ' project partner logo'"
-    class="max-h-16 max-w-[12rem] object-contain object-left"
-    loading="lazy"
-   />
-  </div>
-  <div class="flex flex-col p-5">
-   <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{{ classification }}</p>
-   <h3 class="mt-3 font-display text-xl font-semibold leading-snug tracking-tight text-mist">{{ title }}</h3>
-   <p class="mt-3 text-sm text-mist/[0.62]">{{ location }}<span v-if="timeframe">, {{ timeframe }}</span></p>
-   <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-primary">
-    View project
-    <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" />
-   </span>
-  </div>
- </NuxtLink>
+ <RevealBlock as="article" class="project-record border-t border-line/55 first:border-t-0">
+  <NuxtLink :to="slug" class="project-link group relative grid gap-7 overflow-hidden py-10 md:items-center md:py-12">
+   <span class="font-display text-xs text-mist/35">{{ String(index + 1).padStart(2,"0") }}</span>
+   <div class="project-logo-cell"><BrandMark v-if="icon" :src="icon" :alt="title+' project partner logo'" context="project" /></div>
+   <div class="relative z-10">
+    <p class="atlas-label">{{ classification }}</p>
+    <h3 class="atlas-display mt-3 max-w-[26ch] text-[clamp(1.65rem,2.3vw,2.45rem)] leading-[1.04] transition duration-300 group-hover:text-primary">{{ title }}</h3>
+    <p class="mt-5 text-sm text-mist/55">{{ location }}<span v-if="timeframe">, {{ timeframe }}</span></p>
+   </div>
+   <div class="flex justify-start md:justify-end"><span class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-line/60 text-lg transition duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-accent-ink"><Icon name="mdi:arrow-top-right" /></span></div>
+  </NuxtLink>
+ </RevealBlock>
 </template>
 
-<script lang="ts" setup>
- defineProps({
-  title: { type: String, required: true },
-  icon: String,
-  slug: { type: String, required: true },
-  classification: { type: String, required: true },
-  location: { type: String, required: true },
-  timeframe: String,
- })
+<script setup lang="ts">
+ defineProps({ index:{type:Number,default:0}, title:{type:String,required:true},icon:String,slug:{type:String,required:true},classification:{type:String,required:true},location:{type:String,required:true},timeframe:String })
 </script>
+
+<style scoped>
+.project-record { background:linear-gradient(90deg,transparent,rgb(var(--panel)/0)); transition:background 350ms ease; }
+.project-record:hover { background:linear-gradient(90deg,transparent,rgb(var(--panel)/.8)); }
+.project-link { grid-template-columns:2.5rem minmax(8rem,10rem) minmax(0,1fr) 3rem; }
+.project-logo-cell { display:flex; min-height:5rem; align-items:center; }
+@media(max-width:767px){.project-link{grid-template-columns:2.25rem minmax(0,1fr)}.project-logo-cell{min-height:4rem}.project-link>div:nth-of-type(2),.project-link>div:nth-of-type(3){grid-column:2}}
+</style>
