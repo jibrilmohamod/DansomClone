@@ -1,15 +1,15 @@
 # Photography sources
 
-The website uses real stock photography licensed through [Pexels](https://www.pexels.com/license/). The licence was reviewed on 2026-09-03; attribution is not required for website use.
+The website uses documentary photography whose subjects are explicitly identified as Somali or photographed in Somali communities. The files below are available under CC0 or public-domain terms. No visible captions are required; this ledger preserves provenance and licensing details.
 
-| Catalogue key | Photographer | Source | Website context |
-| --- | --- | --- | --- |
-| `fieldResearchHero` | Şeyhmus Kino | [Community gathering in rural Kenya](https://www.pexels.com/photo/community-gathering-in-rural-african-village-30616602/) | Homepage and general research hero |
-| `communityDialogue` | Şeyhmus Kino | [Outdoor community gathering](https://www.pexels.com/photo/30564960/) | Community engagement |
-| `fieldMonitoring` | Kindel Media | [African woman engineer recording site observations](https://www.pexels.com/photo/woman-engineer-writing-down-on-paper-8488032/) | Monitoring and evaluation |
-| `researchWorkshop` | PICHA Stock | [African women collaborating in an office meeting](https://www.pexels.com/photo/office-team-having-a-meeting-3869649/) | Research planning and collaboration |
-| `programmeAnalysis` | Monstera Production | [Black professionals reviewing a project](https://www.pexels.com/photo/focused-black-coworkers-discussing-project-9430884/) | Analysis and advisory |
-| `fieldOperations` | Twilight Kenya | [Field vehicle in East Africa](https://www.pexels.com/photo/4x4-truck-on-field-14510931/) | Field operations and portfolio |
-| `livelihoodsResearch` | Kipkirui Ambrosr | [Farmer preparing land in Kenya](https://www.pexels.com/photo/farmer-plowing-field-with-blue-tractor-35273257/) | Livelihoods and agricultural research |
+| Catalogue key | Credit | Source | Licence | Website context |
+| --- | --- | --- | --- | --- |
+| `fieldResearchHero` | AMISOM Public Information / Nigel M. Nassar | [Somali Women's Political Participation Forum, Mogadishu](https://commons.wikimedia.org/wiki/File:Women_Political_Participation_Forum_-_Mogadishu_(51667300629).jpg) | CC0 | Homepage and general research hero |
+| `communityDialogue` | AMISOM Public Information | [Kismayo community meeting](https://commons.wikimedia.org/wiki/File:2016_02_29_Kismayo_Community_Police_Meeting-4_(24743795204).jpg) | CC0 | Community engagement |
+| `fieldMonitoring` | AMISOM Public Information | [Gedo field assessment](https://commons.wikimedia.org/wiki/File:A_man_collects_water_from_a_well_in_Garbahaarey_town_in_the_Gedo_region_of_Somalia_on_August_11._AMISOM%27s_Humanitarian_Unit_today_conducted_an_assesment_of_Garbahaarey_town_in_the_Gedo_region_of_(14700908410).jpg) | CC0 | Monitoring and evaluation |
+| `researchWorkshop` | AMISOM Public Information / Tobin Jones | [Somali civil-society consultative workshop](https://commons.wikimedia.org/wiki/File:Women,_representing_various_civil_society_groups_from_around_Somalia,_attend_a_Consultative_Workshop_on_Draft_National_Gender_Policy_hosted_by_AMISOM_in_Mogadishu,_Somalia,_on_June_17._AMISOM_Photo_-_(14446031351).jpg) | CC0 | Research planning and collaboration |
+| `programmeAnalysis` | AMISOM Public Information / Ilyas Ahmed | [Somali women MPs workshop](https://commons.wikimedia.org/wiki/File:2015_06_13_Somali_Female_MPs_Workshop-11_(18768562331).jpg) | CC0 | Analysis and advisory |
+| `fieldOperations` | AMISOM Public Information / Stuart Price | [Somali dock workers, Mogadishu seaport](https://commons.wikimedia.org/wiki/File:Mogadishu_Daily_Life_one_year_after_Al_Shabaab_03_(7731056752).jpg) | CC0 | Field operations and portfolio |
+| `livelihoodsResearch` | U.S. Department of Defense / G. D. Robinson | [Somali farmers near Kismayo](https://commons.wikimedia.org/wiki/File:Somalia_farmers3.jpg) | Public domain | Livelihoods and agricultural research |
 
-These are representative stock photographs. The people and locations shown are not presented as Dansom employees, clients, research participants, or completed assignments.
+These are representative documentary photographs and are not presented as Dansom employees, clients, research participants, or completed Dansom assignments.
