@@ -8,16 +8,16 @@ export const photography = {
   alt: "Community members taking part in an outdoor group discussion",
  },
  fieldMonitoring: {
-  src: "https://images.pexels.com/photos/8960991/pexels-photo-8960991.jpeg?auto=compress&cs=tinysrgb&w=2000",
-  alt: "A field engineer reviewing an infrastructure site with a clipboard",
+  src: "https://images.pexels.com/photos/8488032/pexels-photo-8488032.jpeg?auto=compress&cs=tinysrgb&w=2000",
+  alt: "An African woman engineer recording observations during a site inspection",
  },
  researchWorkshop: {
-  src: "https://images.pexels.com/photos/8068833/pexels-photo-8068833.jpeg?auto=compress&cs=tinysrgb&w=2000",
-  alt: "A diverse professional team collaborating during a workshop",
+  src: "https://images.pexels.com/photos/3869649/pexels-photo-3869649.jpeg?auto=compress&cs=tinysrgb&w=2000",
+  alt: "African women collaborating during a professional workshop",
  },
  programmeAnalysis: {
-  src: "https://images.pexels.com/photos/7888809/pexels-photo-7888809.jpeg?auto=compress&cs=tinysrgb&w=2000",
-  alt: "A professional team reviewing documents together in an office",
+  src: "https://images.pexels.com/photos/9430884/pexels-photo-9430884.jpeg?auto=compress&cs=tinysrgb&w=2000",
+  alt: "African professionals reviewing project documents together",
  },
  fieldOperations: {
   src: "https://images.pexels.com/photos/14510931/pexels-photo-14510931.jpeg?auto=compress&cs=tinysrgb&w=2200",
