@@ -120,6 +120,7 @@
 </template>
 
 <script lang="ts" setup>
+import { photography } from "~/data/photography"
  const form = reactive({
   name: "",
   email: "",
@@ -144,7 +145,4 @@
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })
-</script>
-<script setup lang="ts">
-import { photography } from "~/data/photography"
 </script>
