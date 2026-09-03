@@ -1,8 +1,11 @@
 <template>
  <div>
-  <TheHeader title="Services" eyebrow="What we do" intro="Research, monitoring, advisory, institutional support and field delivery for complex contexts.">
-   <template #image><img :src="photography.fieldMonitoring.src" :alt="photography.fieldMonitoring.alt" fetchpriority="high" /></template>
-  </TheHeader>
+  <TheHeader
+   title="Services"
+   eyebrow="What we do"
+   intro="Research, monitoring, advisory, institutional support and field delivery for complex contexts."
+   variant="services"
+  />
 
   <section class="atlas-grid bg-ink py-24 md:py-36">
    <div class="atlas-shell">
