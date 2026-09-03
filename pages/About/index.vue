@@ -1,6 +1,10 @@
 <template>
  <div>
-  <TheHeader title="Who We Are">
+  <TheHeader
+   title="About Dansom"
+   eyebrow="Independent since 2009"
+   intro="A regional research and advisory firm with established field access and multidisciplinary expertise."
+  >
    <template #image>
     <img
      loading="eager"
@@ -14,77 +18,59 @@
    </template>
   </TheHeader>
 
-  <section class="py-16 md:py-28">
-   <div class="shell grid gap-12 lg:grid-cols-12">
-    <div class="reveal lg:col-span-7">
-     <h2 class="display-title text-4xl leading-tight md:text-6xl">Research rooted in the Horn of Africa.</h2>
-     <p class="body-copy mt-6 text-lg">
-      We partner with humanitarian and development actors to unlock meaningful change across Somalia and Kenya. Our teams combine rigorous research, contextual understanding, and secure access to deliver evidence that informs policies, strengthens programmes, and amplifies community voices.
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-14 lg:grid-cols-12">
+    <p class="atlas-label lg:col-span-2">About us</p>
+    <RevealBlock class="lg:col-span-9 lg:col-start-4">
+     <h2 class="atlas-display max-w-[18ch] text-[clamp(2.35rem,4.2vw,4.15rem)] leading-[0.98]">
+      Regional research expertise grounded in local context.
+     </h2>
+     <p class="mt-10 max-w-3xl text-lg leading-relaxed text-mist/[0.65] md:ml-auto md:text-2xl">
+      We partner with humanitarian and development actors across Somalia and Kenya. Multidisciplinary teams connect rigorous research, contextual understanding, and secure access to produce evidence that informs policies, strengthens programmes, and amplifies community voices.
      </p>
-    </div>
-    <div class="grid gap-5 sm:grid-cols-2 lg:col-span-5">
-     <div class="surface-soft p-6">
-      <p class="font-display text-5xl font-semibold text-primary">2009</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/60">Founded to connect global partners with local insight.</p>
-     </div>
-     <div class="surface p-6 sm:mt-12">
-      <p class="font-display text-3xl font-semibold text-mist">Full access</p>
-      <p class="mt-3 text-sm leading-relaxed text-mist/60">Teams positioned across hard-to-reach regions.</p>
-     </div>
-    </div>
+    </RevealBlock>
    </div>
   </section>
 
-  <section class="border-y border-mist/10 bg-panel/[0.55] py-16 md:py-24">
-   <div class="shell grid items-center gap-10 lg:grid-cols-2">
-    <div class="media-zoom editorial-media">
+  <section class="border-y border-line/45 bg-panel py-20 md:py-28">
+   <div class="atlas-shell grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+    <RevealBlock class="lg:col-span-5">
+     <p class="atlas-label">Our vision</p>
+     <h2 class="atlas-display mt-6 max-w-[14ch] text-[clamp(2.25rem,3.8vw,3.75rem)] leading-[0.98]">Research that supports better decisions.</h2>
+     <p class="mt-8 max-w-lg text-lg leading-relaxed text-mist/[0.66]">
+      Increase understanding through innovative socio-political engagement and strategic field-based research.
+     </p>
+    </RevealBlock>
+    <RevealBlock class="vision-media lg:col-span-7">
      <img
       loading="lazy"
       width="1586"
       height="992"
       src="/dansom-community-dialogue.jpg"
       alt="Community members sharing local knowledge with researchers"
-      class="aspect-[5/4] w-full object-cover"
+      class="aspect-[4/3] h-full w-full object-cover"
      />
-    </div>
-    <div class="reveal lg:pl-10">
-     <p class="eyebrow">Our vision</p>
-     <h2 class="display-title mt-5 text-4xl leading-tight md:text-5xl">Knowledge that strengthens the region.</h2>
-     <p class="body-copy mt-5 text-base md:text-lg">
-      Our vision is to support the region by increasing understanding and knowledge through innovative socio-political engagement and strategic field-based research. We aim to be the trusted partner for institutions seeking clarity, accountability, and resilient programme design.
-     </p>
-     <div class="mt-8 grid gap-6 sm:grid-cols-2">
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Informed decisions</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Political economy analysis and security advisory guide policy and programming.</p>
-      </div>
-      <div>
-       <h3 class="font-display text-xl font-semibold text-mist">Community-first</h3>
-       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Approaches elevate local voices and prioritize inclusion.</p>
-      </div>
-     </div>
-    </div>
+    </RevealBlock>
    </div>
   </section>
 
-  <section class="py-16 md:py-28">
-   <div class="shell">
-    <OurExpertise title="Values that shape the work" subtitle="How we work with partners, communities, and one another.">
-     <template #vfor>
-      <div class="grid gap-5 md:grid-cols-12">
-       <article
-        v-for="(service, index) in services"
-        :key="service.title"
-        class="surface group p-6 transition duration-500 hover:border-primary/[0.35] md:p-7"
-        :class="index === 0 || index === 3 ? 'md:col-span-7' : 'md:col-span-5'"
-       >
-        <Icon :name="service.icon" class="text-3xl text-primary" />
-        <h3 class="mt-10 font-display text-3xl font-semibold tracking-tight text-mist">{{ service.title }}</h3>
-        <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.58]">{{ service.subtitle }}</p>
-       </article>
-      </div>
-     </template>
-    </OurExpertise>
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell">
+    <div class="grid gap-8 lg:grid-cols-12">
+     <p class="atlas-label lg:col-span-2">Our values</p>
+     <h2 class="atlas-display text-[clamp(2.3rem,3.9vw,3.85rem)] leading-[0.98] lg:col-span-8 lg:col-start-4">How we work.</h2>
+    </div>
+    <div class="mt-20">
+     <RevealBlock
+      v-for="(service, index) in services"
+      :key="service.title"
+      class="group grid items-center border-t border-line/55 py-10 md:grid-cols-12 md:py-14"
+     >
+      <span class="atlas-label md:col-span-2">0{{ index + 1 }}</span>
+      <h3 class="atlas-display mt-8 text-[clamp(2rem,3.2vw,3.2rem)] leading-[1] transition-colors group-hover:text-primary md:col-span-5 md:mt-0">{{ service.title }}</h3>
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-mist/[0.62] md:col-span-4 md:col-start-9 md:mt-0">{{ service.subtitle }}</p>
+     </RevealBlock>
+    </div>
    </div>
   </section>
 
@@ -101,14 +87,12 @@
    </template>
   </OurTeam>
 
-  <section class="py-16 md:py-24">
-   <div class="shell">
-    <div class="surface-soft grid gap-8 p-7 md:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
-     <div>
-      <h2 class="display-title text-4xl leading-tight md:text-5xl">Local access. Actionable intelligence.</h2>
-      <p class="body-copy mt-4">Tell us about your objectives and we will assemble the right team.</p>
-     </div>
-     <NuxtLink to="/Contact" class="button-primary">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
+  <section class="atlas-grid py-24 md:py-40">
+   <div class="atlas-shell grid gap-10 lg:grid-cols-12 lg:items-end">
+    <h2 class="atlas-display text-[clamp(2.35rem,4.1vw,4rem)] leading-[0.98] lg:col-span-8">Regional expertise and local access.</h2>
+    <div class="lg:col-span-3">
+     <p class="mb-7 text-base leading-relaxed text-mist/[0.62]">Tell us about your objectives and we will assemble the right team.</p>
+     <NuxtLink to="/Contact" class="button-primary">Start a project <Icon name="mdi:arrow-right" /></NuxtLink>
     </div>
    </div>
   </section>
@@ -213,3 +197,8 @@
   },
  ]
 </script>
+
+<style scoped>
+.vision-media { position:relative; overflow:hidden; background:rgb(var(--panel-soft)); }
+.vision-media::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 62%,rgb(var(--ink)/.24)); }
+</style>

@@ -1,45 +1,56 @@
 <template>
  <div>
-  <TheHeader :projTitle="service.fullTitle">
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1586"
-     height="992"
-     alt="Analysts reviewing field evidence and programme findings"
-     src="/dansom-programme-analysis.jpg"
-     class="h-full w-full object-cover"
-    />
-   </template>
+  <TheHeader :projTitle="service.fullTitle" :eyebrow="service.category" :intro="service.subtitle">
+   <template #image><img src="/dansom-programme-analysis.jpg" alt="Analysts reviewing field evidence and programme findings" fetchpriority="high" /></template>
   </TheHeader>
 
-  <main class="py-16 md:py-24">
-   <div class="shell grid gap-10 lg:grid-cols-12">
-    <aside class="lg:col-span-4">
-     <div class="surface-soft lg:sticky lg:top-28">
-      <div class="flex min-h-52 items-center justify-center border-b border-mist/10 p-8">
-       <Icon :name="service.icon" class="h-24 w-24 text-primary" />
-      </div>
-      <dl class="grid gap-6 p-6 text-sm">
-       <div>
-        <dt class="font-semibold text-mist">Delivery model</dt>
-        <dd class="mt-2 leading-relaxed text-mist/[0.62]">{{ service.deliveryModel }}</dd>
-       </div>
-       <div>
-        <dt class="font-semibold text-mist">Coverage</dt>
-        <dd class="mt-2 text-mist/[0.62]">Somalia and Kenya</dd>
-       </div>
+  <main class="atlas-grid bg-ink py-24 md:py-36">
+   <div class="atlas-shell grid gap-14 lg:grid-cols-12">
+    <aside class="lg:col-span-3">
+     <div class="sticky top-8 border-t border-line/55 pt-6">
+      <Icon :name="service.icon" class="text-5xl text-primary" />
+      <dl class="mt-10 grid gap-7 text-sm">
+       <div><dt class="font-semibold text-mist">Delivery model</dt><dd class="mt-2 leading-relaxed text-mist/58">{{ service.deliveryModel }}</dd></div>
+       <div><dt class="font-semibold text-mist">Coverage</dt><dd class="mt-2 text-mist/58">Somalia and Kenya</dd></div>
       </dl>
+      <NuxtLink to="/Contact" class="button-primary mt-9">Discuss this service <Icon name="mdi:arrow-right" /></NuxtLink>
      </div>
     </aside>
 
-    <article class="lg:col-span-7 lg:col-start-6">
-     <p class="text-sm font-semibold text-primary">{{ service.title }}</p>
-     <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">{{ service.fullTitle }}</h2>
-     <p class="mt-5 text-lg leading-relaxed text-mist/[0.65]">{{ service.subtitle }}</p>
-     <div class="service-body mt-10 space-y-6 text-base leading-8 text-mist/[0.65]" v-html="service.about"></div>
-     <NuxtLink to="/Contact" class="button-primary mt-10">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
+    <article class="lg:col-span-8 lg:col-start-5">
+     <p class="atlas-label">Service overview</p>
+     <h2 class="atlas-display mt-6 max-w-[18ch] text-[clamp(2.2rem,3.4vw,3.4rem)] leading-[1]">What this service covers.</h2>
+     <div class="service-narrative mt-12" v-html="service.about"></div>
+
+     <section class="mt-20 grid gap-10 border-y border-line/55 py-10 md:grid-cols-2">
+      <div>
+       <p class="atlas-label">Areas of work</p>
+       <ul class="service-list mt-7">
+        <li v-for="item in service.areasOfWork" :key="item">{{ item }}</li>
+       </ul>
+      </div>
+      <div class="md:border-l md:border-line/55 md:pl-10">
+       <p class="atlas-label">Methods</p>
+       <ul class="service-list mt-7">
+        <li v-for="item in service.methods" :key="item">{{ item }}</li>
+       </ul>
+      </div>
+     </section>
+
+     <section v-if="relatedProjects.length" class="mt-20">
+      <p class="atlas-label">Related assignments</p>
+      <div class="mt-7 border-b border-line/55">
+       <NuxtLink v-for="project in relatedProjects" :key="project.title" :to="project.path" class="group grid gap-4 border-t border-line/55 py-7 md:grid-cols-[1fr_auto] md:items-center">
+        <div><h3 class="font-display text-xl font-semibold transition group-hover:text-primary md:text-2xl">{{ project.title }}</h3><p class="mt-2 text-sm text-mist/55">{{ project.Location }}<span v-if="project.timeframes">, {{ project.timeframes }}</span></p></div>
+        <Icon name="mdi:arrow-top-right" class="text-xl text-mist/40 transition group-hover:text-primary" />
+       </NuxtLink>
+      </div>
+     </section>
+
+     <div class="mt-20 grid gap-6 border-y border-line/55 py-9 md:grid-cols-2">
+      <NuxtLink to="/Portfolio" class="group"><p class="atlas-label">Project portfolio</p><p class="mt-3 font-display text-2xl font-semibold transition group-hover:text-primary">View our project work</p></NuxtLink>
+      <NuxtLink to="/Services" class="group md:border-l md:border-line/55 md:pl-7"><p class="atlas-label">Other services</p><p class="mt-3 font-display text-2xl font-semibold transition group-hover:text-primary">Explore all services</p></NuxtLink>
+     </div>
     </article>
    </div>
   </main>
@@ -47,35 +58,19 @@
 </template>
 
 <style>
-.service-body p + p {
- margin-top: 1.5rem;
-}
-.service-body ul {
- margin-top: 1.5rem;
- display: grid;
- gap: 0.75rem;
- padding-left: 1.25rem;
- list-style: disc;
-}
+.service-narrative>p { max-width: 64ch; font-size:clamp(1rem,1.25vw,1.125rem); font-weight:400; line-height:1.75; letter-spacing:-.005em; color:rgb(var(--mist)/.76); }
+.service-narrative>p+ p { margin-top:clamp(2.5rem,5vw,4.5rem); margin-left:auto; }
+.service-narrative ul { margin-top:3rem; display:grid; gap:1rem; border-top:1px solid rgb(var(--line)/.55); padding-top:2rem; }
+.service-narrative li { border-bottom:1px solid rgb(var(--line)/.45); padding-bottom:1rem; color:rgb(var(--mist)/.65); }
+.service-list { display:grid; gap:0; border-top:1px solid rgb(var(--line)/.55); }
+.service-list li { border-bottom:1px solid rgb(var(--line)/.45); padding:1rem 0; color:rgb(var(--mist)/.7); }
 </style>
 
-<script lang="ts" setup>
+<script setup lang="ts">
  import { services } from "~/data/services"
-
- const route = useRoute()
- const requestedService = decodeURIComponent(String(route.params.slug || ""))
- const service = services.find((item) => item.slug === requestedService)
-
- if (!service) {
-  throw createError({ statusCode: 404, statusMessage: "Service not found" })
- }
-
- useSeoMeta({
-  title: () => service.fullTitle,
-  description: () => service.subtitle,
-  ogTitle: () => `${service.fullTitle} | Dansom Research & Consultancy`,
-  ogDescription: () => service.subtitle,
-  ogImage: "/dansom-logo.png",
-  twitterCard: "summary_large_image",
- })
+ import { projects } from "~/data/projects"
+ const route=useRoute(); const requestedService=decodeURIComponent(String(route.params.slug||"")); const service=services.find(item=>item.slug===requestedService)
+ if(!service) throw createError({statusCode:404,statusMessage:"Service not found"})
+ const relatedProjects=projects.map((project,index)=>({...project,path:`/Portfolio/${index}-${encodeURIComponent(project.title)}`})).filter(project=>project.classification===service.slug||project.classification===service.fullTitle||project.classification2===service.slug||project.classification2===service.fullTitle).slice(0,3)
+ useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:"/dansom-programme-analysis.jpg", twitterCard:"summary_large_image" })
 </script>
