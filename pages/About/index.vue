@@ -4,19 +4,8 @@
    title="About Dansom"
    eyebrow="Independent since 2009"
    intro="A regional research and advisory firm with established field access and multidisciplinary expertise."
-  >
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1570"
-     height="1002"
-     :alt="photography.researchWorkshop.alt"
-     :src="photography.researchWorkshop.src"
-     class="h-full w-full object-cover"
-    />
-   </template>
-  </TheHeader>
+   variant="about"
+  />
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
