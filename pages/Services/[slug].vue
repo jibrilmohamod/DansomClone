@@ -1,8 +1,11 @@
 <template>
  <div>
-  <TheHeader :projTitle="service.fullTitle" :eyebrow="service.category" :intro="service.subtitle">
-   <template #image><img :src="photography.programmeAnalysis.src" :alt="photography.programmeAnalysis.alt" fetchpriority="high" /></template>
-  </TheHeader>
+  <TheHeader
+   :projTitle="service.fullTitle"
+   :eyebrow="service.category"
+   :intro="service.subtitle"
+   variant="detail"
+  />
 
   <main class="atlas-grid bg-ink py-24 md:py-36">
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
