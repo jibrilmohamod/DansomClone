@@ -15,10 +15,11 @@ This is a Nuxt 3 / Vue 3 / TailwindCSS site. Preserve the existing stack and con
 For any task that changes how the website looks, feels, moves, responds, or is interacted with:
 
 1. Read `.agents/skills/dansom-frontend/SKILL.md` first.
-2. Use `.agents/skills/ui-ux-pro-max/SKILL.md` for layout, typography, hierarchy, color, responsive, interaction, and accessibility decisions.
-3. Use `.agents/skills/motion-design/SKILL.md` when motion, transitions, scroll effects, hover behavior, or micro-interactions are involved.
-4. Use `.agents/skills/web-design-guidelines/SKILL.md` as a post-implementation UX/accessibility audit.
-5. Use `.agents/skills/frontend-testing-debugging/SKILL.md` for rendered browser QA.
+2. Use `.agents/skills/frontend-design/SKILL.md` to classify the task and translate the approved design direction into focused Nuxt/Vue/Tailwind changes.
+3. Use `.agents/skills/ui-ux-pro-max/SKILL.md` for layout, typography, hierarchy, color, responsive, interaction, and accessibility decisions.
+4. Use `.agents/skills/motion-design/SKILL.md` when motion, transitions, scroll effects, hover behavior, or micro-interactions are involved.
+5. Use `.agents/skills/web-design-guidelines/SKILL.md` as a post-implementation UX/accessibility audit.
+6. Use `.agents/skills/frontend-testing-debugging/SKILL.md` for rendered browser QA.
 
 ## Working rule
 
