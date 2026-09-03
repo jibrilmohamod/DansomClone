@@ -11,8 +11,8 @@
      fetchpriority="high"
      width="1570"
      height="1002"
-     alt="Research specialists collaborating around a regional fieldwork plan"
-     src="/dansom-research-workshop.jpg"
+     :alt="photography.researchWorkshop.alt"
+     :src="photography.researchWorkshop.src"
      class="h-full w-full object-cover"
     />
    </template>
@@ -144,4 +144,7 @@
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })
+</script>
+<script setup lang="ts">
+import { photography } from "~/data/photography"
 </script>

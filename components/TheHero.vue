@@ -26,12 +26,12 @@
    <div class="lg:col-span-7">
     <div class="media-zoom overflow-hidden rounded-2xl border border-mist/10 bg-panel shadow-lift">
      <img
-      src="/dansom-field-research-hero.jpg"
+      :src="photography.fieldResearchHero.src"
       width="1810"
       height="869"
       loading="eager"
       fetchpriority="high"
-      alt="East African researchers speaking with community members during a field study"
+      :alt="photography.fieldResearchHero.alt"
       class="aspect-[16/11] w-full object-cover object-center lg:aspect-[16/10]"
      />
     </div>
@@ -56,3 +56,6 @@
   </div>
  </section>
 </template>
+<script setup lang="ts">
+import { photography } from "~/data/photography"
+</script>

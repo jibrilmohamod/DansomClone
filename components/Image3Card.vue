@@ -4,16 +4,17 @@
                  :src="image"
                  width="1586"
                  height="992"
-                 alt="Researchers collaborating on programme analysis"
+                 :alt="photography.programmeAnalysis.alt"
                  class="h-[40vh] m-auto object-cover shadow-xl shadow-black" />
     </div>
 </template>
 
 <script setup>
+import { photography } from "~/data/photography"
 defineProps({
     image: {
         type: String,
-        default: "/dansom-programme-analysis.jpg"
+        default: photography.programmeAnalysis.src
     }
 })
 </script>

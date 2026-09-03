@@ -11,8 +11,8 @@
      fetchpriority="high"
      width="1570"
      height="1002"
-     alt="Research specialists reviewing a fieldwork plan together"
-     src="/dansom-research-workshop.jpg"
+     :alt="photography.researchWorkshop.alt"
+     :src="photography.researchWorkshop.src"
      class="h-full w-full object-cover"
     />
    </template>
@@ -46,8 +46,8 @@
       loading="lazy"
       width="1586"
       height="992"
-      src="/dansom-community-dialogue.jpg"
-      alt="Community members sharing local knowledge with researchers"
+      :src="photography.communityDialogue.src"
+      :alt="photography.communityDialogue.alt"
       class="aspect-[4/3] h-full w-full object-cover"
      />
     </RevealBlock>
@@ -100,6 +100,7 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  useSeoMeta({
   title: "About",
   description:

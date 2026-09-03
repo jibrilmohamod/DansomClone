@@ -1,7 +1,7 @@
 <template>
  <div>
   <TheHeader :projTitle="service.fullTitle" :eyebrow="service.category" :intro="service.subtitle">
-   <template #image><img src="/dansom-programme-analysis.jpg" alt="Analysts reviewing field evidence and programme findings" fetchpriority="high" /></template>
+   <template #image><img :src="photography.programmeAnalysis.src" :alt="photography.programmeAnalysis.alt" fetchpriority="high" /></template>
   </TheHeader>
 
   <main class="atlas-grid bg-ink py-24 md:py-36">
@@ -67,10 +67,11 @@
 </style>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  import { services } from "~/data/services"
  import { projects } from "~/data/projects"
  const route=useRoute(); const requestedService=decodeURIComponent(String(route.params.slug||"")); const service=services.find(item=>item.slug===requestedService)
  if(!service) throw createError({statusCode:404,statusMessage:"Service not found"})
  const relatedProjects=projects.map((project,index)=>({...project,path:`/Portfolio/${index}-${encodeURIComponent(project.title)}`})).filter(project=>project.classification===service.slug||project.classification===service.fullTitle||project.classification2===service.slug||project.classification2===service.fullTitle).slice(0,3)
- useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:"/dansom-programme-analysis.jpg", twitterCard:"summary_large_image" })
+ useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:photography.programmeAnalysis.src, twitterCard:"summary_large_image" })
 </script>

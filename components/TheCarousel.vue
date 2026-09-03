@@ -23,11 +23,12 @@
 </template>
 
 <script setup>
+import { photography } from "~/data/photography"
  const images = ref([
-  "/dansom-field-monitoring.jpg",
-  "/dansom-community-dialogue.jpg",
-  "/dansom-research-workshop.jpg",
-  "/dansom-livelihoods-research.jpg",
+  photography.fieldMonitoring.src,
+  photography.communityDialogue.src,
+  photography.researchWorkshop.src,
+  photography.livelihoodsResearch.src,
  ])
 
  const imageAlts = [

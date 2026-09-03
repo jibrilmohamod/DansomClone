@@ -1,7 +1,7 @@
 <template>
  <div>
   <TheHeader title="Services" eyebrow="What we do" intro="Research, monitoring, advisory, institutional support and field delivery for complex contexts.">
-   <template #image><img src="/dansom-field-monitoring.jpg" alt="Researchers independently monitoring rural water infrastructure" fetchpriority="high" /></template>
+   <template #image><img :src="photography.fieldMonitoring.src" :alt="photography.fieldMonitoring.alt" fetchpriority="high" /></template>
   </TheHeader>
 
   <section class="atlas-grid bg-ink py-24 md:py-36">
@@ -41,9 +41,10 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  import { services } from "~/data/services"
- const images=["/dansom-community-dialogue.jpg","/dansom-field-monitoring.jpg","/dansom-research-workshop.jpg","/dansom-programme-analysis.jpg","/dansom-field-operations.jpg","/dansom-livelihoods-research.jpg"]
- useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:"/dansom-field-monitoring.jpg", twitterCard:"summary_large_image" })
+ const images=[photography.communityDialogue.src,photography.fieldMonitoring.src,photography.researchWorkshop.src,photography.programmeAnalysis.src,photography.fieldOperations.src,photography.livelihoodsResearch.src]
+ useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.fieldMonitoring.src, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>

@@ -7,17 +7,18 @@
    loading="lazy"
    width="1586"
    height="992"
-   alt="Researchers conducting field monitoring"
+   :alt="photography.fieldMonitoring.alt"
    class="rounded-full h-80 w-80 md:w-full md:h-full shadow-quaternary shadow-xl object-cover"
   />
  </div>
 </template>
 
 <script setup>
+import { photography } from "~/data/photography"
  defineProps({
   image: {
    type: String,
-   default: "/dansom-field-monitoring.jpg",
+   default: photography.fieldMonitoring.src,
   },
  })
 </script>

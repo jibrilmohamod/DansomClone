@@ -64,27 +64,28 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  const chapters = [
   {
    verb: "Listen",
    title: "Access before assumptions",
    copy: "Local researchers begin with the people, institutions, and incentives that shape each operating environment.",
-   image: "/dansom-community-dialogue.jpg",
-   alt: "Dansom researchers listening to community members during a consultation",
+   image: photography.communityDialogue.src,
+   alt: photography.communityDialogue.alt,
   },
   {
    verb: "Verify",
    title: "Independent verification",
    copy: "Field observations, interviews, and quantitative evidence are triangulated to test findings and resolve inconsistencies.",
-   image: "/dansom-field-monitoring.jpg",
-   alt: "A researcher recording observations during field monitoring",
+   image: photography.fieldMonitoring.src,
+   alt: photography.fieldMonitoring.alt,
   },
   {
    verb: "Advise",
    title: "Findings built for decisions",
    copy: "Clear analysis and practical recommendations help partners adapt programmes, allocate resources, and act with confidence.",
-   image: "/dansom-programme-analysis.jpg",
-   alt: "A research team reviewing programme findings and charts",
+   image: photography.programmeAnalysis.src,
+   alt: photography.programmeAnalysis.alt,
   },
  ]
 

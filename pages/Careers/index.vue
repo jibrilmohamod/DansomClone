@@ -11,8 +11,8 @@
      fetchpriority="high"
      width="1588"
      height="991"
-     alt="Research and operations colleagues preparing for fieldwork"
-     src="/dansom-field-operations.jpg"
+     :alt="photography.fieldOperations.alt"
+     :src="photography.fieldOperations.src"
      class="h-full w-full object-cover"
     />
    </template>
@@ -73,6 +73,7 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  const principles = [
   "Context before assumptions",
   "Rigour in every assignment",

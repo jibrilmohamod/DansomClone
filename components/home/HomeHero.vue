@@ -4,8 +4,8 @@
 
   <div class="hero-media absolute inset-0 top-16 md:top-[72px]">
    <img
-    src="/dansom-field-research-hero.jpg"
-    alt="Dansom researchers speaking with community members in a rural farming area"
+    :src="photography.fieldResearchHero.src"
+    :alt="photography.fieldResearchHero.alt"
     width="1810"
     height="869"
     fetchpriority="high"
@@ -32,6 +32,10 @@
  </section>
 </template>
 
+
+<script setup lang="ts">
+import { photography } from "~/data/photography"
+</script>
 <style scoped>
 .hero-media {
  animation: hero-curtain 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;

@@ -1,7 +1,7 @@
 <template>
  <div>
   <section class="home-cinema relative min-h-[100dvh] overflow-hidden bg-[#050e17] text-white">
-   <img src="/dansom-field-research-hero.jpg" alt="Dansom researchers speaking with community members in a rural farming area" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" width="1586" height="992" />
+   <img :src="photography.fieldResearchHero.src" :alt="photography.fieldResearchHero.alt" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" width="1586" height="992" />
    <div class="home-scrim absolute inset-0"></div>
    <div class="atlas-grid absolute inset-0 opacity-30"></div>
    <TheNav overlay />
@@ -73,6 +73,7 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  import { services } from "~/data/services"
  import { projects } from "~/data/projects"
  const capabilityTrack = ref<HTMLElement | null>(null)
@@ -80,7 +81,7 @@
   capabilityTrack.value?.scrollBy({ left: direction * Math.min(window.innerWidth * 0.78, 760), behavior: "smooth" })
  }
  const featuredProjects = projects.slice(0,4)
- useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:"/dansom-field-research-hero.jpg", twitterCard:"summary_large_image" })
+ useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:photography.fieldResearchHero.src, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
  <div>
   <TheHeader title="Our work" eyebrow="Selected projects" intro="Independent assignments and long-term partnerships across humanitarian, development and public-sector programmes.">
-   <template #image><img src="/dansom-field-operations.jpg" alt="Research and operations staff planning a field deployment" fetchpriority="high" /></template>
+   <template #image><img :src="photography.fieldOperations.src" :alt="photography.fieldOperations.alt" fetchpriority="high" /></template>
   </TheHeader>
 
   <section class="atlas-grid bg-ink py-20 md:py-28">
@@ -24,11 +24,12 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  import { projects as projectsData } from "~/data/projects"
  const projects=ref(projectsData),searchTerm=ref(""),classification=ref("All"),visibleCount=ref(9)
  const classificationOptions=computed(()=>[...new Set(projects.value.flatMap(p=>[p.classification,p.classification2].filter(Boolean) as string[]))].sort())
  const filteredProjectPool=computed(()=>{const search=searchTerm.value.trim().toLowerCase();return projects.value.filter(p=>(!search||p.title.toLowerCase().includes(search)||p.description.toLowerCase().includes(search)||p.Ngo?.toLowerCase().includes(search))&&(classification.value==="All"||p.classification===classification.value||p.classification2===classification.value))})
  const filteredProjects=computed(()=>filteredProjectPool.value.slice(0,visibleCount.value));watch([searchTerm,classification],()=>visibleCount.value=9)
  const getProjectPath=(project:{title:string;description:string;icon:string})=>{const i=projects.value.findIndex(item=>item.title===project.title&&item.description===project.description&&item.icon===project.icon);return `/Portfolio/${i}-${encodeURIComponent(project.title)}`}
- useSeoMeta({title:"Portfolio",description:"Explore Dansom Research & Consultancy's portfolio of monitoring, evaluation, research, logistics, and advisory projects for partners across Somalia and the Horn of Africa.",ogTitle:"Portfolio | Dansom Research & Consultancy",ogDescription:"Browse Dansom's project work with development, humanitarian, donor, and institutional partners across Somalia and the Horn of Africa.",ogImage:"/dansom-field-operations.jpg",twitterCard:"summary_large_image"})
+ useSeoMeta({title:"Portfolio",description:"Explore Dansom Research & Consultancy's portfolio of monitoring, evaluation, research, logistics, and advisory projects for partners across Somalia and the Horn of Africa.",ogTitle:"Portfolio | Dansom Research & Consultancy",ogDescription:"Browse Dansom's project work with development, humanitarian, donor, and institutional partners across Somalia and the Horn of Africa.",ogImage:photography.fieldOperations.src,twitterCard:"summary_large_image"})
 </script>

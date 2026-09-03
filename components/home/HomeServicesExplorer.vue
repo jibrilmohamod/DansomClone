@@ -12,8 +12,8 @@
     <div class="lg:sticky lg:top-24 lg:col-span-5">
      <figure class="service-image overflow-hidden rounded-2xl border border-line/55">
       <img
-       src="/dansom-programme-analysis.jpg"
-       alt="A Dansom team reviewing evidence and programme findings"
+       :src="photography.programmeAnalysis.src"
+       :alt="photography.programmeAnalysis.alt"
        width="1586"
        height="992"
        loading="lazy"
@@ -46,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  import { services } from "~/data/services"
 
  const serviceGroups = computed(() => [services.slice(0, 3), services.slice(3)])
