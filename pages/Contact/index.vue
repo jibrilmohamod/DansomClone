@@ -4,19 +4,8 @@
    title="Contact Dansom"
    eyebrow="Contact"
    intro="Contact our regional team to discuss research, monitoring, evaluation, advisory or field-support requirements."
-  >
-   <template #image>
-    <img
-     loading="eager"
-     fetchpriority="high"
-     width="1570"
-     height="1002"
-     :alt="photography.researchWorkshop.alt"
-     :src="photography.researchWorkshop.src"
-     class="h-full w-full object-cover"
-    />
-   </template>
-  </TheHeader>
+   variant="contact"
+  />
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-16 lg:grid-cols-12">
@@ -120,7 +109,6 @@
 </template>
 
 <script lang="ts" setup>
-import { photography } from "~/data/photography"
  const form = reactive({
   name: "",
   email: "",
