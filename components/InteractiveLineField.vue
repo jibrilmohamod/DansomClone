@@ -22,6 +22,7 @@ const props = withDefaults(
 )
 
 const canvas = ref<HTMLCanvasElement | null>(null)
+const ready = ref(false)
 
 const variantConfig: Record<
   LineVariant,
@@ -88,14 +89,14 @@ onMounted(() => {
     context.clearRect(0, 0, width, height)
 
     const config = variantConfig[props.variant]
+    const viewportDensity = width < 640 ? 0.72 : width < 900 ? 0.86 : 1
     const lineCount = Math.round(
-      Math.min(16, Math.max(6, config.count * props.density)),
+      Math.min(16, Math.max(6, config.count * props.density * viewportDensity)),
     )
     const amplitude = config.amplitude * Math.min(1.25, Math.max(0.55, props.strength))
     const radius = Math.min(220, Math.max(150, width * 0.17))
     const maxDisplacement = (props.variant === "home" ? 32 : 20) *
       Math.min(1, Math.max(0.35, props.strength))
-    const ambientPhase = reduceMotion.matches || !finePointer.matches ? 0 : time * 0.00012
     const regularOpacity = darkTheme ? 0.2 : 0.23
     const accentOpacity = darkTheme ? 0.22 : 0.2
 
@@ -112,7 +113,7 @@ onMounted(() => {
 
       for (let x = -32; x <= width + 32; x += 14) {
         const wave =
-          Math.sin(x * 0.006 + config.phase + line * 0.31 + ambientPhase) *
+          Math.sin(x * 0.006 + config.phase + line * 0.31) *
           amplitude
         let y = baseY + config.slope * (x - width / 2) + wave
 
@@ -134,6 +135,8 @@ onMounted(() => {
 
       context.stroke()
     }
+
+    if (!ready.value) ready.value = true
   }
 
   const requestFrame = () => {
@@ -154,7 +157,13 @@ onMounted(() => {
       (pointer.targetInfluence - pointer.influence) * Math.min(0.14, ease * 8)
 
     draw(time)
-    requestFrame()
+
+    const unsettled =
+      Math.abs(pointer.targetX - pointer.x) > 0.1 ||
+      Math.abs(pointer.targetY - pointer.y) > 0.1 ||
+      Math.abs(pointer.targetInfluence - pointer.influence) > 0.002
+
+    if (unsettled) requestFrame()
   }
 
   const resize = () => {
@@ -256,7 +265,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas ref="canvas" class="interactive-line-field" aria-hidden="true" />
+  <div
+    class="interactive-line-field"
+    :class="{ 'interactive-line-field--ready': ready }"
+    aria-hidden="true"
+  >
+    <canvas ref="canvas" />
+  </div>
 </template>
 
 <style scoped>
@@ -264,9 +279,24 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
+  background-image: repeating-radial-gradient(
+    ellipse at 72% 46%,
+    transparent 0,
+    transparent 48px,
+    rgb(var(--line) / 0.16) 49px,
+    transparent 50px,
+    transparent 68px
+  );
+}
+
+.interactive-line-field--ready {
+  background-image: none;
+}
+
+.interactive-line-field canvas {
   display: block;
   width: 100%;
   height: 100%;
-  pointer-events: none;
 }
 </style>
