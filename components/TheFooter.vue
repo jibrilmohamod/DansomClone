@@ -18,8 +18,6 @@
       <p class="mt-5 font-semibold text-mist">Hargeisa</p><p class="mt-1">Shacab Mall, Shacab Street,<br />Second Road, Hargeisa</p>
       <p class="mt-6 font-semibold text-mist">Dansom Research &amp; Consultancy Ltd</p>
       <a href="mailto:info@dansomconsultancy.org" class="mt-2 block break-all text-primary">info@dansomconsultancy.org</a>
-      <a href="tel:+254722853540" class="mt-2 block">+254-722-853-540 (Kenya)</a>
-      <a href="tel:+252615570144" class="mt-1 block">+252-61-557-0144 (Somalia)</a>
      </div>
     </div>
    </div>
