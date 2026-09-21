@@ -14,15 +14,16 @@
       <img
        v-for="(chapter, index) in chapters"
        :key="chapter.title"
-       :src="chapter.image"
-       :alt="chapter.alt"
+       :src="chapter.photo.src"
+       :alt="chapter.photo.alt"
+       :style="{ objectPosition: chapter.photo.position }"
        width="1586"
        height="992"
        loading="lazy"
        class="sequence-image absolute inset-0 h-full w-full object-cover"
        :class="activeIndex === index ? 'is-active' : ''"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-[#08131f]/70 via-transparent to-transparent"></div>
+      <div class="image-tone absolute inset-0"></div>
       <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-5 text-[#f3f7f9] md:bottom-8 md:left-8 md:right-8">
        <p class="max-w-md font-display text-2xl font-semibold tracking-tight">{{ chapters[activeIndex].title }}</p>
        <div class="flex gap-1.5" aria-hidden="true">
@@ -46,12 +47,13 @@
       :class="activeIndex === index ? 'is-active' : ''"
      >
       <img
-       :src="chapter.image"
-       :alt="chapter.alt"
+       :src="chapter.photo.src"
+       :alt="chapter.photo.alt"
+       :style="{ objectPosition: chapter.photo.position }"
        width="1586"
        height="992"
        loading="lazy"
-       class="mb-7 aspect-[16/9] w-full border border-line/55 object-cover lg:hidden"
+       class="mb-7 aspect-[16/10] w-full border border-line/55 object-cover lg:hidden"
       />
       <p class="font-display text-base font-semibold text-primary">{{ chapter.verb }}</p>
       <h3 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-mist md:text-4xl">{{ chapter.title }}</h3>
@@ -70,22 +72,19 @@ import { photography } from "~/data/photography"
    verb: "Listen",
    title: "Access before assumptions",
    copy: "Local researchers begin with the people, institutions, and incentives that shape each operating environment.",
-   image: photography.communityDialogue.src,
-   alt: photography.communityDialogue.alt,
+   photo: photography.communityDialogue,
   },
   {
    verb: "Verify",
    title: "Independent verification",
    copy: "Field observations, interviews, and quantitative evidence are triangulated to test findings and resolve inconsistencies.",
-   image: photography.fieldMonitoring.src,
-   alt: photography.fieldMonitoring.alt,
+   photo: photography.fieldMonitoring,
   },
   {
    verb: "Advise",
    title: "Findings built for decisions",
    copy: "Clear analysis and practical recommendations help partners adapt programmes, allocate resources, and act with confidence.",
-   image: photography.programmeAnalysis.src,
-   alt: photography.programmeAnalysis.alt,
+   photo: photography.programmeAnalysis,
   },
  ]
 
@@ -116,6 +115,15 @@ import { photography } from "~/data/photography"
 </script>
 
 <style scoped>
+.image-tone {
+ background: linear-gradient(180deg, transparent 48%, rgb(5 14 23 / 0.56));
+ pointer-events: none;
+}
+
+:global(.light) .image-tone {
+ background: linear-gradient(180deg, transparent 56%, rgb(5 14 23 / 0.42));
+}
+
 .sequence-image {
  opacity: 0;
  transform: scale(1.045);
