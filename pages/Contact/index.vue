@@ -80,14 +80,6 @@
      </div>
      <div class="mt-8 grid gap-4 text-sm">
       <p class="font-semibold text-mist">Dansom Research &amp; Consultancy Ltd</p>
-      <a href="tel:+254722853540" class="group flex items-center justify-between border-b border-line/45 pb-3 hover:text-primary">
-       <span>+254-722-853-540 <span class="text-mist/45">(Kenya)</span></span>
-       <Icon name="mdi:arrow-top-right" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-      </a>
-      <a href="tel:+252615570144" class="group flex items-center justify-between border-b border-line/45 pb-3 hover:text-primary">
-       <span>+252-61-557-0144 <span class="text-mist/45">(Somalia)</span></span>
-       <Icon name="mdi:arrow-top-right" class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-      </a>
       <a href="mailto:info@dansomconsultancy.org" class="group flex items-center justify-between gap-4 border-b border-line/45 pb-3 hover:text-primary">
        <span class="break-all">info@dansomconsultancy.org</span>
        <Icon name="mdi:arrow-top-right" class="shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
