@@ -57,11 +57,11 @@ export const photography = {
   location: "Mogadishu, Somalia",
  },
  livelihoodsResearch: {
-  src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Woman%20watering%20in%20a%20field%20in%20Ethiopia.jpg?width=2200",
-  alt: "An Ethiopian farmer watering crops in a cultivated field",
-  position: "50% 48%",
-  sourcePage: "https://commons.wikimedia.org/wiki/File:Woman_watering_in_a_field_in_Ethiopia.jpg",
-  license: "CC BY-SA 4.0",
-  location: "Ethiopia",
+  src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Resilience%20Enhanced%20through%20Adaptation%2C%20Action-learning%20and%20Partnerships%20(REAAP)%20(26960423946).jpg?width=2200",
+  alt: "Ethiopian pastoralist women conducting community resource mapping",
+  position: "58% 50%",
+  sourcePage: "https://commons.wikimedia.org/wiki/File:Resilience_Enhanced_through_Adaptation,_Action-learning_and_Partnerships_(REAAP)_(26960423946).jpg",
+  license: "Public domain (USAID)",
+  location: "Mieso Woreda, Ethiopia",
  },
 } as const satisfies Record<string, DocumentaryPhoto>
