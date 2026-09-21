@@ -79,7 +79,7 @@ import { photography } from "~/data/photography"
   capabilityTrack.value?.scrollBy({ left: direction * Math.min(window.innerWidth * 0.78, 760), behavior: "smooth" })
  }
  const featuredProjects = projects.slice(0,4)
- useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:photography.fieldResearchHero.src, twitterCard:"summary_large_image" })
+ useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:photography.fieldResearchHero.src, ogImageAlt:photography.fieldResearchHero.alt, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>
