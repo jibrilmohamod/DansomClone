@@ -16,7 +16,7 @@
   <section class="bg-panel text-mist">
    <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative min-h-[118dvh] border-t border-line/45">
     <div class="sticky top-0 grid min-h-[100dvh] overflow-hidden lg:grid-cols-12">
-     <div class="service-visual relative min-h-[42dvh] lg:col-span-5 lg:min-h-full" :class="index % 2 === 1 ? 'lg:order-2' : ''">
+     <div class="service-visual relative aspect-[4/5] w-full self-center lg:col-span-5 lg:aspect-[3/4]" :class="index % 2 === 1 ? 'lg:order-2' : ''">
       <img :src="images[index].src" :alt="images[index].alt" :style="{ objectPosition: images[index].position }" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       <div class="service-image-tone"></div>
       <p class="absolute bottom-6 left-6 font-display text-sm text-white/55 md:bottom-10 md:left-10">0{{ index+1 }} / 0{{ services.length }}</p>
@@ -54,7 +54,7 @@ import { photography } from "~/data/photography"
   photography.fieldOperations,
   photography.livelihoodsResearch,
  ]
- useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.fieldMonitoring.src, twitterCard:"summary_large_image" })
+ useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.fieldMonitoring.src, ogImageAlt:photography.fieldMonitoring.alt, twitterImage:photography.fieldMonitoring.src, twitterImageAlt:photography.fieldMonitoring.alt, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>
