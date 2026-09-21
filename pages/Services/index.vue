@@ -17,8 +17,8 @@
    <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative min-h-[118dvh] border-t border-line/45">
     <div class="sticky top-0 grid min-h-[100dvh] overflow-hidden lg:grid-cols-12">
      <div class="service-visual relative min-h-[42dvh] lg:col-span-5 lg:min-h-full" :class="index % 2 === 1 ? 'lg:order-2' : ''">
-      <img :src="images[index]" :alt="service.description" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,14,23,.1),rgba(5,14,23,.7))]"></div>
+      <img :src="images[index].src" :alt="images[index].alt" :style="{ objectPosition: images[index].position }" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div class="service-image-tone"></div>
       <p class="absolute bottom-6 left-6 font-display text-sm text-white/55 md:bottom-10 md:left-10">0{{ index+1 }} / 0{{ services.length }}</p>
      </div>
      <div class="service-copy-panel atlas-grid flex items-end bg-panel p-6 pb-12 md:p-10 md:pb-16 lg:col-span-7 lg:p-16" :class="index % 2 === 1 ? 'lg:order-1' : ''">
@@ -46,13 +46,29 @@
 <script setup lang="ts">
 import { photography } from "~/data/photography"
  import { services } from "~/data/services"
- const images=[photography.communityDialogue.src,photography.fieldMonitoring.src,photography.researchWorkshop.src,photography.programmeAnalysis.src,photography.fieldOperations.src,photography.livelihoodsResearch.src]
+ const images = [
+  photography.communityDialogue,
+  photography.fieldMonitoring,
+  photography.researchWorkshop,
+  photography.programmeAnalysis,
+  photography.fieldOperations,
+  photography.livelihoodsResearch,
+ ]
  useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.fieldMonitoring.src, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>
 .service-visual { overflow:hidden; }
 .service-visual img { transform:scale(1.04); }
+.service-image-tone {
+ position: absolute;
+ inset: 0;
+ pointer-events: none;
+ background: linear-gradient(180deg, rgb(5 14 23 / 0.04), rgb(5 14 23 / 0.46));
+}
+:global(.light) .service-image-tone {
+ background: linear-gradient(180deg, transparent 58%, rgb(5 14 23 / 0.34));
+}
 .service-copy-panel { position:relative; }
 .service-copy-panel::before { content:""; position:absolute; inset:0 auto 0 0; width:3px; background:rgb(var(--primary)); transform:scaleY(.16); transform-origin:bottom; opacity:.7; }
 @media (prefers-reduced-motion:no-preference) {
