@@ -35,9 +35,9 @@
       loading="lazy"
       width="1586"
       height="992"
-      :src="photography.communityDialogue.src"
-      :alt="photography.communityDialogue.alt"
-      :style="{ objectPosition: photography.communityDialogue.position }"
+      :src="photography.researchWorkshop.src"
+      :alt="photography.researchWorkshop.alt"
+      :style="{ objectPosition: photography.researchWorkshop.position }"
       class="aspect-[4/3] h-full w-full object-cover"
      />
     </RevealBlock>
