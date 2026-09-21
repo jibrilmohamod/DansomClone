@@ -12,15 +12,16 @@ The interactive line-based hero system remains unchanged. Photography supports t
 
 ## Creative direction
 
-The site should use real, high-resolution documentary photography featuring Somali people, locations, and working contexts. Images must feel observed rather than staged: field research, community consultation, professional workshops, monitoring visits, livelihoods, logistics, and public-service contexts.
+The site should use real, high-resolution documentary photography featuring Somali and Ethiopian people, locations, and working contexts where each is geographically and editorially appropriate. Images must feel observed rather than staged: field research, community consultation, professional workshops, monitoring visits, livelihoods, logistics, and public-service contexts.
 
 The treatment is professional and restrained. Images should provide human context without becoming decorative stock photography or competing with the content.
 
 ## Non-negotiable constraints
 
 - Use real photography; no AI-generated images.
-- People shown must be recognisably Somali and contextually appropriate.
-- Do not use generic African stock imagery as a substitute for Somali representation.
+- People shown must be Somali or Ethiopian and contextually appropriate to the page.
+- Do not use generic African stock imagery as a substitute for Somali or Ethiopian representation.
+- Ethiopian imagery may be used when the scene plausibly supports Dansom's Horn of Africa context; avoid presenting a clearly Ethiopian location or institution as Somalia.
 - Do not use images featuring white subjects.
 - Use images with a clear reuse licence from reputable sources.
 - Do not add visible captions to the interface.
@@ -31,7 +32,7 @@ The treatment is professional and restrained. Images should provide human contex
 
 Prioritise:
 
-1. Somali researchers and facilitators working with communities.
+1. Somali or Ethiopian researchers and facilitators working with communities.
 2. Women and men participating in professional or civic settings.
 3. Field monitoring, verification, and programme-delivery contexts.
 4. Livelihoods, agriculture, water, infrastructure, logistics, and local markets.
@@ -103,7 +104,7 @@ Implementation is complete only after:
 
 - visually reviewing every image placement in light and dark modes;
 - checking desktop and mobile crops;
-- confirming no non-Somali or white subjects appear;
+- confirming subjects are Somali or Ethiopian, with no white or geographically mismatched stock subjects;
 - confirming no image is stretched, compressed, watermarked, or visibly low-resolution;
 - verifying source licences and preserving attribution records internally;
 - confirming all relevant routes load without broken images;
