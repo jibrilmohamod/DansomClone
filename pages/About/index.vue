@@ -37,6 +37,7 @@
       height="992"
       :src="photography.communityDialogue.src"
       :alt="photography.communityDialogue.alt"
+      :style="{ objectPosition: photography.communityDialogue.position }"
       class="aspect-[4/3] h-full w-full object-cover"
      />
     </RevealBlock>
@@ -189,6 +190,20 @@ import { photography } from "~/data/photography"
 </script>
 
 <style scoped>
-.vision-media { position:relative; overflow:hidden; background:rgb(var(--panel-soft)); }
-.vision-media::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 62%,rgb(var(--ink)/.24)); }
+.vision-media {
+ position: relative;
+ overflow: hidden;
+ aspect-ratio: 4 / 3;
+ background: rgb(var(--panel-soft));
+}
+.vision-media::after {
+ content: "";
+ position: absolute;
+ inset: 0;
+ pointer-events: none;
+ background: linear-gradient(180deg, transparent 68%, rgb(5 14 23 / 0.18));
+}
+:global(.dark) .vision-media::after {
+ background: linear-gradient(180deg, rgb(5 14 23 / 0.05), rgb(5 14 23 / 0.28));
+}
 </style>
