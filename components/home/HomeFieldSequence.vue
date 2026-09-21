@@ -9,8 +9,8 @@
    </div>
 
    <div class="mt-14 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-8">
-    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block lg:h-[68dvh]">
-     <div class="relative h-full overflow-hidden border border-line/55 bg-panel">
+    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block">
+     <div class="relative aspect-[16/10] w-full overflow-hidden border border-line/55 bg-panel">
       <img
        v-for="(chapter, index) in chapters"
        :key="chapter.title"
