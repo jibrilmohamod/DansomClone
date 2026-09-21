@@ -76,5 +76,5 @@ import { photography } from "~/data/photography"
  const route=useRoute(); const requestedService=decodeURIComponent(String(route.params.slug||"")); const service=services.find(item=>item.slug===requestedService)
  if(!service) throw createError({statusCode:404,statusMessage:"Service not found"})
  const relatedProjects=projects.map((project,index)=>({...project,path:`/Portfolio/${index}-${encodeURIComponent(project.title)}`})).filter(project=>project.classification===service.slug||project.classification===service.fullTitle||project.classification2===service.slug||project.classification2===service.fullTitle).slice(0,3)
- useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:photography.programmeAnalysis.src, twitterCard:"summary_large_image" })
+ useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:photography.programmeAnalysis.src, ogImageAlt:photography.programmeAnalysis.alt, twitterImage:photography.programmeAnalysis.src, twitterImageAlt:photography.programmeAnalysis.alt, twitterCard:"summary_large_image" })
 </script>
