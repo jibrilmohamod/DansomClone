@@ -64,23 +64,20 @@ const isDetail = computed(() => Boolean(props.projTitle))
  width: 100%;
  object-fit: cover;
  transform: scale(1.025);
- filter: saturate(0.82) contrast(1.04);
-}
-.page-hero-media-overlay {
- background:
-  linear-gradient(90deg, rgb(5 14 23 / 0.82) 0%, rgb(5 14 23 / 0.58) 46%, rgb(5 14 23 / 0.28) 100%),
-  linear-gradient(180deg, rgb(5 14 23 / 0.18), rgb(5 14 23 / 0.62));
-}
-:global(.light) .page-hero-media :deep(img) {
  filter: saturate(0.72) contrast(0.92) brightness(1.08);
 }
-:global(.light) .page-hero-media-overlay {
+.page-hero-media-overlay {
  background:
   linear-gradient(90deg, rgb(247 249 246 / 0.96) 0%, rgb(247 249 246 / 0.9) 52%, rgb(247 249 246 / 0.72) 100%),
   linear-gradient(180deg, rgb(247 249 246 / 0.28), rgb(247 249 246 / 0.74));
 }
-:global(.light) .page-hero-surface::after {
- background: linear-gradient(180deg, transparent 48%, rgb(247 249 246 / 0.18));
+:global(.dark) .page-hero-media :deep(img) {
+ filter: saturate(0.82) contrast(1.04);
+}
+:global(.dark) .page-hero-media-overlay {
+ background:
+  linear-gradient(90deg, rgb(5 14 23 / 0.82) 0%, rgb(5 14 23 / 0.58) 46%, rgb(5 14 23 / 0.28) 100%),
+  linear-gradient(180deg, rgb(5 14 23 / 0.18), rgb(5 14 23 / 0.62));
 }
 .page-hero-surface {
  background:
@@ -91,6 +88,9 @@ const isDetail = computed(() => Boolean(props.projTitle))
  content: "";
  position: absolute;
  inset: 0;
+ background: linear-gradient(180deg, transparent 48%, rgb(247 249 246 / 0.18));
+}
+:global(.dark) .page-hero-surface::after {
  background: linear-gradient(180deg, transparent 48%, rgb(var(--ink) / 0.14));
 }
 @media (prefers-reduced-motion: no-preference) {
