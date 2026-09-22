@@ -233,7 +233,7 @@ onMounted(() => {
   Boolean(target.closest("a, button, input, textarea, select, label, [role='button']"))
 
  const updateHover = (event: PointerEvent) => {
-  if (!finePointer.matches || event.pointerType === "touch") return
+  if (reduceMotion.matches || !finePointer.matches || event.pointerType === "touch") return
   const point = localPoint(event)
 
   if (!point.inside) {
@@ -247,6 +247,10 @@ onMounted(() => {
 
   if (drag.pointerId >= 0) {
    if (event.pointerId !== drag.pointerId) return
+   if (event.buttons === 0) {
+    cancelDrag()
+    return
+   }
    const now = performance.now()
    const natural = naturalY(drag.line, point.x, now)
    const nextOffset = clamp(point.y - natural, -height * 0.25, height * 0.25)
@@ -269,7 +273,7 @@ onMounted(() => {
  }
 
  const beginDrag = (event: PointerEvent) => {
-  if (!finePointer.matches || event.pointerType === "touch" || event.button !== 0 || isControl(event.target)) return
+  if (reduceMotion.matches || !finePointer.matches || event.pointerType === "touch" || event.button !== 0 || isControl(event.target)) return
 
   const point = localPoint(event)
   if (!point.inside) return
@@ -288,21 +292,36 @@ onMounted(() => {
   dragging.value = true
   pointer.targetInfluence = 0
   hero?.classList.add("line-field-dragging")
+  try {
+   hero?.setPointerCapture(event.pointerId)
+  } catch {}
+  requestFrame()
+ }
+
+ const cancelDrag = () => {
+  if (drag.pointerId >= 0) {
+   try {
+    hero?.releasePointerCapture(drag.pointerId)
+   } catch {}
+  }
+
+  drag.pointerId = -1
+  dragging.value = false
+  pointer.targetInfluence = 0
+  hero?.classList.remove("line-field-can-grab", "line-field-dragging")
   requestFrame()
  }
 
  const endDrag = (event: PointerEvent) => {
   if (event.pointerId !== drag.pointerId) return
-
-  drag.pointerId = -1
-  dragging.value = false
-  pointer.targetInfluence = 0
-  hero?.classList.remove("line-field-dragging")
-  requestFrame()
+  cancelDrag()
  }
 
  const resetPointer = () => {
-  if (drag.pointerId >= 0) return
+  if (drag.pointerId >= 0) {
+   cancelDrag()
+   return
+  }
   pointer.targetInfluence = 0
   hero?.classList.remove("line-field-can-grab")
   requestFrame()
@@ -329,9 +348,12 @@ onMounted(() => {
  const handleVisibilityChange = () => {
   pageVisible = document.visibilityState === "visible"
   if (pageVisible) requestFrame()
-  else if (frame) {
-   window.cancelAnimationFrame(frame)
-   frame = 0
+  else {
+   cancelDrag()
+   if (frame) {
+    window.cancelAnimationFrame(frame)
+    frame = 0
+   }
   }
  }
 
