@@ -1,6 +1,6 @@
 <template>
  <div class="min-h-[100dvh] bg-ink text-mist">
-  <SitePreloader />
+  <AtlasPreloader />
   <div class="flex min-h-[100dvh] flex-col">
    <main class="flex-1">
     <NuxtPage />
