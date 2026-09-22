@@ -71,10 +71,16 @@ const isDetail = computed(() => Boolean(props.projTitle))
   linear-gradient(90deg, rgb(5 14 23 / 0.82) 0%, rgb(5 14 23 / 0.58) 46%, rgb(5 14 23 / 0.28) 100%),
   linear-gradient(180deg, rgb(5 14 23 / 0.18), rgb(5 14 23 / 0.62));
 }
+:global(.light) .page-hero-media :deep(img) {
+ filter: saturate(0.72) contrast(0.92) brightness(1.08);
+}
 :global(.light) .page-hero-media-overlay {
  background:
-  linear-gradient(90deg, rgb(247 249 246 / 0.9) 0%, rgb(247 249 246 / 0.72) 48%, rgb(247 249 246 / 0.38) 100%),
-  linear-gradient(180deg, rgb(247 249 246 / 0.22), rgb(247 249 246 / 0.62));
+  linear-gradient(90deg, rgb(247 249 246 / 0.96) 0%, rgb(247 249 246 / 0.9) 52%, rgb(247 249 246 / 0.72) 100%),
+  linear-gradient(180deg, rgb(247 249 246 / 0.28), rgb(247 249 246 / 0.74));
+}
+:global(.light) .page-hero-surface::after {
+ background: linear-gradient(180deg, transparent 48%, rgb(247 249 246 / 0.18));
 }
 .page-hero-surface {
  background:
