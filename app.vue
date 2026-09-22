@@ -1,5 +1,6 @@
 <template>
  <div class="min-h-[100dvh] bg-ink text-mist">
+  <SitePreloader />
   <div class="flex min-h-[100dvh] flex-col">
    <main class="flex-1">
     <NuxtPage />
@@ -30,21 +31,37 @@
  }
 </script>
 
-<style scoped>
+<style>
 .page-enter-active,
 .page-leave-active {
- transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+ transition:
+  opacity 420ms ease,
+  transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+  filter 420ms ease;
 }
-.page-enter-from,
+
+.page-enter-from {
+ opacity: 0;
+ transform: translateY(18px);
+ filter: blur(5px);
+}
+
 .page-leave-to {
  opacity: 0;
- transform: translateY(12px);
+ transform: translateY(-10px);
+ filter: blur(3px);
 }
 
 @media (prefers-reduced-motion: reduce) {
  .page-enter-active,
  .page-leave-active {
   transition: none;
+ }
+
+ .page-enter-from,
+ .page-leave-to {
+  transform: none;
+  filter: none;
  }
 }
 </style>
