@@ -1,7 +1,11 @@
 <template>
  <div class="min-h-[100dvh] bg-ink text-mist">
-  <AtlasPreloader />
-  <div class="flex min-h-[100dvh] flex-col">
+  <AtlasPreloader @active-change="introActive = $event" />
+  <div
+   class="flex min-h-[100dvh] flex-col"
+   :inert="introActive || undefined"
+   :aria-hidden="introActive ? 'true' : undefined"
+  >
    <main class="flex-1">
     <NuxtPage />
    </main>
@@ -22,6 +26,12 @@
 
 <script lang="ts" setup>
  import { useWindowScroll } from "@vueuse/core"
+
+ const introCookie = useCookie<boolean>("dansom-atlas-intro", {
+  default: () => false,
+  sameSite: "lax",
+ })
+ const introActive = ref(!introCookie.value)
 
  const { y } = useWindowScroll()
  const scrolled = computed(() => y.value > 700)
