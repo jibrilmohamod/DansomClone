@@ -5,7 +5,11 @@
    :eyebrow="service.category"
    :intro="service.subtitle"
    variant="detail"
-  />
+  >
+   <template #image>
+    <img :src="photography.programmeAnalysis.src" :alt="photography.programmeAnalysis.alt" :style="{ objectPosition: photography.programmeAnalysis.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <main class="atlas-grid bg-ink py-24 md:py-36">
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
