@@ -64,33 +64,22 @@ const isDetail = computed(() => Boolean(props.projTitle))
  width: 100%;
  object-fit: cover;
  transform: scale(1.025);
- filter: saturate(0.72) contrast(0.92) brightness(1.08);
+ filter: saturate(0.8) contrast(1.02);
 }
 .page-hero-media-overlay {
  background:
-  linear-gradient(90deg, rgb(247 249 246 / 0.96) 0%, rgb(247 249 246 / 0.9) 52%, rgb(247 249 246 / 0.72) 100%),
-  linear-gradient(180deg, rgb(247 249 246 / 0.28), rgb(247 249 246 / 0.74));
-}
-:global([data-theme="dark"]) .page-hero-media :deep(img) {
- filter: saturate(0.82) contrast(1.04);
-}
-:global([data-theme="dark"]) .page-hero-media-overlay {
- background:
-  linear-gradient(90deg, rgb(5 14 23 / 0.82) 0%, rgb(5 14 23 / 0.58) 46%, rgb(5 14 23 / 0.28) 100%),
-  linear-gradient(180deg, rgb(5 14 23 / 0.18), rgb(5 14 23 / 0.62));
+  linear-gradient(90deg, rgb(var(--ink) / 0.9) 0%, rgb(var(--ink) / 0.72) 50%, rgb(var(--ink) / 0.42) 100%),
+  linear-gradient(180deg, rgb(var(--ink) / 0.12), rgb(var(--ink) / 0.64));
 }
 .page-hero-surface {
  background:
   radial-gradient(circle at 78% 24%, rgb(var(--primary) / 0.075), transparent 31%),
-  linear-gradient(135deg, rgb(var(--panel-soft) / 0.22), transparent 52%);
+  linear-gradient(135deg, rgb(var(--panel-soft) / 0.18), transparent 52%);
 }
 .page-hero-surface::after {
  content: "";
  position: absolute;
  inset: 0;
- background: linear-gradient(180deg, transparent 48%, rgb(247 249 246 / 0.18));
-}
-:global([data-theme="dark"]) .page-hero-surface::after {
  background: linear-gradient(180deg, transparent 48%, rgb(var(--ink) / 0.14));
 }
 @media (prefers-reduced-motion: no-preference) {
