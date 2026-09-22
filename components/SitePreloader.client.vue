@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
  display: grid;
  place-items: center;
  overflow: hidden;
- background: rgb(var(--ink));
+ background: transparent;
  color: rgb(var(--mist));
  isolation: isolate;
 }
@@ -115,7 +115,7 @@ onBeforeUnmount(() => {
 }
 
 .site-preloader__panels span {
- background: rgb(var(--ink));
+ background: rgb(var(--ink) / .96);
  border-right: 1px solid rgb(var(--line) / .38);
  transform: translateY(0);
 }
@@ -197,6 +197,11 @@ onBeforeUnmount(() => {
  transform: scaleX(0);
  transform-origin: left;
  animation: atlas-progress 720ms 130ms cubic-bezier(.65,0,.35,1) forwards;
+}
+
+.site-preloader--leaving .site-preloader__grid {
+ opacity: 0;
+ transition: opacity 320ms ease;
 }
 
 .site-preloader--leaving .site-preloader__content {
