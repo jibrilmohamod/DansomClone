@@ -9,8 +9,8 @@
    </div>
 
    <div class="mt-14 grid gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-8">
-    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block">
-     <div class="relative aspect-[16/10] w-full overflow-hidden border border-line/55 bg-panel">
+    <div class="hidden lg:sticky lg:top-24 lg:col-span-7 lg:block lg:h-[68dvh]">
+     <div class="relative h-full overflow-hidden border border-line/55 bg-panel">
       <img
        v-for="(chapter, index) in chapters"
        :key="chapter.title"
@@ -23,7 +23,7 @@
        class="sequence-image absolute inset-0 h-full w-full object-cover"
        :class="activeIndex === index ? 'is-active' : ''"
       />
-      <div class="image-tone absolute inset-0"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#08131f]/70 via-transparent to-transparent"></div>
       <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-5 text-[#f3f7f9] md:bottom-8 md:left-8 md:right-8">
        <p class="max-w-md font-display text-2xl font-semibold tracking-tight">{{ chapters[activeIndex].title }}</p>
        <div class="flex gap-1.5" aria-hidden="true">
@@ -53,7 +53,7 @@
        width="1586"
        height="992"
        loading="lazy"
-       class="mb-7 aspect-[16/10] w-full border border-line/55 object-cover lg:hidden"
+       class="mb-7 aspect-[16/9] w-full border border-line/55 object-cover lg:hidden"
       />
       <p class="font-display text-base font-semibold text-primary">{{ chapter.verb }}</p>
       <h3 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-mist md:text-4xl">{{ chapter.title }}</h3>
@@ -115,15 +115,6 @@ import { photography } from "~/data/photography"
 </script>
 
 <style scoped>
-.image-tone {
- background: linear-gradient(180deg, transparent 48%, rgb(5 14 23 / 0.56));
- pointer-events: none;
-}
-
-:global(.light) .image-tone {
- background: linear-gradient(180deg, transparent 56%, rgb(5 14 23 / 0.42));
-}
-
 .sequence-image {
  opacity: 0;
  transform: scale(1.045);
