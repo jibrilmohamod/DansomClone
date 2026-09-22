@@ -5,7 +5,11 @@
    eyebrow="Careers at Dansom"
    intro="For careful thinkers and grounded practitioners working across research, monitoring, analysis, and field delivery."
    variant="careers"
-  />
+  >
+   <template #image>
+    <img :src="photography.researchWorkshop.src" :alt="photography.researchWorkshop.alt" :style="{ objectPosition: photography.researchWorkshop.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-12 lg:grid-cols-12">
@@ -62,6 +66,7 @@
 </template>
 
 <script setup lang="ts">
+import { photography } from "~/data/photography"
  const principles = [
   "Context before assumptions",
   "Rigour in every assignment",
