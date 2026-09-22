@@ -5,7 +5,11 @@
    eyebrow="Independent since 2009"
    intro="A regional research and advisory firm with established field access and multidisciplinary expertise."
    variant="about"
-  />
+  >
+   <template #image>
+    <img :src="photography.communityDialogue.src" :alt="photography.communityDialogue.alt" :style="{ objectPosition: photography.communityDialogue.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-14 lg:grid-cols-12">
