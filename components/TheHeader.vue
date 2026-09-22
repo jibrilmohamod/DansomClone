@@ -3,11 +3,7 @@
   class="page-hero relative overflow-hidden border-b border-line/45 bg-ink text-mist"
   :class="isDetail ? 'min-h-[54dvh]' : 'min-h-[68dvh]'"
  >
-  <InteractiveLineField
-   :variant="isDetail ? 'detail' : variant"
-   :strength="isDetail ? 0.55 : 0.72"
-   :density="isDetail ? 0.8 : 0.92"
-  />
+  <div class="page-hero-surface atlas-grid absolute inset-0" aria-hidden="true"></div>
   <TheNav />
   <div
    class="atlas-shell relative z-10 flex"
@@ -59,6 +55,19 @@ const isDetail = computed(() => Boolean(props.projTitle))
 </script>
 
 <style scoped>
+.page-hero-surface {
+ background:
+  radial-gradient(circle at 78% 24%, rgb(var(--primary) / 0.075), transparent 31%),
+  linear-gradient(135deg, rgb(var(--panel-soft) / 0.34), transparent 52%);
+}
+
+.page-hero-surface::after {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(180deg, transparent 48%, rgb(var(--ink) / 0.2));
+}
+
 @media (prefers-reduced-motion: no-preference) {
  .hero-title {
   animation: title-in 760ms 100ms cubic-bezier(0.16, 1, 0.3, 1) both;
