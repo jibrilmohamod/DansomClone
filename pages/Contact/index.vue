@@ -5,7 +5,11 @@
    eyebrow="Contact"
    intro="Contact our regional team to discuss research, monitoring, evaluation, advisory or field-support requirements."
    variant="contact"
-  />
+  >
+   <template #image>
+    <img :src="photography.fieldResearchHero.src" :alt="photography.fieldResearchHero.alt" :style="{ objectPosition: photography.fieldResearchHero.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <section class="atlas-grid py-24 md:py-40">
    <div class="atlas-shell grid gap-16 lg:grid-cols-12">
@@ -101,6 +105,7 @@
 </template>
 
 <script lang="ts" setup>
+import { photography } from "~/data/photography"
  const form = reactive({
   name: "",
   email: "",
