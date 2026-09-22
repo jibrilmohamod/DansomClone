@@ -41,6 +41,7 @@ onMounted(() => {
  let lastTime = 0
  let visible = true
  let pageVisible = document.visibilityState === "visible"
+ let destroyed = false
  let lastActivation = 0
  let lineColor = [69, 91, 104]
  let accentColor = [197, 224, 96]
@@ -233,7 +234,7 @@ onMounted(() => {
  }
 
  const requestFrame = () => {
-  if (frame || !visible || !pageVisible || reduceMotion.matches) return
+  if (destroyed || frame || !visible || !pageVisible || reduceMotion.matches) return
   frame = window.requestAnimationFrame(animate)
  }
 
@@ -447,11 +448,13 @@ onMounted(() => {
  resize()
 
  onBeforeUnmount(() => {
+  destroyed = true
+  resetInteraction()
   if (frame) window.cancelAnimationFrame(frame)
+  frame = 0
   resizeObserver.disconnect()
   visibilityObserver.disconnect()
   themeObserver.disconnect()
-  resetInteraction()
   hero.classList.remove("evidence-field-interactive", "evidence-field-drawing")
   hero.removeEventListener("pointermove", updatePointer)
   hero.removeEventListener("pointerdown", beginDrawing)
