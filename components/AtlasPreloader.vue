@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const emit = defineEmits<{
+ (event: "active-change", active: boolean): void
+}>()
 const visible = ref(false)
 const leaving = ref(false)
 
@@ -11,6 +14,7 @@ const finish = () => {
  leaveTimer = window.setTimeout(() => {
   visible.value = false
   document.documentElement.classList.remove("is-preloading")
+  emit("active-change", false)
  }, 700)
 }
 
@@ -217,7 +221,10 @@ onBeforeUnmount(() => {
 .site-preloader--leaving .site-preloader__panels span:nth-child(2) { transition-delay: 55ms; }
 .site-preloader--leaving .site-preloader__panels span:nth-child(3) { transition-delay: 110ms; }
 
-.atlas-loader-leave-active { transition: opacity 140ms linear; }
+.atlas-loader-leave-active {
+ pointer-events: none;
+ transition: opacity 140ms linear;
+}
 .atlas-loader-leave-to { opacity: 0; }
 
 @keyframes atlas-grid-in {
