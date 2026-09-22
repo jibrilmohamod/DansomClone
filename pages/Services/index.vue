@@ -5,7 +5,11 @@
    eyebrow="What we do"
    intro="Research, monitoring, advisory, institutional support and field delivery for complex contexts."
    variant="services"
-  />
+  >
+   <template #image>
+    <img :src="photography.fieldMonitoring.src" :alt="photography.fieldMonitoring.alt" :style="{ objectPosition: photography.fieldMonitoring.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <section class="atlas-grid bg-ink py-24 md:py-36">
    <div class="atlas-shell">
