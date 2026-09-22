@@ -5,7 +5,11 @@
    :eyebrow="project.classification"
    :intro="projectIntro"
    variant="detail"
-  />
+  >
+   <template #image>
+    <img :src="photography.fieldOperations.src" :alt="photography.fieldOperations.alt" :style="{ objectPosition: photography.fieldOperations.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
   <main class="atlas-grid bg-ink py-24 md:py-36">
    <div class="atlas-shell">
     <NuxtLink to="/Portfolio" class="text-link"><Icon name="mdi:arrow-left" /> All projects</NuxtLink>
@@ -51,6 +55,7 @@
 </template>
 
 <script setup lang="ts">
+ import { photography } from "~/data/photography"
  import {projects} from "~/data/projects"
  import {services} from "~/data/services"
  const route=useRoute(),slug=decodeURIComponent(String(route.params.slug||"")),projectIndex=Number(slug.split("-")[0]),projectTitle=slug.replace(/^\d+-/,""); const project=projects[projectIndex]||projects.find(item=>item.title===projectTitle); if(!project)throw createError({statusCode:404,statusMessage:"Project not found"}); const projectIntro=`${project.Location}${project.timeframes?`, ${project.timeframes}`:""}`
