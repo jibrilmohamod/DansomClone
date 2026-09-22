@@ -5,7 +5,11 @@
    eyebrow="Selected projects"
    intro="Independent assignments and long-term partnerships across humanitarian, development and public-sector programmes."
    variant="work"
-  />
+  >
+   <template #image>
+    <img :src="photography.fieldOperations.src" :alt="photography.fieldOperations.alt" :style="{ objectPosition: photography.fieldOperations.position }" fetchpriority="high" />
+   </template>
+  </TheHeader>
 
   <section class="atlas-grid bg-ink py-20 md:py-28">
    <div class="atlas-shell">
