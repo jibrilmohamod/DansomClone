@@ -2,12 +2,16 @@
 const emit = defineEmits<{
  (event: "active-change", active: boolean): void
 }>()
-const visible = ref(false)
+
+const introPlayed = useCookie<boolean>("dansom-atlas-intro", {
+ default: () => false,
+ sameSite: "lax",
+})
+const visible = ref(!introPlayed.value)
 const leaving = ref(false)
 
 let leaveTimer = 0
 let removeTimer = 0
-const storageKey = "dansom-atlas-intro-v1"
 
 const finish = () => {
  leaving.value = true
@@ -20,21 +24,16 @@ const finish = () => {
 
 onMounted(() => {
  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
- let hasPlayed = false
 
- try {
-  hasPlayed = sessionStorage.getItem(storageKey) === "complete"
- } catch {}
+ if (reduceMotion || introPlayed.value) {
+  visible.value = false
+  emit("active-change", false)
+  return
+ }
 
- if (reduceMotion || hasPlayed) return
-
- visible.value = true
  document.documentElement.classList.add("is-preloading")
-
- try {
-  sessionStorage.setItem(storageKey, "complete")
- } catch {}
-
+ emit("active-change", true)
+ introPlayed.value = true
  removeTimer = window.setTimeout(finish, 900)
 })
 
@@ -42,6 +41,7 @@ onBeforeUnmount(() => {
  window.clearTimeout(leaveTimer)
  window.clearTimeout(removeTimer)
  document.documentElement.classList.remove("is-preloading")
+ emit("active-change", false)
 })
 </script>
 
