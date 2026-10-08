@@ -1,22 +1,6 @@
 <template>
  <div>
-  <section class="home-cinema relative min-h-[100dvh] overflow-hidden border-b border-line/45 bg-ink text-mist">
-   <InteractiveLineField variant="home" :strength="1" :density="1" />
-   <TheNav />
-
-   <div class="atlas-shell relative z-10 flex min-h-[calc(100dvh-76px)] items-end pb-10 pt-24 md:pb-14">
-    <div class="grid w-full gap-10 lg:grid-cols-12 lg:items-end">
-     <div class="lg:col-span-9">
-      <p class="atlas-label">Research and advisory services</p>
-      <h1 class="atlas-display home-title mt-6 max-w-[16ch] text-[clamp(2.65rem,4.35vw,4.35rem)] leading-[0.96]">Research for complex operating environments.</h1>
-     </div>
-     <div class="lg:col-span-3">
-      <p class="border-t border-line/55 pt-5 text-base leading-relaxed text-mist/68">Research, monitoring, and advisory built from trusted access across Somalia, Kenya, and the Horn of Africa.</p>
-      <div class="mt-6 flex flex-wrap gap-3"><NuxtLink to="/Portfolio" class="button-primary">Explore the work <Icon name="mdi:arrow-right" /></NuxtLink><NuxtLink to="/About" class="button-ghost">Who we are</NuxtLink></div>
-     </div>
-    </div>
-   </div>
-  </section>
+  <HomeHero />
 
   <section id="partners" class="border-y border-line/45 bg-panel py-8">
    <div class="atlas-shell"><p class="atlas-label mb-6">Selected partners</p><LogoCarousel /></div>
@@ -83,9 +67,6 @@ import { photography } from "~/data/photography"
 </script>
 
 <style scoped>
-@media (prefers-reduced-motion: no-preference) {
- .home-title { animation: home-title 760ms 100ms cubic-bezier(.16,1,.3,1) both; }
-}
 .atlas-scroll { scrollbar-width: thin; scrollbar-color: rgb(var(--primary)) transparent; }
 .service-panel { background: linear-gradient(145deg,rgb(var(--panel)/.65),transparent 70%); }
 .capability-control { display:inline-flex; height:3rem; width:3rem; align-items:center; justify-content:center; border:1px solid rgb(var(--line)/.65); border-radius:.75rem; color:rgb(var(--mist)); transition:transform 240ms ease,border-color 240ms ease,background-color 240ms ease,color 240ms ease; }
@@ -93,5 +74,4 @@ import { photography } from "~/data/photography"
 .experience-row { grid-template-columns:9.5rem minmax(0,1fr) auto; }
 .experience-logo-cell { display:flex; min-height:4.75rem; align-items:center; }
 @media(max-width:767px){.experience-row{grid-template-columns:minmax(7.5rem,9rem) minmax(0,1fr)}.experience-row>:last-child{grid-column:2}.experience-logo-cell{min-height:4rem}}
-@keyframes home-title { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:none } }
 </style>
