@@ -20,7 +20,6 @@
     <div class="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_12%_18%,rgba(80,174,211,0.2),transparent_32%),radial-gradient(circle_at_85%_20%,rgba(191,217,98,0.24),transparent_30%)] md:block"></div>
     <div class="grid items-start gap-5 md:grid-cols-2 md:items-center md:gap-8">
      <div class="relative space-y-3 md:space-y-4">
-      <p class="text-xs uppercase tracking-[0.22em] text-secondary md:text-sm md:tracking-[0.25em]">What we do</p>
       <h2 class="font-display text-xl font-semibold leading-tight md:text-3xl">Specialised services for complex operating environments</h2>
       <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
        We combine contextual understanding with rigorous methodology to deliver evidence, advisory, and monitoring services that keep programmes responsive and accountable.
@@ -48,7 +47,7 @@
     <div
      v-for="service in services"
      :key="service.title"
-     class="dansom-card group p-4 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-secondary/40 md:p-6"
+     class="dansom-card group p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 md:p-6"
     >
      <div class="flex items-center gap-3">
       <span class="flex h-9 w-9 items-center justify-center rounded-full bg-secondary/15 text-secondary md:h-10 md:w-10">

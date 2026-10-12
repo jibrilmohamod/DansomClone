@@ -5,7 +5,6 @@
   <section id="home-intro" class="container px-4 py-10 md:px-6 md:py-20">
    <div class="grid items-center gap-6 md:gap-12 lg:grid-cols-[1.15fr_0.85fr]">
     <div class="animate-fade-up space-y-4 rounded-none border-0 bg-transparent p-0 shadow-none backdrop-blur-none md:dansom-card md:space-y-6 md:p-8 md:backdrop-blur-xl">
-     <p class="text-xs font-semibold uppercase tracking-[0.24em] text-secondary md:text-sm md:tracking-[0.3em]">Who we are</p>
      <h2 class="font-display text-2xl font-semibold leading-tight md:text-4xl">Regional expertise backed by on-the-ground access</h2>
      <p class="font-body text-sm leading-relaxed text-slate-600 md:text-lg">
       Since 2009, DANSOM has partnered with humanitarian and development actors to generate actionable insights across Somalia and Kenya. Our network of thematic experts and field researchers brings clarity to complex contexts so programs can move forward with confidence.
@@ -40,6 +39,7 @@
        loading="lazy"
        sizes="sm:100vw md:50vw lg:800px"
        src="v1713946564/expertise-1000x757_1_ha2eyx.jpg"
+       alt="Dansom field research and regional expertise"
        class="h-full w-full object-cover"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
@@ -56,15 +56,15 @@
   <section class="relative bg-slate-50/70 py-10 md:py-20">
   <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(148,163,184,0.12),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(182,138,53,0.12),transparent_28%),linear-gradient(0deg,rgba(255,255,255,0.04),transparent)]"></div>
    <div class="container relative space-y-7 px-4 md:space-y-12 md:px-6">
-    <div class="flex flex-col gap-3 text-center md:gap-4">
-     <p class="text-xs font-semibold uppercase tracking-[0.24em] text-secondary md:text-sm md:tracking-[0.3em]">Our expertise</p>
+    <div class="flex flex-col gap-3 text-left md:gap-4">
+
      <h2 class="font-display text-2xl font-semibold md:text-4xl">Services designed for complex environments</h2>
      <p class="mx-auto max-w-3xl font-body text-sm text-slate-600 md:text-lg">
       We blend rigorous methodologies with contextual sensitivity to deliver monitoring, advisory, and research services that strengthen decision-making for partners across the Horn of Africa.
      </p>
     </div>
 
-    <div class="grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+    <div class="grid gap-4 md:grid-cols-2 md:gap-6">
      <div
       v-for="service in services"
       :key="service.title"
@@ -91,18 +91,18 @@
    <div class="container px-4 md:px-6">
     <div class="grid gap-6 rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:gap-10 md:p-10 md:shadow-2xl md:shadow-slate-200">
      <div class="max-w-3xl space-y-3 md:space-y-4">
-      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-secondary md:text-sm md:tracking-[0.3em]">How we work</p>
+
       <h2 class="font-display text-2xl font-semibold md:text-4xl">Field-tested methods for reliable results</h2>
       <p class="font-body text-sm text-slate-600 md:text-lg">
        Our teams pair local presence with proven tools to deliver credible evidence. From rapid mobilization to structured analysis, every engagement is designed to translate findings into practical recommendations.
       </p>
      </div>
 
-     <div class="grid gap-3 md:grid-cols-3 md:gap-6">
+     <div class="grid gap-0">
       <div
        v-for="step in approach"
        :key="step.title"
-       class="rounded-lg border border-slate-200/80 bg-white/90 p-4 shadow-none transition md:dansom-card-soft md:p-6 md:shadow-lg md:shadow-black/10 md:hover:-translate-y-1"
+       class="grid gap-3 border-t border-slate-200 py-5 md:grid-cols-[auto_1fr] md:gap-5 md:py-6"
       >
        <div class="flex items-center gap-3">
         <span class="flex h-9 w-9 items-center justify-center rounded-full bg-secondary/15 text-secondary md:h-10 md:w-10">
@@ -121,8 +121,7 @@
   <section class="pb-6 md:pb-10">
    <div class="container px-4 md:px-6">
     <div class="rounded-lg border border-slate-200/80 bg-white p-2.5 shadow-none backdrop-blur md:dansom-card-soft md:p-3 md:shadow-inner md:shadow-slate-300/40">
-     <div class="flex flex-col gap-3 text-center">
-      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Partners and collaborators</p>
+     <div>
       <LogoCarousel />
      </div>
     </div>
@@ -132,17 +131,16 @@
   <section class="pb-10 md:pb-20">
    <div class="container px-4 md:px-6">
     <div class="flex flex-col items-center gap-3 rounded-none border-0 bg-transparent p-0 text-center shadow-none backdrop-blur-none md:dansom-card md:gap-4 md:p-10 md:shadow-glow md:backdrop-blur">
-     <p class="text-xs font-semibold uppercase tracking-[0.24em] text-secondary md:text-sm md:tracking-[0.3em]">Let&apos;s collaborate</p>
      <h2 class="font-display text-2xl font-semibold md:text-4xl">Ready to build actionable evidence together?</h2>
      <p class="max-w-3xl font-body text-sm text-slate-600 md:text-lg">
-      Tell us about your objectives and we&apos;ll assemble the right team to support you—from rapid assessments to long-term monitoring and evaluation.
+      Tell us about your objectives and we&apos;ll assemble the right team to support you, from rapid assessments to long-term monitoring and evaluation.
      </p>
      <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3">
       <NuxtLink
        to="/Contact"
        class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-1 hover:from-secondary hover:to-primary md:px-6 md:py-3"
       >
-       Contact Dansom
+       Contact
        <Icon name="mdi:phone" class="text-lg" />
       </NuxtLink>
       <NuxtLink

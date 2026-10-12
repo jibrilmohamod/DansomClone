@@ -1,75 +1,63 @@
 <template>
- <div class="min-h-screen text-slate-900">
-  <TheHeader :projTitle="slug">
+ <div class="min-h-[100dvh] text-slate-900">
+  <TheHeader :projTitle="service.fullTitle">
    <template #image>
     <NuxtImg
      provider="cloudinary"
      loading="lazy"
      format="webp"
-     alt="Service header"
+     alt="Dansom research team working in the Horn of Africa"
      sizes="sm:100vw md:50vw lg:1500px"
      :modifiers="{ effect: 'colorize:60', color: 'black' }"
      src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+     class="h-full w-full object-cover object-center"
     />
    </template>
   </TheHeader>
 
-  <div class="container m-auto px-4 py-6 md:px-6 md:py-14">
-   <div class="grid gap-4 rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:grid-cols-3 md:gap-8 md:p-8">
-    <div class="space-y-2.5 md:space-y-4">
-     <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-secondary/20 via-white to-quinary/25 p-3.5 ring-1 ring-secondary/20 md:rounded-2xl md:p-6">
-      <Icon :name="service.icon" class="text-primary h-20 w-20 animate-pulse" />
+  <main class="container px-4 py-10 md:px-6 md:py-16">
+   <div class="grid gap-8 lg:grid-cols-[0.75fr_1.75fr] lg:gap-12">
+    <aside class="space-y-4">
+     <div class="flex min-h-44 items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-primary">
+      <Icon :name="service.icon" class="h-20 w-20" />
      </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Delivery model</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Mixed-method research + local field teams</p>
-     </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
-     </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
-     </div>
-    </div>
-    <div class="space-y-3 md:col-span-2 md:space-y-5">
-     <p class="inline-flex w-fit items-center rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-      {{ service.title }}
-     </p>
-     <h5 class="font-display text-xl font-semibold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
+     <dl class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm">
+      <div>
+       <dt class="font-semibold text-slate-900">Delivery model</dt>
+       <dd class="mt-1 text-slate-600">Mixed-method research with local field teams</dd>
+      </div>
+      <div class="mt-4 border-t border-slate-200 pt-4">
+       <dt class="font-semibold text-slate-900">Coverage</dt>
+       <dd class="mt-1 text-slate-600">Somalia and Kenya</dd>
+      </div>
+     </dl>
+    </aside>
+
+    <article>
+     <p class="text-sm font-semibold text-primary">{{ service.title }}</p>
+     <h2 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight text-slate-900 md:text-4xl">
+      {{ service.fullTitle }}
+     </h2>
+     <p class="mt-4 text-lg leading-relaxed text-slate-600">{{ service.subtitle }}</p>
      <div
-      class="service-body prose prose-sm max-w-none text-justify prose-headings:text-primary prose-p:my-0 prose-p:mb-5 prose-p:leading-8 prose-ul:my-5 prose-ul:pl-6 prose-li:leading-7 prose-a:text-secondary md:prose-base"
+      class="service-body prose prose-slate mt-8 max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:leading-8 prose-a:text-primary"
       v-html="service.about"
      ></div>
-    </div>
-    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
-     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
-     <div
-      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
-      v-html="service.about"
-     ></div>
-    </div>
-    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
-     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
-     <div
-      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
-      v-html="service.about"
-     ></div>
-    </div>
+     <NuxtLink
+      to="/Contact"
+      class="mt-8 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 active:translate-y-px"
+     >
+      Contact
+      <Icon name="mdi:arrow-right" />
+     </NuxtLink>
+    </article>
    </div>
-  </div>
+  </main>
  </div>
 </template>
 
 <script lang="ts" setup>
  const route = useRoute()
- const slug = ref(route.params.slug)
- const service = ref(null)
-
  const services = [
   {
    icon: "arcticons:adobe-analytics",
@@ -100,14 +88,18 @@
   },
  ]
 
- service.value =
-  services.find((item) => item.title === slug.value) || services[0]
+ const requestedService = decodeURIComponent(String(route.params.slug || ""))
+ const service = services.find((item) => item.title === requestedService)
+
+ if (!service) {
+  throw createError({ statusCode: 404, statusMessage: "Service not found" })
+ }
 
  useSeoMeta({
-  title: () => service.value.fullTitle,
-  description: () => service.value.subtitle,
-  ogTitle: () => `${service.value.fullTitle} | Dansom Services`,
-  ogDescription: () => service.value.subtitle,
+  title: () => service.fullTitle,
+  description: () => service.subtitle,
+  ogTitle: () => `${service.fullTitle} | Dansom Research & Consultancy`,
+  ogDescription: () => service.subtitle,
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })
