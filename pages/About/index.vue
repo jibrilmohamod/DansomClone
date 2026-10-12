@@ -1,115 +1,86 @@
 <template>
- <div class="text-slate-900">
+ <div>
   <TheHeader title="Who We Are">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
-     loading="lazy"
-     format="webp"
-     alt="Dansom team in the field"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="h-full w-full object-cover object-center"
+    <img
+     loading="eager"
+     fetchpriority="high"
+     width="1570"
+     height="1002"
+     alt="Research specialists reviewing a fieldwork plan together"
+     src="/dansom-research-workshop.jpg"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <section class="container mx-auto px-4 py-10 md:px-6 md:py-16">
-   <div class="grid items-center gap-5 rounded-none border-0 bg-transparent p-0 shadow-none backdrop-blur-none md:dansom-card md:gap-10 md:p-10 md:backdrop-blur-xl md:grid-cols-2">
-    <div class="space-y-3 md:space-y-4">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary md:text-sm md:tracking-[0.25em]">About Dansom</p>
-     <h2 class="font-display text-2xl font-semibold leading-tight md:text-3xl">Research and consultancy rooted in the Horn of Africa</h2>
-     <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
+  <section class="py-16 md:py-28">
+   <div class="shell grid gap-12 lg:grid-cols-12">
+    <div class="reveal lg:col-span-7">
+     <h2 class="display-title text-4xl leading-tight md:text-6xl">Research rooted in the Horn of Africa.</h2>
+     <p class="body-copy mt-6 text-lg">
       We partner with humanitarian and development actors to unlock meaningful change across Somalia and Kenya. Our teams combine rigorous research, contextual understanding, and secure access to deliver evidence that informs policies, strengthens programmes, and amplifies community voices.
      </p>
-     <div class="grid gap-3 sm:grid-cols-2 md:gap-4">
-      <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-       <p class="text-2xl font-semibold text-slate-900 md:text-3xl">2009</p>
-       <p class="text-sm text-slate-600">Founded to connect global partners with local insight</p>
-      </div>
-      <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-       <p class="text-2xl font-semibold text-slate-900 md:text-3xl">Full access</p>
-       <p class="text-sm text-slate-600">Teams positioned across hard-to-reach regions</p>
-      </div>
-     </div>
     </div>
-    <div class="rounded-lg border border-slate-200/80 bg-white p-4 shadow-none md:dansom-card md:p-6 md:shadow-inner md:shadow-slate-200">
-     <h3 class="text-lg font-semibold md:text-xl">What drives us</h3>
-     <p class="mt-2 text-sm leading-relaxed text-slate-700 md:mt-3 md:text-base">
-      Dansom is built on trust, cultural fluency, and a commitment to ethical research. We work with international consultancies and donor agencies to design tailored engagement strategies, deliver political economy analyses, and provide third-party monitoring and evaluation services.
-     </p>
-     <p class="mt-2 text-sm leading-relaxed text-slate-700 md:mt-3 md:text-base">
-      Our specialists span security, socio-political and economic development, agriculture, health, and policy advisory. Together, we deliver strategies and evidence that ensure programmes succeed in fragile and rapidly changing environments.
-     </p>
-     <div class="mt-3 flex flex-wrap gap-1.5 md:mt-4 md:gap-2">
-      <span class="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700">Ethical research</span>
-      <span class="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700">Secure access</span>
-      <span class="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700">Actionable insight</span>
+    <div class="grid gap-5 sm:grid-cols-2 lg:col-span-5">
+     <div class="surface-soft p-6">
+      <p class="font-display text-5xl font-semibold text-primary">2009</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/60">Founded to connect global partners with local insight.</p>
+     </div>
+     <div class="surface p-6 sm:mt-12">
+      <p class="font-display text-3xl font-semibold text-mist">Full access</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/60">Teams positioned across hard-to-reach regions.</p>
      </div>
     </div>
    </div>
   </section>
 
-  <section class="py-10 md:py-16">
-   <div class="container mx-auto grid items-center gap-6 px-4 md:grid-cols-2 md:gap-10 md:px-6">
-    <div class="relative rounded-xl border border-slate-200 bg-white p-3 shadow-none md:rounded-[28px] md:p-6 md:shadow-2xl md:shadow-slate-300/50">
-     <NuxtImg
-      provider="cloudinary"
+  <section class="border-y border-mist/10 bg-panel/[0.55] py-16 md:py-24">
+   <div class="shell grid items-center gap-10 lg:grid-cols-2">
+    <div class="media-zoom editorial-media">
+     <img
       loading="lazy"
-      format="webp"
-      sizes="sm:100vw md:50vw lg:1200px"
-      src="v1713943514/Community_Mobilization_Bula_jiray-2_vzzaja.jpg"
-      class="w-full rounded-lg object-cover md:rounded-2xl"
+      width="1586"
+      height="992"
+      src="/dansom-community-dialogue.jpg"
+      alt="Community members sharing local knowledge with researchers"
+      class="aspect-[5/4] w-full object-cover"
      />
-     <div class="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_20%_20%,rgba(124,248,255,0.16),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(156,123,255,0.14),transparent_30%)] md:block"></div>
     </div>
-    <div class="space-y-3 md:space-y-5">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary md:text-sm md:tracking-[0.25em]">Vision</p>
-     <h3 class="font-display text-2xl font-semibold md:text-3xl">Building knowledge that strengthens the Horn of Africa</h3>
-     <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
+    <div class="reveal lg:pl-10">
+     <p class="eyebrow">Our vision</p>
+     <h2 class="display-title mt-5 text-4xl leading-tight md:text-5xl">Knowledge that strengthens the region.</h2>
+     <p class="body-copy mt-5 text-base md:text-lg">
       Our vision is to support the region by increasing understanding and knowledge through innovative socio-political engagement and strategic field-based research. We aim to be the trusted partner for institutions seeking clarity, accountability, and resilient programme design.
      </p>
-     <div class="grid gap-3 sm:grid-cols-2 md:gap-4">
-      <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 md:rounded-2xl md:p-4">
-       <p class="text-base font-semibold text-slate-900 md:text-lg">Informed decisions</p>
-       <p class="text-sm text-slate-600">Political economy analysis and security advisory to guide policy and programming.</p>
+     <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      <div>
+       <h3 class="font-display text-xl font-semibold text-mist">Informed decisions</h3>
+       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Political economy analysis and security advisory guide policy and programming.</p>
       </div>
-      <div class="rounded-lg border border-slate-200 bg-slate-50 p-3 md:rounded-2xl md:p-4">
-       <p class="text-base font-semibold text-slate-900 md:text-lg">Community-first</p>
-       <p class="text-sm text-slate-600">Approaches that elevate local voices and prioritize inclusion across every engagement.</p>
+      <div>
+       <h3 class="font-display text-xl font-semibold text-mist">Community-first</h3>
+       <p class="mt-2 text-sm leading-relaxed text-mist/[0.55]">Approaches elevate local voices and prioritize inclusion.</p>
       </div>
      </div>
     </div>
    </div>
   </section>
 
-  <section class="py-10 md:py-16">
-   <div class="container mx-auto px-4 md:px-6">
-    <OurExpertise
-     title="Our Values"
-     subtitle="Our values guide how we work with partners, communities, and one another."
-     variant="light"
-    >
+  <section class="py-16 md:py-28">
+   <div class="shell">
+    <OurExpertise title="Values that shape the work" subtitle="How we work with partners, communities, and one another.">
      <template #vfor>
-      <div class="grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+      <div class="grid gap-5 md:grid-cols-12">
        <article
-        v-for="service in services"
+        v-for="(service, index) in services"
         :key="service.title"
-        class="dansom-card group relative overflow-hidden p-4 md:p-6"
+        class="surface group p-6 transition duration-500 hover:border-primary/[0.35] md:p-7"
+        :class="index === 0 || index === 3 ? 'md:col-span-7' : 'md:col-span-5'"
        >
-        <div class="absolute inset-0 hidden bg-gradient-to-br from-secondary/10 via-transparent to-slate-100 opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:block"></div>
-        <div class="relative flex items-start justify-between gap-4">
-         <span class="dansom-chip">Value</span>
-         <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/15 text-xl text-secondary ring-1 ring-secondary/20 md:h-12 md:w-12 md:rounded-2xl md:text-2xl">
-          <Icon :name="service.icon" />
-         </div>
-        </div>
-        <h4 class="relative mt-4 text-lg font-semibold leading-tight text-slate-900 md:mt-5 md:text-xl">{{ service.title }}</h4>
-        <p class="relative mt-2 text-sm leading-relaxed text-slate-600 md:mt-3 md:text-base">{{ service.subtitle }}</p>
-        <div class="relative mt-4 h-1.5 overflow-hidden rounded-full bg-slate-200 md:mt-6">
-         <div class="h-full w-2/3 bg-secondary transition-all duration-500 group-hover:w-full"></div>
-        </div>
+        <Icon :name="service.icon" class="text-3xl text-primary" />
+        <h3 class="mt-10 font-display text-3xl font-semibold tracking-tight text-mist">{{ service.title }}</h3>
+        <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.58]">{{ service.subtitle }}</p>
        </article>
       </div>
      </template>
@@ -124,37 +95,20 @@
      :key="member.name"
      :name="member.name"
      :role="member.role"
-     :image="member.image"
-     :alt="member.alt"
      :about="member.about"
      :aboutBig="member.aboutBig"
     />
    </template>
   </OurTeam>
 
-  <section class="py-10 md:py-16">
-   <div class="container mx-auto grid gap-3 px-4 md:grid-cols-3 md:gap-8 md:px-6">
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">Where we work</p>
-     <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Somalia &amp; Kenya</h4>
-     <p class="mt-2 text-sm text-slate-600">Local teams with deep networks and trusted access.</p>
-    </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">What we deliver</p>
-     <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Actionable intelligence</h4>
-     <p class="mt-2 text-sm text-slate-600">Structured analysis, secure data, and clear recommendations.</p>
-    </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-4 shadow-none md:rounded-2xl md:p-6 md:shadow-glow">
-     <p class="text-xs uppercase tracking-[0.2em] text-secondary">How to start</p>
-     <h4 class="mt-1.5 text-lg font-semibold md:mt-2 md:text-xl">Partner with us</h4>
-     <p class="mt-2 text-sm text-slate-600">Tell us about your objectives and we will assemble the right team.</p>
-     <NuxtLink
-      to="/Contact"
-      class="mt-3 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-surface shadow-none transition hover:-translate-y-1 md:mt-4 md:shadow-glow"
-     >
-      Contact Dansom
-      <Icon name="mdi:arrow-right" />
-     </NuxtLink>
+  <section class="py-16 md:py-24">
+   <div class="shell">
+    <div class="surface-soft grid gap-8 p-7 md:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
+     <div>
+      <h2 class="display-title text-4xl leading-tight md:text-5xl">Local access. Actionable intelligence.</h2>
+      <p class="body-copy mt-4">Tell us about your objectives and we will assemble the right team.</p>
+     </div>
+     <NuxtLink to="/Contact" class="button-primary">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
     </div>
    </div>
   </section>
@@ -204,8 +158,6 @@
   {
    name: "Mahamed M. Dirir",
    role: "Managing Director",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Mahamed M. Dirir",
    about:
     "Over 20 years of experience leading M&E, conflict management, and development cooperation across Somalia.",
    aboutBig:
@@ -214,8 +166,6 @@
   {
    name: "Abdifatah Abdullahi Ali",
    role: "M&E Coordinator",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Abdifatah Abdullahi Ali",
    about:
     "Dynamic M&E professional with expertise across food security, livelihoods, WASH, health, governance, and resilience.",
    aboutBig:
@@ -224,8 +174,6 @@
   {
    name: "Jama Mahamed",
    role: "Business Development & Reporting Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Jama Mahamed",
    about:
     "Business development and reporting specialist with healthcare operations and programme management experience.",
    aboutBig:
@@ -234,8 +182,6 @@
   {
    name: "Douglas Nzioka",
    role: "Administration & Operations Manager",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Douglas Nzioka",
    about:
     "Operations, logistics, finance, and HR leader with extensive donor compliance and M&E experience.",
    aboutBig:
@@ -244,18 +190,14 @@
   {
    name: "Brian O. Mauwa",
    role: "Statistician Data Scientist & ME Specialist",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Brian O. Mauwa",
    about:
     "Statistician and data scientist with deep experience in monitoring, verification, and learning across Africa.",
    aboutBig:
-    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID – SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelor’s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
+    "<p>Brian is an experienced Statistician, Data Scientist and M&E Specialist, with widespread experience in monitoring, verification, evaluation and learning. He has expert knowledge in participatory methodologies, research design (qualitative and quantitative); survey programming and data management; and tools (SPSS, STATA, SAS, R, CSPro, Askia, Advanced Excel, NVivo, Power BI etc.). Brian has over 12 years of professional work experience in his field of specialization. He is also experienced in the development of data collection tools for computer-aided interviews using various platforms including ODK, CSPro, Askia, Survey CTO, SurveyToGo, Google Forms etc. in the fields of livelihood, health, education, governance, entrepreneurship, agriculture etc., working with international and national private and public organizations across Kenya and the African continent, not limited to marginalized and hard to reach areas and marginalized rural communities. Prior to joining Dansom, Brian worked with International Business & Technical Consultants, Inc. (IBTCI) as a Data Manager under the USAID Somalia Program Support Services (USAID - SPSS). The main roles cut across Design, Field, Analysis and Reporting (DFAR) of the Monitoring, Verification, Evaluation and Learning activities; management of the indicator data by developing and maintaining Indicator Performance Tracking Table (IPTT) summarizing indicator analysis and reports; and Data Quality Assessment (DQA) for IP systems, structures and processes. Brian holds a Bachelor’s Degree in Applied Statistics with Computing and other post graduate trainings in Data Science. At Dansom, he is the Analysis and Reporting Expert and has a knack for what he calls the 3-Ds (discipline of time, discipline of execution and attention to detail).</p>",
   },
   {
    name: "Mumina Hassan",
    role: "Gender Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Mumina Hassan",
    about:
     "Gender specialist and M&E expert advancing inclusive, accountable, and community-centered programming.",
    aboutBig:
@@ -264,8 +206,6 @@
   {
    name: "Jibril Mohamud",
    role: "ICT Expert",
-   image: "v1713240810/close-up-farmer-holding-plants_23-2149142896_fuhkxy.jpg",
-   alt: "Jibril Mohamud",
    about:
     "IT specialist and data analyst supporting digital systems, analytics, and evidence-based decision-making.",
    aboutBig:

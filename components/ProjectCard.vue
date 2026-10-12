@@ -1,41 +1,36 @@
 <template>
- <div data-aos="fade-left" data-aos-duration="800">
-  <NuxtLink :to="slug">
-   <div
-    class="dansom-card h-52 overflow-hidden transition hover:scale-[1.02] hover:duration-200 hover:ease-linear md:h-60"
-   >
-    <div class="h-full px-2.5 pb-2 md:px-3">
-     <!-- logo  -->
-     <div
-      class="flex h-1/2 items-center justify-center border-b border-1 border-slate-300"
-     >
-      <NuxtImg
-       :src="icon"
-       alt="logo"
-       class="h-20 w-full object-contain md:h-24"
-       loading="lazy"
-       quality="100"
-       v-if="icon"
-      />
-     </div>
-     <div class="flex h-1/2 items-center justify-center">
-      <h3 class="text-pretty text-center font-Merriweather text-base text-slate-800 md:text-lg">
-       {{ title }}
-      </h3>
-     </div>
-    </div>
-   </div>
-  </NuxtLink>
- </div>
+ <NuxtLink
+  :to="slug"
+  class="group surface grid min-h-[22rem] overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary/[0.52] hover:shadow-lift"
+ >
+  <div class="flex h-32 items-center border-b border-line/60 bg-paper p-6">
+   <img
+    v-if="icon"
+    :src="icon"
+    :alt="title + ' project partner logo'"
+    class="max-h-16 max-w-[12rem] object-contain object-left"
+    loading="lazy"
+   />
+  </div>
+  <div class="flex flex-col p-5">
+   <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{{ classification }}</p>
+   <h3 class="mt-3 font-display text-xl font-semibold leading-snug tracking-tight text-mist">{{ title }}</h3>
+   <p class="mt-3 text-sm text-mist/[0.62]">{{ location }}<span v-if="timeframe">, {{ timeframe }}</span></p>
+   <span class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-primary">
+    View project
+    <Icon name="mdi:arrow-right" class="transition group-hover:translate-x-1" />
+   </span>
+  </div>
+ </NuxtLink>
 </template>
 
 <script lang="ts" setup>
  defineProps({
-  title: String,
+  title: { type: String, required: true },
   icon: String,
-  icon2: String,
-  slug: String,
+  slug: { type: String, required: true },
+  classification: { type: String, required: true },
+  location: { type: String, required: true },
+  timeframe: String,
  })
 </script>
-
-<style></style>

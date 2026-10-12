@@ -1,94 +1,130 @@
 <template>
- <div class="min-h-screen text-slate-900">
-  <TheHeader title="Contact Us">
+ <div>
+  <TheHeader title="Contact">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
-     loading="lazy"
-     format="webp"
-     alt="Contact header"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+    <img
+     loading="eager"
+     fetchpriority="high"
+     width="1570"
+     height="1002"
+     alt="Research specialists collaborating around a regional fieldwork plan"
+     src="/dansom-research-workshop.jpg"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <section class="container mx-auto space-y-6 px-4 py-10 md:space-y-10 md:px-6 md:py-16">
-   <div class="grid gap-4 md:grid-cols-3 md:gap-8">
-    <div class="rounded-none border-0 bg-transparent p-0 shadow-none md:col-span-2 md:dansom-card md:p-8">
-     <p class="text-xs uppercase tracking-[0.2em] text-primary md:text-sm md:tracking-[0.25em]">We can help</p>
-     <h2 class="font-Playfair text-2xl font-bold md:text-3xl">Let&apos;s navigate what&apos;s next together</h2>
-     <p class="mt-2 font-Montserrat text-sm leading-relaxed text-slate-700 md:mt-3 md:text-lg">
-      Contact Dansom today to discuss your needs and discover how our services can benefit you. Our team is ready to assist and provide guidance for your next mission.
-     </p>
-     <p class="text-sm leading-relaxed text-slate-700 md:text-base">
-      Please reach out at the addresses below or fill out the form and we will get back to you quickly.
+  <section class="py-16 md:py-24">
+   <div class="shell grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+     <h2 class="display-title text-4xl leading-tight md:text-6xl">Tell us what you are working on.</h2>
+     <p class="body-copy mt-5 text-base md:text-lg">
+      Share your objectives, operating context, and timeline. Our team will respond with the right regional and technical expertise.
      </p>
 
-     <form class="mt-5 grid gap-3 md:mt-8 md:gap-4">
-      <div class="grid gap-4 md:grid-cols-2">
-       <input
-        type="text"
-        id="name"
-        placeholder="Name"
-        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm placeholder:text-slate-500 focus:border-primary focus:outline-none md:rounded-xl md:px-4 md:py-3 md:text-lg"
-       />
-       <input
-        type="email"
-        id="email"
-        placeholder="Email"
-        class="w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm placeholder:text-slate-500 focus:border-primary focus:outline-none md:rounded-xl md:px-4 md:py-3 md:text-lg"
-       />
+     <form class="mt-10 grid gap-6" @submit.prevent="sendEmail">
+      <div class="grid gap-6 md:grid-cols-2">
+       <div class="grid gap-2">
+        <label for="name" class="text-sm font-semibold text-mist">Name</label>
+        <input
+         id="name"
+         v-model="form.name"
+         name="name"
+         type="text"
+         autocomplete="name"
+         required
+         placeholder="Your name"
+         class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+        />
+       </div>
+       <div class="grid gap-2">
+        <label for="email" class="text-sm font-semibold text-mist">Email</label>
+        <input
+         id="email"
+         v-model="form.email"
+         name="email"
+         type="email"
+         autocomplete="email"
+         required
+         placeholder="you@organisation.org"
+         class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+        />
+       </div>
       </div>
-      <textarea
-       id="message"
-       placeholder="How can we help?"
-       class="w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-3 text-sm placeholder:text-slate-500 focus:border-primary focus:outline-none md:h-48 md:rounded-xl md:px-4 md:py-4 md:text-lg"
-      ></textarea>
-      <button
-       type="submit"
-       class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-none transition hover:-translate-y-0.5 md:px-6 md:py-3 md:shadow-lg md:shadow-primary/30"
-      >
-       Submit
-       <Icon name="ic:sharp-double-arrow" />
+
+      <div class="grid gap-2">
+       <label for="message" class="text-sm font-semibold text-mist">How can we help?</label>
+       <textarea
+        id="message"
+        v-model="form.message"
+        name="message"
+        required
+        rows="7"
+        placeholder="Briefly describe your project or research need"
+        class="w-full rounded-xl border border-mist/[0.15] bg-panel px-4 py-3.5 text-base text-mist placeholder:text-mist/[0.38] focus:border-primary"
+       ></textarea>
+       <p class="text-sm text-mist/[0.45]">Submitting opens your email application with this message prepared.</p>
+      </div>
+
+      <button type="submit" class="button-primary w-fit">
+       Email Dansom
+       <Icon name="mdi:email-outline" />
       </button>
      </form>
     </div>
 
-    <div class="space-y-3 rounded-xl bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 p-5 text-white shadow-none md:space-y-4 md:rounded-3xl md:p-8 md:shadow-lg md:shadow-slate-500/30">
-     <h3 class="text-lg font-semibold md:text-xl">Our Offices</h3>
-     <div class="space-y-3 text-sm text-white/80">
+    <aside class="surface-soft h-fit p-7 lg:col-span-4 lg:col-start-9 lg:sticky lg:top-28">
+     <h2 class="font-display text-3xl font-semibold tracking-tight text-mist">Our offices</h2>
+     <div class="mt-7 grid gap-7 text-sm leading-relaxed text-mist/[0.58]">
       <div>
-       <p class="text-white font-semibold">Mogadishu</p>
-       <p>Dirir Building on Balcad Road</p>
-       <a href="mailto:info@dansomconsultancy.org" class="hover:text-white">info@dansomconsultancy.org</a>
+       <p class="font-semibold text-primary">Mogadishu</p>
+       <p class="mt-2">Dirir Building on Balcad Road</p>
       </div>
-      <div class="h-px bg-white/20"></div>
       <div>
-       <p class="text-white font-semibold">Nairobi</p>
-       <p>Nas Apartments, No. 4, Milimani Road</p>
-       <a href="mailto:info@dansomconsultancy.org" class="hover:text-white">info@dansomconsultancy.org</a>
+       <p class="font-semibold text-primary">Nairobi</p>
+       <p class="mt-2">Nas Apartments, No. 4, Milimani Road</p>
       </div>
      </div>
-     <div class="space-y-2 text-sm text-white/80">
-      <div class="flex items-center gap-2">
-       <Icon name="mdi:phone" />
-       <span>+254 745 276 911</span>
-      </div>
-      <div class="flex items-center gap-2">
-       <Icon name="mdi:email-outline" />
-       <a href="mailto:info@dansomconsultancy.org" class="hover:text-white">info@dansomconsultancy.org</a>
-      </div>
+     <div class="mt-8 grid gap-3 border-t border-mist/10 pt-7 text-sm">
+      <a href="tel:+254745276911" class="flex items-center gap-3 text-mist/60 hover:text-primary">
+       <Icon name="mdi:phone-outline" class="text-primary" />
+       +254 745 276 911
+      </a>
+      <a href="mailto:info@dansomconsultancy.org" class="flex items-center gap-3 break-all text-mist/60 hover:text-primary">
+       <Icon name="mdi:email-outline" class="shrink-0 text-primary" />
+       info@dansomconsultancy.org
+      </a>
+      <a
+       href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="flex items-center gap-3 text-mist/60 hover:text-primary"
+      >
+       <Icon name="ri:linkedin-fill" class="text-primary" />
+       LinkedIn
+      </a>
      </div>
-    </div>
+    </aside>
    </div>
   </section>
  </div>
 </template>
 
 <script lang="ts" setup>
+ const form = reactive({
+  name: "",
+  email: "",
+  message: "",
+ })
+
+ const sendEmail = () => {
+  const subject = encodeURIComponent(`Website enquiry from ${form.name}`)
+  const body = encodeURIComponent(
+   `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
+  )
+  window.location.href = `mailto:info@dansomconsultancy.org?subject=${subject}&body=${body}`
+ }
+
  useSeoMeta({
   title: "Contact",
   description:
@@ -100,5 +136,3 @@
   twitterCard: "summary_large_image",
  })
 </script>
-
-<style></style>

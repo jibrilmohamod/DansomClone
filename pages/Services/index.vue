@@ -1,70 +1,66 @@
 <template>
- <div class="text-slate-900">
+ <div>
   <TheHeader title="Our Services">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
-     loading="lazy"
-     format="webp"
-     alt="Services banner"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+    <img
+     loading="eager"
+     fetchpriority="high"
+     width="1586"
+     height="992"
+     alt="Researchers independently monitoring rural water infrastructure"
+     src="/dansom-field-monitoring.jpg"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <section class="container mx-auto space-y-6 px-4 py-8 md:px-6 md:space-y-12 md:py-16">
-   <div class="relative overflow-hidden rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:p-8">
-    <div class="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_12%_18%,rgba(80,174,211,0.2),transparent_32%),radial-gradient(circle_at_85%_20%,rgba(191,217,98,0.24),transparent_30%)] md:block"></div>
-    <div class="grid items-start gap-5 md:grid-cols-2 md:items-center md:gap-8">
-     <div class="relative space-y-3 md:space-y-4">
-      <p class="text-xs uppercase tracking-[0.22em] text-secondary md:text-sm md:tracking-[0.25em]">What we do</p>
-      <h2 class="font-display text-xl font-semibold leading-tight md:text-3xl">Specialised services for complex operating environments</h2>
-      <p class="font-body text-sm leading-relaxed text-slate-700 md:text-lg">
-       We combine contextual understanding with rigorous methodology to deliver evidence, advisory, and monitoring services that keep programmes responsive and accountable.
-      </p>
-      <div class="flex flex-wrap gap-1.5 md:gap-2">
-       <span class="dansom-chip">Somalia</span>
-       <span class="dansom-chip">Kenya</span>
-       <span class="dansom-chip">Field-verified</span>
+  <section class="py-16 md:py-28">
+   <div class="shell">
+    <div class="reveal max-w-3xl">
+     <h2 class="display-title text-4xl leading-tight md:text-6xl">Specialised services for complex operating environments.</h2>
+     <p class="body-copy mt-5 text-base md:text-lg">
+      Contextual understanding and rigorous methodology keep programmes responsive, accountable, and grounded in reliable evidence.
+     </p>
+    </div>
+
+    <div class="mt-12 grid auto-rows-fr gap-5 md:grid-cols-12">
+     <article
+      v-for="(service, index) in services"
+      :key="service.title"
+      class="surface group flex min-h-72 flex-col p-6 transition duration-500 hover:-translate-y-1 hover:border-primary/40 md:p-8"
+      :class="index % 4 === 0 || index % 4 === 3 ? 'md:col-span-7' : 'md:col-span-5'"
+     >
+      <div class="flex items-center justify-between gap-4">
+       <Icon :name="service.icon" class="text-3xl text-primary" />
+       <span class="text-sm font-semibold text-mist/[0.45]">{{ service.category }}</span>
       </div>
-     </div>
-     <div class="relative grid gap-3 sm:grid-cols-2 md:gap-4">
-      <div class="rounded-xl bg-white/80 p-3 ring-1 ring-slate-200/70 backdrop-blur-sm md:dansom-card-soft md:p-4">
-       <p class="text-base font-semibold text-slate-900 md:text-lg">Secure access</p>
-       <p class="text-sm text-slate-600">Field teams positioned across Somalia and Kenya.</p>
+      <div class="mt-auto pt-14">
+       <h3 class="font-display text-2xl font-semibold tracking-tight text-mist md:text-3xl">{{ service.title }}</h3>
+       <p class="mt-3 max-w-xl text-sm leading-relaxed text-mist/[0.64]">{{ service.description }}</p>
+       <NuxtLink :to="'/Services/' + encodeURIComponent(service.slug)" class="text-link mt-6">
+        Explore service
+        <Icon name="mdi:arrow-right" />
+       </NuxtLink>
       </div>
-      <div class="rounded-xl bg-white/80 p-3 ring-1 ring-slate-200/70 backdrop-blur-sm md:dansom-card-soft md:p-4">
-       <p class="text-base font-semibold text-slate-900 md:text-lg">Decision-ready</p>
-       <p class="text-sm text-slate-600">Clear deliverables aligned to partner objectives.</p>
-      </div>
-     </div>
+     </article>
     </div>
    </div>
+  </section>
 
-   <div class="grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-    <div
-     v-for="service in services"
-     :key="service.title"
-     class="dansom-card group p-4 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-secondary/40 md:p-6"
-    >
-     <div class="flex items-center gap-3">
-      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-secondary/15 text-secondary md:h-10 md:w-10">
-       <Icon :name="service.icon" class="text-lg md:text-xl" />
-      </span>
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">{{ service.category }}</p>
+  <section class="border-t border-mist/10 bg-panel/[0.62] py-16 md:py-24">
+   <div class="shell grid gap-10 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+     <h2 class="display-title text-4xl leading-tight md:text-5xl">Designed around the operating context.</h2>
+    </div>
+    <div class="grid gap-8 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
+     <div>
+      <p class="font-display text-2xl font-semibold text-primary">Secure access</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Field teams positioned across Somalia and Kenya.</p>
      </div>
-     <h3 class="mt-2.5 text-lg font-semibold text-primary md:mt-3 md:text-xl">{{ service.title }}</h3>
-     <p class="mt-1.5 text-sm leading-relaxed text-slate-600 md:mt-2">{{ service.description }}</p>
-     <NuxtLink
-      :to="`/Services/${encodeURIComponent(service.title)}`"
-      class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition group-hover:translate-x-1 md:mt-4"
-     >
-      Explore
-      <Icon name="mdi:arrow-right" />
-     </NuxtLink>
+     <div>
+      <p class="font-display text-2xl font-semibold text-primary">Decision-ready</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist/[0.64]">Clear deliverables aligned to partner objectives.</p>
+     </div>
     </div>
    </div>
   </section>
@@ -72,6 +68,8 @@
 </template>
 
 <script setup lang="ts">
+ import { services } from "~/data/services"
+
  useSeoMeta({
   title: "Services",
   description:
@@ -83,48 +81,4 @@
   twitterCard: "summary_large_image",
  })
 
- const services = [
-  {
-   title: "Political Economy Analysis",
-   category: "Advisory",
-   icon: "arcticons:adobe-analytics",
-   description:
-    "Deep-dive assessments that unpack incentives, power dynamics, and risks to guide strategy and programme design.",
-  },
-  {
-   title: "Third Party Monitoring and Evaluation",
-   category: "MEL",
-   icon: "carbon:data-analytics",
-   description:
-    "Independent verification, real-time monitoring, and evaluations that ensure accountability to donors and communities.",
-  },
-  {
-   title: "Socio-Political and Economic Development",
-   category: "Research",
-   icon: "mdi:account-group",
-   description:
-    "Research and advisory services addressing governance, economic growth, and community resilience in fragile contexts.",
-  },
-  {
-   title: "Security and Access Advisory",
-   category: "Advisory",
-   icon: "mdi:security",
-   description:
-    "Risk assessments, access strategies, and operational support for secure delivery in hard-to-reach areas.",
-  },
-  {
-   title: "Research and Knowledge Management",
-   category: "Insights",
-   icon: "mdi:file-document-edit",
-   description:
-    "Knowledge products, learning agendas, and evidence synthesis that drive adaptive programming.",
-  },
-  {
-   title: "Monitoring and Performance Evaluation",
-   category: "MEL",
-   icon: "mdi:clipboard-list",
-   description:
-    "End-to-end MEL systems, performance tracking, and data quality assurance tailored to partner needs.",
-  },
- ]
 </script>

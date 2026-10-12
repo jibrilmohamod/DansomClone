@@ -1,78 +1,52 @@
 <template>
- <footer class="relative overflow-hidden border-t border-slate-300 bg-gradient-to-b from-[#eaf0ff] via-[#f8f4ea] to-white text-slate-900">
-  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(37,99,235,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(182,138,53,0.16),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.65),transparent)]"></div>
-  <div class="container relative mx-auto px-6 py-12">
-   <div class="grid gap-10 lg:grid-cols-[1.1fr_1fr_1fr_1fr]">
-    <div class="space-y-5">
-     <NuxtImg src="/dansom-logo.png" alt="logo" class="w-44" />
-     <p class="text-sm text-slate-600">
-      Research and consultancy services anchored in deep regional expertise across Somalia and Kenya.
-     </p>
-     <div class="flex flex-wrap gap-2">
-      <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-slate-600">Horn of Africa</span>
-      <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-slate-600">Trusted insights</span>
-     </div>
+ <footer class="border-t border-mist/10 bg-panel text-mist">
+  <div class="shell py-14 md:py-20">
+   <div class="grid gap-12 lg:grid-cols-[1.5fr_0.7fr_1fr]">
+    <div>
+     <img src="/dansom-logo.png" alt="Dansom Research & Consultancy" class="w-48 brand-logo" />
+     <h2 class="mt-8 max-w-xl font-display text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+      Evidence built close to the context.
+     </h2>
+     <NuxtLink to="/Contact" class="button-primary mt-7">
+      Contact
+      <Icon name="mdi:arrow-top-right" />
+     </NuxtLink>
     </div>
 
-    <div class="space-y-4">
-     <h3 class="text-lg font-semibold text-secondary">Company</h3>
-     <div class="grid grid-cols-2 gap-2 text-sm text-slate-700">
-      <NuxtLink to="/About" class="hover:text-slate-900">About</NuxtLink>
-      <NuxtLink to="/Services" class="hover:text-slate-900">Services</NuxtLink>
-      <NuxtLink to="/Portfolio" class="hover:text-slate-900">Our Projects</NuxtLink>
-      <NuxtLink to="/Careers" class="hover:text-slate-900">Careers</NuxtLink>
-      <NuxtLink to="/Contact" class="hover:text-slate-900">Contact</NuxtLink>
-      <a href="http://webmail.dansomconsultancy.org/" target="_blank" class="hover:text-slate-900">Staff Email</a>
-     </div>
-    </div>
+    <nav aria-label="Footer navigation" class="grid content-start gap-3 text-sm text-mist/60">
+     <p class="mb-2 font-semibold text-mist">Explore</p>
+     <NuxtLink to="/About" class="hover:text-primary">About</NuxtLink>
+     <NuxtLink to="/Services" class="hover:text-primary">Services</NuxtLink>
+     <NuxtLink to="/Portfolio" class="hover:text-primary">Portfolio</NuxtLink>
+     <NuxtLink to="/Careers" class="hover:text-primary">Careers</NuxtLink>
+     <NuxtLink to="/Contact" class="hover:text-primary">Contact</NuxtLink>
+    </nav>
 
-    <div class="space-y-4">
-     <h3 class="text-lg font-semibold text-secondary">Visit us</h3>
-     <div class="space-y-3 text-sm text-slate-700">
-      <div class="rounded-xl border border-slate-200 bg-white p-3">
-       <p class="font-semibold text-slate-900">Mogadishu</p>
-       <p>Dirir Building on Balcad Road</p>
-      </div>
-      <div class="rounded-xl border border-slate-200 bg-white p-3">
-       <p class="font-semibold text-slate-900">Nairobi</p>
-       <p>Nas Apartments, No. 4, Milimani Road</p>
-      </div>
-     </div>
-    </div>
-
-    <div class="space-y-4">
-     <h3 class="text-lg font-semibold text-secondary">Connect</h3>
-     <a class="flex items-center gap-2 text-sm text-slate-700 transition hover:text-slate-900" href="mailto:info@dansomconsultancy.org">
-      <Icon name="mdi:email-outline" />
-      info@dansomconsultancy.org
-     </a>
-     <div class="flex items-center gap-3 text-slate-500">
-      <Icon name="ri:facebook-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:instagram-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:pinterest-fill" class="hover:text-slate-900" size="22" />
-      <Icon name="ri:twitter-fill" class="hover:text-slate-900" size="22" />
-     </div>
-     <div class="rounded-2xl border border-slate-200 bg-white p-3 text-sm text-slate-700">
-      <p class="font-semibold text-slate-900">Mogadishu &amp; Nairobi</p>
-      <p class="text-slate-500">+254 745 276 911</p>
+    <div class="text-sm leading-relaxed text-mist/60">
+     <p class="font-semibold text-mist">Mogadishu</p>
+     <p class="mt-1">Dirir Building on Balcad Road</p>
+     <p class="mt-6 font-semibold text-mist">Nairobi</p>
+     <p class="mt-1">Nas Apartments, No. 4, Milimani Road</p>
+     <div class="mt-6 grid gap-2">
+      <a href="mailto:info@dansomconsultancy.org" class="hover:text-primary">info@dansomconsultancy.org</a>
+      <a href="tel:+254745276911" class="hover:text-primary">+254 745 276 911</a>
+      <a
+       href="https://so.linkedin.com/company/dansom-research-and-consultancy"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Dansom Research & Consultancy on LinkedIn"
+       class="inline-flex items-center gap-2 font-semibold text-primary"
+      >
+       <Icon name="ri:linkedin-fill" />
+       LinkedIn
+      </a>
      </div>
     </div>
    </div>
 
-   <div class="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-    <p>
-     {{ year }} <span class="font-semibold text-secondary">Dansom Consultancy</span> — All rights reserved
-    </p>
-    <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
-     <span class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1">
-      <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
-      Future-ready research
-     </span>
-     <span class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1">
-      <span class="h-1.5 w-1.5 rounded-full bg-slate-500"></span>
-      Human-centered delivery
-     </span>
-    </div>
+   <div class="mt-14 flex flex-col gap-2 border-t border-mist/10 pt-6 text-xs text-mist/40 sm:flex-row sm:items-center sm:justify-between">
+    <p>&copy; {{ year }} Dansom Research &amp; Consultancy. All rights reserved.</p>
+    <p>Research, monitoring, evaluation, and advisory.</p>
    </div>
   </div>
  </footer>

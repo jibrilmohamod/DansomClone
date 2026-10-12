@@ -1,41 +1,22 @@
 <template>
- <div class="flex flex-col gap-3 md:gap-6 pb-5">
-  <h3 class="font-DM text-3xl md:text-4xl 2xl:text-7xl">
-   {{ title }}
-  </h3>
-
-  <p class="pt-5 font-Lora md:pr-3 2xl:text-2xl">
-   {{ subtitle }}
-  </p>
-
-  <p class="font-Lora md:pr-3 2xl:text-2xl">
-   {{ subtitle2 }}
-  </p>
-
-  <NuxtLink class="place-self-start" :to="link" v-if="icon">
-   <button
-    class="bg-primary text-white flex items-center px-4 py-2 rounded-md gap-2 text-xl hover:bg-quaternary hover:duration-700 transition-all hover:ease-linear"
-   >
-    <p class="font-Montserrat">
-     {{ LinkText }}
-    </p>
-    <Icon :name="icon" class="text-xl md:text-2xl" />
-   </button>
+ <div>
+  <h2 class="display-title text-4xl leading-tight md:text-5xl">{{ title }}</h2>
+  <p v-if="subtitle" class="body-copy mt-4 text-base md:text-lg">{{ subtitle }}</p>
+  <p v-if="subtitle2" class="body-copy mt-3 text-base md:text-lg">{{ subtitle2 }}</p>
+  <NuxtLink v-if="icon && link" :to="link" class="button-primary mt-6">
+   {{ LinkText }}
+   <Icon :name="icon" class="text-lg" />
   </NuxtLink>
  </div>
 </template>
 
 <script setup>
- import { Button } from "@/components/ui/button"
  defineProps({
   title: String,
   subtitle: String,
-  image: String,
   link: String,
   LinkText: String,
   subtitle2: String,
   icon: String,
  })
 </script>
-
-<style lang="scss" scoped></style>

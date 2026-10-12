@@ -1,113 +1,80 @@
 <template>
- <div class="min-h-screen text-slate-900">
-  <TheHeader :projTitle="slug">
+ <div>
+  <TheHeader :projTitle="service.fullTitle">
    <template #image>
-    <NuxtImg
-     provider="cloudinary"
-     loading="lazy"
-     format="webp"
-     alt="Service header"
-     sizes="sm:100vw md:50vw lg:1500px"
-     :modifiers="{ effect: 'colorize:60', color: 'black' }"
-     src="v1713880776/Banner-3-1600x699_ewoaq4.jpg"
-     class="w-full h-full object-cover object-center"
+    <img
+     loading="eager"
+     fetchpriority="high"
+     width="1586"
+     height="992"
+     alt="Analysts reviewing field evidence and programme findings"
+     src="/dansom-programme-analysis.jpg"
+     class="h-full w-full object-cover"
     />
    </template>
   </TheHeader>
 
-  <div class="container m-auto px-4 py-6 md:px-6 md:py-14">
-   <div class="grid gap-4 rounded-none border-0 bg-transparent p-0 shadow-none md:dansom-card md:grid-cols-3 md:gap-8 md:p-8">
-    <div class="space-y-2.5 md:space-y-4">
-     <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-secondary/20 via-white to-quinary/25 p-3.5 ring-1 ring-secondary/20 md:rounded-2xl md:p-6">
-      <Icon :name="service.icon" class="text-primary h-20 w-20 animate-pulse" />
+  <main class="py-16 md:py-24">
+   <div class="shell grid gap-10 lg:grid-cols-12">
+    <aside class="lg:col-span-4">
+     <div class="surface-soft lg:sticky lg:top-28">
+      <div class="flex min-h-52 items-center justify-center border-b border-mist/10 p-8">
+       <Icon :name="service.icon" class="h-24 w-24 text-primary" />
+      </div>
+      <dl class="grid gap-6 p-6 text-sm">
+       <div>
+        <dt class="font-semibold text-mist">Delivery model</dt>
+        <dd class="mt-2 leading-relaxed text-mist/[0.62]">{{ service.deliveryModel }}</dd>
+       </div>
+       <div>
+        <dt class="font-semibold text-mist">Coverage</dt>
+        <dd class="mt-2 text-mist/[0.62]">Somalia and Kenya</dd>
+       </div>
+      </dl>
      </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Delivery model</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Mixed-method research + local field teams</p>
-     </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
-     </div>
-     <div class="rounded-lg border border-slate-200/80 bg-white/90 p-3 shadow-none md:dansom-card-soft md:p-4">
-      <p class="text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.2em]">Coverage</p>
-      <p class="mt-1.5 text-sm font-semibold text-primary md:mt-2">Somalia and Kenya operations</p>
-     </div>
-    </div>
-    <div class="space-y-3 md:col-span-2 md:space-y-5">
-     <p class="inline-flex w-fit items-center rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-      {{ service.title }}
-     </p>
-     <h5 class="font-display text-xl font-semibold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <div
-      class="service-body prose prose-sm max-w-none text-justify prose-headings:text-primary prose-p:my-0 prose-p:mb-5 prose-p:leading-8 prose-ul:my-5 prose-ul:pl-6 prose-li:leading-7 prose-a:text-secondary md:prose-base"
-      v-html="service.about"
-     ></div>
-    </div>
-    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
-     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
-     <div
-      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
-      v-html="service.about"
-     ></div>
-    </div>
-    <div class="space-y-2.5 md:col-span-2 md:space-y-4">
-     <h5 class="font-DM text-xl font-bold leading-tight text-primary md:text-4xl">{{ service.fullTitle }}</h5>
-     <p class="font-Zilla text-sm leading-relaxed text-slate-700 md:text-lg">{{ service.subtitle }}</p>
-     <div
-      class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary prose-p:leading-relaxed md:prose-base"
-      v-html="service.about"
-     ></div>
-    </div>
+    </aside>
+
+    <article class="lg:col-span-7 lg:col-start-6">
+     <p class="text-sm font-semibold text-primary">{{ service.title }}</p>
+     <h2 class="display-title mt-4 text-4xl leading-tight md:text-5xl">{{ service.fullTitle }}</h2>
+     <p class="mt-5 text-lg leading-relaxed text-mist/[0.65]">{{ service.subtitle }}</p>
+     <div class="service-body mt-10 space-y-6 text-base leading-8 text-mist/[0.65]" v-html="service.about"></div>
+     <NuxtLink to="/Contact" class="button-primary mt-10">Contact <Icon name="mdi:arrow-right" /></NuxtLink>
+    </article>
    </div>
-  </div>
+  </main>
  </div>
 </template>
 
+<style>
+.service-body p + p {
+ margin-top: 1.5rem;
+}
+.service-body ul {
+ margin-top: 1.5rem;
+ display: grid;
+ gap: 0.75rem;
+ padding-left: 1.25rem;
+ list-style: disc;
+}
+</style>
+
 <script lang="ts" setup>
+ import { services } from "~/data/services"
+
  const route = useRoute()
- const slug = ref(route.params.slug)
- const service = ref(null)
+ const requestedService = decodeURIComponent(String(route.params.slug || ""))
+ const service = services.find((item) => item.slug === requestedService)
 
- const services = [
-  {
-   icon: "arcticons:adobe-analytics",
-   title: "Political Economy Analysis",
-   fullTitle: "Political Economy Analysis and Security Advisory",
-   subtitle:
-    "Political economy analysis in Somalia to inform programming and policy development.",
-   about:
-    "<p>Dansom has developed a unique expertise in providing international development agencies such as the World Bank, EU, DFID, FCO and the UN with in-depth political economy analysis, economic growth and security advisory services in the Somali and broader East-African context. The firm has experience in collecting up-to-date, triangulated information on the ground, analysing local networks and power structures, and in designing effective strategies to guarantee access to civil society actors and strategic stakeholders in insecure and non-permissive areas.</p><p>Dansom also provides security risk analysis, management planning and on-going advisory services to international organisations that aim to deliver impact in some of the most volatile environments in the region.</p><p>Dansom has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs. Dansom has an extensive network of private sector actors as well as government stakeholders. Additionally, the firm has, through various other projects expanded its working relationship with numerous civil society organizations and NGO’s across Somalia.</p>",
-  },
-  {
-   icon: "carbon:data-analytics",
-   title: "Third Party Monitoring and Evaluation",
-   fullTitle: "Third Party Monitoring and Performance Evaluation",
-   subtitle:
-    "Third party monitoring and evaluation of humanitarian and development projects in Somalia.",
-   about:
-    "<p>DANSOM core expertise lies also in third-party monitoring and performance evaluation. Across our network of multi-disciplinary experts, we combine extensive experience in providing third-party monitoring, verification and evaluation, process efficiency, performance and impact evaluations, as well as programme reviews. Using both qualitative and quantitative methods and leveraging our region-wide network of field monitors and data collectors, we ensure reliable analytical results are provided on time to our clients and allow them to make rapid decisions to steer their programmes in the right direction despite the complexity of their environment of operation.</p><p>Our team of experts have experience in providing third-party monitoring and evaluation services to a range of international development agencies, including the World Bank, EU, DFID, FCO, UN, and other international and local NGOs. Our team has also worked on providing detailed economic analysis for international and national organizations that has informed them on the design and development of economic growth programs.</p>",
-  },
-  {
-   icon: "carbon:data-analytics",
-   title: "Formative Research and Policy Advisory Services",
-   fullTitle: "Formative Research and Policy Advisory Services",
-   subtitle:
-    "Formative Research and Policy Advisory Services to inform programming and policy development.",
-   about:
-    "<p>Dansom has built one of the most extensive and effective networks of multi-disciplinary researchers working in Somalia and has delivered formative baseline assessments on strategically themed areas to support the international community and the Somali government in designing appropriate programmes in newly recovered areas and emerging sectors of interest. Our research services combine in-depth qualitative assessments and quantitative surveys to ensure with systematic ground-truthing and triangulation of information to ensure only the highest quality of data is taken into account for the analysis and programme design phases.</p><p>Our specialized consultants represent a diversity of fields with expertise in law, economics, financial management, public policy, security advice and many other areas.</p>",
-  },
- ]
-
- service.value =
-  services.find((item) => item.title === slug.value) || services[0]
+ if (!service) {
+  throw createError({ statusCode: 404, statusMessage: "Service not found" })
+ }
 
  useSeoMeta({
-  title: () => service.value.fullTitle,
-  description: () => service.value.subtitle,
-  ogTitle: () => `${service.value.fullTitle} | Dansom Services`,
-  ogDescription: () => service.value.subtitle,
+  title: () => service.fullTitle,
+  description: () => service.subtitle,
+  ogTitle: () => `${service.fullTitle} | Dansom Research & Consultancy`,
+  ogDescription: () => service.subtitle,
   ogImage: "/dansom-logo.png",
   twitterCard: "summary_large_image",
  })
