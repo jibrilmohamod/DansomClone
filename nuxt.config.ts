@@ -49,9 +49,10 @@ export default defineNuxtConfig({
    title: "Dansom Research & Consultancy",
    titleTemplate: "%s | Dansom Research & Consultancy",
    link: [
-    { rel: "icon", type: "image/svg+xml", href: "/dansom-green-mark.svg" },
-    { rel: "shortcut icon", type: "image/svg+xml", href: "/dansom-green-mark.svg" },
-    { rel: "apple-touch-icon", href: "/dansom-green-mark.svg" },
+    { rel: "icon", href: "/favicon.ico?v=production", sizes: "any" },
+    { rel: "icon", href: "/favicon-16x16.png?v=production", type: "image/png", sizes: "16x16" },
+    { rel: "icon", href: "/favicon-32x32.png?v=production", type: "image/png", sizes: "32x32" },
+    { rel: "apple-touch-icon", href: "/apple-touch-icon.png?v=production", type: "image/png", sizes: "180x180" },
    ],
    meta: [
     { charset: "utf-8" },
