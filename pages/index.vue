@@ -4,7 +4,6 @@
    <TheNav />
    <div class="home-photo-stage relative isolate overflow-hidden">
     <picture class="absolute inset-0 -z-20">
-     <source media="(max-width: 767px)" srcset="/images/dansom/home-dialogue-mobile.webp" />
      <img :src="photography.homeHero.src" :alt="photography.homeHero.alt" width="2000" height="1333" fetchpriority="high" loading="eager" class="home-photo h-full w-full object-cover" />
     </picture>
     <div class="home-photo-shade absolute inset-0 -z-10" aria-hidden="true"></div>
@@ -97,10 +96,12 @@ import { photography } from "~/data/photography"
 .home-hero-secondary:hover { background:rgba(255,255,255,.15); border-color:white; }
 .home-hero-primary:focus-visible,.home-hero-secondary:focus-visible { outline:2px solid white; outline-offset:4px; }
 @media(max-width:767px) {
- .home-photo-stage { height:auto; min-height:42rem; display:flex; }
- .home-photo-stage>.atlas-shell { padding-top:17rem; padding-bottom:2.5rem; }
- .home-photo { object-position:50% 22%; }
- .home-photo-shade { background:linear-gradient(0deg,rgba(4,16,24,.97),rgba(4,16,24,.8) 44%,rgba(4,16,24,.08) 83%); }
+ .home-photo-stage { height:auto; background:#07121a; }
+ .home-photo-stage picture { bottom:auto; height:auto; aspect-ratio:3/2; }
+ .home-photo-stage>.atlas-shell { height:auto; }
+ .home-photo-stage>.atlas-shell { padding-top:calc(66.666vw + 1rem); padding-bottom:2.5rem; }
+ .home-photo { object-position:center; object-fit:contain; }
+ .home-photo-shade { background:none; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
