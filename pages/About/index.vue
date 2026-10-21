@@ -42,7 +42,7 @@
       :src="photography.aboutVision.src"
       :alt="photography.aboutVision.alt"
       :style="{ objectPosition: photography.aboutVision.position }"
-      class="aspect-[4/3] h-full w-full object-cover"
+      class="block h-auto w-full object-contain"
      />
     </RevealBlock>
    </div>
@@ -197,7 +197,6 @@ import { photography } from "~/data/photography"
 .vision-media {
  position: relative;
  overflow: hidden;
- aspect-ratio: 4 / 3;
  background: rgb(var(--panel-soft));
 }
 .vision-media::after {

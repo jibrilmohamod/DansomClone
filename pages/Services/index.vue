@@ -18,14 +18,12 @@
   </section>
 
   <section class="bg-panel text-mist">
-   <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative min-h-[118dvh] border-t border-line/45">
-    <div class="sticky top-0 grid min-h-[100dvh] overflow-hidden lg:grid-cols-12">
-     <div class="service-visual relative aspect-[4/5] w-full self-center lg:col-span-5 lg:aspect-[3/4]" :class="index % 2 === 1 ? 'lg:order-2' : ''">
-      <img :src="images[index].src" :alt="images[index].alt" :style="{ objectPosition: images[index].position }" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-      <div class="service-image-tone"></div>
-      <p class="absolute bottom-6 left-6 font-display text-sm text-white/55 md:bottom-10 md:left-10">0{{ index+1 }} / 0{{ services.length }}</p>
+   <article v-for="(service,index) in services" :key="service.slug" class="service-scene relative border-t border-line/45">
+    <div class="atlas-shell grid items-center gap-10 py-14 md:gap-14 md:py-20 lg:grid-cols-12">
+     <div class="service-visual relative flex w-full items-center justify-center lg:col-span-6" :class="index % 2 === 1 ? 'lg:order-2' : ''">
+      <img :src="images[index].src" :alt="images[index].alt" :style="{ objectPosition: images[index].position }" class="block h-auto max-h-[34rem] w-full object-contain" loading="lazy" />
      </div>
-     <div class="service-copy-panel atlas-grid flex items-end bg-panel p-6 pb-12 md:p-10 md:pb-16 lg:col-span-7 lg:p-16" :class="index % 2 === 1 ? 'lg:order-1' : ''">
+     <div class="service-copy-panel flex items-center py-2 lg:col-span-6 lg:px-6" :class="index % 2 === 1 ? 'lg:order-1' : ''">
       <div class="service-copy max-w-4xl">
        <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-line/65 text-primary"><Icon :name="service.icon" class="text-3xl" /></div>
        <p class="atlas-label mt-10">{{ service.category }}</p>
@@ -55,25 +53,13 @@ import { photography } from "~/data/photography"
 </script>
 
 <style scoped>
-.service-visual { overflow:hidden; }
-.service-visual img { transform:scale(1.04); }
-.service-image-tone {
- position: absolute;
- inset: 0;
- pointer-events: none;
- background: linear-gradient(180deg, rgb(5 14 23 / 0.04), rgb(5 14 23 / 0.46));
-}
-:global(.light) .service-image-tone {
- background: linear-gradient(180deg, transparent 58%, rgb(5 14 23 / 0.34));
-}
+.service-visual img { transform:none; }
 .service-copy-panel { position:relative; }
 .service-copy-panel::before { content:""; position:absolute; inset:0 auto 0 0; width:3px; background:rgb(var(--primary)); transform:scaleY(.16); transform-origin:bottom; opacity:.7; }
 @media (prefers-reduced-motion:no-preference) {
- .service-visual img { animation:service-image linear both; animation-timeline:view(block); animation-range:entry 0% cover 85%; }
  .service-copy { animation:service-copy linear both; animation-timeline:view(block); animation-range:entry 4% cover 38%; }
  .service-copy-panel::before { animation:service-rule linear both; animation-timeline:view(block); animation-range:entry 5% cover 55%; }
 }
-@keyframes service-image { from { transform:scale(1.11); } to { transform:scale(1.02); } }
 @keyframes service-copy { from { opacity:.2; transform:translateY(3rem); } to { opacity:1; transform:none; } }
 @keyframes service-rule { from { transform:scaleY(.16); } to { transform:scaleY(1); } }
 </style>

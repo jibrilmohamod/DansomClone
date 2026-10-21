@@ -20,7 +20,7 @@
        width="1586"
        height="992"
        loading="lazy"
-       class="sequence-image absolute inset-0 h-full w-full object-cover"
+       class="sequence-image absolute inset-0 h-full w-full object-contain"
        :class="activeIndex === index ? 'is-active' : ''"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-[#08131f]/70 via-transparent to-transparent"></div>
@@ -53,7 +53,7 @@
        width="1586"
        height="992"
        loading="lazy"
-       class="mb-7 aspect-[16/9] w-full border border-line/55 object-cover lg:hidden"
+       class="mb-7 h-auto w-full border border-line/55 object-contain lg:hidden"
       />
       <p class="font-display text-base font-semibold text-primary">{{ chapter.verb }}</p>
       <h3 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-mist md:text-4xl">{{ chapter.title }}</h3>
@@ -117,7 +117,7 @@ import { photography } from "~/data/photography"
 <style scoped>
 .sequence-image {
  opacity: 0;
- transform: scale(1.045);
+ transform: none;
  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
