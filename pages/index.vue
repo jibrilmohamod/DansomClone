@@ -1,18 +1,22 @@
 <template>
  <div>
-  <section class="home-cinema relative min-h-[100dvh] overflow-hidden border-b border-line/45 bg-ink text-mist">
-   <InteractiveLineField variant="home" :strength="1" :density="1" />
+  <section class="home-cinema relative overflow-hidden border-b border-line/45 bg-ink">
    <TheNav />
-
-   <div class="atlas-shell relative z-10 flex min-h-[calc(100dvh-76px)] items-end pb-10 pt-24 md:pb-14">
-    <div class="grid w-full gap-10 lg:grid-cols-12 lg:items-end">
-     <div class="lg:col-span-9">
-      <p class="atlas-label">Research and advisory services</p>
-      <h1 class="atlas-display home-title mt-6 max-w-[16ch] text-[clamp(2.65rem,4.35vw,4.35rem)] leading-[0.96]">Research for complex operating environments.</h1>
-     </div>
-     <div class="lg:col-span-3">
-      <p class="border-t border-line/55 pt-5 text-base leading-relaxed text-mist/68">Research, monitoring, and advisory built from trusted access across Somalia, Kenya, and the Horn of Africa.</p>
-      <div class="mt-6 flex flex-wrap gap-3"><NuxtLink to="/Portfolio" class="button-primary">Explore the work <Icon name="mdi:arrow-right" /></NuxtLink><NuxtLink to="/About" class="button-ghost">Who we are</NuxtLink></div>
+   <div class="home-photo-stage relative isolate overflow-hidden">
+    <picture class="absolute inset-0 -z-20">
+     <source media="(max-width: 767px)" srcset="/images/dansom/home-dialogue-mobile.webp" />
+     <img :src="photography.homeHero.src" :alt="photography.homeHero.alt" width="2000" height="1333" fetchpriority="high" loading="eager" class="home-photo h-full w-full object-cover" />
+    </picture>
+    <div class="home-photo-shade absolute inset-0 -z-10" aria-hidden="true"></div>
+    <div class="atlas-shell relative flex h-full items-end py-12 md:py-16">
+     <div class="home-editorial-copy max-w-[42rem]">
+      <p class="text-xs font-semibold uppercase tracking-[.18em] text-white/80">Research and advisory services</p>
+      <h1 class="atlas-display home-title mt-5 max-w-[17ch] text-[clamp(2.35rem,4.25vw,4rem)] leading-[1.04] text-white">Research for complex operating environments.</h1>
+      <p class="mt-5 max-w-[49ch] text-base leading-relaxed text-white/85">Research, monitoring, and advisory built from trusted access across Somalia, Kenya, and the Horn of Africa.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+       <NuxtLink to="/Portfolio" class="home-hero-primary">Explore the work <Icon name="mdi:arrow-top-right" /></NuxtLink>
+       <NuxtLink to="/About" class="home-hero-secondary">Who we are <Icon name="mdi:arrow-right" /></NuxtLink>
+      </div>
      </div>
     </div>
    </div>
@@ -79,10 +83,26 @@ import { photography } from "~/data/photography"
   capabilityTrack.value?.scrollBy({ left: direction * Math.min(window.innerWidth * 0.78, 760), behavior: "smooth" })
  }
  const featuredProjects = projects.slice(0,4)
- useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:photography.fieldResearchHero.src, ogImageAlt:photography.fieldResearchHero.alt, twitterImage:photography.fieldResearchHero.src, twitterImageAlt:photography.fieldResearchHero.alt, twitterCard:"summary_large_image" })
+ useSeoMeta({ title:"Home", description:"Dansom Research & Consultancy provides research, monitoring, evaluation, political economy analysis, and advisory services across Somalia, Kenya, and the Horn of Africa.", ogTitle:"Dansom Research & Consultancy", ogDescription:"Field-grounded research, monitoring, evaluation, and advisory across the Horn of Africa.", ogImage:photography.homeHero.src, ogImageAlt:photography.homeHero.alt, twitterImage:photography.homeHero.src, twitterImageAlt:photography.homeHero.alt, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>
+.home-photo-stage { height:clamp(38rem,calc(100svh - 76px),50rem); color:#fff; }
+.home-photo { object-position:65% 34%; }
+.home-photo-shade { background:linear-gradient(90deg,rgba(4,16,24,.63),rgba(4,16,24,.12) 80%),linear-gradient(0deg,rgba(4,16,24,.88),rgba(4,16,24,.18) 72%); }
+.home-hero-primary,.home-hero-secondary { display:inline-flex; align-items:center; justify-content:center; gap:.75rem; min-height:3rem; padding:.8rem 1.15rem; border:1px solid transparent; border-radius:.35rem; font-weight:600; font-size:.9rem; transition:background-color .2s,color .2s,border-color .2s; }
+.home-hero-primary { background:#c9e569; color:#142011; }
+.home-hero-primary:hover { background:#d9f28a; }
+.home-hero-secondary { border-color:rgba(255,255,255,.55); color:white; background:rgba(4,16,24,.2); }
+.home-hero-secondary:hover { background:rgba(255,255,255,.15); border-color:white; }
+.home-hero-primary:focus-visible,.home-hero-secondary:focus-visible { outline:2px solid white; outline-offset:4px; }
+@media(max-width:767px) {
+ .home-photo-stage { height:auto; min-height:42rem; display:flex; }
+ .home-photo-stage>.atlas-shell { padding-top:17rem; padding-bottom:2.5rem; }
+ .home-photo { object-position:50% 22%; }
+ .home-photo-shade { background:linear-gradient(0deg,rgba(4,16,24,.97),rgba(4,16,24,.8) 44%,rgba(4,16,24,.08) 83%); }
+}
+
 @media (prefers-reduced-motion: no-preference) {
  .home-title { animation: home-title 760ms 100ms cubic-bezier(.16,1,.3,1) both; }
 }

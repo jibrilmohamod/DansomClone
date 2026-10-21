@@ -7,7 +7,7 @@
    variant="services"
   >
    <template #image>
-    <img :src="photography.fieldMonitoring.src" :alt="photography.fieldMonitoring.alt" :style="{ objectPosition: photography.fieldMonitoring.position }" fetchpriority="high" />
+    <img :src="photography.servicesHero.src" :alt="photography.servicesHero.alt" :style="{ objectPosition: photography.servicesHero.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 
@@ -50,15 +50,8 @@
 <script setup lang="ts">
 import { photography } from "~/data/photography"
  import { services } from "~/data/services"
- const images = [
-  photography.communityDialogue,
-  photography.fieldMonitoring,
-  photography.researchWorkshop,
-  photography.programmeAnalysis,
-  photography.fieldOperations,
-  photography.livelihoodsResearch,
- ]
- useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.fieldMonitoring.src, ogImageAlt:photography.fieldMonitoring.alt, twitterImage:photography.fieldMonitoring.src, twitterImageAlt:photography.fieldMonitoring.alt, twitterCard:"summary_large_image" })
+ const images = [photography.politicalEconomy, photography.monitoring, photography.research, photography.capacity, photography.operations, photography.environment]
+ useSeoMeta({ title:"Services", description:"Explore Dansom Research & Consultancy services including political economy analysis, third-party monitoring and evaluation, research, security advisory, and knowledge management.", ogTitle:"Services | Dansom Research & Consultancy", ogDescription:"Specialised research, MEL, advisory, and knowledge services for complex operating environments across Somalia and Kenya.", ogImage:photography.servicesHero.src, ogImageAlt:photography.servicesHero.alt, twitterImage:photography.servicesHero.src, twitterImageAlt:photography.servicesHero.alt, twitterCard:"summary_large_image" })
 </script>
 
 <style scoped>

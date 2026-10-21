@@ -72,19 +72,19 @@ import { photography } from "~/data/photography"
    verb: "Listen",
    title: "Access before assumptions",
    copy: "Local researchers begin with the people, institutions, and incentives that shape each operating environment.",
-   photo: photography.communityDialogue,
+   photo: photography.approachListening,
   },
   {
    verb: "Verify",
    title: "Independent verification",
    copy: "Field observations, interviews, and quantitative evidence are triangulated to test findings and resolve inconsistencies.",
-   photo: photography.fieldMonitoring,
+   photo: photography.approachFieldwork,
   },
   {
    verb: "Advise",
    title: "Findings built for decisions",
    copy: "Clear analysis and practical recommendations help partners adapt programmes, allocate resources, and act with confidence.",
-   photo: photography.programmeAnalysis,
+   photo: photography.approachAnalysis,
   },
  ]
 

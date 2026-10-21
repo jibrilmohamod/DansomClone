@@ -7,7 +7,7 @@
    variant="work"
   >
    <template #image>
-    <img :src="photography.fieldOperations.src" :alt="photography.fieldOperations.alt" :style="{ objectPosition: photography.fieldOperations.position }" fetchpriority="high" />
+    <img :src="photography.portfolioHero.src" :alt="photography.portfolioHero.alt" :style="{ objectPosition: photography.portfolioHero.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 
@@ -38,5 +38,5 @@ import { photography } from "~/data/photography"
  const filteredProjectPool=computed(()=>{const search=searchTerm.value.trim().toLowerCase();return projects.value.filter(p=>(!search||p.title.toLowerCase().includes(search)||p.description.toLowerCase().includes(search)||p.Ngo?.toLowerCase().includes(search))&&(classification.value==="All"||p.classification===classification.value||p.classification2===classification.value))})
  const filteredProjects=computed(()=>filteredProjectPool.value.slice(0,visibleCount.value));watch([searchTerm,classification],()=>visibleCount.value=9)
  const getProjectPath=(project:{title:string;description:string;icon:string})=>{const i=projects.value.findIndex(item=>item.title===project.title&&item.description===project.description&&item.icon===project.icon);return `/Portfolio/${i}-${encodeURIComponent(project.title)}`}
- useSeoMeta({title:"Portfolio",description:"Explore Dansom Research & Consultancy's portfolio of monitoring, evaluation, research, logistics, and advisory projects for partners across Somalia and the Horn of Africa.",ogTitle:"Portfolio | Dansom Research & Consultancy",ogDescription:"Browse Dansom's project work with development, humanitarian, donor, and institutional partners across Somalia and the Horn of Africa.",ogImage:photography.fieldOperations.src,ogImageAlt:photography.fieldOperations.alt,twitterImage:photography.fieldOperations.src,twitterImageAlt:photography.fieldOperations.alt,twitterCard:"summary_large_image"})
+ useSeoMeta({title:"Portfolio",description:"Explore Dansom Research & Consultancy's portfolio of monitoring, evaluation, research, logistics, and advisory projects for partners across Somalia and the Horn of Africa.",ogTitle:"Portfolio | Dansom Research & Consultancy",ogDescription:"Browse Dansom's project work with development, humanitarian, donor, and institutional partners across Somalia and the Horn of Africa.",ogImage:photography.portfolioHero.src,ogImageAlt:photography.portfolioHero.alt,twitterImage:photography.portfolioHero.src,twitterImageAlt:photography.portfolioHero.alt,twitterCard:"summary_large_image"})
 </script>

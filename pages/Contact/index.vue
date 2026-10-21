@@ -7,7 +7,7 @@
    variant="contact"
   >
    <template #image>
-    <img :src="photography.fieldResearchHero.src" :alt="photography.fieldResearchHero.alt" :style="{ objectPosition: photography.fieldResearchHero.position }" fetchpriority="high" />
+    <img :src="photography.contactHero.src" :alt="photography.contactHero.alt" :style="{ objectPosition: photography.contactHero.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 

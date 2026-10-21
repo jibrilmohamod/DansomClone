@@ -7,7 +7,7 @@
    variant="detail"
   >
    <template #image>
-    <img :src="photography.fieldOperations.src" :alt="photography.fieldOperations.alt" :style="{ objectPosition: photography.fieldOperations.position }" fetchpriority="high" />
+    <img :src="photo.src" :alt="photo.alt" :style="{ objectPosition: photo.position }" fetchpriority="high" />
    </template>
   </TheHeader>
   <main class="atlas-grid bg-ink py-24 md:py-36">
@@ -55,10 +55,11 @@
 </template>
 
 <script setup lang="ts">
- import { photography } from "~/data/photography"
+ import { projectPhoto } from "~/data/photography"
  import {projects} from "~/data/projects"
  import {services} from "~/data/services"
  const route=useRoute(),slug=decodeURIComponent(String(route.params.slug||"")),projectIndex=Number(slug.split("-")[0]),projectTitle=slug.replace(/^\d+-/,""); const project=projects[projectIndex]||projects.find(item=>item.title===projectTitle); if(!project)throw createError({statusCode:404,statusMessage:"Project not found"}); const projectIntro=`${project.Location}${project.timeframes?`, ${project.timeframes}`:""}`
+ const photo = projectPhoto(project.title)
  const serviceNames=[project.classification,project.classification2].filter((value,index,array):value is string=>Boolean(value)&&array.indexOf(value)===index)
  const servicePath=(serviceName:string)=>{const service=services.find(item=>item.slug===serviceName||item.fullTitle===serviceName);return service?`/Services/${encodeURIComponent(service.slug)}`:"/Services"}
  const relatedProjects=projects.map((item,index)=>({...item,path:`/Portfolio/${index}-${encodeURIComponent(item.title)}`})).filter(item=>item.title!==project.title&&(serviceNames.includes(item.classification)||Boolean(item.classification2&&serviceNames.includes(item.classification2)))).slice(0,3)

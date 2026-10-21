@@ -7,7 +7,7 @@
    variant="careers"
   >
    <template #image>
-    <img :src="photography.researchWorkshop.src" :alt="photography.researchWorkshop.alt" :style="{ objectPosition: photography.researchWorkshop.position }" fetchpriority="high" />
+    <img :src="photography.careersHero.src" :alt="photography.careersHero.alt" :style="{ objectPosition: photography.careersHero.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 

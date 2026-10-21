@@ -7,7 +7,7 @@
    variant="detail"
   >
    <template #image>
-    <img :src="photography.programmeAnalysis.src" :alt="photography.programmeAnalysis.alt" :style="{ objectPosition: photography.programmeAnalysis.position }" fetchpriority="high" />
+    <img :src="photo.src" :alt="photo.alt" :style="{ objectPosition: photo.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 
@@ -74,11 +74,12 @@
 </style>
 
 <script setup lang="ts">
-import { photography } from "~/data/photography"
+import { photography, servicePhotography } from "~/data/photography"
  import { services } from "~/data/services"
  import { projects } from "~/data/projects"
  const route=useRoute(); const requestedService=decodeURIComponent(String(route.params.slug||"")); const service=services.find(item=>item.slug===requestedService)
  if(!service) throw createError({statusCode:404,statusMessage:"Service not found"})
+ const photo = servicePhotography[service.slug] || photography.servicesHero
  const relatedProjects=projects.map((project,index)=>({...project,path:`/Portfolio/${index}-${encodeURIComponent(project.title)}`})).filter(project=>project.classification===service.slug||project.classification===service.fullTitle||project.classification2===service.slug||project.classification2===service.fullTitle).slice(0,3)
- useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:photography.programmeAnalysis.src, ogImageAlt:photography.programmeAnalysis.alt, twitterImage:photography.programmeAnalysis.src, twitterImageAlt:photography.programmeAnalysis.alt, twitterCard:"summary_large_image" })
+ useSeoMeta({ title:()=>service.fullTitle, description:()=>service.subtitle, ogTitle:()=>`${service.fullTitle} | Dansom Research & Consultancy`, ogDescription:()=>service.subtitle, ogImage:photo.src, ogImageAlt:photo.alt, twitterImage:photo.src, twitterImageAlt:photo.alt, twitterCard:"summary_large_image" })
 </script>

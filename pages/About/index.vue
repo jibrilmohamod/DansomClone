@@ -7,7 +7,7 @@
    variant="about"
   >
    <template #image>
-    <img :src="photography.communityDialogue.src" :alt="photography.communityDialogue.alt" :style="{ objectPosition: photography.communityDialogue.position }" fetchpriority="high" />
+    <img :src="photography.aboutHero.src" :alt="photography.aboutHero.alt" :style="{ objectPosition: photography.aboutHero.position }" fetchpriority="high" />
    </template>
   </TheHeader>
 
@@ -39,9 +39,9 @@
       loading="lazy"
       width="1586"
       height="992"
-      :src="photography.researchWorkshop.src"
-      :alt="photography.researchWorkshop.alt"
-      :style="{ objectPosition: photography.researchWorkshop.position }"
+      :src="photography.aboutVision.src"
+      :alt="photography.aboutVision.alt"
+      :style="{ objectPosition: photography.aboutVision.position }"
       class="aspect-[4/3] h-full w-full object-cover"
      />
     </RevealBlock>
